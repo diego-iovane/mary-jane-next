@@ -9,7 +9,7 @@ export default function Home() {
 
     lottie.loadAnimation({
       container: document.getElementById('contact-animation'),
-      renderer: 'svg',
+      renderer: 'canvas',
       loop: true,
       autoplay: true,
       animationData: contactAnimation
