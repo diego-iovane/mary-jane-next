@@ -6,6 +6,9 @@ const nextConfig = {
     defaultLocale: "en",
     locales: ["en", "de"],
   },
+  images: {
+    domains: [ 'firebasestorage.googleapis.com' ]
+  }
 }
 
 module.exports = nextConfig

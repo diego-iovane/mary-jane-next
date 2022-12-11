@@ -28,7 +28,7 @@ const Counter = ({ content }) => {
             </Item>
             <Item>
                 <Num>{seconds}</Num>
-                <Text>{content.minutes}</Text>
+                <Text>{content.seconds}</Text>
             </Item>
         </Container>
         )

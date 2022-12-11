@@ -23,6 +23,8 @@ body {
   --light-green: #93c244;
   --pink: #e27baf;
   --light-blue: #c7e1e0;
+
+  --soft-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 h1, h2, h3, h4, h5, h6 {

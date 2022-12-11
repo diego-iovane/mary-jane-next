@@ -31,11 +31,11 @@ const NavBar = ({ data }) => {
             {
               pathname === '/' ?
                 <LogoContainer onClick={toTop}>
-                  <Logo src={Lg} alt='logo' />
+                  <Logo src={Lg} alt='logo' placeholder='blur' priority />
                 </LogoContainer> :
                 <Link href='/'>
                   <LogoContainer>
-                    <Logo src={Lg} alt='logo' />
+                    <Logo src={Lg} alt='logo' laceholder='blur' priority />
                   </LogoContainer>
                 </Link>
             }
