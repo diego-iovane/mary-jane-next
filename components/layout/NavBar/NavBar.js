@@ -13,13 +13,16 @@ import {
   LogoContainer,
   Logo,
 } from './Elements'
+import MobileNav from './MobileNav/MobileNav'
+import Hamburguer from './MobileNav/Hamburguer'
 
 const NavBar = () => {
 
   const router = useRouter()
   const pathname = router.pathname
   const { content } = GetContentContext()
-  const [ scrollPos, setScrollPos ] = useState(false) 
+  const [opened, setOpened] = useState(false)
+  const [scrollPos, setScrollPos] = useState(false)
 
   const toTop = () => scrollTo(top)
   const handleScroll = () => setScrollPos(window.pageYOffset)
@@ -48,11 +51,30 @@ const NavBar = () => {
                   </LogoContainer>
                 </Link>
             }
-            <MainNav links={content.mainNav.links} scrolled={scrollPos > 0.1} />
+            <MainNav
+              links={content.mainNav.links}
+              scrolled={scrollPos > 0.1}
+            />
           </Left>
           <Right>
-            <SecondaryNav links={content.secondaryNav.links} flags={content.secondaryNav.flags} scrolled={scrollPos > 0.1} />
+            <SecondaryNav
+              links={content.secondaryNav.links}
+              flags={content.secondaryNav.flags}
+              scrolled={scrollPos > 0.1}
+            />
+            <Hamburguer 
+              opened={opened}
+              setOpened={setOpened}
+            />
           </Right>
+            <MobileNav
+              primaryLinks={content.mainNav.links}
+              secondaryLinks={content.secondaryNav.links}
+              flags={content.secondaryNav.flags}
+              scrolled={scrollPos > 0.1}
+              opened={opened}
+              setOpened={setOpened}
+            />
         </Inner>
       }
     </Container>

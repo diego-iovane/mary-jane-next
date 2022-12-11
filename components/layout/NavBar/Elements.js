@@ -28,14 +28,13 @@ export const Left = styled.div`
 export const Right = styled.div``
 
 export const LogoContainer = styled.div`
-    /* width: 5rem; */
+    width: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
     display: flex;
     justify-content: center;
     align-self: center;
     cursor: pointer;
     transition: all .5s ease-in-out;
-
-    width: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
+    z-index: 10;
 `
 
 export const Logo = styled(Image)`
@@ -46,10 +45,13 @@ export const Logo = styled(Image)`
 
 export const Nav = styled.nav`
     display: flex;
-    /* margin-top: 1rem; */
     margin-top: ${({scrolled}) => scrolled ? '.5rem' : '1rem'};
     position: relative;
     transition: all .5s ease-in-out;
+
+    @media all and (max-width: 960px) {
+        display: none;
+    }
 `
 
 export const Links = styled.ul`
