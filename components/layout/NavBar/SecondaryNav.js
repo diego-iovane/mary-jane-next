@@ -7,9 +7,9 @@ import {
     LinkContainer,
 } from './Elements'
 
-const SecondaryNav = ({ links, flags }) => {
+const SecondaryNav = ({ links, flags, scrolled }) => {
     return (
-        <Nav>
+        <Nav scrolled={scrolled}>
             <Links>
                 {
                     links.map(link => {

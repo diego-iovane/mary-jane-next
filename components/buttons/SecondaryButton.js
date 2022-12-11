@@ -8,6 +8,11 @@ const Button = styled.button`
     color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: .8;
+    }
 `
 
 const SecondaryButton = ({ children }) => {

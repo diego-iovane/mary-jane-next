@@ -8,10 +8,10 @@ import {
 } from './Elements'
 import PrimaryButton from '../../buttons/PrimaryButton'
 
-const MainNav = ({ links }) => {
+const MainNav = ({ links, scrolled }) => {
 
     return (
-        <Nav>
+        <Nav scrolled={scrolled}>
             <Links>
                 {
                     links.map(link => {

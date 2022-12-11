@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { GetContentContext } from '../../../context/ContentContext'
@@ -14,35 +14,44 @@ import {
   Logo,
 } from './Elements'
 
-const NavBar = ({ data }) => {
+const NavBar = () => {
 
   const router = useRouter()
   const pathname = router.pathname
   const { content } = GetContentContext()
+  const [ scrollPos, setScrollPos ] = useState(false) 
 
   const toTop = () => scrollTo(top)
+  const handleScroll = () => setScrollPos(window.pageYOffset)
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
 
   return (
-    <Container>
+    <Container scrolled={scrollPos > 0.1}>
       {
         Object.entries(content).length !== 0 &&
         <Inner>
           <Left>
             {
               pathname === '/' ?
-                <LogoContainer onClick={toTop}>
+                <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
                   <Logo src={Lg} alt='logo' placeholder='blur' priority />
                 </LogoContainer> :
                 <Link href='/'>
-                  <LogoContainer>
+                  <LogoContainer scrolled={scrollPos > 0.1}>
                     <Logo src={Lg} alt='logo' laceholder='blur' priority />
                   </LogoContainer>
                 </Link>
             }
-            <MainNav links={content.mainNav.links} />
+            <MainNav links={content.mainNav.links} scrolled={scrollPos > 0.1} />
           </Left>
           <Right>
-            <SecondaryNav links={content.secondaryNav.links} flags={content.secondaryNav.flags} />
+            <SecondaryNav links={content.secondaryNav.links} flags={content.secondaryNav.flags} scrolled={scrollPos > 0.1} />
           </Right>
         </Inner>
       }
