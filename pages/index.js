@@ -6,7 +6,7 @@ import Hero from '../components/hero/Hero'
 import Features from '../components/features/Features'
 import MediaFeatures from '../components/mediaFeatures/MediaFeatures'
 import HoverSection from '../components/hoverSection/HoverSection'
-import ExhibitorsSection from '../components/exhibitorsSection/exhibitorsSection'
+import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection'
 
 export default function Home() {
 
