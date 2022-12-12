@@ -8,7 +8,7 @@ import {
 } from './Elements'
 import PrimaryButton from '../../buttons/PrimaryButton'
 
-const MainNav = ({ links, scrolled }) => {
+const MainNav = ({ links, scrolled, ticketBtn }) => {
 
     return (
         <Nav scrolled={scrolled}>
@@ -26,7 +26,9 @@ const MainNav = ({ links, scrolled }) => {
                 }
             </Links>
             <ButtonContainer>
-                <PrimaryButton>tickets</PrimaryButton>
+                <PrimaryButton>
+                    <a href={ticketBtn.url} rel="noopener noreferrer" target="_blank">{ticketBtn.title}</a>
+                </PrimaryButton>
             </ButtonContainer>
         </Nav>
     )

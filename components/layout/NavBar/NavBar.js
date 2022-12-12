@@ -53,6 +53,7 @@ const NavBar = () => {
             }
             <MainNav
               links={content.mainNav.links}
+              ticketBtn={content.mainNav.ticketButton}
               scrolled={scrollPos > 0.1}
             />
           </Left>

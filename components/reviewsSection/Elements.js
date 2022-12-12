@@ -34,61 +34,19 @@ export const GImg = styled(Image)`
 `
 
 export const StarsContainer = styled.div`
-
+    margin-bottom: 1rem;
 `
 
-export const Star = styled.span`
-    font-size: x-large;
-    width: 50px;
-    display: inline-block;
-    color: gray;
-    color: gold;
+export const Star = styled.svg`
+    width: 1rem;
+    height: 1rem;
 
-    &::before {
-        content: '\2605';
+    path {
+        fill: gold;
     }
-`
-
-export const HalfStar = styled.span`
-    font-size: x-large;
-    width: 50px;
-    display: inline-block;
-    color: gray;
-
-    &::before {
-        content: '\2605';
-    }
-
-    &::after {
-        content: '\2605';
-        color: gold;
-        margin-left: -20px;
-        width: 10px;
-        position: absolute;
-        overflow: hidden;
-    }
-`
-
-export const EmptyStar = styled.span`
-    font-size: x-large;
-    width: 50px;
-    display: inline-block;
-    color: gray;
-
-    &::before {
-        content: '\2605';
-    }
-`
-
-export const ReviewsContainer = styled.div`
-    /* width: 100%; */
-    width: 70rem;
-    height: 22rem;
-    margin-top: 2.5rem;
 `
 
 // REVIEW
-
 export const ReviewContainer = styled.div`
     position: relative;
     background-color: var(--soft-gray);

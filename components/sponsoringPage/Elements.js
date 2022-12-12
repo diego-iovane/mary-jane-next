@@ -28,7 +28,7 @@ export const HeroTitle = styled.h1`
 
 export const Inner = styled.div`
     max-width: var(--section-max-width);
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     display: flex;
     flex-direction: column;
     padding: 0 var(--desktop-section-padding);
@@ -36,29 +36,6 @@ export const Inner = styled.div`
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);
     }
-`
-
-export const SectionsTagContainer = styled.div`
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    /* box-shadow: var(--soft-shadow); */
-
-    @media all and (max-width: 540px) {
-        display: none;
-    }
-`
-
-export const SectionsTags = styled.div`
-    display: flex;
-`
-
-export const SectionTag = styled.a`
-    font-size: .8rem;
-    padding: .4rem 1rem;
-    margin: 1.5rem .5rem .5rem 0;
-    cursor: pointer;
 `
 
 export const Title = styled.h3`
@@ -78,8 +55,11 @@ export const TextDecoration = styled.p`
     font-weight: bold;
 `
 
-export const InfoSection = styled.div`
-
+export const ImageContainer = styled.div`
+    width: 10rem;
+    height: 10rem;
 `
 
-export const SectionElement = styled.div``
+export const Img = styled(Image)`
+    object-fit: cover;
+`

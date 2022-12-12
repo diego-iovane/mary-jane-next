@@ -5,23 +5,16 @@ import {
   HeroSection,
   HeroTitle,
   Overlay,
-  Content,
   Inner,
   Title,
   Text,
-  TextDecoration,
   InfoSection,
-  SectionsTagContainer,
-  SectionsTags,
-  SectionTag,
   SectionElement,
 } from './Elements'
 
 const ExhibitorsPage = () => {
 
   const { content } = GetContentContext()
-
-  console.log(content)
 
   return (
     <>

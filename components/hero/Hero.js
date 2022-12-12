@@ -23,7 +23,15 @@ const Hero = () => {
                     <SubTitle dangerouslySetInnerHTML={{ __html: content.hero.subTitle }} />
                     <Title dangerouslySetInnerHTML={{ __html: content.hero.title }} />
                     <Counter content={content.hero.counter} />
-                    <SecondaryButton>{content.hero.button}</SecondaryButton>
+                    <SecondaryButton>
+                        <a
+                            href={content.hero.button.url}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            {content.hero.button.title}
+                        </a>
+                    </SecondaryButton>
                 </Content>
             }
         </HeroSection>

@@ -21,8 +21,6 @@ const VisitorsPage = () => {
 
   const { content } = GetContentContext()
 
-  console.log(content.visitorsPage)
-
   return (
     <>
       {
