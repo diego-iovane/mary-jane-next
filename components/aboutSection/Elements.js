@@ -11,6 +11,10 @@ export const Inner = styled.div`
     margin: 0 auto;
     display: flex;
     padding: 0 var(--desktop-section-padding);
+
+    @media all and (max-width: 540px) {
+        padding: 0 var(--mobile-section-padding);
+    }
 `
 
 export const Left = styled.div`

@@ -13,6 +13,10 @@ export const Inner = styled.div`
     display: flex;
     padding: 0 var(--desktop-section-padding);
     flex-wrap: wrap;
+
+    @media all and (max-width: 540px) {
+        padding: 0 var(--mobile-section-padding);
+    }
 `
 
 export const Title = styled.p`
@@ -34,15 +38,28 @@ export const Left = styled.div`
     @media all and (max-width: 850px) {
         width: 100%;
     }
+
+    @media all and (max-width: 540px) {
+        flex-direction: column;
+    }
 `
 
 export const LeftLeft = styled.div`
     width: 50%;
+
+    @media all and (max-width: 540px) {
+        width: 100%;
+    }
 `
 
 export const LeftRight = styled.div`
     width: 50%;
     margin-left: 4%;
+
+    @media all and (max-width: 540px) {
+        width: 100%;
+        margin-left: 0;
+    }
 `
 
 export const Right = styled.div`
@@ -53,6 +70,10 @@ export const Right = styled.div`
         
     @media all and (max-width: 850px) {
         width: 100%;
+    }
+
+    @media all and (max-width: 540px) {
+        flex-direction: column;
     }
 `
 
@@ -72,6 +93,14 @@ export const RightRight = styled.div`
 
     @media all and (max-width: 850px) {
         bottom: 7rem;
+    }
+
+    @media all and (max-width: 540px) {
+        bottom: 0;
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 `
 
@@ -96,6 +125,10 @@ export const ScrubbleContainer = styled.div`
         width: 18rem;
         top: 4rem;
         left: 4rem;
+    }
+
+    @media all and (max-width: 540px) {
+        display: none;
     }
 `
 

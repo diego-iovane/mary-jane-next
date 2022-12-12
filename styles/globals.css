@@ -18,8 +18,9 @@ body {
   /* GLOBALS */
   --section-max-width: 1500px;
   --section-min-height: 30rem;
-  --desktop-section-padding: 5rem;
 
+  --desktop-section-padding: 5rem;
+  --mobile-section-padding: 3rem;
   --desktop-title-font-size: 2.5rem;
 
   --black: #1E1E1E;
