@@ -4,17 +4,20 @@ import Image from 'next/image'
 export const Container = styled.div`
     height: 15rem;
     display: flex;
-    justify-content: center;;
+    justify-content: center;
+    margin-bottom: 2rem;
 `
 
 export const IllustrationsContainer = styled.div`
-
+    position: relative;
 `
 
 export const IllustrationInner = styled.div`
-    position: relative;
+    position: absolute;
     width: 20rem;
     height: 20rem;
+    left: ${({left}) => left && left};
+    top: ${({top}) => top && top};
 `
 
 export const Img = styled(Image)`
