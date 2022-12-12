@@ -9,7 +9,6 @@ import HoverSection from '../components/hoverSection/HoverSection'
 import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection'
 
 import About from '../components/aboutSection/About'
-import SocialSection from '../components/socialSection/SocialSection'
 
 export default function Home() {
 
@@ -38,7 +37,6 @@ export default function Home() {
       <ExhibitorsSection />
 
       <About />
-      <SocialSection />
     </div>
   )
 }

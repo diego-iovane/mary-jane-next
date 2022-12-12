@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 export const Section = styled.section`
     min-height: 10rem;
@@ -24,6 +23,8 @@ export const Title = styled.h3`
 
 export const Carousel = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 export const LogoContainer = styled(Link)`
@@ -32,6 +33,10 @@ export const LogoContainer = styled(Link)`
     position: relative;
     margin: 0 1.5rem;
     cursor: pointer;
+
+    @media all and (max-width: 850px) {
+        margin-bottom: 1.5rem;
+    }
 `
 
 export const Logo = styled(Image)`

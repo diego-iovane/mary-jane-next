@@ -16,7 +16,7 @@ const About = () => {
     const { content } = GetContentContext()
 
     return (
-        <Section>
+        <Section id="about">
             {
                 Object.entries(content).length !== 0 &&
                 <Inner>

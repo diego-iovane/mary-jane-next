@@ -25,6 +25,10 @@ export const Title = styled.h1`
     line-height: .5;
     border-bottom: 1px solid #ffffff;
     padding-bottom: 3.5rem;
+
+    @media all and (max-width: 850px) {
+        font-size: 4.5rem;
+    }
 `
 
 export const SubTitle = styled.h2`

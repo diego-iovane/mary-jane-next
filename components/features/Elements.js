@@ -48,6 +48,10 @@ export const CountContainer = styled.div`
         font-size: 2rem;
         display: flex;
         align-items: center;
+
+        @media all and (max-width: 500px) {
+            font-size: 1.5rem;
+        }
     }
 `
 
@@ -55,6 +59,10 @@ export const Text = styled.p`
     text-align: center;
     font-size: .9rem;
     line-height: .7;
+
+    @media all and (max-width: 500px) {
+        font-size: .8rem;
+    }
 `
 
 export const CounterContainer = styled(motion.div)`
@@ -62,4 +70,8 @@ export const CounterContainer = styled(motion.div)`
     font-size: 2rem;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+
+    @media all and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `
