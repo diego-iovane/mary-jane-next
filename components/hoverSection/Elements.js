@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
@@ -27,8 +25,8 @@ export const SectionTitle = styled.h2`
 export const SectionText = styled.p`
     text-align: center;
     font-size: .9rem;
-    width: 85%;
-    margin-bottom: 1.5rem;
+    width: 42rem;
+    margin-bottom: 2rem;
 `
 
 export const Gallery = styled.div`
@@ -36,6 +34,10 @@ export const Gallery = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media all and (max-width: 1000px) {
+        width: 80%;
+    }
 `
 
 export const ImgContainer = styled.div`
@@ -48,15 +50,37 @@ export const ImgContainer = styled.div`
     &:first-child {
         flex: 1 0 35rem;
         height: 20rem;
+
+        @media all and (max-width: 1000px) {
+            width: 100%;
+            height: 15rem;
+            flex: 1;
+        }
     }
 
     &:nth-child(2) {
         flex: 1 0 25rem;
         height: 20rem;
+
+        @media all and (max-width: 1000px) {
+            width: 100%;
+            height: 15rem;
+            flex: 1;
+        }
     }
 
     &:last-child {
         width: 25rem;
+        
+        @media all and (max-width: 1000px) {
+            width: 100%;
+            height: 15rem;
+        }
+    }
+
+    @media all and (max-width: 1000px) {
+        width: 100%;
+        height: 15rem;
     }
 `
 
@@ -88,6 +112,10 @@ export const Content = styled.div`
     pointer-events: none;
     /* display: flex; */
     /* flex-direction: column; */
+
+    @media all and (max-width: 1000px) {
+        padding: 5rem;
+    }
 `
 
 export const Title = styled.h3`
@@ -97,5 +125,5 @@ export const Title = styled.h3`
 `
 
 export const Text = styled.p`
-    font-size: .9rem;
+    font-size: .8rem;
 `
