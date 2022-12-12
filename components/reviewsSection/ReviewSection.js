@@ -50,9 +50,9 @@ const ReviewSection = () => {
                     </RevWidget>
                     {/* <ReviewsContainer> */}
                         <Swiper
-                            // slidesPerView={3}
+                            slidesPerView={3}
                             breakpoints={{
-                                1500: {
+                                900: {
                                     slidesPerView: 3,
                                 },
                                 650: {
@@ -63,7 +63,7 @@ const ReviewSection = () => {
                                 }
                             }}
                             grid={{
-                                rows: 2,
+                                rows: 1,
                             }}
                             spaceBetween={30}
                             pagination={{
