@@ -8,6 +8,9 @@ import MediaFeatures from '../components/mediaFeatures/MediaFeatures'
 import HoverSection from '../components/hoverSection/HoverSection'
 import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection'
 
+import About from '../components/aboutSection/About'
+import SocialSection from '../components/socialSection/SocialSection'
+
 export default function Home() {
 
   const { locale } = useRouter()
@@ -33,6 +36,9 @@ export default function Home() {
       <MediaFeatures />
       <HoverSection />
       <ExhibitorsSection />
+
+      <About />
+      <SocialSection />
     </div>
   )
 }

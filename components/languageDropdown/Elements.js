@@ -62,13 +62,16 @@ export const Arrow = styled.div`
     right: 0;
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid #555;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
     rotate: ${({opened}) => opened && 'x 180deg'};
     transition: rotate .5s;
 
     @media all and (max-width: 960px) {
         right: -17px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #555;
     }
 `

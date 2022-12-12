@@ -14,7 +14,7 @@ export const Inner = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-    font-size: 2.5rem;
+    font-size: var(--desktop-title-font-size);
     padding-bottom: 2rem;
     border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;

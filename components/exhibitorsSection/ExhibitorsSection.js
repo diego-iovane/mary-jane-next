@@ -10,7 +10,7 @@ const ExhibitorsSection = () => {
 
     const { content } = GetContentContext()
 
-    console.log(content)
+    // console.log(content)
 
     return (
         <Section>

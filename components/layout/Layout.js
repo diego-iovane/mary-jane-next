@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 //Styles
 const LayoutContainer = styled.div`
   width: 100%;
+  overflow: hidden;
 `
 
 //Component
