@@ -17,6 +17,7 @@
     "react-countdown": "^2.3.5",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6",
+    "swiper": "^8.4.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {

@@ -9,6 +9,7 @@ import HoverSection from '../components/hoverSection/HoverSection'
 import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection'
 
 import About from '../components/aboutSection/About'
+import ReviewSection from '../components/reviewsSection/ReviewSection'
 
 export default function Home() {
 
@@ -35,7 +36,7 @@ export default function Home() {
       <MediaFeatures />
       <HoverSection />
       <ExhibitorsSection />
-
+      <ReviewSection />
       <About />
     </div>
   )

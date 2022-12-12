@@ -1,8 +1,9 @@
 import React from 'react'
+import ExhibitorsPage from '../components/exhibitorsPage/ExhibitorsPage'
 
 const Exhibitors = () => {
   return (
-    <div>exhibitors</div>
+    <ExhibitorsPage />
   )
 }
 
