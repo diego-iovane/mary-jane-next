@@ -28,6 +28,8 @@ const SocialSection = () => {
                                         <IconContainer
                                             key={item.src}
                                             href={item.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             <Icon
                                                 src={item.src}
