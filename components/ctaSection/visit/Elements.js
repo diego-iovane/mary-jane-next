@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Container = styled.div`
     height: 15rem;
@@ -14,8 +15,8 @@ export const IllustrationsContainer = styled.div`
 
 export const IllustrationInner = styled.div`
     position: absolute;
-    width: 20rem;
-    height: 20rem;
+    width: 22rem;
+    height: ${({height}) => height ? height : "20rem"};
     left: ${({left}) => left && left};
     top: ${({top}) => top && top};
 `
@@ -41,4 +42,24 @@ export const Inner = styled.div`
 
 export const Title = styled.p`
     font-size: 1.5rem;
+`
+
+export const Button = styled(Link)`
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    padding: .4rem 1.7rem;
+    color: var(--pink);
+    border-radius: 50px;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    position: absolute;
+    left: ${({left}) => left && left};
+    top: ${({top}) => top && top};
+    
+
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: .8;
+    }
 `
