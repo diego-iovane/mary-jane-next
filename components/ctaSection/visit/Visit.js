@@ -2,9 +2,9 @@ import React from 'react'
 import { GetContentContext } from '../../../context/ContentContext'
 import {
     Container,
-    Inner,
-    Content,
-    Title,
+    IllustrationsContainer,
+    IllustrationInner,
+    Img,
 } from './Elements'
 
 const Visit = () => {
@@ -16,7 +16,16 @@ const Visit = () => {
     return (
         <Container>
             {
-                
+                Object.entries(content).length !== 0 &&
+                <IllustrationsContainer>
+                    <IllustrationInner>
+                        <Img 
+                            src={content.newsletterSection.visitIllustration.src}
+                            alt={content.newsletterSection.visitIllustration.alt}
+                            fill
+                        />
+                    </IllustrationInner>
+                </IllustrationsContainer>
             }
         </Container>
     )

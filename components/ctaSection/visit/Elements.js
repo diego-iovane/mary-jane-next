@@ -2,19 +2,19 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Container = styled.div`
-
+    height: 15rem;
+    display: flex;
+    justify-content: center;;
 `
 
-export const IllustrationContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
+export const IllustrationsContainer = styled.div`
+
 `
 
 export const IllustrationInner = styled.div`
     position: relative;
-    width: 5rem;
-    height: 5rem;
+    width: 20rem;
+    height: 20rem;
 `
 
 export const Img = styled(Image)`
