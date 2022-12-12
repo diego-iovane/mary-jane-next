@@ -29,7 +29,7 @@ const Hero = () => {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            {content.hero.button.title}
+                            {content.hero.button.text}
                         </a>
                     </SecondaryButton>
                 </Content>
