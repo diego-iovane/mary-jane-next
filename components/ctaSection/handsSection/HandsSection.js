@@ -20,7 +20,9 @@ const HandsSection = () => {
                 <IllustrationsContainer>
                     <IllustrationInner
                         left="-16rem"
+                        leftMobile="-7rem"
                         top="-3rem"
+                        topMobile="-4rem"
                     >
                         <Img
                             src={content.newsletterSection.visitIllustration.src}
@@ -44,7 +46,9 @@ const HandsSection = () => {
                     </IllustrationInner>
                     <IllustrationInner
                         top="7rem"
+                        topMobile="29rem"
                         left="-10rem"
+                        leftMobile="-11rem"
                         height="23rem"
                     >
                         <Img
@@ -55,7 +59,9 @@ const HandsSection = () => {
                     </IllustrationInner>
                     <IllustrationInner
                         top="0"
+                        topMobile="11rem"
                         left="-6rem"
+                        leftMobile="-15rem"
                     >
                         <Img
                             src={content.newsletterSection.exhibitIllustration.src}

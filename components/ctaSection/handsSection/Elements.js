@@ -7,6 +7,10 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 550px) {
+        height: 40rem;
+    }
 `
 
 export const IllustrationsContainer = styled.div`
@@ -19,6 +23,11 @@ export const IllustrationInner = styled.div`
     height: ${({height}) => height ? height : "20rem"};
     left: ${({left}) => left && left};
     top: ${({top}) => top && top};
+
+    @media all and (max-width: 550px) {
+        left: ${({leftMobile}) => leftMobile && leftMobile};
+        top: ${({topMobile}) => topMobile && topMobile};
+    }
 `
 
 export const Img = styled(Image)`
