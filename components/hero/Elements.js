@@ -20,7 +20,7 @@ export const Title = styled.h1`
     color: #ffffff;
     text-align: center;
     font-size: 5.5rem;
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: .5;
     border-bottom: 1px solid #ffffff;
@@ -35,4 +35,8 @@ export const SubTitle = styled.h2`
     color: var(--light-blue);
     text-align: center;
     font-size: 1.5rem;
+
+    @media all and (max-width: 450px) {
+        font-size: 1.3rem;
+    }
 `
