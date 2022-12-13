@@ -28,7 +28,9 @@ export const Left = styled.div`
 export const Right = styled.div``
 
 export const LogoContainer = styled.div`
+    position: relative;
     width: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
+    height: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
     display: flex;
     justify-content: center;
     align-self: center;
@@ -38,9 +40,9 @@ export const LogoContainer = styled.div`
 `
 
 export const Logo = styled(Image)`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+/* width: 100%;   */
+    /* height: auto; */
+    object-fit: contain;
 `
 
 export const Nav = styled.nav`

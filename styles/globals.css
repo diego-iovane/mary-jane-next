@@ -72,3 +72,22 @@ button {
   width: auto;
   height: calc((100% - 30px) / 2) !important;
 }
+
+.imageGallerySwyper.swiper {
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.imageGallerySwyper .swiper-wrapper {
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 3.5rem;
+}
+
+.imageGallerySwyper .swiper-slide {
+  width: auto;
+  height: calc((100% - 30px) / 2) !important;
+}

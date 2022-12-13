@@ -43,11 +43,11 @@ const NavBar = () => {
             {
               pathname === '/' ?
                 <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
-                  <Logo src={Lg} alt='logo' placeholder='blur' priority />
+                  <Logo src={content.mainNav.logo.src} alt='logo' priority fill />
                 </LogoContainer> :
                 <Link href='/'>
                   <LogoContainer scrolled={scrollPos > 0.1}>
-                    <Logo src={Lg} alt='logo' laceholder='blur' priority />
+                    <Logo src={content.mainNav.logo.src} alt='logo' priority fill />
                   </LogoContainer>
                 </Link>
             }

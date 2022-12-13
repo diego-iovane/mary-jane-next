@@ -11,6 +11,7 @@ import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection
 import About from '../components/aboutSection/About'
 import ReviewSection from '../components/reviewsSection/ReviewSection'
 import CtaSection from '../components/ctaSection/CtaSection'
+import ImageGallery from '../components/imageGallery/ImageGallery'
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
       <HoverSection />
       <ExhibitorsSection />
       <ReviewSection />
+      <ImageGallery />
       <CtaSection />
       <About />
     </div>
