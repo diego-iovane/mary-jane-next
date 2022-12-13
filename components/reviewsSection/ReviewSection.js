@@ -48,7 +48,7 @@ const ReviewSection = () => {
                     </RevWidget>
                     {/* <ReviewsContainer> */}
                         <Swiper
-                            slidesPerView={3}
+                            slidesPerView={1}
                             breakpoints={{
                                 900: {
                                     slidesPerView: 3,
@@ -58,7 +58,7 @@ const ReviewSection = () => {
                                 },
                                 400: {
                                     slidesPerView: 1,
-                                }
+                                },
                             }}
                             grid={{
                                 rows: 1,

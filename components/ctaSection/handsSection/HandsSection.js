@@ -6,13 +6,12 @@ import {
     IllustrationInner,
     Img,
     Button,
+    Note,
 } from './Elements'
 
-const Visit = () => {
+const HandsSection = () => {
 
     const { content } = GetContentContext()
-
-    console.log(content)
 
     return (
         <Container>
@@ -31,10 +30,17 @@ const Visit = () => {
                         <Button
                             href={content.newsletterSection.visitButton.url}
                             top="14rem"
-                            left="-2rem"
+                            left="0rem"
                         >
                             {content.newsletterSection.visitButton.text}
                         </Button>
+                        <Note
+                            top="17.5rem"
+                            left="0rem"
+                            width="8rem"
+                        >
+                            {content.newsletterSection.visitText}    
+                        </Note>
                     </IllustrationInner>
                     <IllustrationInner
                         top="7rem"
@@ -58,11 +64,18 @@ const Visit = () => {
                         />
                         <Button
                             top="14rem"
-                            left="15rem"
+                            left="12rem"
                             href={content.newsletterSection.exhibitButton.url}
                         >
                             {content.newsletterSection.exhibitButton.text}
                         </Button>
+                        <Note
+                            top="17.5rem"
+                            left="12rem"
+                            width="11rem"
+                        >
+                            {content.newsletterSection.exhibitText}
+                        </Note>
                     </IllustrationInner>
                 </IllustrationsContainer>
             }
@@ -70,4 +83,4 @@ const Visit = () => {
     )
 }
 
-export default Visit
+export default HandsSection

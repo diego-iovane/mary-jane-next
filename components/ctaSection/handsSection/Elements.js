@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const Container = styled.div`
-    height: 15rem;
+    height: 21rem;
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
@@ -47,7 +47,7 @@ export const Title = styled.p`
 export const Button = styled(Link)`
     background-color: #ffffff;
     font-size: 1.5rem;
-    padding: .4rem 1.7rem;
+    padding: .1rem 2rem;
     color: var(--pink);
     border-radius: 50px;
     border: 1px solid var(--pink);
@@ -55,11 +55,19 @@ export const Button = styled(Link)`
     position: absolute;
     left: ${({left}) => left && left};
     top: ${({top}) => top && top};
+    box-shadow: var(--soft-shadow);
     
-
     transition: opacity .5s ease-in-out;
 
     &:hover {
         opacity: .8;
     }
+`
+
+export const Note = styled.p`
+    font-size: .7rem;
+    position: absolute;
+    left: ${({left}) => left && left};
+    top: ${({top}) => top && top};
+    width: ${({width}) => width && width};
 `

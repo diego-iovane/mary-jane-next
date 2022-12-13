@@ -2,7 +2,7 @@ import React from 'react'
 import Newsletter from './newsletter/NewsLetter'
 import styled from 'styled-components'
 import { GetContentContext } from '../../context/ContentContext'
-import Visit from './visit/Visit'
+import HandsSection from './handsSection/HandsSection'
 
 const Section = styled.section`
     width: 100%;
@@ -24,7 +24,7 @@ const CtaSection = () => {
                 Object.entries(content).length !== 0 &&
                 <>
                     <Title>{content.newsletterSection.mainTitle}</Title>
-                    <Visit />
+                    <HandsSection />
                     <Newsletter />
                 </>
             }

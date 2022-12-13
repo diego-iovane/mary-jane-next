@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    height: 22rem;
+    height: 25rem;
     width: 100%;
     position: relative;
+    box-shadow: var(--soft-shadow);
 `
 
 export const BgImg = styled(Image)`
@@ -21,6 +22,9 @@ export const Content = styled.div`
     position: absolute;
     left: 50%;
     top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
 `
 
 export const Inner = styled.div`
@@ -29,4 +33,40 @@ export const Inner = styled.div`
 
 export const Title = styled.p`
     font-size: 1.5rem;
+`
+
+export const InputContainer = styled.div`
+    margin: 1rem 0;
+    width: 100%;
+    position: relative;
+`
+
+export const Input = styled.input`
+        width: 75%;
+        border: 1px solid var(--soft-lines-color);
+        border-radius: 4px;
+        padding: .6rem .8rem;
+        box-shadow: var(--soft-shadow);
+
+        &&::placeholder {
+            color: var(--soft-color);
+            font-family: var(--text-font);
+        }
+`
+
+export const Button = styled.button`
+    width: 20%;
+    border: 1px solid var(--soft-lines-color);
+    border-radius: 4px;
+    opacity: ${({dis}) => dis ? ".5" : "1"};
+    cursor: ${({dis}) => dis ? "default" : "pointer"};
+`
+
+export const ButtonIcon = styled.svg`
+    width: 1rem;
+    height: 1rem;
+
+    path {
+        /* fill:  */
+    }
 `
