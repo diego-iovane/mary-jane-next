@@ -1,7 +1,7 @@
 import React from 'react'
-import Newsletter from './newsletter/NewsLetter'
 import styled from 'styled-components'
 import { GetContentContext } from '../../context/ContentContext'
+import EmailForm from './emailForm/EmailForm'
 import HandsSection from './handsSection/HandsSection'
 
 const Section = styled.section`
@@ -25,7 +25,7 @@ const CtaSection = () => {
                 <>
                     <Title>{content.newsletterSection.mainTitle}</Title>
                     <HandsSection />
-                    <Newsletter />
+                    <EmailForm />
                 </>
             }
         </Section>
