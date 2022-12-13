@@ -21,7 +21,7 @@ const Newsletter = () => {
     const { language } = GetLanguageContext()
     const [disabled, setDisabled] = useState(false)
 
-    console.log(language)
+    // console.log(language)
 
     const formik = useFormik({
         initialValues: {
