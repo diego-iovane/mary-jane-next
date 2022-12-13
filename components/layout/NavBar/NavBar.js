@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { GetContentContext } from '../../../context/ContentContext'
-import Lg from '/public/logos/logo-white.webp'
+import Lg from '/public/logos/logo-white.png'
 import MainNav from './MainNav'
 import SecondaryNav from './SecondaryNav'
 import {
@@ -43,11 +43,11 @@ const NavBar = () => {
             {
               pathname === '/' ?
                 <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
-                  <Logo src={Lg} alt='logo' placeholder='blur' priority />
+                  <Logo src={content.mainNav.logo.src} alt='logo' placeholder='blur' priority />
                 </LogoContainer> :
                 <Link href='/'>
                   <LogoContainer scrolled={scrollPos > 0.1}>
-                    <Logo src={Lg} alt='logo' laceholder='blur' priority />
+                    <Logo src={content.mainNav.logo.src} alt='logo' laceholder='blur' priority />
                   </LogoContainer>
                 </Link>
             }
