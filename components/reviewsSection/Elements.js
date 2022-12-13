@@ -79,7 +79,10 @@ export const Name = styled.p`
 export const Text = styled.p`
     font-size: .8rem !important;
 
-    @media all and (max-width: 450px) {
-        font-size: .8rem !important;
+    p {
+        @media all and (max-width: 450px) {
+            font-size: .8rem; 
+        }
     }
+
 `
