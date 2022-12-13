@@ -19,6 +19,12 @@ export const SectionTitle = styled.h2`
     padding-bottom: 2rem;
     border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 450px) {
+        padding-bottom: 1rem;
+        line-height: 1.2;
+        width: 90%;
+    }
 `
 
 export const RevWidget = styled.div`
@@ -38,8 +44,8 @@ export const StarsContainer = styled.div`
 `
 
 export const Star = styled.svg`
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
 
     path {
         fill: gold;

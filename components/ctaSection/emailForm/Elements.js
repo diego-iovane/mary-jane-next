@@ -33,40 +33,60 @@ export const Inner = styled.div`
 
 export const Title = styled.p`
     font-size: 1.5rem;
+    text-align: center;
+    width: 25rem;
+
+    @media all and (max-width: 560px) {
+        font-size: 1.3rem;
+    }
 `
 
 export const InputContainer = styled.div`
     margin: 1rem 0;
     width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media all and (max-width: 450px) {
+        margin: 1rem auto;
+        width: 90%;
+    }
 `
 
 export const Input = styled.input`
         width: 75%;
+        height: 3rem;
         border: 1px solid var(--soft-lines-color);
         border-radius: 4px;
-        padding: .6rem .8rem;
+        padding: 0 .8rem;
         box-shadow: var(--soft-shadow);
 
         &&::placeholder {
-            color: var(--soft-color);
+            color: var(--soft-gray);
             font-family: var(--text-font);
+            font-size: 1.2rem;
         }
 `
 
 export const Button = styled.button`
     width: 20%;
+    height: 3rem;
+    margin-left: .5rem;
     border: 1px solid var(--soft-lines-color);
+    background-color: var(--light-green);
     border-radius: 4px;
-    opacity: ${({dis}) => dis ? ".5" : "1"};
-    cursor: ${({dis}) => dis ? "default" : "pointer"};
+    opacity: ${({ dis }) => dis ? ".5" : "1"};
+    cursor: ${({ dis }) => dis ? "default" : "pointer"};
+    box-shadow: var(--soft-shadow);
 `
 
 export const ButtonIcon = styled.svg`
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
 
     path {
-        /* fill:  */
+        fill: #ffffff; 
     }
 `

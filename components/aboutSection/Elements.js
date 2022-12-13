@@ -3,7 +3,13 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
-    padding: 5rem 0;
+    padding: 2rem 0 0 0;
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: 450px) {
+        margin: 3rem auto;
+    }
 `
 
 export const Inner = styled.div`
@@ -27,8 +33,7 @@ export const SectionTitle = styled.h2`
 `
 
 export const SectionText = styled.p`
-    font-size: .8rem;
-    margin-bottom: .5rem;
+    font-size: .9rem;
 `
 
 export const Right = styled.div`

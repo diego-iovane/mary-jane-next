@@ -12,8 +12,9 @@ export const Hamb = styled.button`
     padding: 4px 9px;
     border-radius: 4px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: .2rem;
+    /* top: 50%;
+    transform: translateY(-50%); */
 
     @media all and (min-width: 960px) {
         display: none;

@@ -25,12 +25,19 @@ export const Left = styled.div`
     display: flex;
 `
 
-export const Right = styled.div``
+export const Right = styled.div`
+    display: flex;
+
+    @media all and (max-width: 960px) {
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 export const LogoContainer = styled.div`
     position: relative;
     width: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
-    height: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
+    height: ${({scrolled}) => scrolled ? '4rem' : '4rem'};
     display: flex;
     justify-content: center;
     align-self: center;
@@ -40,8 +47,6 @@ export const LogoContainer = styled.div`
 `
 
 export const Logo = styled(Image)`
-/* width: 100%;   */
-    /* height: auto; */
     object-fit: contain;
 `
 
@@ -80,7 +85,7 @@ export const LinkContainer = styled.li`
 `
 
 export const ButtonContainer = styled.div`
-    margin: 1rem 0 1rem 1rem;
+    margin: 1.2rem 0 1rem 1rem;
     display: flex;
     align-items: center;
     position: absolute;

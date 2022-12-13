@@ -20,6 +20,12 @@ export const SectionTitle = styled.h2`
     padding-bottom: 2rem;
     border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 450px) {
+        padding-bottom: 1rem;
+        line-height: 1.2;
+        width: 90%;
+    }
 `
 
 export const SectionText = styled.p`
@@ -27,6 +33,15 @@ export const SectionText = styled.p`
     font-size: .9rem;
     width: 42rem;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 1000px) {
+        width: 80%;
+        text-align: left;
+    }
+
+    @media all and (max-width: 450px) {
+        width: 90%;
+    }
 `
 
 export const Gallery = styled.div`
@@ -37,6 +52,10 @@ export const Gallery = styled.div`
 
     @media all and (max-width: 1000px) {
         width: 80%;
+    }
+
+    @media all and (max-width: 450px) {
+        width: 90%;
     }
 `
 
