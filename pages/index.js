@@ -14,6 +14,7 @@ import CtaSection from '../components/ctaSection/CtaSection'
 import ImageGallery from '../components/imageGallery/ImageGallery'
 import MediaSponsorsSection from '../components/mediaSponsorsSection/MediaSponsorsSection'
 import SponsorsSection from '../components/sponsorsSection/SponsorsSection'
+import TicketsSection from '../components/ticketsSection/TicketsSection'
 
 export default function Home() {
 
@@ -41,10 +42,11 @@ export default function Home() {
       <HoverSection />
       <ExhibitorsSection />
       <ReviewSection />
-      {/* <ImageGallery /> */}
-      <MediaSponsorsSection />
+      <ImageGallery />
       <SponsorsSection />
+      <MediaSponsorsSection />
       <CtaSection />
+      <TicketsSection />
       <About />
     </div>
   )

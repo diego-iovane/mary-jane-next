@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import Image from 'next/image'
 
 export const Section = styled.section`
-    padding: 5rem 0 2rem 0;
+    min-height: var(--section-min-height);
+    padding: 5rem 0;
+    background-color: var(--light-blue);
 `
 
 export const Inner = styled.div`
@@ -14,18 +15,14 @@ export const Inner = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-    font-size: var(--desktop-title-font-size);
+    font-size: 2.5rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;
-` 
 
-export const LogoContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: 10rem;
-`
-
-export const Logo = styled(Image)`
-    object-fit: contain;
+    @media all and (max-width: 450px) {
+        padding-bottom: 1rem;
+        line-height: 1.2;
+        width: 90%;
+    }
 `
