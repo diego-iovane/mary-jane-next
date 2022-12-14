@@ -12,6 +12,7 @@ import {
     Frame,
     ImgContainer,
     Img,
+    AnchorOverlay,
 } from './Elements'
 
 const ImageGallery = () => {
@@ -50,7 +51,8 @@ const ImageGallery = () => {
                                 content.imageGallery.img.map((item) => {
                                     return (
                                         <SwiperSlide key={item.src}>
-                                            <Frame>
+                                            <Frame href={item.url}>
+                                                <AnchorOverlay />
                                                 <ImgContainer>
                                                     <Img src={item.src} alt={item.alt} fill/>
                                                 </ImgContainer>

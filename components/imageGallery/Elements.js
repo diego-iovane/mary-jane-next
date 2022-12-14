@@ -25,6 +25,17 @@ export const Frame = styled.div`
     height: 30rem;
     padding: .5rem .5rem 4rem .5rem;
     box-shadow: var(--light-shadow);
+    position: relative;
+`
+
+export const AnchorOverlay = styled.a`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    cursor: pointer;
 `
 
 export const ImgContainer = styled.div`
