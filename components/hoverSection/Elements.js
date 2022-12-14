@@ -121,7 +121,30 @@ export const Img = styled(Image)`
     transition: all .5s ease-in-out;
 
     &:hover {
-        transform: scale(1.2)
+        transform: scale(1.1)
+    }
+`
+
+export const SubTitle = styled.h3`
+    position: absolute;
+    top: 50%; left: 50%;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+`
+
+export const Tap = styled.p`
+    position: absolute;
+    top: 63%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: .9rem;
+    display: none;
+
+    @media all and (max-width: 450px) {
+        display: block;
     }
 `
 
@@ -129,21 +152,18 @@ export const Content = styled.div`
     position: absolute;
     top: 0; left: 0;
     width: 100%;
+    height: 100%;
     color: #ffffff;
     overflow: hidden;
     padding: 2rem;
     pointer-events: none;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* opacity: 0; */
+    transition: all .2s ease-in-out;
     transform: translateY(-100%);
-
-    /* &:hover {
-        transform: translateY(0);
-    } */
+    background-color: black;
+    z-index: 5;
 
     @media all and (max-width: 1000px) {
-        padding: 5rem;
+        /* padding: 2rem; */
     }
 `
 

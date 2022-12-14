@@ -12,6 +12,8 @@ import {
     Text,
     SectionTitle,
     SectionText,
+    SubTitle,
+    Tap,
 } from './Elements'
 
 const HoverSection = () => {
@@ -41,6 +43,8 @@ const HoverSection = () => {
                                                 <Title>{item.title}</Title>
                                                 <Text>{item.text}</Text>
                                             </Content>
+                                            <SubTitle>{item.title}</SubTitle>
+                                            <Tap>-Tap-</Tap>
                                         </ImgContainer>
                                     )
                                 })
