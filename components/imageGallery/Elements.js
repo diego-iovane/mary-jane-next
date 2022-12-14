@@ -9,14 +9,22 @@ export const Section = styled.section`
 `
 
 export const Inner = styled.div`
-    width: 80%;
+    width: 90%;
     /* height: 45rem; */
-    height: 100%;
+    /* height: 100%; */
     max-width: var(--section-max-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+`
+
+export const Frame = styled.div`
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 30rem;
+    padding: .5rem .5rem 4rem .5rem;
+    box-shadow: var(--light-shadow);
 `
 
 export const ImgContainer = styled.div`

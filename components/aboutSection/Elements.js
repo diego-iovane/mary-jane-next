@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
-    padding: 2rem 0 0 0;
     display: flex;
     align-items: center;
 
