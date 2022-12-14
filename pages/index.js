@@ -12,6 +12,8 @@ import About from '../components/aboutSection/About'
 import ReviewSection from '../components/reviewsSection/ReviewSection'
 import CtaSection from '../components/ctaSection/CtaSection'
 import ImageGallery from '../components/imageGallery/ImageGallery'
+import MediaSponsorsSection from '../components/mediaSponsorsSection/MediaSponsorsSection'
+import SponsorsSection from '../components/sponsorsSection/SponsorsSection'
 
 export default function Home() {
 
@@ -39,7 +41,9 @@ export default function Home() {
       <HoverSection />
       <ExhibitorsSection />
       <ReviewSection />
-      <ImageGallery />
+      {/* <ImageGallery /> */}
+      <MediaSponsorsSection />
+      <SponsorsSection />
       <CtaSection />
       <About />
     </div>

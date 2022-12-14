@@ -61,7 +61,7 @@ const ImageGallery = () => {
                                 },
                             }}
                             grid={{
-                                rows: 2,
+                                rows: 1,
                             }}
                             spaceBetween={30}
                             pagination={{
