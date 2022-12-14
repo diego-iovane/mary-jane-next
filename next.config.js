@@ -7,7 +7,8 @@ const nextConfig = {
     locales: ["en", "de"],
   },
   images: {
-    domains: [ 'firebasestorage.googleapis.com' ]
+    domains: [ 'firebasestorage.googleapis.com' ],
+    formats: ['image/avif', 'image/webp'],
   }
 }
 

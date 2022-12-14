@@ -73,7 +73,7 @@ export const ImgContainer = styled.div`
         @media all and (max-width: 1000px) {
             width: 100%;
             height: 15rem;
-            flex: 1;
+            flex: 1 0 17.5rem;
         }
     }
 
@@ -84,7 +84,7 @@ export const ImgContainer = styled.div`
         @media all and (max-width: 1000px) {
             width: 100%;
             height: 15rem;
-            flex: 1;
+            flex: 1 0 17.5rem;
         }
     }
 
@@ -100,6 +100,10 @@ export const ImgContainer = styled.div`
     @media all and (max-width: 1000px) {
         width: 100%;
         height: 15rem;
+    }
+
+    &:hover .child {
+        transform: translateY(0);
     }
 `
 
@@ -131,6 +135,12 @@ export const Content = styled.div`
     pointer-events: none;
     /* display: flex; */
     /* flex-direction: column; */
+    /* opacity: 0; */
+    transform: translateY(-100%);
+
+    /* &:hover {
+        transform: translateY(0);
+    } */
 
     @media all and (max-width: 1000px) {
         padding: 5rem;

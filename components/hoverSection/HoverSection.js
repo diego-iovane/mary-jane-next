@@ -37,7 +37,7 @@ const HoverSection = () => {
                                                 fill
                                             />
                                             <Overlay />
-                                            <Content>
+                                            <Content className="child">
                                                 <Title>{item.title}</Title>
                                                 <Text>{item.text}</Text>
                                             </Content>

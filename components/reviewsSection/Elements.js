@@ -28,19 +28,40 @@ export const SectionTitle = styled.h2`
 `
 
 export const RevWidget = styled.div`
-
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+    margin-bottom: .5rem;
 `
 
 export const GContainer = styled.div`
     position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+`
+
+export const Num = styled.p`
+    font-size: 1rem;
+    margin-right: .7rem;
+    font-weight: bold;
+    position: relative;
+    top: 3px;
 `
 
 export const GImg = styled(Image)`
-    object-fit: contain;
+    object-fit: cover;
+    /* margin-bottom: .5rem; */
+    height: 2rem;
+    width: auto;
 `
 
 export const StarsContainer = styled.div`
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 3px;
 `
 
 export const Star = styled.svg`
