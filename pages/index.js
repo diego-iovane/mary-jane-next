@@ -41,9 +41,9 @@ export default function Home() {
       <MediaFeatures />
       <HoverSection />
       <ExhibitorsSection />
-      <ReviewSection />
-      <ImageGallery />
       <SponsorsSection />
+      <ImageGallery />
+      <ReviewSection />
       <MediaSponsorsSection />
       <CtaSection />
       <TicketsSection />
