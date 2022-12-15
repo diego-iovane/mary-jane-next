@@ -6,7 +6,7 @@ const Button = styled.button`
     font-size: .8rem;
     width: 8rem;
     padding: .7rem 0;
-    color: var(--pink);
+    color: var(--light-green);
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
