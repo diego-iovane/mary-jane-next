@@ -43,7 +43,7 @@ const HoverSection = () => {
                                                 <Title>{item.title}</Title>
                                                 <Text>{item.text}</Text>
                                             </Content>
-                                            <SubTitle>{item.title}</SubTitle>
+                                            <SubTitle className="sub">{item.title}</SubTitle>
                                             <Tap>-Tap-</Tap>
                                         </ImgContainer>
                                     )

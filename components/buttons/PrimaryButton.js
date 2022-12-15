@@ -4,8 +4,8 @@ import styled from 'styled-components'
 const Button = styled.button`
     background-color: #ffffff;
     font-size: .8rem;
-    margin: 0 0 0 2.5rem;
-    padding: .7rem 2rem;
+    width: 8rem;
+    padding: .7rem 0;
     color: var(--pink);
     border-radius: 50px;
     cursor: pointer;

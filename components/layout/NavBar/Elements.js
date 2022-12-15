@@ -10,7 +10,8 @@ export const Container = styled(motion.header)`
     transition: all .5s ease-in-out;
     
     box-shadow: ${({scrolled}) => scrolled ? '0px 2px 9px 3px rgba(0, 0, 0, 0.2)' : 'none'};
-    background-color: ${({scrolled}) => scrolled ? 'rgb(0,0,0)' : 'transparent'};
+    /* background-color: ${({scrolled}) => scrolled ? 'rgb(0,0,0)' : 'transparent'}; */
+    background-color: ${({scrolled}) => scrolled ? 'var(--black)' : 'transparent'};
 `
 
 export const Inner = styled.div`
@@ -90,5 +91,5 @@ export const ButtonContainer = styled.div`
     align-items: center;
     position: absolute;
     top: -.8rem;
-    right: -8rem;
+    right: -9rem;
 `

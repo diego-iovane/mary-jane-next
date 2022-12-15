@@ -105,6 +105,10 @@ export const ImgContainer = styled.div`
     &:hover .child {
         transform: translateY(0);
     }
+
+    &:hover .sub {
+        opacity: 0;
+    }
 `
 
 export const Overlay = styled.div`
@@ -133,6 +137,8 @@ export const SubTitle = styled.h3`
     margin-bottom: 1rem;
     transform: translate(-50%, -50%);
     color: #ffffff;
+    transition: all .1s ease-in-out;
+    line-height: 1.1;
 `
 
 export const Tap = styled.p`
@@ -153,13 +159,14 @@ export const Content = styled.div`
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    color: #ffffff;
+    color: var(--black);
     overflow: hidden;
     padding: 2rem;
     pointer-events: none;
     transition: all .2s ease-in-out;
     transform: translateY(-100%);
-    background-color: black;
+    background-color: var(--light-blue);
+    opacity: .9;
     z-index: 5;
 
     @media all and (max-width: 1000px) {
@@ -168,7 +175,7 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h3`
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--black);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 `

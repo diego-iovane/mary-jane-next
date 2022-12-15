@@ -4,6 +4,10 @@ export const HeroSection = styled.div`
     height: 42rem;
     width: 100%;
     position: relative;
+
+    @media all and (max-width: 500px) {
+        height: 100vh;
+    }
 `
 
 export const Content = styled.div`
