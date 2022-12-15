@@ -109,6 +109,10 @@ export const ImgContainer = styled.div`
     &:hover .sub {
         opacity: 0;
     }
+
+    &:hover .tap {
+        opacity: 0;
+    }
 `
 
 export const Overlay = styled.div`
@@ -143,7 +147,7 @@ export const SubTitle = styled.h3`
 
 export const Tap = styled.p`
     position: absolute;
-    top: 63%; left: 50%;
+    top: 90%; left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
     font-size: .9rem;
