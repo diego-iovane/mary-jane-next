@@ -169,8 +169,9 @@ export const Content = styled.div`
     pointer-events: none;
     transition: all .2s ease-in-out;
     transform: translateY(-100%);
-    background-color: var(--light-blue);
-    opacity: .9;
+    /* background-color: var(--light-blue); */
+    background-color: #ffffff;
+    opacity: 1;
     z-index: 5;
 
     @media all and (max-width: 1000px) {
