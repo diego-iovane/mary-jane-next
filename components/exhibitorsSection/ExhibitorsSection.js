@@ -70,7 +70,7 @@ const ExhibitorsSection = () => {
                     </Swiper>
                     <Swiper
                         ref={swiperRefSec}
-                        slidesPerView={2}
+                        slidesPerView={1}
                         breakpoints={{
                             900: {
                                 slidesPerView: 3,
@@ -79,7 +79,7 @@ const ExhibitorsSection = () => {
                                 slidesPerView: 3,
                             },
                             400: {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                             },
                         }}
                         grid={{
