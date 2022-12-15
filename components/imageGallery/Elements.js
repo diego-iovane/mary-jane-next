@@ -32,6 +32,7 @@ export const SectionTitle = styled.h2`
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--black);
     margin-bottom: 1.5rem;
+    line-height: 1.1;
 ` 
 
 export const Frame = styled.div`

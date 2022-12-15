@@ -52,6 +52,13 @@ export const Arrow = styled.button`
     transition: all .2s ease-in-out;
     opacity: 0;
     bottom: .3rem;
+    background-color: var(--pink);
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
 
     svg {
 
@@ -59,7 +66,7 @@ export const Arrow = styled.button`
         height: 2rem;
 
         path {
-            fill: var(--pink)
+            fill: #ffffff;
         }
     }
 `
