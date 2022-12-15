@@ -179,7 +179,8 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h3`
-    border-bottom: 1px solid var(--black);
+    color: var(--pink);
+    border-bottom: 1px solid var(--pink);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 `

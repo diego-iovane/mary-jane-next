@@ -19,6 +19,17 @@ export const Inner = styled.div`
     align-items: center;
 `
 
+export const HoverableArea = styled.div`
+    width: 100%;
+`
+
+export const SectionTitle = styled.h2`
+    font-size: var(--desktop-title-font-size);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--black);
+    margin-bottom: 1.5rem;
+` 
+
 export const Frame = styled.div`
     border-radius: 5px;
     background-color: #ffffff;

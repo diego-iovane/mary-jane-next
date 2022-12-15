@@ -76,6 +76,10 @@ export const LinkContainer = styled.li`
     display: flex;
     align-items: center;
 
+    a {
+        color: #ffffff;
+    }
+
     &:hover {
         opacity: .7;
     }
@@ -91,5 +95,5 @@ export const ButtonContainer = styled.div`
     align-items: center;
     position: absolute;
     top: -.8rem;
-    right: -9rem;
+    right: -10rem;
 `

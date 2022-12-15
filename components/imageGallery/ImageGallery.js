@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
@@ -12,18 +12,47 @@ import {
     ImgContainer,
     Img,
     AnchorOverlay,
+    SectionTitle,
+    HoverableArea,
 } from './Elements'
 
 const ImageGallery = () => {
 
     const { content } = GetContentContext()
+    const swiperRef = useRef()
+    const [isHovering, setIsHovering] = useState(false)
+    let loop
+
+    useEffect(() => {
+
+        if (isHovering) {
+            console.log('clear Interval')
+            return clearInterval(loop)
+        } else {
+
+            console.log('create Interval')
+            loop = setInterval(() => {
+                if (swiperRef.current !== undefined) {
+                    swiperRef.current.swiper.slideNext(2700, false)
+                }
+            }, 2900)
+        }
+
+        return () => clearInterval(loop)
+    }, [isHovering, swiperRef.current])
 
     return (
         <Section>
             {
                 Object.entries(content).length !== 0 &&
                 <Inner>
-                    <Swiper
+                    <SectionTitle>{content.imageGallery.title}</SectionTitle>
+                    <HoverableArea
+                        onMouseEnter={() => setIsHovering(true)}
+                        onMouseLeave={() => setIsHovering(false)}
+                    >
+                        <Swiper
+                            ref={swiperRef}
                             slidesPerView={1}
                             breakpoints={{
                                 800: {
@@ -43,6 +72,7 @@ const ImageGallery = () => {
                             pagination={{
                                 clickable: true,
                             }}
+                            loop={true}
                             modules={[Grid, Pagination]}
                             className="imageGallerySwyper"
                         >
@@ -50,10 +80,14 @@ const ImageGallery = () => {
                                 content.imageGallery.img.map((item) => {
                                     return (
                                         <SwiperSlide key={item.src}>
-                                            <Frame href={item.url}>
-                                                <AnchorOverlay />
+                                            <Frame >
+                                                <AnchorOverlay
+                                                    href={item.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                />
                                                 <ImgContainer>
-                                                    <Img src={item.src} alt={item.alt} fill/>
+                                                    <Img src={item.src} alt={item.alt} fill />
                                                 </ImgContainer>
                                             </Frame>
                                         </SwiperSlide>
@@ -61,6 +95,7 @@ const ImageGallery = () => {
                                 })
                             }
                         </Swiper>
+                    </HoverableArea>
                 </Inner>
             }
         </Section>

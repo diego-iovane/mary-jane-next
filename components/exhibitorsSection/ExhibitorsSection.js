@@ -31,7 +31,7 @@ const ExhibitorsSection = () => {
                         slidesPerView={2}
                         breakpoints={{
                             900: {
-                                slidesPerView: 5,
+                                slidesPerView: 3,
                             },
                             650: {
                                 slidesPerView: 3,
@@ -49,8 +49,8 @@ const ExhibitorsSection = () => {
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[Grid, Pagination]}
-                        className="reviewSwyper"
+                        modules={[Grid]}
+                        className="exhibitorsSwyper"
                     >
                         {
                             content.exhibitorsGallery.items.map(item => {
@@ -68,12 +68,12 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
-                    {/* <Swiper
+                    <Swiper
                         ref={swiperRefSec}
                         slidesPerView={2}
                         breakpoints={{
                             900: {
-                                slidesPerView: 5,
+                                slidesPerView: 3,
                             },
                             650: {
                                 slidesPerView: 3,
@@ -89,19 +89,19 @@ const ExhibitorsSection = () => {
                         autoplay={true}
                         loop={true}
                         pagination={{
-                            clickable: true,
+                            clickable: false,
                         }}
                         modules={[Grid, Pagination]}
-                        className="reviewSwyper"
+                        className="exhibitorsSwyper"
                     >
                         {
-                            content.exhibitorsGallery.items.map(item => {
+                            content.exhibitorsGalleryAlt.items.map(item => {
                                 return (
                                     <SwiperSlide key={item.src}>
                                         <LogoContainer>
                                             <Logo
                                                 src={item.src}
-                                                alt=""
+                                                alt="exhibitors logo"
                                                 fill
                                             />
                                         </LogoContainer>
@@ -113,7 +113,7 @@ const ExhibitorsSection = () => {
                     <SwiperButtons 
                         swiperRef={swiperRef}
                         swiperRefSec={swiperRefSec}
-                    /> */}
+                    />
             </Inner>
         }
     </Section>
