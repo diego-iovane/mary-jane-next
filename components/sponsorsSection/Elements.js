@@ -20,10 +20,22 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
 ` 
 
+export const LogosContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+
+    @media all and (max-width: 650px) {
+        width: 100%;
+    }
+`
+
 export const LogoContainer = styled.div`
     position: relative;
-    width: 100%;
+    width: 10rem;
     height: 10rem;
+    margin: 0 2rem;
 `
 
 export const Logo = styled(Image)`
