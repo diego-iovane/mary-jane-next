@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-    min-height: var(--section-min-height);
     padding: 5rem 0;
     background-color: var(--light-blue);
 `
