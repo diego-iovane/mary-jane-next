@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
@@ -18,12 +18,12 @@ import {
     StarsContainer,
     SectionTitle,
 } from './Elements'
+import SwiperButtons from '../swiperButtons/SwiperButtons'
 
 const ReviewSection = () => {
 
     const { content } = GetContentContext()
-
-    console.log(content)
+    const swiperRef = useRef()
 
     return (
         <Section>
@@ -50,6 +50,7 @@ const ReviewSection = () => {
                         </StarsContainer>
                     </RevWidget>
                     <Swiper
+                        ref={swiperRef}
                         slidesPerView={1}
                         breakpoints={{
                             900: {
@@ -82,6 +83,7 @@ const ReviewSection = () => {
                             })
                         }
                     </Swiper>
+                    <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
             }
         </Section>

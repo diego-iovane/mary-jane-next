@@ -10,13 +10,17 @@ export const Section = styled.section`
 
 export const Inner = styled.div`
     width: 90%;
-    /* height: 45rem; */
-    /* height: 100%; */
+    position: relative;
     max-width: var(--section-max-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &:hover .arrow {
+        opacity: 1;
+        bottom: 0;
+    }
 `
 
 export const HoverableArea = styled.div`

@@ -15,6 +15,7 @@ import {
     SectionTitle,
     HoverableArea,
 } from './Elements'
+import SwiperButtons from '../swiperButtons/SwiperButtons'
 
 const ImageGallery = () => {
 
@@ -96,6 +97,7 @@ const ImageGallery = () => {
                             }
                         </Swiper>
                     </HoverableArea>
+                    <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
             }
         </Section>
