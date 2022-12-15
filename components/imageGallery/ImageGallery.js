@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination } from "swiper";
+import { Grid, Pagination, Autoplay } from "swiper"
 import { GetContentContext } from '../../context/ContentContext'
 import {
     Section,
@@ -11,6 +11,8 @@ import {
     Frame,
     ImgContainer,
     Img,
+    VideoContainer,
+    Video,
     AnchorOverlay,
     SectionTitle,
     HoverableArea,
@@ -21,26 +23,6 @@ const ImageGallery = () => {
 
     const { content } = GetContentContext()
     const swiperRef = useRef()
-    const [isHovering, setIsHovering] = useState(false)
-    let loop
-
-    useEffect(() => {
-
-        if (isHovering) {
-            console.log('clear Interval')
-            return clearInterval(loop)
-        } else {
-
-            console.log('create Interval')
-            loop = setInterval(() => {
-                if (swiperRef.current !== undefined) {
-                    swiperRef.current.swiper.slideNext(2700, false)
-                }
-            }, 2900)
-        }
-
-        return () => clearInterval(loop)
-    }, [isHovering, swiperRef.current])
 
     return (
         <Section>
@@ -48,10 +30,7 @@ const ImageGallery = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner>
                     <SectionTitle>{content.imageGallery.title}</SectionTitle>
-                    <HoverableArea
-                        onMouseEnter={() => setIsHovering(true)}
-                        onMouseLeave={() => setIsHovering(false)}
-                    >
+                    <HoverableArea>
                         <Swiper
                             ref={swiperRef}
                             slidesPerView={1}
@@ -70,15 +49,41 @@ const ImageGallery = () => {
                                 rows: 1,
                             }}
                             spaceBetween={30}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: true,
+                            }}
+                            pauseOnMouseEnter={true}
                             pagination={{
                                 clickable: true,
                             }}
                             loop={true}
-                            modules={[Grid, Pagination]}
+                            modules={[Grid, Pagination, Autoplay]}
                             className="imageGallerySwyper"
                         >
                             {
                                 content.imageGallery.img.map((item) => {
+
+                                    if (item.isVideo) {
+                                        console.log('true')
+                                        return (
+                                            <SwiperSlide key={item.src}>
+                                                <Frame >
+                                                    <AnchorOverlay
+                                                        href={item.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    />
+                                                    <VideoContainer>
+                                                        <Video autoPlay loop muted playsInline>
+                                                            <source src={item.src} type='video/mp4' />
+                                                        </Video>
+                                                    </VideoContainer>
+                                                </Frame>
+                                            </SwiperSlide>
+                                        )
+                                    }
+
                                     return (
                                         <SwiperSlide key={item.src}>
                                             <Frame >

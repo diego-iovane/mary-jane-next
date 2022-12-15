@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination } from "swiper";
+import { Grid, Pagination, Autoplay } from "swiper";
 import { GetContentContext } from '../../context/ContentContext'
 import SwiperButtons from './SwiperButtons'
 import {
@@ -22,11 +22,11 @@ const ExhibitorsSection = () => {
 
     return (
         <Section>
-        {
-            Object.entries(content).length !== 0 &&
-            <Inner>
-                <SectionTitle>{content.exhibitorsGallery.title}</SectionTitle>
-                <Swiper
+            {
+                Object.entries(content).length !== 0 &&
+                <Inner>
+                    <SectionTitle>{content.exhibitorsGallery.title}</SectionTitle>
+                    <Swiper
                         ref={swiperRef}
                         slidesPerView={1}
                         breakpoints={{
@@ -44,12 +44,16 @@ const ExhibitorsSection = () => {
                             rows: 1,
                         }}
                         spaceBetween={30}
-                        autoplay={true}
+                        autoplay={{
+                            delay: 1500,
+                            disableOnInteraction: false,
+                        }}
+                        allowTouchMove={false}
                         loop={true}
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[Grid]}
+                        modules={[Grid, Autoplay]}
                         className="exhibitorsSwyper"
                     >
                         {
@@ -86,12 +90,15 @@ const ExhibitorsSection = () => {
                             rows: 1,
                         }}
                         spaceBetween={30}
-                        autoplay={true}
+                        autoplay={{
+                            delay: 1500,
+                            disableOnInteraction: false,
+                        }}
                         loop={true}
                         pagination={{
                             clickable: false,
                         }}
-                        modules={[Grid, Pagination]}
+                        modules={[Grid, Pagination, Autoplay]}
                         className="exhibitorsSwyper"
                     >
                         {
@@ -110,13 +117,13 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
-                    <SwiperButtons 
+                    <SwiperButtons
                         swiperRef={swiperRef}
                         swiperRefSec={swiperRefSec}
                     />
-            </Inner>
-        }
-    </Section>
+                </Inner>
+            }
+        </Section>
     )
 }
 

@@ -173,15 +173,11 @@ export const Content = styled.div`
     background-color: #ffffff;
     opacity: 1;
     z-index: 5;
-
-    @media all and (max-width: 1000px) {
-        /* padding: 2rem; */
-    }
 `
 
 export const Title = styled.h3`
-    color: var(--pink);
-    border-bottom: 1px solid var(--pink);
+    color: var(--light-green);
+    border-bottom: 1px solid var(--light-green);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 `

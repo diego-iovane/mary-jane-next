@@ -44,10 +44,6 @@ export const SwiperButtonsContainer = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    @media all and (max-width: 550px) {
-        display: none;
-    }
 `
 
 export const Arrow = styled.button`

@@ -85,6 +85,10 @@ export const ReviewContainer = styled.div`
     background-color: var(--soft-gray);
     padding: 1rem 2rem;
     border-radius: 7px;
+    min-height: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `
 
 export const QuotesIcon = styled.svg`

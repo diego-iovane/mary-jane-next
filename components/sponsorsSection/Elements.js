@@ -24,10 +24,9 @@ export const LogosContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 70%;
 
-    @media all and (max-width: 650px) {
-        width: 100%;
+    @media all and (min-width: 950px) and (max-width: 1150px) {
+        width: 75%;
     }
 `
 

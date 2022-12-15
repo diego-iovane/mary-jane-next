@@ -63,3 +63,15 @@ export const ImgContainer = styled.div`
 export const Img = styled(Image)`
     object-fit: cover;
 `
+
+export const VideoContainer = styled.div`
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+`
+
+export const Video = styled.video`
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+`
