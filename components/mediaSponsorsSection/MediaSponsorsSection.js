@@ -58,7 +58,7 @@ const MediaSponsorsSection = () => {
                                         <LogoContainer>
                                             <Logo
                                                 src={item.src}
-                                                alt=""
+                                                alt="media sponsors logo"
                                                 fill
                                             />
                                         </LogoContainer>
