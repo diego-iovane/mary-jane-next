@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Button = styled.button`
+export const Button = styled.a`
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -10,6 +10,7 @@ export const Button = styled.button`
     background-color: var(--light-green);
     z-index: 100;
     display: none;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 
     svg {
         width: 2rem;

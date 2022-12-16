@@ -5,6 +5,7 @@ export const Section = styled.section`
     min-height: var(--section-min-height);
     display: flex;
     align-items: center;
+    background-color: var(--black);
 
     @media all and (max-width: 450px) {
         margin: 3rem auto;
@@ -29,12 +30,14 @@ export const Left = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    color: #ffffff;
 `
 
 export const SectionText = styled.p`
     font-size: .9rem;
 
     p {
+        color: #ffffff;
         margin-bottom: .5rem;
     }
 `

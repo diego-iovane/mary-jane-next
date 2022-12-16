@@ -10,6 +10,7 @@ import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection
 
 import About from '../components/aboutSection/About'
 import ReviewSection from '../components/reviewsSection/ReviewSection'
+import GrowSection from '../components/growSection/GrowSection'
 import CtaSection from '../components/ctaSection/CtaSection'
 import ImageGallery from '../components/imageGallery/ImageGallery'
 import MediaSponsorsSection from '../components/mediaSponsorsSection/MediaSponsorsSection'
@@ -46,6 +47,7 @@ export default function Home() {
       <ImageGallery />
       <ReviewSection />
       <MediaSponsorsSection />
+      <GrowSection />
       <CtaSection />
       <TicketsSection />
       <FloatingButton />

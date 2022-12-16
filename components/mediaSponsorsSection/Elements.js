@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    margin-bottom: 6rem;
     padding: 5rem 0;
     background-color: var(--bg-gray);
 `

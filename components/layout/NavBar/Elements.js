@@ -10,7 +10,6 @@ export const Container = styled(motion.header)`
     transition: all .5s ease-in-out;
     
     box-shadow: ${({scrolled}) => scrolled ? '0px 2px 9px 3px rgba(0, 0, 0, 0.2)' : 'none'};
-    /* background-color: ${({scrolled}) => scrolled ? 'rgb(0,0,0)' : 'transparent'}; */
     background-color: ${({scrolled}) => scrolled ? 'var(--black)' : 'transparent'};
 `
 
@@ -38,7 +37,7 @@ export const Right = styled.div`
 export const LogoContainer = styled.div`
     position: relative;
     width: ${({scrolled}) => scrolled ? '4rem' : '5rem'};
-    height: ${({scrolled}) => scrolled ? '4rem' : '4rem'};
+    height: ${({scrolled}) => scrolled ? '3.5rem' : '4rem'};
     display: flex;
     justify-content: center;
     align-self: center;
@@ -53,7 +52,7 @@ export const Logo = styled(Image)`
 
 export const Nav = styled.nav`
     display: flex;
-    margin-top: ${({scrolled}) => scrolled ? '.5rem' : '1rem'};
+    margin-top: ${({scrolled}) => scrolled ? '0' : '1rem'};
     position: relative;
     transition: all .5s ease-in-out;
 

@@ -7,7 +7,7 @@ import HandsSection from './handsSection/HandsSection'
 const Section = styled.section`
     width: 100%;
     position: relative;
-    margin: 3rem 0 0 0;
+    margin: 5rem 0 0 0;
 `
 
 const Title = styled.h2`

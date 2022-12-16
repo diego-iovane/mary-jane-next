@@ -27,7 +27,10 @@ export const Title = styled.p`
 
 export const Text = styled.p`
     font-size: .8rem;
-    line-height: 1;
+
+    p {
+        margin-bottom: .5rem;
+    }
 `
 
 export const Left = styled.div`
