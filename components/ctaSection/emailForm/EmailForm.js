@@ -21,14 +21,12 @@ const EmailForm = () => {
     const { language } = GetLanguageContext()
     const [disabled, setDisabled] = useState(false)
 
-    // console.log(language)
-
     const formik = useFormik({
         initialValues: {
             email: '',
         },
         validationSchema: Yup.object({
-            email: Yup.string().email().required(),
+            // email: Yup.string().email().required(),
         }),
         onSubmit: (values) => {
             console.log(values)
@@ -36,6 +34,7 @@ const EmailForm = () => {
             setDisabled(true)
 
             //mailchimp
+            setTimeout(() => {setDisabled(false)}, 1000)
         }
     })
 

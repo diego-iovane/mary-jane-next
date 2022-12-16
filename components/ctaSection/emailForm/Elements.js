@@ -75,7 +75,7 @@ export const Button = styled.button`
     height: 3rem;
     margin-left: .5rem;
     border: 1px solid var(--soft-lines-color);
-    background-color: var(--light-green);
+    background-color: ${({ dis }) => dis ? "gray" : "var(--light-green)"};
     border-radius: 4px;
     opacity: ${({ dis }) => dis ? ".5" : "1"};
     cursor: ${({ dis }) => dis ? "default" : "pointer"};
@@ -85,6 +85,8 @@ export const Button = styled.button`
 export const ButtonIcon = styled.svg`
     width: 1.5rem;
     height: 1.5rem;
+    position: relative;
+    top: 2px;
 
     path {
         fill: #ffffff; 

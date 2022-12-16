@@ -5,7 +5,7 @@ export const Section = styled.section`
     min-height: var(--section-min-height);
     display: flex;
     align-items: center;
-    background-color: var(--black);
+    background-color: var(--dark-green);
 
     @media all and (max-width: 450px) {
         margin: 3rem auto;
@@ -45,6 +45,7 @@ export const SectionText = styled.p`
 export const Right = styled.div`
     flex: 1;
     position: relative;
+    right: 10%;
     
     @media all and (max-width: 700px) {
         display: none;

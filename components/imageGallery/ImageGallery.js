@@ -65,12 +65,12 @@ const ImageGallery = () => {
                                 content.imageGallery.img.map((item) => {
 
                                     if (item.isVideo) {
-                                        console.log('true')
                                         return (
                                             <SwiperSlide key={item.src}>
                                                 <Frame >
                                                     <AnchorOverlay
-                                                        href={item.url}
+                                                        // href={item.url}
+                                                        href="https://www.instagram.com/mary_jane_berlin/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                     />
@@ -88,12 +88,13 @@ const ImageGallery = () => {
                                         <SwiperSlide key={item.src}>
                                             <Frame >
                                                 <AnchorOverlay
-                                                    href={item.url}
+                                                    // href={item.url}
+                                                    href="https://www.instagram.com/mary_jane_berlin/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 />
                                                 <ImgContainer>
-                                                    <Img src={item.src} alt={item.alt} fill />
+                                                    <Img src={item.src} alt="mary jane berlin experience" fill />
                                                 </ImgContainer>
                                             </Frame>
                                         </SwiperSlide>
