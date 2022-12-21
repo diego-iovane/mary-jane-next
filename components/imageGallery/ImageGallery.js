@@ -16,6 +16,7 @@ import {
     AnchorOverlay,
     SectionTitle,
     HoverableArea,
+    ButtonsContainer,
 } from './Elements'
 import SwiperButtons from '../swiperButtons/SwiperButtons'
 
@@ -103,7 +104,9 @@ const ImageGallery = () => {
                             }
                         </Swiper>
                     </HoverableArea>
-                    <SwiperButtons swiperRef={swiperRef} />
+                    <ButtonsContainer>
+                        <SwiperButtons swiperRef={swiperRef} />
+                    </ButtonsContainer>
                 </Inner>
             }
         </Section>

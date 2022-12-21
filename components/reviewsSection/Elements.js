@@ -79,6 +79,12 @@ export const Star = styled.svg`
     }
 `
 
+export const ButtonsContainer = styled.div`
+    @media all and (max-width: 450px) {
+        display: none;
+    }
+`
+
 // REVIEW
 export const ReviewContainer = styled.div`
     position: relative;

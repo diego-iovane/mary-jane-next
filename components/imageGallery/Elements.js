@@ -75,3 +75,9 @@ export const Video = styled.video`
     width: 100%;
     object-fit: cover;
 `
+
+export const ButtonsContainer = styled.div`
+    @media all and (max-width: 450px) {
+        display: none;
+    }
+`

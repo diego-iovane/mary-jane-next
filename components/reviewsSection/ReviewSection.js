@@ -17,6 +17,7 @@ import {
     Num,
     StarsContainer,
     SectionTitle,
+    ButtonsContainer,
 } from './Elements'
 import SwiperButtons from '../swiperButtons/SwiperButtons'
 
@@ -83,7 +84,9 @@ const ReviewSection = () => {
                             })
                         }
                     </Swiper>
-                    <SwiperButtons swiperRef={swiperRef} />
+                    <ButtonsContainer>
+                        <SwiperButtons swiperRef={swiperRef} />
+                    </ButtonsContainer>
                 </Inner>
             }
         </Section>

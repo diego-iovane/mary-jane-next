@@ -42,5 +42,6 @@ export const SubTitle = styled.h2`
 
     @media all and (max-width: 450px) {
         font-size: 1.3rem;
+        line-height: .7;
     }
 `
