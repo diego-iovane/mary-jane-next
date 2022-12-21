@@ -25,6 +25,11 @@ export const SectionTitle = styled.h2`
     padding-bottom: 2rem;
     border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;
+    line-height: 1.1;
+
+    @media all and (max-width: 450px) {
+        width: 90%;
+    }
 ` 
 
 export const LogoContainer = styled.div`

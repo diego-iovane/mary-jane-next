@@ -25,6 +25,10 @@ export const ItemContainer = styled.div`
     flex-direction: column;
     align-items: center;
     min-width: 8rem; 
+
+    @media all and (max-width: 450px) {
+        min-width: 0;
+    }
 `
 
 export const IconContainer = styled.div`
@@ -48,6 +52,7 @@ export const CountContainer = styled.div`
         font-size: 2rem;
         display: flex;
         align-items: center;
+        color: var(--gray-blue);
 
         @media all and (max-width: 500px) {
             font-size: 1.5rem;
@@ -59,6 +64,7 @@ export const Text = styled.p`
     text-align: center;
     font-size: .9rem;
     line-height: .7;
+    color: var(--gray-blue);
 
     @media all and (max-width: 500px) {
         font-size: .8rem;
@@ -70,6 +76,7 @@ export const CounterContainer = styled(motion.div)`
     font-size: 2rem;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    color: var(--gray-blue);
 
     @media all and (max-width: 500px) {
         font-size: 1.5rem;

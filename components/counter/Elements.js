@@ -8,6 +8,10 @@ export const Container = styled.div`
 export const Item = styled.div`
     flex: 1;
     margin: 0 1rem;
+
+    @media all and (max-width: 450px) {
+        margin: 0 .7rem;
+    }
 `
 
 export const Num = styled.p`
@@ -15,6 +19,10 @@ export const Num = styled.p`
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
+
+    @media all and (max-width: 450px) {
+        font-size: 1.6rem;
+    }
 `
 
 export const Text = styled.p`

@@ -6,10 +6,6 @@ export const Section = styled.section`
     display: flex;
     align-items: center;
     background-color: var(--dark-green);
-
-    @media all and (max-width: 450px) {
-        margin: 3rem auto;
-    }
 `
 
 export const Inner = styled.div`
@@ -21,6 +17,11 @@ export const Inner = styled.div`
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);
     }
+
+    @media all and (max-width: 450px) {
+        padding: 0;
+        width: 90%;
+    }
 `
 
 export const Left = styled.div`
@@ -31,6 +32,8 @@ export const SectionTitle = styled.h2`
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
+
+    line-height: 1.1;
 `
 
 export const SectionText = styled.p`

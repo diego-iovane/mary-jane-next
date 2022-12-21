@@ -35,14 +35,22 @@ export const Title = styled.p`
     font-size: 1.5rem;
     text-align: center;
     width: 25rem;
+    color: var(--gray-blue);
 
     @media all and (max-width: 560px) {
         font-size: 1.3rem;
     }
+
+    @media all and (max-width: 450px) {
+        font-size: 1.1rem;
+    }
 `
 
 export const Form = styled.form`
-
+    @media all and (max-width: 350px) {
+        width: 80%;
+        margin: 0 auto;
+    }
 `
 
 export const InputContainer = styled.div`

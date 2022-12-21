@@ -50,7 +50,7 @@ export const MenuContainer = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
     max-height: ${({opened}) => opened ? '100rem' : '0rem'};
     overflow: hidden;
     transition: max-height .5s cubic-bezier( 1, 0, 0, 1 );
