@@ -55,24 +55,36 @@ export const Inner = styled.div`
     }
 `
 
-export const SectionsTagContainer = styled.div`
+export const HandsSection = styled.div`
     width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    /* box-shadow: var(--soft-shadow); */
+    min-height: 35rem;
 `
 
-export const SectionsTags = styled.div`
-    display: flex;
+export const HandsInner = styled.div`
+    width: 50%;
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    position: relative;
 `
 
-export const SectionTag = styled.a`
-    font-size: .8rem;
-    padding: .4rem 1rem;
-    margin: 1.5rem .5rem .5rem 0;
-    cursor: pointer;
+export const HandsComponent = styled.div`
+    position: absolute;
+    top: ${({x}) => x && x};
+    left: ${({y}) => y && y};
 `
+
+export const HandsContainer = styled.div`
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    transform: ${({tr}) => tr && tr};
+`
+
+export const Hand = styled(Image)`
+    object-fit: contain;
+`
+
+// GENERAL INFO
 
 export const Title = styled.h3`
     font-size: 2rem;

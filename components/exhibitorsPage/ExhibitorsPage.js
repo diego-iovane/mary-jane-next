@@ -24,6 +24,11 @@ import {
   FileContainer,
   FileName,
   FileIcon,
+  HandsSection,
+  HandsInner,
+  HandsComponent,
+  HandsContainer,
+  Hand,
 } from './Elements'
 
 
@@ -45,7 +50,39 @@ const ExhibitorsPage = () => {
             <Overlay />
             <HeroTitle>{content.exhibitorsPage.title}</HeroTitle>
           </HeroSection>
-          <Section>
+          <HandsSection>
+            <HandsInner>
+              <HandsComponent
+                x="-3rem"
+                y="5rem"
+              >
+                <HandsContainer
+                  tr="rotate(116deg) scale(-1, -1)"
+                >
+                  <Hand
+                    src={content.newsletterSection.illustration.src}
+                    alt={content.newsletterSection.illustration.alt}
+                    fill
+                  />
+                </HandsContainer>
+              </HandsComponent>
+              <HandsComponent
+                x="0rem"
+                y="-5rem"
+              >
+                <HandsContainer
+                  tr="rotate(-116deg) scaleY(-1)"
+                >
+                  <Hand
+                    src={content.newsletterSection.illustration.src}
+                    alt={content.newsletterSection.illustration.alt}
+                    fill
+                  />
+                </HandsContainer>
+              </HandsComponent>
+            </HandsInner>
+          </HandsSection>
+          {/* <Section>
             <Inner id="info">
               {
                 content.exhibitorsPage.info.map(item => {
@@ -58,7 +95,7 @@ const ExhibitorsPage = () => {
                 })
               }
             </Inner>
-          </Section>
+          </Section> */}
           {/* LOCATION PICS */}
           <Section id="location-pics" bgColor="var(--black)">
             <Inner>
@@ -113,7 +150,7 @@ const ExhibitorsPage = () => {
           <Section id="foyer">
             <Inner>
               <Title color="var(--black)">{content.exhibitorsPage.foyer.title}</Title>
-              <Text color="var(--black)" dangerouslySetInnerHTML={{ __html: content.exhibitorsPage.foyer.text }}  />
+              <Text color="var(--black)" dangerouslySetInnerHTML={{ __html: content.exhibitorsPage.foyer.text }} />
               <Swiper
                 // ref={swiperRef}
                 slidesPerView={1}

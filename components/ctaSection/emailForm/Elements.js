@@ -41,6 +41,10 @@ export const Title = styled.p`
     }
 `
 
+export const Form = styled.form`
+
+`
+
 export const InputContainer = styled.div`
     margin: 1rem 0;
     width: 100%;
@@ -91,4 +95,20 @@ export const ButtonIcon = styled.svg`
     path {
         fill: #ffffff; 
     }
+`
+
+export const Error = styled.p`
+    position: absolute;
+    bottom: -2rem;
+    left: 1rem;
+    color: var(--alert);
+    font-size: .9rem;
+`
+
+export const Msg = styled.p`
+    position: absolute;
+    bottom: -2rem;
+    left: 1rem;
+    color: var(--light-green);
+    font-size: .9rem;
 `
