@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export const Button = styled(motion.a)`
     position: fixed;
@@ -13,7 +14,7 @@ export const Button = styled(motion.a)`
     display: none;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 
-    opacity: ${({ appear }) => appear ? "1" : "0"};
+    /* opacity: ${({ appear }) => appear ? "1" : "0"}; */
 
     svg {
         width: 2rem;
@@ -30,4 +31,14 @@ export const Button = styled(motion.a)`
         justify-content: center;
         align-items: center;
     }
+`
+
+export const ImgContainer = styled.div`
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+`
+
+export const Img = styled(Image)`
+    object-fit: contain;
 `
