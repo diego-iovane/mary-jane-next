@@ -5,6 +5,7 @@ import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay, Navigation } from "swiper"
 import { GetContentContext } from '../../context/ContentContext'
+import SectionsButtons from './SectionsButtons/SectionsButtons'
 import {
   Section,
   HeroImage,
@@ -24,11 +25,12 @@ import {
   FileContainer,
   FileName,
   FileIcon,
-  HandsSection,
-  HandsInner,
-  HandsComponent,
-  HandsContainer,
-  Hand,
+  HeroContent,
+  IllustrationsSectionContainer,
+  IllustrationsContainer,
+  IllustrationInner,
+  Illustration,
+  Button,
 } from './Elements'
 
 
@@ -48,54 +50,47 @@ const ExhibitorsPage = () => {
               fill
             />
             <Overlay />
-            <HeroTitle>{content.exhibitorsPage.title}</HeroTitle>
+            <HeroContent>
+              <HeroTitle>{content.exhibitorsPage.title}</HeroTitle>
+            </HeroContent>
           </HeroSection>
-          <HandsSection>
-            <HandsInner>
-              <HandsComponent
-                x="-3rem"
-                y="5rem"
+          <IllustrationsSectionContainer>
+            <IllustrationsContainer>
+              <IllustrationInner
+                top="0rem"
+                left="-07rem"
               >
-                <HandsContainer
-                  tr="rotate(116deg) scale(-1, -1)"
+                <Illustration
+                  src={content.newsletterSection.exhibitIllustration.src}
+                  alt={content.newsletterSection.exhibitIllustration.alt}
+                  fill
+                />
+                <Button
+                  href={content.exhibitorsPage.exhibitorButton.href}
+                  top="14rem"
+                  left="14rem"
                 >
-                  <Hand
-                    src={content.newsletterSection.illustration.src}
-                    alt={content.newsletterSection.illustration.alt}
-                    fill
-                  />
-                </HandsContainer>
-              </HandsComponent>
-              <HandsComponent
-                x="0rem"
-                y="-5rem"
+                  {content.exhibitorsPage.exhibitorButton.title}
+                </Button>
+              </IllustrationInner>
+              <IllustrationInner
+                top="3rem"
+                left="-21rem"
               >
-                <HandsContainer
-                  tr="rotate(-116deg) scaleY(-1)"
-                >
-                  <Hand
-                    src={content.newsletterSection.illustration.src}
-                    alt={content.newsletterSection.illustration.alt}
-                    fill
-                  />
-                </HandsContainer>
-              </HandsComponent>
-            </HandsInner>
-          </HandsSection>
-          {/* <Section>
-            <Inner id="info">
-              {
-                content.exhibitorsPage.info.map(item => {
-                  return (
-                    <SectionElement key={item.title}>
-                      <Title>{item.title}</Title>
-                      <Text dangerouslySetInnerHTML={{ __html: item.text }} />
-                    </SectionElement>
-                  )
-                })
-              }
-            </Inner>
-          </Section> */}
+                <Illustration
+                  src={content.newsletterSection.visitIllustration.src}
+                  alt={content.newsletterSection.visitIllustration.alt}
+                  fill
+                />
+                <Button
+                  href={content.exhibitorsPage.exhibitButton.href}
+                  top="15rem"
+                  left="0rem"
+                >{content.exhibitorsPage.exhibitButton.title}</Button>
+              </IllustrationInner>
+            </IllustrationsContainer>
+          </IllustrationsSectionContainer>
+          <SectionsButtons />
           {/* LOCATION PICS */}
           <Section id="location-pics" bgColor="var(--black)">
             <Inner>
@@ -200,7 +195,7 @@ const ExhibitorsPage = () => {
             </Inner>
           </Section>
           {/* GUIDE */}
-          <Section id="location-pics">
+          <Section id="guides">
             <Inner>
               <Title color="var(--black)">{content.exhibitorsPage.guides.title}</Title>
               <FilesContainer>

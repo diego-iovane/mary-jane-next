@@ -49,7 +49,7 @@ export const HeroTitle = styled.h1`
 `
 
 export const Inner = styled.div`
-    width: 70%;
+    width: 80%;
     max-width: var(--section-max-width);
     margin: 0 auto;
     display: flex;

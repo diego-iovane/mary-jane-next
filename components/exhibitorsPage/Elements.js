@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Section = styled.div`
     min-height: 22rem;
@@ -20,6 +21,11 @@ export const HeroImage = styled(Image)`
 
 export const HeroContent = styled.div`
     position: absolute;
+    max-width: var(--section-max-width);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100%;
 `
 
 export const Overlay = styled.div`
@@ -55,33 +61,56 @@ export const Inner = styled.div`
     }
 `
 
-export const HandsSection = styled.div`
-    width: 100%;
-    min-height: 35rem;
-`
-
-export const HandsInner = styled.div`
-    width: 50%;
-    max-width: var(--section-max-width);
-    margin: 0 auto;
-    position: relative;
-`
-
-export const HandsComponent = styled.div`
-    position: absolute;
-    top: ${({x}) => x && x};
-    left: ${({y}) => y && y};
-`
-
-export const HandsContainer = styled.div`
-    position: relative;
-    width: 30rem;
+export const IllustrationsSectionContainer = styled.div`
     height: 30rem;
-    transform: ${({tr}) => tr && tr};
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    @media all and (max-width: 550px) {
+        height: 40rem;
+    }
 `
 
-export const Hand = styled(Image)`
+export const IllustrationsContainer = styled.div`
+    position: relative;
+`
+
+export const IllustrationInner = styled.div`
+    position: absolute;
+    width: 22rem;
+    height: ${({ height }) => height ? height : "20rem"};
+    left: ${({ left }) => left && left};
+    top: ${({ top }) => top && top};
+
+    @media all and (max-width: 550px) {
+        left: ${({ leftMobile }) => leftMobile && leftMobile};
+        top: ${({ topMobile }) => topMobile && topMobile};
+    }
+`
+
+export const Illustration = styled(Image)`
     object-fit: contain;
+`
+
+export const Button = styled(Link)`
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    padding: .4rem 2rem;
+    color: var(--pink);
+    border-radius: 5px;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    position: absolute;
+    left: ${({left}) => left && left};
+    top: ${({top}) => top && top};
+    box-shadow: var(--soft-shadow);
+    
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+        opacity: .5;
+    }
 `
 
 // GENERAL INFO
