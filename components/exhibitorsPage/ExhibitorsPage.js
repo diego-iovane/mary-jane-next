@@ -32,6 +32,8 @@ import {
   Illustration,
   Button,
 } from './Elements'
+import BookingSection from './BookingSection/BookingSection'
+import Contact from './Contact/Contact'
 
 
 const ExhibitorsPage = () => {
@@ -92,9 +94,29 @@ const ExhibitorsPage = () => {
           </IllustrationsSectionContainer>
           <SectionsButtons />
           {/* LOCATION PICS */}
-          <Section id="location-pics" bgColor="var(--black)">
+          <Section id="location-pics" bgColor="var(--gray-blue)">
             <Inner>
               <Title color="#ffffff">{content.exhibitorsPage.locationImagesSection.title}</Title>
+              <ButtonsContainer>
+                <FileButton
+                  href={content.exhibitorsPage.hallPlan.hallPlan.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  bg="#ffffff"
+                  color="var(--gray-blue)"
+                >
+                  {content.exhibitorsPage.hallPlan.hallPlan.title}
+                </FileButton>
+                <FileButton
+                  href={content.exhibitorsPage.hallPlan.priceList.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  bg="#ffffff"
+                  color="var(--gray-blue)"
+                >
+                  {content.exhibitorsPage.hallPlan.priceList.title}
+                </FileButton>
+              </ButtonsContainer>
               <Swiper
                 // ref={swiperRef}
                 slidesPerView={1}
@@ -123,29 +145,31 @@ const ExhibitorsPage = () => {
                   })
                 }
               </Swiper>
-              <ButtonsContainer>
-                <FileButton
-                  href={content.exhibitorsPage.hallPlan.hallPlan.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {content.exhibitorsPage.hallPlan.hallPlan.title}
-                </FileButton>
-                <FileButton
-                  href={content.exhibitorsPage.hallPlan.priceList.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {content.exhibitorsPage.hallPlan.priceList.title}
-                </FileButton>
-              </ButtonsContainer>
             </Inner>
           </Section>
           {/* FOYER */}
           <Section id="foyer">
             <Inner>
-              <Title color="var(--black)">{content.exhibitorsPage.foyer.title}</Title>
-              <Text color="var(--black)" dangerouslySetInnerHTML={{ __html: content.exhibitorsPage.foyer.text }} />
+              <Title color="var(--gray-blue)">{content.exhibitorsPage.foyer.title}</Title>
+              <Text color="var(--gray-blue)" dangerouslySetInnerHTML={{ __html: content.exhibitorsPage.foyer.text }} />
+              <ButtonsContainer>
+                <FileButton
+                  href={content.exhibitorsPage.foyer.files.foyerOne.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#ffffff"
+                >
+                  {content.exhibitorsPage.foyer.files.foyerOne.title}
+                </FileButton>
+                <FileButton
+                  href={content.exhibitorsPage.foyer.files.foyerTwo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#ffffff"
+                >
+                  {content.exhibitorsPage.foyer.files.foyerTwo.title}
+                </FileButton>
+              </ButtonsContainer>
               <Swiper
                 // ref={swiperRef}
                 slidesPerView={1}
@@ -174,30 +198,14 @@ const ExhibitorsPage = () => {
                   })
                 }
               </Swiper>
-              <ButtonsContainer>
-                <FileButton
-                  color="var(--black)"
-                  href={content.exhibitorsPage.foyer.files.foyerOne.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {content.exhibitorsPage.foyer.files.foyerOne.title}
-                </FileButton>
-                <FileButton
-                  color="var(--black)"
-                  href={content.exhibitorsPage.foyer.files.foyerTwo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {content.exhibitorsPage.foyer.files.foyerTwo.title}
-                </FileButton>
-              </ButtonsContainer>
             </Inner>
           </Section>
+          <BookingSection />
+          {/* <Contact /> */}
           {/* GUIDE */}
           <Section id="guides">
             <Inner>
-              <Title color="var(--black)">{content.exhibitorsPage.guides.title}</Title>
+              <Title color="var(--gray-blue)">{content.exhibitorsPage.guides.title}</Title>
               <FilesContainer>
                 {
                   content.exhibitorsPage.guides.guides.map(item => {

@@ -55,6 +55,7 @@ export const Inner = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 var(--desktop-section-padding);
+    padding-bottom: 1rem;
 
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);
@@ -113,21 +114,20 @@ export const Button = styled(Link)`
     }
 `
 
-// GENERAL INFO
-
 export const Title = styled.h3`
     font-size: 2rem;
-    margin: 2rem 0;
+    margin: 2rem auto 1rem auto;
     max-width: 35rem;
     line-height: 1.4;
     color: ${({ color }) => color && color};
 `
 
-export const Text = styled.p`
+export const Text = styled.div`
     font-size: .9rem;
     max-width: 35rem;
     color: ${({ color }) => color && color};
-    margin-bottom: 2rem;
+    text-align: center;
+    margin: 0 auto;
 
     p {
         margin-bottom: .5rem;
@@ -161,20 +161,25 @@ export const ButtonsContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 2.5rem 0;
+    margin: 1rem 0;
 `
 
 export const FileButton = styled.a`
-    border-radius: 500px;
-    border: 1px solid  ${({ color }) => color ? color : "#ffffff"};
-    padding: .2rem 1rem;
-    margin: .5rem;
-    color: ${({ color }) => color ? color : "#ffffff"};
+    background-color: ${({bg}) => bg ? bg : "var(--gray-blue)"};
+    color: ${({color}) => color ? color : "#ffffff"};
+    font-size: 1rem;
+    width: 12rem;
+    height: 4rem;
+    margin: 1rem .5rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
-        border: 1px solid var(--pink);
+        opacity: .5;
     }
 `
 
@@ -209,6 +214,7 @@ export const FileName = styled.p`
 
 export const FileIcon = styled.a`
     svg {
-        width: 4rem
+        width: 4rem;
+        fill: var(--gray-blue);
     }
 `
