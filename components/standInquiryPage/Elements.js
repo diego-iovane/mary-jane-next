@@ -56,6 +56,7 @@ export const Inner = styled.div`
     display: flex;
     position: relative;
     min-height: 25rem;
+    padding: 1rem 0;
 
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);

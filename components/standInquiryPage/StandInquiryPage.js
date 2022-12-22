@@ -1,6 +1,7 @@
 import React from 'react'
+import Jotform from 'react-jotform'
 import { GetContentContext } from '../../context/ContentContext'
-import { 
+import {
     HeroSection,
     HeroImage,
     Overlay,
@@ -31,7 +32,10 @@ const StandInquiryPage = () => {
                         </HeroContent>
                     </HeroSection>
                     <Inner>
-                        <script type="text/javascript" src="https://form.jotformeu.com/jsform/73424744902356"></script>
+                        {/* <script type="text/javascript" src="https://form.jotformeu.com/jsform/73424744902356"></script> */}
+                        <Jotform
+                            src="https://form.jotform.com/73424744902356"
+                        />
                     </Inner>
                 </>
             }
