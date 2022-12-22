@@ -65,10 +65,10 @@ export const Button = styled(Link)`
     }
 `
 
-export const IconContainer = styled.span`
+export const IconContainer = styled.div`
     position: relative;
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin: 0 1rem;
 `
 

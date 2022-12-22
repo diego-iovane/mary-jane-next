@@ -14,6 +14,8 @@ const SectionsButtons = () => {
 
     const { content } = GetContentContext()
 
+    console.log(content.exhibitorsPage.buttonsSection.buttons)
+
     return (
         <Section>
             {/* { */}
@@ -29,8 +31,8 @@ const SectionsButtons = () => {
                                     >
                                         <IconContainer>
                                             <Icon 
-                                                src={content.exhibitorsPage.buttonsSection.buttons.src?.src} 
-                                                alt=""
+                                                src={item.src} 
+                                                alt={item.title}
                                                 fill
                                             />
                                         </IconContainer>
