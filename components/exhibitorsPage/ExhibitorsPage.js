@@ -6,6 +6,9 @@ import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay, Navigation } from "swiper"
 import { GetContentContext } from '../../context/ContentContext'
 import SectionsButtons from './SectionsButtons/SectionsButtons'
+import BookingSection from './BookingSection/BookingSection'
+import Contact from './Contact/Contact'
+import Furniture from './Furniture/Furniture'
 import {
   Section,
   HeroImage,
@@ -32,8 +35,6 @@ import {
   Illustration,
   Button,
 } from './Elements'
-import BookingSection from './BookingSection/BookingSection'
-import Contact from './Contact/Contact'
 
 
 const ExhibitorsPage = () => {
@@ -226,6 +227,7 @@ const ExhibitorsPage = () => {
               </FilesContainer>
             </Inner>
           </Section>
+          <Furniture />
         </>
       }
     </>

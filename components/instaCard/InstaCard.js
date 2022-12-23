@@ -5,11 +5,11 @@ import {
     Img,
 } from './Elements'
 
-const InstaCard = ({ src, x, y, rt }) => {
+const InstaCard = ({ src, x, y, rt, alt = "mary jane berlin experience" }) => {
   return (
     <Card x={x} y={y} rt={rt}>
         <ImgContainer>
-            <Img src={src} alt="mary jane berlin experience" fill />
+            <Img src={src} alt={alt} fill />
         </ImgContainer>
     </Card>
   )
