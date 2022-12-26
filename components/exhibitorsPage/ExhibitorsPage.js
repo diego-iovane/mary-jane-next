@@ -31,12 +31,8 @@ import {
   FileName,
   FileIcon,
   HeroContent,
-  IllustrationsSectionContainer,
-  IllustrationsContainer,
-  IllustrationInner,
-  Illustration,
-  Button,
 } from './Elements'
+import HandsSection from './HandsSection/HandsSection'
 
 
 const ExhibitorsPage = () => {
@@ -52,6 +48,7 @@ const ExhibitorsPage = () => {
             <HeroImage
               src={content.exhibitorsPage.heroImg.src}
               alt={content.exhibitorsPage.heroImg.alt}
+              priority
               fill
             />
             <Overlay />
@@ -59,42 +56,7 @@ const ExhibitorsPage = () => {
               <HeroTitle>{content.exhibitorsPage.title}</HeroTitle>
             </HeroContent>
           </HeroSection>
-          <IllustrationsSectionContainer>
-            <IllustrationsContainer>
-              <IllustrationInner
-                top="0rem"
-                left="-07rem"
-              >
-                <Illustration
-                  src={content.newsletterSection.exhibitIllustration.src}
-                  alt={content.newsletterSection.exhibitIllustration.alt}
-                  fill
-                />
-                <Button
-                  href={content.exhibitorsPage.exhibitorButton.href}
-                  top="14rem"
-                  left="14rem"
-                >
-                  {content.exhibitorsPage.exhibitorButton.title}
-                </Button>
-              </IllustrationInner>
-              <IllustrationInner
-                top="3rem"
-                left="-21rem"
-              >
-                <Illustration
-                  src={content.newsletterSection.visitIllustration.src}
-                  alt={content.newsletterSection.visitIllustration.alt}
-                  fill
-                />
-                <Button
-                  href={content.exhibitorsPage.exhibitButton.href}
-                  top="15rem"
-                  left="0rem"
-                >{content.exhibitorsPage.exhibitButton.title}</Button>
-              </IllustrationInner>
-            </IllustrationsContainer>
-          </IllustrationsSectionContainer>
+          <HandsSection />
           <SectionsButtons />
           {/* LOCATION PICS */}
           <Section id="location-pics" bgColor="var(--gray-blue)">

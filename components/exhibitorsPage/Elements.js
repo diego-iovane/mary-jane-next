@@ -62,58 +62,6 @@ export const Inner = styled.div`
     }
 `
 
-export const IllustrationsSectionContainer = styled.div`
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    @media all and (max-width: 550px) {
-        height: 40rem;
-    }
-`
-
-export const IllustrationsContainer = styled.div`
-    position: relative;
-`
-
-export const IllustrationInner = styled.div`
-    position: absolute;
-    width: 22rem;
-    height: ${({ height }) => height ? height : "20rem"};
-    left: ${({ left }) => left && left};
-    top: ${({ top }) => top && top};
-
-    @media all and (max-width: 550px) {
-        left: ${({ leftMobile }) => leftMobile && leftMobile};
-        top: ${({ topMobile }) => topMobile && topMobile};
-    }
-`
-
-export const Illustration = styled(Image)`
-    object-fit: contain;
-`
-
-export const Button = styled(Link)`
-    background-color: #ffffff;
-    font-size: 1.5rem;
-    padding: .4rem 2rem;
-    color: var(--pink);
-    border-radius: 5px;
-    border: 1px solid var(--pink);
-    cursor: pointer;
-    position: absolute;
-    left: ${({left}) => left && left};
-    top: ${({top}) => top && top};
-    box-shadow: var(--soft-shadow);
-    
-    transition: opacity .2s ease-in-out;
-
-    &:hover {
-        opacity: .5;
-    }
-`
-
 export const Title = styled.h3`
     font-size: 2rem;
     margin: 2rem auto 1rem auto;
