@@ -4,11 +4,11 @@ import { SwiperButtonsContainer, Arrow } from './Elements'
 const SwiperButtons = ({ swiperRef }) => {
 
     const swipeLeft = () => {
-        swiperRef.current.swiper.slidePrev(800, false)
+        swiperRef.current.swiper.slidePrev(200, false)
     }
 
     const swipeRight = () => {
-        swiperRef.current.swiper.slideNext(800, false)
+        swiperRef.current.swiper.slideNext(200, false)
     }
 
     return (

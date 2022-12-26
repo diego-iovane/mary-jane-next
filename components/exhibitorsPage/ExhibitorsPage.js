@@ -9,6 +9,8 @@ import SectionsButtons from './SectionsButtons/SectionsButtons'
 import BookingSection from './BookingSection/BookingSection'
 import Contact from './Contact/Contact'
 import Furniture from './Furniture/Furniture'
+import Hotels from './Hotels/Hotels'
+import Hostesses from './Hostesses/Hostesses'
 import {
   Section,
   HeroImage,
@@ -228,6 +230,8 @@ const ExhibitorsPage = () => {
             </Inner>
           </Section>
           <Furniture />
+          <Hotels />
+          <Hostesses />
         </>
       }
     </>
