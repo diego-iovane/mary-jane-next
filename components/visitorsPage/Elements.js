@@ -59,6 +59,7 @@ export const Inner = styled.div`
         padding: 0 var(--mobile-section-padding);
     }
 `
+
 export const Title = styled.h3`
     font-size: 2rem;
     margin: 2rem auto 1rem auto;

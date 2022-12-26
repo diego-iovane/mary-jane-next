@@ -2,6 +2,7 @@ import React from 'react'
 import { GetContentContext } from '../../context/ContentContext'
 import Features from './Features/Features'
 import GreenBoxSection from './GreenBoxSection/GreenBoxSection'
+import Benefits from './Benefits/Benefits'
 import {
   HeroImage,
   Section,
@@ -34,6 +35,7 @@ const VisitorsPage = () => {
           <GreenBoxSection />
           <Features />
           <ProductsGrid />
+          <Benefits />
         </>
       }
     </>

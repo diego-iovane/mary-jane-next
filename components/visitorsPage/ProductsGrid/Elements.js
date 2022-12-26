@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const Inner = styled.div`
     width: 70%;
     max-width: calc(var(--section-max-width) - 25rem);
-    margin: 0 auto;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -21,7 +21,7 @@ export const GridContainer = styled.div`
 
 export const Grid = styled.div`
     width: 70%;
-    margin: 3rem auto 0 auto;
+    margin: 3rem auto 3rem auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(0,1fr));
     grid-gap: .5rem;
