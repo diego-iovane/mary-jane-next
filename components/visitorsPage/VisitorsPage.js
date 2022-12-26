@@ -9,6 +9,7 @@ import {
   Overlay,
   HeroContent,
 } from './Elements'
+import ProductsGrid from './ProductsGrid/ProductsGrid'
 
 const VisitorsPage = () => {
 
@@ -32,6 +33,7 @@ const VisitorsPage = () => {
           </Section>
           <GreenBoxSection />
           <Features />
+          <ProductsGrid />
         </>
       }
     </>

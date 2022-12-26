@@ -30,7 +30,7 @@ const Features = () => {
                     <InstaCard
                         src={content.visitorsPage.instaCardTwo.src}
                         alt={content.visitorsPage.instaCardTwo.src}
-                        x="8rem"
+                        x="5rem"
                         y="0rem"
                         rt="-5"
                     />

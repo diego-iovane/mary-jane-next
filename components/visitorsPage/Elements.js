@@ -42,7 +42,6 @@ export const HeroTitle = styled.h1`
     transform: translateY(-130%);
     bottom: 0;
     left: 0;
-    /* left: var(--desktop-section-padding); */
     font-size: 3rem;
     font-weight: 500;
     color: #ffffff;
@@ -59,4 +58,11 @@ export const Inner = styled.div`
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);
     }
+`
+export const Title = styled.h3`
+    font-size: 2rem;
+    margin: 2rem auto 1rem auto;
+    max-width: 35rem;
+    line-height: 1.4;
+    color: ${({ color }) => color && color};
 `
