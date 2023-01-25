@@ -29,7 +29,7 @@ const ExhibitorsSection = () => {
                     <SectionTitle>{content.exhibitorsGallery.title}</SectionTitle>
                     <Swiper
                         ref={swiperRef}
-                        slidesPerView={1}
+                        slidesPerView={3}
                         breakpoints={{
                             900: {
                                 slidesPerView: 7,

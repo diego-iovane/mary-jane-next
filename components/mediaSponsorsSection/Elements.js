@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     padding: 5rem 0;
-    background-color: var(--bg-gray);
+    /* background-color: var(--bg-gray); */
 `
 
 export const Inner = styled.div`

@@ -34,12 +34,7 @@ const ReviewSection = () => {
                     <SectionTitle>{content.reviewsSection.title}</SectionTitle>
                     <RevWidget>
                         <GContainer>
-                            <GImg src={googleLogo} />
-                            {/* <GImg
-                                src={content.reviewsSection.gLogo.src}
-                                alt={content.reviewsSection.gLogo.alt}
-                                fill
-                            /> */}
+                            <GImg src={googleLogo} alt="google reviews logo"/>
                         </GContainer>
                         <StarsContainer>
                             <Num>4.7</Num>

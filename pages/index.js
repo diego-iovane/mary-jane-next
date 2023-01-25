@@ -3,11 +3,8 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { GetLanguageContext } from '../context/LanguageContext'
 import Hero from '../components/hero/Hero'
-import Features from '../components/features/Features'
-import MediaFeatures from '../components/mediaFeatures/MediaFeatures'
 import ExhibitorsSection from '../components/exhibitorsSection/ExhibitorsSection'
 import ReviewSection from '../components/reviewsSection/ReviewSection'
-import GrowSection from '../components/growSection/GrowSection'
 import CtaSection from '../components/ctaSection/CtaSection'
 import ImageGallery from '../components/imageGallery/ImageGallery'
 import MediaSponsorsSection from '../components/mediaSponsorsSection/MediaSponsorsSection'
@@ -15,6 +12,8 @@ import SponsorsSection from '../components/sponsorsSection/SponsorsSection'
 import TicketsSection from '../components/ticketsSection/TicketsSection'
 import FloatingButton from '../components/floatingButton/FloatingButton'
 import Exhibition from '../components/home/Exhibition/Exhibition'
+import ForExhibitors from '../components/home/ForExhibitors/ForExhibitors'
+import MediaReviews from '../components/mediaReviews/MediaReviews'
 
 export default function Home() {
 
@@ -38,12 +37,11 @@ export default function Home() {
       </Head>
       <Hero />
       <Exhibition />
-      {/* <Features /> */}
-      {/* <MediaFeatures /> */}
+      <ForExhibitors />
+      <MediaReviews />
       <ExhibitorsSection />
-      <MediaSponsorsSection />
       <SponsorsSection />
-      {/* <GrowSection /> */}
+      <MediaSponsorsSection />
       {/* <CtaSection /> */}
       <ReviewSection />
       <ImageGallery />

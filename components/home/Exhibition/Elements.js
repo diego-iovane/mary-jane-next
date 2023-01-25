@@ -58,3 +58,22 @@ export const InstaText = styled.p`
     text-align: center;
     font-family: 'Rock Salt', cursive;
 `
+
+export const IconContainer = styled.div`
+    width: 2rem;
+    margin: 1rem auto 0 auto;
+`
+
+export const Icon = styled.div`
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+`
+
+export const Img = styled(Image)`
+    object-fit: contain;
+`
+
+export const IconTxt = styled.p`
+    font-size: .6rem;
+`

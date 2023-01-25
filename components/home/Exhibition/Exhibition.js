@@ -1,4 +1,8 @@
 import SecondaryButton from '../../buttons/SecondaryButton'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"
+import "swiper/css/effect-cards"
+import { EffectCards } from "swiper";
 import {
     Section,
     Inner,
@@ -9,18 +13,11 @@ import {
     InstaCard,
     InstaImgContainer,
     InstaText,
+    IconContainer,
+    Icon,
+    Img,
+    IconTxt,
 } from './Elements'
-
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css"
-import "swiper/css/effect-cards"
-
-// import required modules
-import { EffectCards } from "swiper";
 
 const Exhibition = () => {
 
@@ -65,7 +62,7 @@ const Exhibition = () => {
                     >
                         {
                             data.map(item => {
-                                return(
+                                return (
                                     <SwiperSlide key={item.text}>
                                         <InstaCard>
                                             <InstaImgContainer></InstaImgContainer>
@@ -75,12 +72,13 @@ const Exhibition = () => {
                                 )
                             })
                         }
-                        {/* <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        <SwiperSlide>Slide 5</SwiperSlide> */}
                     </Swiper>
+                    <IconContainer>
+                        <Icon>
+                            <Img src="/icons/swipe-icon.png" alt="swipe icon" fill />
+                        </Icon>
+                        <IconTxt>Swipe</IconTxt>
+                    </IconContainer>
                 </Images>
             </Inner>
         </Section>

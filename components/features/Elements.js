@@ -2,22 +2,12 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export const Section = styled.section`
-    min-height: 10rem;
-    padding-top: 5rem;
-`
-
-export const Inner = styled.div`
-    max-width: var(--section-max-width);
-    margin: 0 auto;
+export const Items = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
-`
-
-export const Items = styled.div`
-    display: flex;
-    justify-content: space-around;
-    width: 55rem;
+    top: 50%;
+    transform: translateY(-50%);
 `
 
 export const ItemContainer = styled.div`
