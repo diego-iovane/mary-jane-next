@@ -5,6 +5,7 @@ import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
 import { GetContentContext } from '../../context/ContentContext'
+import SwiperButtons from '../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
@@ -12,7 +13,6 @@ import {
     LogoContainer,
     Logo,
 } from './Elements'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
 
 const MediaSponsorsSection = () => {
 
@@ -30,10 +30,10 @@ const MediaSponsorsSection = () => {
                         slidesPerView={3}
                         breakpoints={{
                             900: {
-                                slidesPerView: 7,
+                                slidesPerView: 6,
                             },
                             650: {
-                                slidesPerView: 5,
+                                slidesPerView: 4,
                             },
                             400: {
                                 slidesPerView: 3,

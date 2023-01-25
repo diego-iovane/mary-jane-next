@@ -25,6 +25,11 @@ export const IllustrationInner = styled.div`
     left: ${({ left }) => left && left};
     top: ${({ top }) => top && top};
 
+    @media all and (max-width: 690px) {
+        left: ${({ leftMidMobile }) => leftMidMobile && leftMidMobile};
+        top: ${({ topMidMobile }) => topMidMobile && topMidMobile};
+    }
+
     @media all and (max-width: 550px) {
         left: ${({ leftMobile }) => leftMobile && leftMobile};
         top: ${({ topMobile }) => topMobile && topMobile};
@@ -49,6 +54,7 @@ export const Button = styled(Link)`
     left: ${({left}) => left && left};
     top: ${({top}) => top && top};
     box-shadow: var(--soft-shadow);
+    z-index: 110;
     
     transition: opacity .2s ease-in-out;
 

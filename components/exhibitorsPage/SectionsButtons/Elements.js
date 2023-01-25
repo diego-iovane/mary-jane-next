@@ -15,6 +15,8 @@ export const Inner = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 var(--desktop-section-padding);
+    position: relative;
+    z-index: 110;
 
     @media all and (max-width: 540px) {
         padding: 0 var(--mobile-section-padding);
@@ -44,6 +46,10 @@ export const ButtonsContainer = styled.div`
     flex-wrap: wrap;
     width: 70%;
     margin: 0 auto;
+
+    @media all and (max-width: 1050px) {
+        width: 100%;
+    }
 `
 
 export const Button = styled(Link)`

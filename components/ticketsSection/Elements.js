@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
     padding: 5rem 0;
-    background-color: var(--light-blue);
+    /* background-color: var(--light-blue); */
 `
 
 export const Inner = styled.div`

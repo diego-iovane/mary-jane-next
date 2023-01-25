@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
-    padding: 5rem 0;
+    padding: 5rem 0 1rem 0;
 `
 
 export const Inner = styled.div`

@@ -31,6 +31,8 @@ const HandsSection = () => {
                 <IllustrationInner
                     top="0rem"
                     left="-5rem"
+                    topMidMobile="-3rem"
+                    leftMidMobile="-19.3rem"
                 >
                     <Illustration
                         src={content.newsletterSection.exhibitIllustration.src}
@@ -49,6 +51,8 @@ const HandsSection = () => {
                 <IllustrationInner
                     top="3rem"
                     left="-19rem"
+                    topMidMobile="-4rem"
+                    leftMidMobile="9rem"
                 >
                     <Illustration
                         src={content.newsletterSection.visitIllustration.src}

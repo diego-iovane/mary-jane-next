@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
-    height: 50rem;
     padding: 5rem 0;
     background-color: var(--light-blue);
 `
@@ -81,3 +80,21 @@ export const ButtonsContainer = styled.div`
         display: none;
     }
 `
+
+export const CtaContainer = styled.div`
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+`
+
+export const CtaTitle = styled.h2`
+    margin: 4rem 0;
+    text-align: center;
+`
+
+export const CtaSubTitle = styled.h4`
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+`
+

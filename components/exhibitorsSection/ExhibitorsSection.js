@@ -5,7 +5,8 @@ import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay } from "swiper";
 import { GetContentContext } from '../../context/ContentContext'
-import SwiperButtons from './SwiperButtons'
+// import SwiperButtons from './SwiperButtons'
+import SwiperButtons from '../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
@@ -31,59 +32,13 @@ const ExhibitorsSection = () => {
                         slidesPerView={1}
                         breakpoints={{
                             900: {
-                                slidesPerView: 3,
+                                slidesPerView: 7,
                             },
                             650: {
-                                slidesPerView: 3,
+                                slidesPerView: 5,
                             },
                             400: {
-                                slidesPerView: 1,
-                            },
-                        }}
-                        grid={{
-                            rows: 1,
-                        }}
-                        spaceBetween={30}
-                        autoplay={{
-                            delay: 1500,
-                            disableOnInteraction: false,
-                        }}
-                        allowTouchMove={false}
-                        loop={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Grid, Autoplay]}
-                        className="exhibitorsSwyper"
-                    >
-                        {
-                            content.exhibitorsGallery.items.map(item => {
-                                return (
-                                    <SwiperSlide key={item.src}>
-                                        <LogoContainer>
-                                            <Logo
-                                                src={item.src}
-                                                alt=""
-                                                fill
-                                            />
-                                        </LogoContainer>
-                                    </SwiperSlide>
-                                )
-                            })
-                        }
-                    </Swiper>
-                    <Swiper
-                        ref={swiperRefSec}
-                        slidesPerView={1}
-                        breakpoints={{
-                            900: {
                                 slidesPerView: 3,
-                            },
-                            650: {
-                                slidesPerView: 3,
-                            },
-                            400: {
-                                slidesPerView: 1,
                             },
                         }}
                         grid={{
@@ -117,10 +72,7 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
-                    <SwiperButtons
-                        swiperRef={swiperRef}
-                        swiperRefSec={swiperRefSec}
-                    />
+                    <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
             }
         </Section>

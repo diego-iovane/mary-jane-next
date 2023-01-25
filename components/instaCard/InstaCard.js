@@ -7,7 +7,11 @@ import {
 
 const InstaCard = ({ src, x, y, rt, alt = "mary jane berlin experience" }) => {
   return (
-    <Card x={x} y={y} rt={rt}>
+    <Card 
+      x={x} 
+      y={y} 
+      rt={rt}
+    >
         <ImgContainer>
             <Img src={src} alt={alt} fill />
         </ImgContainer>

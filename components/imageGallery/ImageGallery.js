@@ -5,6 +5,8 @@ import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay } from "swiper"
 import { GetContentContext } from '../../context/ContentContext'
+import SwiperButtons from '../swiperButtons/SwiperButtons'
+import SecondaryButton from '../buttons/SecondaryButton'
 import {
     Section,
     Inner,
@@ -14,11 +16,12 @@ import {
     VideoContainer,
     Video,
     AnchorOverlay,
-    SectionTitle,
     HoverableArea,
     ButtonsContainer,
+    CtaContainer,
+    CtaTitle,
+    CtaSubTitle,
 } from './Elements'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
 
 const ImageGallery = () => {
 
@@ -30,7 +33,6 @@ const ImageGallery = () => {
             {
                 Object.entries(content).length !== 0 &&
                 <Inner>
-                    <SectionTitle>{content.imageGallery.title}</SectionTitle>
                     <HoverableArea>
                         <Swiper
                             ref={swiperRef}
@@ -107,6 +109,19 @@ const ImageGallery = () => {
                     <ButtonsContainer>
                         <SwiperButtons swiperRef={swiperRef} />
                     </ButtonsContainer>
+                    <CtaContainer>
+                        <CtaTitle>Wanna Join?</CtaTitle>
+                        <CtaSubTitle>Get your tickets for a special price</CtaSubTitle>
+                        <SecondaryButton>
+                            <a
+                                href={content.hero.button.url}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                Get your tickets
+                            </a>
+                        </SecondaryButton>
+                    </CtaContainer>
                 </Inner>
             }
         </Section>
