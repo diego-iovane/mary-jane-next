@@ -39,7 +39,7 @@ const LanguageDropdown = ({ flags }) => {
     }
 
     return (
-        <DropdownContainer>
+        <DropdownContainer opened={opened}>
             <Button onClick={handleOpen}>
                 <FlagContainer>
                     <Flag src={active.src} />

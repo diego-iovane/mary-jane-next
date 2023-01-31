@@ -1,5 +1,4 @@
-import React from 'react'
-import { GetContentContext } from '../../context/ContentContext'
+import { GetContentContext } from '../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -18,7 +17,7 @@ const SocialSection = () => {
         <Section>
             {
                 Object.entries(content).length !== 0 &&
-                <Inner>
+                // <Inner>
                     <Content>
                         <Title>{content.socialSection.title}</Title>
                         <IconsContainer>
@@ -42,7 +41,7 @@ const SocialSection = () => {
                             }
                         </IconsContainer>
                     </Content>
-                </Inner>
+                // </Inner>
             }
         </Section>
     )

@@ -1,18 +1,18 @@
 /* EN */
 .date {
-    font-size: 5.3rem;
+    font-size: 4.3rem;
     color: #ffffff;
 }
 
 .month {
     line-height: .3;
     color: var(--greenl);
-    font-size: 8rem;
+    font-size: 7rem;
 }
 
 .year {
     color: var(--green);
-    font-size: 8.6rem;
+    font-size: 7.6rem;
 }
 
 .subtitle {

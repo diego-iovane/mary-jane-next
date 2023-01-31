@@ -7,6 +7,7 @@ export const Section = styled.section`
 
 export const Inner = styled.div`
     max-width: var(--section-max-width);
+    width: var(--section-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -21,9 +22,8 @@ export const Inner = styled.div`
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #000000;
     margin-bottom: 1.5rem;
+    align-self: flex-start;
 ` 
 
 export const LogoContainer = styled.div`

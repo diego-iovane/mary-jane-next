@@ -10,14 +10,13 @@ export const Container = styled(motion.header)`
     transition: all .5s ease-in-out;
     
     box-shadow: ${({scrolled}) => scrolled ? '0px 2px 9px 3px rgba(0, 0, 0, 0.2)' : 'none'};
-    /* background-color: ${({scrolled}) => scrolled ? 'var(--black)' : 'transparent'}; */
-    background-color: ${({scrolled}) => scrolled ? '#ffffff' : 'transparent'};
+    background-color: ${({scrolled}) => scrolled ? 'var(--bg-color)' : 'transparent'};
 `
 
 export const Inner = styled.div`
     margin: 0 auto;
     width: 100%;
-    max-width: var(--section-max-width);
+    max-width: calc(var(--section-max-width) + 5rem);
     display: flex;
     justify-content: space-between;
 `
@@ -56,6 +55,7 @@ export const Nav = styled.nav`
     margin-top: ${({scrolled}) => scrolled ? '0' : '1rem'};
     position: relative;
     transition: all .5s ease-in-out;
+    align-items: center;
 
     @media all and (max-width: 960px) {
         display: none;
@@ -77,8 +77,7 @@ export const LinkContainer = styled.li`
     align-items: center;
 
     a {
-        /* color: #ffffff; */
-        color: ${({scrolled}) => scrolled ? 'var(--black)' : '#ffffff'};
+        color: ${({scrolled}) => scrolled ? 'var(--text-color)' : '#ffffff'};
     }
 
     &:hover {
@@ -90,11 +89,42 @@ export const LinkContainer = styled.li`
     }
 `
 
-// export const ButtonContainer = styled.div`
-//     margin: 1.2rem 0 1rem 1rem;
-//     display: flex;
-//     align-items: center;
-//     position: absolute;
-//     top: -.8rem;
-//     right: -10rem;
-// `
+export const TicketsBtn = styled.div`
+    background-color: var(--green);
+    font-size: .7rem;
+    width: 7rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50px;
+    margin: 0 .3rem;
+    cursor: pointer;
+
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: .8;
+    }
+`
+
+export const StandBtn = styled.div`
+    background-color: var(--pink);
+    font-size: .7rem;
+    width: 7rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 50px;
+    margin: 0 .3rem;
+    cursor: pointer;
+
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: .8;
+    }
+`

@@ -34,6 +34,19 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
 
     return (
         <Nav scrolled={scrolled}>
+            <Links>
+                {
+                    temp.map(link => {
+                        return (
+                            <LinkContainer key={link.title} scrolled={scrolled} >
+                                <Link href={link.url}>
+                                    {link.title}
+                                </Link>
+                            </LinkContainer>
+                        )
+                    })
+                }
+            </Links>
             {/* <Links>
                 {
                     links.map(link => {
@@ -47,19 +60,6 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
                     })
                 }
             </Links> */}
-            <Links>
-                {
-                    temp.map(link => {
-                        return (
-                            <LinkContainer key={link.title} >
-                                <Link href={link.url}>
-                                    {link.title}
-                                </Link>
-                            </LinkContainer>
-                        )
-                    })
-                }
-            </Links>
             {/* <ButtonContainer>
                 <PrimaryButton>
                     <a href={ticketBtn.url} rel="noopener noreferrer" target="_blank">{ticketBtn.title}</a>

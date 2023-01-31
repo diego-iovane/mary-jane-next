@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: var(--section-min-height);
+    background-color: var(--black);
     padding: 3rem 0;
 `
 
@@ -23,13 +24,16 @@ export const Title = styled.p`
     font-weight: bold;
     font-size: .8rem;
     margin: 2.5rem 0 1rem 0;
+    color: #ffffff;
 `
 
-export const Text = styled.p`
+export const Text = styled.div`
     font-size: .8rem;
+    color: #ffffff;
 
     p {
         margin-bottom: .5rem;
+        color: #ffffff;
     }
 `
 
@@ -149,4 +153,5 @@ export const FooterLink = styled(Link)`
     font-size: .8rem;
     font-weight: bold;
     margin-bottom: .5rem;
+    color: #ffffff;
 `

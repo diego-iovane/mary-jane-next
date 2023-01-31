@@ -2,9 +2,21 @@ import styled from 'styled-components'
 
 export const DropdownContainer = styled.div`
     position: relative;
-    margin-left: 2.5rem;
+    margin: 0 .5rem 0 1rem;
     display: flex;
     align-items: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -5px;
+        background-color: #ffffff;
+        width: 100%;
+        height: ${({opened}) => opened ? '262%' : '100%'};
+        border-radius: 500px;
+        transition: all .1s ease-in-out;
+    }
 
     @media all and (max-width: 960px) {
         margin-top: 1rem;
@@ -59,7 +71,7 @@ export const Flag = styled.img`
 
 export const Arrow = styled.div`
     position: absolute;
-    right: 0;
+    right: -3px;
     width: 0;
     height: 0;
     border-left: 3px solid transparent;

@@ -1,12 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay } from "swiper";
-import { GetContentContext } from '../../context/ContentContext'
-// import SwiperButtons from './SwiperButtons'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
+import { GetContentContext } from '../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -19,7 +17,6 @@ const ExhibitorsSection = () => {
 
     const { content } = GetContentContext()
     const swiperRef = useRef()
-    const swiperRefSec = useRef()
 
     return (
         <Section>
@@ -46,7 +43,7 @@ const ExhibitorsSection = () => {
                         }}
                         spaceBetween={30}
                         autoplay={{
-                            delay: 1500,
+                            delay: 900,
                             disableOnInteraction: false,
                         }}
                         loop={true}
@@ -72,7 +69,6 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
-                    <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
             }
         </Section>

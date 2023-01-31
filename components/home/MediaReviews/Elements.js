@@ -8,6 +8,7 @@ export const Section = styled.section`
 
 export const Inner = styled.div`
     max-width: var(--section-max-width);
+    width: var(--section-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -22,8 +23,7 @@ export const Inner = styled.div`
 
 export const SectionTitle = styled.h2`
     font-size: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #000000;
+    align-self: flex-start;
     margin-bottom: 1.5rem;
 
     @media all and (max-width: 450px) {

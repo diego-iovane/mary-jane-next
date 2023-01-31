@@ -4,34 +4,33 @@ import Image from 'next/image'
 export const Section = styled.section`
     min-height: 10rem;
     padding: 7rem 0;
-    background-color: var(--light-blue);
+    background-color: var(--black);
     position: relative;
 
     &:after {
-        content: ' ';
-        width: 100%;
-        height: 1.4rem;
-        background-color: var(--black);
+        content: '';
         position: absolute;
+        left: 50%;
         bottom: 0;
-        left: 0;
+        transform: translateX(-50%);
+        height: .2rem;
+        width: 10rem;
+        background-color: black;
+        border-radius: 500px;
     }
 `
 
-export const Inner = styled.div`
-    margin: 0 auto;
+export const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`
-
-export const Content = styled.div`
-
+    flex-direction: column;
 `
 
 export const Title = styled.h2`
     text-align: center;
     font-size: var(--desktop-title-font-size);
+    color: #ffffff;
 `
 
 export const IconsContainer = styled.div`

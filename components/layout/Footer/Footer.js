@@ -1,6 +1,6 @@
 import React from 'react'
 import { GetContentContext } from '../../../context/ContentContext'
-import SocialSection from '../../socialSection/SocialSection'
+import SocialSection from '../../home/SocialSection/SocialSection'
 import {
   Section,
   Inner,

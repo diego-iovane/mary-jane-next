@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 `
 
 export const Item = styled.div`
@@ -18,7 +18,7 @@ export const Num = styled.p`
     color: #ffffff;
     font-weight: bold;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     @media all and (max-width: 450px) {
         font-size: 1.6rem;
@@ -28,4 +28,5 @@ export const Num = styled.p`
 export const Text = styled.p`
     color: #ffffff;
     text-align: center;
+    font-size: .8rem;
 `

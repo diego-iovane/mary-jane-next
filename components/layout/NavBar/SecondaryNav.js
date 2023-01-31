@@ -3,20 +3,20 @@ import Link from 'next/link'
 import LanguageDropdown from '../../languageDropdown/LanguageDropdown'
 import {
     Nav,
-    Links,
-    LinkContainer,
+    TicketsBtn,
+    StandBtn,
 } from './Elements'
 
 const SecondaryNav = ({ links, flags, scrolled }) => {
 
     const temp = [
         {
-            title: '',
-            url: '',
+            title: 'Get tickets',
+            url: '/',
         },
         {
-            title: '',
-            url: '',
+            title: 'Stand inquiry',
+            url: '/',
         }
     ]
 
@@ -33,7 +33,12 @@ const SecondaryNav = ({ links, flags, scrolled }) => {
                     })
                 }
             </Links> */}
-            
+            <TicketsBtn>
+                <Link href="/">Get tickets</Link>
+            </TicketsBtn>
+            <StandBtn>
+                <Link href="/">Stand inquiry</Link>
+            </StandBtn>
             <LanguageDropdown flags={flags}/>
         </Nav>
     )

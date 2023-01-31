@@ -27,12 +27,14 @@ body {
 
   --text-color: #1E411D;
   --green: #93C244;
-
+  --pink: #e27baf;
+  --bg-color: #F7F7F7;
   --black: #1E1E1E;
+
+
   --dark-green: #1e411d;
   --middle-green: #87AF55;
   --light-green: #93c244;
-  --pink: #e27baf;
   --light-blue: #c7e1e0;
   --soft-gray: #e4e4e4;
   --gray-blue: #435a65;

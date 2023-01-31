@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 const LayoutContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  background-color: #F7F7F7;
+  background-color: var(--bg-color);
 `
 
 //Component
