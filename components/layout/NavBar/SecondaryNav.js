@@ -8,9 +8,21 @@ import {
 } from './Elements'
 
 const SecondaryNav = ({ links, flags, scrolled }) => {
+
+    const temp = [
+        {
+            title: '',
+            url: '',
+        },
+        {
+            title: '',
+            url: '',
+        }
+    ]
+
     return (
         <Nav scrolled={scrolled}>
-            <Links>
+            {/* <Links>
                 {
                     links.map(link => {
                         return (
@@ -20,7 +32,8 @@ const SecondaryNav = ({ links, flags, scrolled }) => {
                         )
                     })
                 }
-            </Links>
+            </Links> */}
+            
             <LanguageDropdown flags={flags}/>
         </Nav>
     )

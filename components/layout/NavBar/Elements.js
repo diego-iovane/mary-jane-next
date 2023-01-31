@@ -10,12 +10,13 @@ export const Container = styled(motion.header)`
     transition: all .5s ease-in-out;
     
     box-shadow: ${({scrolled}) => scrolled ? '0px 2px 9px 3px rgba(0, 0, 0, 0.2)' : 'none'};
-    background-color: ${({scrolled}) => scrolled ? 'var(--black)' : 'transparent'};
+    /* background-color: ${({scrolled}) => scrolled ? 'var(--black)' : 'transparent'}; */
+    background-color: ${({scrolled}) => scrolled ? '#ffffff' : 'transparent'};
 `
 
 export const Inner = styled.div`
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     max-width: var(--section-max-width);
     display: flex;
     justify-content: space-between;
@@ -70,13 +71,14 @@ export const Links = styled.ul`
 export const LinkContainer = styled.li`
     margin-left: 2.5rem;
     transition: opacity .2s ease-in-out;
-    font-size: .8rem;
+    font-size: .7rem;
     color: #ffffff;
     display: flex;
     align-items: center;
 
     a {
-        color: #ffffff;
+        /* color: #ffffff; */
+        color: ${({scrolled}) => scrolled ? 'var(--black)' : '#ffffff'};
     }
 
     &:hover {
@@ -88,11 +90,11 @@ export const LinkContainer = styled.li`
     }
 `
 
-export const ButtonContainer = styled.div`
-    margin: 1.2rem 0 1rem 1rem;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -.8rem;
-    right: -10rem;
-`
+// export const ButtonContainer = styled.div`
+//     margin: 1.2rem 0 1rem 1rem;
+//     display: flex;
+//     align-items: center;
+//     position: absolute;
+//     top: -.8rem;
+//     right: -10rem;
+// `

@@ -42,16 +42,15 @@ export const ButtonsContainer = styled.div`
 // REVIEW
 export const ReviewContainer = styled.div`
     position: relative;
-    background-color: var(--soft-gray);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 100%);
+    border-radius: 12px;
     padding: 1rem 2rem;
-    border-radius: 7px;
     min-height: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* transform: scale(.9); */
-    /* PARA ACTIVA: */
-    /* transform: scale(1.1); */
+    transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
+    transition: transform .3s ease-in-out;
 `
 
 export const QuotesIcon = styled.svg`
@@ -59,7 +58,7 @@ export const QuotesIcon = styled.svg`
     height: 2rem;
     
     path { 
-        fill: var(--light-green);
+        fill: var(--pink);
     }
 `
 

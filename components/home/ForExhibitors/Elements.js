@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const Section = styled.section`
     padding: 5rem 0 2rem 0;
@@ -17,12 +17,13 @@ export const Inner = styled.div`
     }
 `
 
-export const FeaturesContainer = styled.div`
+export const FeaturesContainer = styled(motion.div)`
     width: 50%;
     position: relative;
+    padding: 0 2rem;
 `
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
     width: 50%;
 `
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const HeroSection = styled.div`
     height: 42rem;
@@ -10,25 +11,30 @@ export const HeroSection = styled.div`
     }
 `
 
+export const Inner = styled(motion.div)`
+    width: var(--section-width);
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    position: relative;
+    top: 6rem;
+    left: 0;
+`
+
 export const Content = styled.div`
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 `
 
 export const Title = styled.h1`
     color: #ffffff;
-    text-align: center;
     font-size: 5.5rem;
-    margin-top: 3.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     line-height: .5;
     border-bottom: 1px solid #ffffff;
-    padding-bottom: 3.5rem;
+    padding-bottom: 2.5rem;
 
     @media all and (max-width: 850px) {
         font-size: 4.5rem;
@@ -36,9 +42,10 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
-    color: var(--light-blue);
-    text-align: center;
-    font-size: 1.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: .1rem;
 
     @media all and (max-width: 450px) {
         font-size: 1.1rem;

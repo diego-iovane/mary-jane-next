@@ -2,12 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-    background-color: #ffffff;
-    font-size: .8rem;
-    width: 8rem;
-    padding: .7rem 0;
-    color: var(--light-green);
-    font-weight: 700;
+    background-color: var(--green);
+    font-size: 1rem;
+    padding: .7rem 2rem;
+    color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
 

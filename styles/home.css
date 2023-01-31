@@ -1,0 +1,27 @@
+/* EN */
+.date {
+    font-size: 5.3rem;
+    color: #ffffff;
+}
+
+.month {
+    line-height: .3;
+    color: var(--greenl);
+    font-size: 8rem;
+}
+
+.year {
+    color: var(--green);
+    font-size: 8.6rem;
+}
+
+.subtitle {
+    color: #ffffff;
+    letter-spacing: .14;
+}
+
+.subtitle-span {
+    color: var(--pink);
+}
+
+/* DE */

@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const Section = styled.section`
     padding: 5rem 0 2rem 0;
 `
 
-export const Inner = styled.div`
+export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
     margin: 0 auto;
@@ -17,7 +18,7 @@ export const Inner = styled.div`
     }
 `
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
     width: 41rem;
 `
 
@@ -30,8 +31,9 @@ export const Text = styled.p`
     margin: 2rem 0;
 `
 
-export const Images = styled.div`
+export const Images = styled(motion.div)`
     width: 50%;
+    position: relative;
 `
 
 export const InstaCard = styled.div`
@@ -53,6 +55,10 @@ export const InstaImgContainer = styled.div`
     background-color: #ededed;
 `
 
+export const InstaImg = styled(Image)`
+    object-fit: cover;
+`
+
 export const InstaText = styled.p`
     font-size: 1.5rem;
     text-align: center;
@@ -62,12 +68,15 @@ export const InstaText = styled.p`
 export const IconContainer = styled.div`
     width: 2rem;
     margin: 1rem auto 0 auto;
+    position: relative;
 `
 
-export const Icon = styled.div`
+export const Icon = styled(motion.div)`
     width: 2rem;
     height: 2rem;
     position: relative;
+    transform: ${({rotate}) => rotate ? 'rotateZ(60deg)' : 'rotateZ(0)'};
+    transition: all .2s ease-in-out;
 `
 
 export const Img = styled(Image)`
@@ -76,4 +85,33 @@ export const Img = styled(Image)`
 
 export const IconTxt = styled.p`
     font-size: .6rem;
+`
+
+export const ButtonsContainer = styled.div`
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 50;
+`
+
+export const Button = styled.button`
+    width: 2rem;
+    height: 2rem;
+    background-color: #ffffff;
+    border-radius: 500px;
+    border: 1px solid var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: ${({right}) => right ? 'rotate(180deg)' : null};
+
+    svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
 `

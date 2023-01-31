@@ -4,7 +4,7 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../context/ContentContext'
+import { GetContentContext } from '../../../context/ContentContext'
 import Review from './Review'
 import {
     Section,
@@ -12,7 +12,7 @@ import {
     SectionTitle,
     ButtonsContainer,
 } from './Elements'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
+import SwiperButtons from '../../swiperButtons/SwiperButtons'
 
 const MediaReviews = () => {
 
@@ -48,7 +48,7 @@ const MediaReviews = () => {
                             clickable: true,
                         }}
                         modules={[Grid, Pagination]}
-                        // onSlideChange={() => console.log('change')}
+                        loop={true}
                     >
                         {
                             content.features.mediaLogos.map((item, index) => {
