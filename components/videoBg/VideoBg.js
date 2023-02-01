@@ -8,7 +8,7 @@ const VideoBack = () => {
     return (
         <>
         {/* autoPlay */}
-            <VideoBg autoPlay loop muted playsInline>
+            <VideoBg loop muted playsInline>
                 <source src='/video/bg-video.mp4' type='video/mp4' />
             </VideoBg>
             <Overlay />

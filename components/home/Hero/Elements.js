@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const HeroSection = styled.div`
-    height: 100vh;
-    max-height: 46rem;
+    height: 50rem;
     width: 100%;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
 
     @media all and (max-width: 500px) {
         height: 100vh;
@@ -20,16 +20,19 @@ export const WhiteOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.29) 18.23%, rgba(0, 0, 0, 0.46) 50%, rgba(83, 83, 83, 0.46) 91.67%, #F6F6F5 100%);
+    background: linear-gradient(180deg, rgba(247, 247, 247, 0) 64.58%, #F7F7F7 100%);
 `
 
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    bottom: 4rem;
-    left: 4rem;
+    bottom: 2rem;
 `
 
 export const Content = styled(motion.div)`
@@ -42,11 +45,11 @@ export const Content = styled(motion.div)`
 export const Title = styled(motion.h1)`
     color: #ffffff;
     font-size: 5.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: .5rem;
     line-height: .5;
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
 
     @media all and (max-width: 850px) {
         font-size: 4.5rem;
@@ -55,8 +58,10 @@ export const Title = styled(motion.h1)`
 
 export const SubTitle = styled(motion.h2)`
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     letter-spacing: .1rem;
+    line-height: .6;
+    text-align: center;
 
     @media all and (max-width: 450px) {
         font-size: 1.1rem;
@@ -64,6 +69,12 @@ export const SubTitle = styled(motion.h2)`
     }
 `
 
-export const CounterContainer = styled(motion.div)``
+export const CounterContainer = styled(motion.div)`
+    border-top: 1px solid #ffffff;
+    padding-top: .5rem;
+    margin: 0 auto;
+`
 
-export const ButtonContainer = styled(motion.div)``
+export const ButtonContainer = styled(motion.div)`
+    margin: 0 auto;
+`

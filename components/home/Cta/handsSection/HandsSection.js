@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
+import { GetContentContext } from '../../../../context/ContentContext'
 import {
     Container,
     IllustrationsContainer,

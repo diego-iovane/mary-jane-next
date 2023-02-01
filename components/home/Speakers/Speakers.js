@@ -1,36 +1,72 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../context/ContentContext'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
+import { GetContentContext } from '../../../context/ContentContext'
+import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
     SectionTitle,
+    Head,
+    ButtonContainer,
     LogoContainer,
     Logo,
+    NameContainer,
+    Name,
+    Surname,
 } from './Elements'
+import SmallCta from '../../buttons/SmallCta'
 
-const MediaSponsorsSection = () => {
+const Speakers = () => {
+
+    const temp = [
+        {
+            src: '/temp/andre.webp',
+            name: 'Andreas',
+            surname: 'Muller',
+        },
+        {
+            src: '/temp/greg.jpg',
+            name: 'Gregor',
+            surname: 'Cichy',
+        },
+        {
+            src: '/temp/vane.jpg',
+            name: 'Vanessa',
+            surname: 'Wennninger',
+        },
+        {
+            src: '/temp/mir.jpg',
+            name: 'Mirta',
+            surname: 'Rostas',
+        },
+    ]
 
     const { content } = GetContentContext()
     const swiperRef = useRef()
+    const [isInView, setInView] = useState(false)
+    
 
     return (
-        <Section>
+        <Section whileInView={() => setInView(true)}>
             {
                 Object.entries(content).length !== 0 &&
-                <Inner>
-                    <SectionTitle>{content.mediaSponsorsSection.title}</SectionTitle>
+                <Inner isinview={isInView}>
+                    <Head>
+                        <SectionTitle>Speakers</SectionTitle>
+                        <ButtonContainer>
+                            <SmallCta>Check the full agenda</SmallCta>
+                        </ButtonContainer>
+                    </Head>
                     <Swiper
                         ref={swiperRef}
                         slidesPerView={3}
                         breakpoints={{
                             900: {
-                                slidesPerView: 6,
+                                slidesPerView: 4,
                             },
                             650: {
                                 slidesPerView: 4,
@@ -49,19 +85,23 @@ const MediaSponsorsSection = () => {
                             clickable: true,
                         }}
                         modules={[Grid, Pagination]}
-                        className="reviewSwyper"
+                        className="speakersSwyper"
                     >
                         {
-                            content.mediaSponsorsSection.sponsors.map(item => {
+                            temp.map(item => {
                                 return (
-                                    <SwiperSlide key={item.src}>
+                                    <SwiperSlide key={item.surname}>
                                         <LogoContainer>
                                             <Logo
                                                 src={item.src}
-                                                alt="media sponsors logo"
+                                                alt="speaker"
                                                 fill
                                             />
                                         </LogoContainer>
+                                        <NameContainer isinview={isInView}>
+                                            <Name>{item.name}</Name>
+                                            <Surname>{item.surname}</Surname>
+                                        </NameContainer>
                                     </SwiperSlide>
                                 )
                             })
@@ -74,4 +114,4 @@ const MediaSponsorsSection = () => {
     )
 }
 
-export default MediaSponsorsSection
+export default Speakers

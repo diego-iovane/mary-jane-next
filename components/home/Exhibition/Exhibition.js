@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/effect-cards"
 import { EffectCards } from "swiper"
+import Link from 'next/link'
 import {
     Section,
     Inner,
@@ -64,17 +65,19 @@ const Exhibition = () => {
             <Inner>
                 <Content
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0, transition: {duration: 1} }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     viewport={{ once: true }}
                     amount="200"
                 >
                     <Title>Germanys leading Cannabis Expo & Festival Since 2016</Title>
                     <Text>Mary Jane Berlin is not only an expo, but also a festival with large live acts, and in combination with our exhibitors, we offer food stands, live concerts, conference on therapeutic properties, we have an extensive cultural and entertainment program offered to our visitors. As a visitor of Mary Jane Berlin, we inform you about the variety of THE green power plant – as food, cosmetic, building material, medicine and much more! As the world’s biggest Cannabis Expo, the Mary Jane Berlin offers a beach area with pool for the hot days of the Expo!</Text>
-                    <PrimaryButton>learn more...</PrimaryButton>
+                    <PrimaryButton>
+                        <Link href="/">learn more...</Link>
+                    </PrimaryButton>
                 </Content>
                 <Images
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0, transition: {delay: .5, duration: 1} }}
+                    whileInView={{ opacity: 1, y: 0, transition: { delay: .5, duration: 1 } }}
                     onHoverStart={() => setRotate(true)}
                     onHoverEnd={() => setRotate(false)}
                     viewport={{ once: true }}

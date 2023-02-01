@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SwiperButtonsContainer = styled.div`
     position: absolute;
-    width: 100%;
+    width: 110%;
     display: flex;
     justify-content: space-between;
     top: 50%;

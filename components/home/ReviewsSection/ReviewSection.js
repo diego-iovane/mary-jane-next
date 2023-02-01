@@ -4,8 +4,8 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import googleLogo from '../../public/logos/google-logo.png'
-import { GetContentContext } from '../../context/ContentContext'
+import googleLogo from '../../../public/logos/google-logo.png'
+import { GetContentContext } from '../../../context/ContentContext'
 import Review from './Review'
 import {
     Section,
@@ -19,7 +19,7 @@ import {
     SectionTitle,
     ButtonsContainer,
 } from './Elements'
-import SwiperButtons from '../swiperButtons/SwiperButtons'
+import SwiperButtons from '../../swiperButtons/SwiperButtons'
 
 const ReviewSection = () => {
 

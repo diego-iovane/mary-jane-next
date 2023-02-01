@@ -3,20 +3,21 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination, Autoplay } from "swiper";
+import { Grid, Pagination } from "swiper";
 import { GetContentContext } from '../../../context/ContentContext'
-import SmallCta from '../../buttons/SmallCta'
+import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
+    SectionTitle,
     Head,
     ButtonContainer,
-    SectionTitle,
     LogoContainer,
     Logo,
 } from './Elements'
+import SmallCta from '../../buttons/SmallCta'
 
-const ExhibitorsSection = () => {
+const MediaSponsorsSection = () => {
 
     const { content } = GetContentContext()
     const swiperRef = useRef()
@@ -27,12 +28,9 @@ const ExhibitorsSection = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner>
                     <Head>
-                        <SectionTitle>{content.exhibitorsGallery.title}</SectionTitle>
+                        <SectionTitle>{content.mediaSponsorsSection.title}</SectionTitle>
                         <ButtonContainer>
-                            <SmallCta>Become an exhibitor</SmallCta>
-                        </ButtonContainer>
-                        <ButtonContainer>
-                            <SmallCta>View all exhibitors</SmallCta>
+                            <SmallCta>Become a media sponsor</SmallCta>
                         </ButtonContainer>
                     </Head>
                     <Swiper
@@ -40,10 +38,10 @@ const ExhibitorsSection = () => {
                         slidesPerView={3}
                         breakpoints={{
                             900: {
-                                slidesPerView: 7,
+                                slidesPerView: 5,
                             },
                             650: {
-                                slidesPerView: 5,
+                                slidesPerView: 4,
                             },
                             400: {
                                 slidesPerView: 3,
@@ -53,25 +51,22 @@ const ExhibitorsSection = () => {
                             rows: 1,
                         }}
                         spaceBetween={30}
-                        autoplay={{
-                            delay: 900,
-                            disableOnInteraction: false,
-                        }}
+                        autoplay={true}
                         loop={true}
                         pagination={{
-                            clickable: false,
+                            clickable: true,
                         }}
-                        modules={[Grid, Pagination, Autoplay]}
-                        className="exhibitorsSwyper"
+                        modules={[Grid, Pagination]}
+                        className="reviewSwyper"
                     >
                         {
-                            content.exhibitorsGalleryAlt.items.map(item => {
+                            content.mediaSponsorsSection.sponsors.map(item => {
                                 return (
                                     <SwiperSlide key={item.src}>
                                         <LogoContainer>
                                             <Logo
                                                 src={item.src}
-                                                alt="exhibitors logo"
+                                                alt="media sponsors logo"
                                                 fill
                                             />
                                         </LogoContainer>
@@ -80,10 +75,11 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
+                    <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
             }
         </Section>
     )
 }
 
-export default ExhibitorsSection
+export default MediaSponsorsSection

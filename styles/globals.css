@@ -125,11 +125,6 @@ span {
   height: calc((100% - 30px) / 2) !important;
 }
 
-/* .mediaReviewSwyper .swiper-slide .swiper-slide-next {
-  transform: scale(1.1);
-} */
-
-
 .exhibitorsSwyper.swiper {
   width: 100%;
   height: 100%;
@@ -164,7 +159,28 @@ span {
   height: calc((100% - 30px) / 2) !important;
 }
 
+/*  */
+.speakersSwyper.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
 
+.speakersSwyper .swiper-wrapper {
+  margin-bottom: 3.5rem;
+}
+
+.speakersSwyper .swiper-slide {
+  width: auto;
+  height: calc((100% - 30px) / 2) !important;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/*  */
 .imageGallerySwyper.swiper {
   width: 100%;
   height: 100%;
@@ -180,10 +196,6 @@ span {
 .imageGallerySwyper .swiper-slide {
   width: auto;
   height: calc((100% - 30px) / 2) !important;
-}
-
-.imageGallerySwyper .swiper-pagination-bullet {
-  background-color: #ffffff !important;
 }
 
 /* EXHIBITION PAGE SWIPERS */

@@ -1,8 +1,11 @@
 import React from 'react'
-import { GetContentContext } from '../../context/ContentContext'
+import { GetContentContext } from '../../../context/ContentContext'
+import SmallCta from '../../buttons/SmallCta'
 import {
     Section,
     Inner,
+    Head,
+    ButtonContainer,
     SectionTitle,
     LogosContainer,
     LogoContainer,
@@ -18,7 +21,12 @@ const SponsorsSection = () => {
             {
                 Object.entries(content).length !== 0 &&
                 <Inner>
-                    <SectionTitle>{content.sponsorsSection.title}</SectionTitle>
+                    <Head>
+                        <SectionTitle>{content.sponsorsSection.title}</SectionTitle>
+                        <ButtonContainer>
+                            <SmallCta>Become a sponsor</SmallCta>
+                        </ButtonContainer>
+                    </Head>
                     <LogosContainer>
                         {
                             content.sponsorsSection.sponsors.map(item => {

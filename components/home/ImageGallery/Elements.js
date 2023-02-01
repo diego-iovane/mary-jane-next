@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    min-height: var(--section-min-height);
-    padding: 5rem 0;
-    /* background-color: var(--light-blue); */
+    padding: 1rem 0;
 `
 
 export const Inner = styled.div`
@@ -88,13 +86,21 @@ export const CtaContainer = styled.div`
 `
 
 export const CtaTitle = styled.h2`
-    margin: 4rem 0;
+    margin: 2rem 0;
     text-align: center;
-`
+    color: var(--pink);
+    `
 
 export const CtaSubTitle = styled.h4`
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: var(--text-color);
+    font-weight: 400;
+`
+
+export const ButtonContainer = styled.div`
+    width: fit-content;
+    margin: 0 auto;
 `
 

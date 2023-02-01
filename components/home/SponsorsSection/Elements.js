@@ -7,17 +7,32 @@ export const Section = styled.section`
 
 export const Inner = styled.div`
     max-width: var(--section-max-width);
+    width: var(--section-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+`
+
+export const Head = styled.div`
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+`
+
+export const ButtonContainer = styled.div`
+    position: relative;
+    bottom: 1rem;
+    margin-left: 1rem;
 `
 
 export const SectionTitle = styled.h2`
-    font-size: var(--desktop-title-font-size);
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #000000;
+    font-size: 2.5rem;
+    align-self: flex-start;
     margin-bottom: 1.5rem;
+    margin-right: 1rem;
+    font-size: var(--desktop-title-font-size);
 ` 
 
 export const LogosContainer = styled.div`

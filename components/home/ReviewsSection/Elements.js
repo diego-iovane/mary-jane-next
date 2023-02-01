@@ -2,16 +2,16 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    min-height: var(--section-min-height);
-    padding: 5rem 0 1rem 0;
+    padding: 0 0 1rem 0;
 `
 
 export const Inner = styled.div`
     max-width: var(--section-max-width);
+    width: var(--section-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
 
     &:hover .arrow {
@@ -21,22 +21,16 @@ export const Inner = styled.div`
 `
 
 export const SectionTitle = styled.h2`
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #000000;
+    font-size: var(--desktop-title-font-size);
     margin-bottom: 1.5rem;
-
-    @media all and (max-width: 450px) {
-        padding-bottom: 1rem;
-        line-height: 1.2;
-        width: 90%;
-    }
-`
+    margin-right: 1rem;
+    align-self: flex-start;
+` 
 
 export const RevWidget = styled.div`
     display: flex;
-    justify-content: space-around;
-    width: 20rem;
+    justify-content: space-between;
+    width: 16.5rem;
     margin-bottom: .5rem;
 `
 
@@ -58,7 +52,6 @@ export const Num = styled.p`
 
 export const GImg = styled(Image)`
     object-fit: cover;
-    /* margin-bottom: .5rem; */
     height: 2rem;
     width: auto;
 `
@@ -88,9 +81,9 @@ export const ButtonsContainer = styled.div`
 // REVIEW
 export const ReviewContainer = styled.div`
     position: relative;
-    background-color: var(--soft-gray);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 100%);
+    border-radius: 12px;
     padding: 1rem 2rem;
-    border-radius: 7px;
     min-height: 17rem;
     display: flex;
     flex-direction: column;
@@ -102,7 +95,7 @@ export const QuotesIcon = styled.svg`
     height: 2rem;
     
     path { 
-        fill: var(--light-green);
+        fill: var(--pink);
     }
 `
 
