@@ -45,6 +45,9 @@ const Hero = () => {
                             dangerouslySetInnerHTML={{ __html: content.hero.title }}
                             variants={elementsMotion}
                         /> */}
+                        <Date>23.-25.</Date>
+                        <Month>June</Month>
+                        <Year>2023</Year>
                         <CounterContainer variants={elementsMotion}>
                             <Counter content={content.hero.counter} />
                         </CounterContainer>

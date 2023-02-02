@@ -57,15 +57,15 @@ export const Content = styled(motion.div)`
 // `
 
 export const Date = styled.h2`
-
+    color: #ffffff;
 `
 
 export const Month = styled.h2`
-
+    color: #ffffff;
 `
 
 export const Year = styled.h2`
-
+    color: var(--green);
 `
 
 export const SubTitle = styled(motion.h1)`
