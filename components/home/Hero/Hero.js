@@ -9,7 +9,10 @@ import {
     HeroSection,
     Inner,
     Content,
-    Title,
+    // Title,
+    Date,
+    Month,
+    Year,
     SubTitle,
     CounterContainer,
     ButtonContainer,
@@ -38,10 +41,10 @@ const Hero = () => {
                             dangerouslySetInnerHTML={{ __html: content.hero.subTitle }}
                             variants={elementsMotion}
                         />
-                        <Title
+                        {/* <Title
                             dangerouslySetInnerHTML={{ __html: content.hero.title }}
                             variants={elementsMotion}
-                        />
+                        /> */}
                         <CounterContainer variants={elementsMotion}>
                             <Counter content={content.hero.counter} />
                         </CounterContainer>

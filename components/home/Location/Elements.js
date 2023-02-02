@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-    padding: 0 0 1rem 0;
-
-    min-height: 20rem;
+    padding: 4rem 0 8rem 0;
 `
 
 export const Inner = styled.div`
@@ -26,10 +24,24 @@ export const Map = styled.div`
     overflow: hidden;
 `
 
-export const LocationPinContainer = styled.div`
-
-`
-
 export const DetailsContainer = styled.div`
     width: 50%;
+    padding-left: 6rem;
+`
+
+export const Title = styled.h3`
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+`
+
+export const SubTitle = styled.h6`
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+`
+
+export const Text = styled.p`
+    font-size: .9rem;
+    margin-bottom: .5rem;
 `

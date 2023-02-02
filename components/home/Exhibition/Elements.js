@@ -34,6 +34,11 @@ export const Text = styled.p`
 export const Images = styled(motion.div)`
     width: 50%;
     position: relative;
+
+    &:hover .small-arrows {
+        opacity: 1;
+        top: 40%;
+    }
 `
 
 export const InstaCard = styled.div`
@@ -89,13 +94,15 @@ export const IconTxt = styled.p`
 
 export const ButtonsContainer = styled.div`
     position: absolute;
-    top: 40%;
+    top: 42%;
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
     display: flex;
     justify-content: space-between;
     z-index: 50;
+    opacity: 0;
+    transition: all .3s ease-in-out;
 `
 
 export const Button = styled.button`
@@ -103,7 +110,6 @@ export const Button = styled.button`
     height: 2rem;
     background-color: #ffffff;
     border-radius: 500px;
-    border: 1px solid var(--pink);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,5 +119,6 @@ export const Button = styled.button`
     svg {
         width: 1.2rem;
         height: 1.2rem;
+        fill: var(--pink);
     }
 `

@@ -42,23 +42,35 @@ export const Content = styled(motion.div)`
     align-items: flex-start;
 `
 
-export const Title = styled(motion.h1)`
-    color: #ffffff;
-    font-size: 5.5rem;
-    margin-top: 2rem;
-    margin-bottom: .5rem;
-    line-height: .5;
-    text-align: center;
-    padding-bottom: 1rem;
+// export const Title = styled(motion.h1)`
+//     color: #ffffff;
+//     font-size: 5.5rem;
+//     margin-top: 2rem;
+//     margin-bottom: .5rem;
+//     line-height: .5;
+//     text-align: center;
+//     padding-bottom: 1rem;
 
-    @media all and (max-width: 850px) {
-        font-size: 4.5rem;
-    }
+//     @media all and (max-width: 850px) {
+//         font-size: 4.5rem;
+//     }
+// `
+
+export const Date = styled.h2`
+
 `
 
-export const SubTitle = styled(motion.h2)`
+export const Month = styled.h2`
+
+`
+
+export const Year = styled.h2`
+
+`
+
+export const SubTitle = styled(motion.h1)`
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: .1rem;
     line-height: .6;
     text-align: center;
