@@ -8,6 +8,7 @@ export const HeroSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
 
     @media all and (max-width: 500px) {
         height: 100vh;
@@ -39,45 +40,61 @@ export const Content = styled(motion.div)`
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 `
 
-// export const Title = styled(motion.h1)`
-//     color: #ffffff;
-//     font-size: 5.5rem;
-//     margin-top: 2rem;
-//     margin-bottom: .5rem;
-//     line-height: .5;
-//     text-align: center;
-//     padding-bottom: 1rem;
-
-//     @media all and (max-width: 850px) {
-//         font-size: 4.5rem;
-//     }
-// `
-
-export const Date = styled.h2`
+export const Title = styled(motion.h1)`
     color: #ffffff;
+    font-size: 5.5rem;
+    margin-top: 2rem;
+    margin-bottom: .9rem;
+    line-height: .5;
+    text-align: center;
+    padding-bottom: 1rem;
+
+    @media all and (max-width: 960px) {
+        font-size: 4.5rem;
+    }
 `
 
-export const Month = styled.h2`
+export const Date = styled.span`
     color: #ffffff;
+
+    @media all and (max-width: 760px) {
+        display: block;
+    }
 `
 
-export const Year = styled.h2`
+export const Month = styled.span`
+    color: #ffffff;
+
+    @media all and (max-width: 760px) {
+        display: block;
+        line-height: 1;
+        font-size: 6.5rem;
+    }
+`
+
+export const Year = styled.span`
     color: var(--green);
+
+    @media all and (max-width: 760px) {
+        display: block;
+        font-size: 6.5rem;
+        line-height: .7;
+    }
 `
 
 export const SubTitle = styled(motion.h1)`
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 1rem;
     letter-spacing: .1rem;
     line-height: .6;
     text-align: center;
 
-    @media all and (max-width: 450px) {
-        font-size: 1.1rem;
-        /* line-height: .7; */
+    @media all and (max-width: 760px) {
+        line-height: 1.3;
+        width: 20rem;
     }
 `
 

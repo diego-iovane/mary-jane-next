@@ -1,10 +1,20 @@
-import React from 'react'
+import { useScroll, useTransform } from 'framer-motion'
 import {
     VideoBg,
     Overlay,
 } from './Elements'
 
 const VideoBack = () => {
+
+    const { scrollY } = useScroll()
+    const [ grPosition, setGrPosition ] = useState({
+        
+    })
+
+    console.log(scrollY)
+
+    if(scrollY > 1000 )
+
     return (
         <>
         {/* autoPlay */}

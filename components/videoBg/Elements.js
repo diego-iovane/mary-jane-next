@@ -7,6 +7,7 @@ export const VideoBg = styled.video`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #ffffff;
 `
 
 export const Overlay = styled.div`

@@ -4,12 +4,13 @@ import PrimaryButton from '../../buttons/PrimaryButton'
 import {
     containerMotion,
     elementsMotion,
+    titleMotion,
 } from './Motions'
 import {
     HeroSection,
     Inner,
     Content,
-    // Title,
+    Title,
     Date,
     Month,
     Year,
@@ -41,13 +42,11 @@ const Hero = () => {
                             dangerouslySetInnerHTML={{ __html: content.hero.subTitle }}
                             variants={elementsMotion}
                         />
-                        {/* <Title
-                            dangerouslySetInnerHTML={{ __html: content.hero.title }}
-                            variants={elementsMotion}
-                        /> */}
-                        <Date>23.-25.</Date>
-                        <Month>June</Month>
-                        <Year>2023</Year>
+                        <Title variants={elementsMotion}>
+                            <Date>23.-25.</Date>
+                            <Month> June</Month>
+                            <Year> 2023</Year>
+                        </Title>
                         <CounterContainer variants={elementsMotion}>
                             <Counter content={content.hero.counter} />
                         </CounterContainer>
@@ -70,4 +69,3 @@ const Hero = () => {
 }
 
 export default Hero
-{/* <span style="font-size: 3rem">23. - 25. </span><br></br><span style="font-size: 8rem">June </span><br></br><span style="color: var(--light-green); font-size: 8rem;">2023</span> */ }
