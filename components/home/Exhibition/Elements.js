@@ -6,6 +6,24 @@ export const Section = styled.section`
     padding: 5rem 0 2rem 0;
 `
 
+export const BgGreen = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(147, 194, 68, 0.40) 0%, rgba(147, 194, 68, 0) 100%);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+`
+
+export const BgPink = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(226, 123, 175, 0.40) 0%, rgba(226, 123, 175, 0) 100%);
+    position: absolute;
+    top: 10rem;
+    left: 28rem;
+`
+
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);

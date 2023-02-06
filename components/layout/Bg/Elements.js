@@ -12,6 +12,7 @@ export const BgInner = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    opacity: ${(opacity) => opacity}; 
 `
 
 export const Green = styled.div`

@@ -3,6 +3,8 @@ import PrimaryButton from '../../buttons/PrimaryButton'
 import {
     Section,
     Inner,
+    BgGreen,
+    BgPink,
     FeaturesContainer,
     Content,
     Title,
@@ -13,6 +15,8 @@ const ForExhibitors = () => {
     return (
         <Section>
             <Inner>
+                <BgGreen />
+                <BgPink />
                 <FeaturesContainer
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: .4 } }}

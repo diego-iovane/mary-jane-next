@@ -31,7 +31,7 @@ const SponsorsSection = () => {
                         {
                             content.sponsorsSection.sponsors.map(item => {
                                 return (
-                                    <LogoContainer>
+                                    <LogoContainer key={item.src}>
                                         <Logo
                                             src={item.src}
                                             alt=""

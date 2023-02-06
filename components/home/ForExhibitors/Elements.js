@@ -17,6 +17,24 @@ export const Inner = styled.div`
     }
 `
 
+export const BgGreen = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(147, 194, 68, 0.40) 0%, rgba(147, 194, 68, 0) 100%);
+    position: absolute;
+    top: 10rem;
+    left: 35rem;
+`
+
+export const BgPink = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(226, 123, 175, 0.20) 0%, rgba(226, 123, 175, 0) 100%);
+    position: absolute;
+    top: 1rem;
+    left: 6rem;
+`
+
 export const FeaturesContainer = styled(motion.div)`
     width: 50%;
     position: relative;

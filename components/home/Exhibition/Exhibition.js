@@ -8,13 +8,15 @@ import Link from 'next/link'
 import {
     Section,
     Inner,
+    BgGreen,
+    BgPink,
     Content,
     Title,
     Text,
     Images,
     InstaCard,
     InstaImgContainer,
-    InstaText,
+    // InstaText,
     InstaImg,
     IconContainer,
     Icon,
@@ -63,6 +65,8 @@ const Exhibition = () => {
     return (
         <Section>
             <Inner>
+                <BgGreen />
+                <BgPink />
                 <Content
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}

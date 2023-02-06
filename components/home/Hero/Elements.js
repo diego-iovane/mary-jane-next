@@ -47,7 +47,7 @@ export const Title = styled(motion.h1)`
     color: #ffffff;
     font-size: 5.5rem;
     margin-top: 2rem;
-    margin-bottom: .9rem;
+    margin-bottom: 1rem;
     line-height: .5;
     text-align: center;
     padding-bottom: 1rem;
@@ -91,6 +91,7 @@ export const SubTitle = styled(motion.h1)`
     letter-spacing: .1rem;
     line-height: .6;
     text-align: center;
+    margin-bottom: .5rem;
 
     @media all and (max-width: 760px) {
         line-height: 1.3;

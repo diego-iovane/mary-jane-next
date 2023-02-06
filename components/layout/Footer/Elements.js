@@ -6,6 +6,8 @@ export const Section = styled.section`
     min-height: var(--section-min-height);
     background-color: var(--black);
     padding: 3rem 0;
+    position: relative;
+    z-index: 1;
 `
 
 export const Inner = styled.div`
