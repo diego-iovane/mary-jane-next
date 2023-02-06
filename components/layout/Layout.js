@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import NavBar from "./NavBar/NavBar"
 import Footer from "./Footer/Footer"
 import { useRouter } from 'next/router'
-import Bg from './bg/Bg'
+import Bg from './Bg/Bg'
 
 //Styles
 const LayoutContainer = styled.div`
