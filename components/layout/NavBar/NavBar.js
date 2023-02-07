@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { GetContentContext } from '../../../context/ContentContext'
-import Lg from '/public/logos/logo-white.png'
 import MainNav from './MainNav'
 import SecondaryNav from './SecondaryNav'
 import {
