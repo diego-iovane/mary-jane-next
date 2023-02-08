@@ -58,7 +58,7 @@ const FeaturesSection = () => {
                             whileInView="animate"
                             exit="exit"
                             viewport={{once: true}}
-                            margin="500px"
+                            margin="700px"
                             >
                                 <IconContainer>
                                     <Icon src={item.src} alt={item.alt} fill />

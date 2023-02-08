@@ -37,6 +37,7 @@ export const SectionTitle = styled.h2`
 
 export const LogoContainer = styled.div`
     position: relative;
+    margin: 0 auto;
     height: 9rem;
     width: 9rem;
     padding: .5rem;
