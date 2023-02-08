@@ -13,11 +13,6 @@ export const Inner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &:hover .arrow {
-        opacity: 1;
-        bottom: 0;
-    }
 `
 
 export const HoverableArea = styled.div`
@@ -74,6 +69,12 @@ export const Video = styled.video`
 `
 
 export const ButtonsContainer = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 65%;
+
     @media all and (max-width: 450px) {
         display: none;
     }

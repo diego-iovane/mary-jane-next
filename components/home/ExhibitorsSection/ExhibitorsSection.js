@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination, Autoplay } from "swiper";
+import { Grid, Pagination, Autoplay } from "swiper"
 import { GetContentContext } from '../../../context/ContentContext'
 import SmallCta from '../../buttons/SmallCta'
 import {

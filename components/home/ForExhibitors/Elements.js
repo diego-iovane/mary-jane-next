@@ -39,10 +39,13 @@ export const FeaturesContainer = styled(motion.div)`
     width: 50%;
     position: relative;
     padding: 0 2rem;
+    z-index: 10;
 `
 
 export const Content = styled(motion.div)`
     width: 50%;
+    position: relative;
+    z-index: 10;
 `
 
 export const Title = styled.h2`

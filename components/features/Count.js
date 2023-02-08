@@ -7,7 +7,7 @@ import {
 const easeOutQuad = t => t * ( 2 - t );
 const frameDuration = 1000 / 60;
 
-const Count = ({ children, duration = 400 }) => {
+const Count = ({ children, duration = 1500 }) => {
   
   	const countTo = parseInt( children, 10 );
 	const [ count, setCount ] = useState( 0 );

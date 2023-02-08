@@ -19,7 +19,6 @@ export const Arrow = styled.button`
     position: relative;
     transform: ${({right}) => right && 'rotate(180deg)'};
     transition: all .2s ease-in-out;
-    opacity: 0;
     bottom: .3rem;
     background-color: #ffffff;
     border-radius: 500px;

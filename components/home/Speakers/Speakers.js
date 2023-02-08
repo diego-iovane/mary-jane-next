@@ -12,6 +12,7 @@ import {
     SectionTitle,
     Head,
     ButtonContainer,
+    SwiperInner,
     LogoContainer,
     Logo,
     NameContainer,
@@ -91,17 +92,19 @@ const Speakers = () => {
                             temp.map(item => {
                                 return (
                                     <SwiperSlide key={item.surname}>
-                                        <LogoContainer>
-                                            <Logo
-                                                src={item.src}
-                                                alt="speaker"
-                                                fill
-                                            />
-                                        </LogoContainer>
-                                        <NameContainer isinview={isInView}>
-                                            <Name>{item.name}</Name>
-                                            <Surname>{item.surname}</Surname>
-                                        </NameContainer>
+                                        <SwiperInner>
+                                            <LogoContainer>
+                                                <Logo
+                                                    src={item.src}
+                                                    alt="speaker"
+                                                    fill
+                                                />
+                                            </LogoContainer>
+                                            <NameContainer isinview={isInView}>
+                                                <Name>{item.name}</Name>
+                                                <Surname>{item.surname}</Surname>
+                                            </NameContainer>
+                                        </SwiperInner>
                                     </SwiperSlide>
                                 )
                             })

@@ -38,6 +38,8 @@ export const Inner = styled(motion.div)`
 
 export const Content = styled(motion.div)`
     width: 41rem;
+    position: relative;
+    z-index: 10;
 `
 
 export const Title = styled.h2`
@@ -80,63 +82,4 @@ export const InstaImgContainer = styled.div`
 
 export const InstaImg = styled(Image)`
     object-fit: cover;
-`
-
-export const InstaText = styled.p`
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: 'Rock Salt', cursive;
-`
-
-export const IconContainer = styled.div`
-    width: 2rem;
-    margin: 1rem auto 0 auto;
-    position: relative;
-`
-
-export const Icon = styled(motion.div)`
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    transform: ${({rotate}) => rotate ? 'rotateZ(60deg)' : 'rotateZ(0)'};
-    transition: all .2s ease-in-out;
-`
-
-export const Img = styled(Image)`
-    object-fit: contain;
-`
-
-export const IconTxt = styled.p`
-    font-size: .6rem;
-`
-
-export const ButtonsContainer = styled.div`
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 50;
-    opacity: 0;
-    transition: all .3s ease-in-out;
-`
-
-export const Button = styled.button`
-    width: 2rem;
-    height: 2rem;
-    background-color: #ffffff;
-    border-radius: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transform: ${({right}) => right ? 'rotate(180deg)' : null};
-
-    svg {
-        width: 1.2rem;
-        height: 1.2rem;
-        fill: var(--pink);
-    }
 `

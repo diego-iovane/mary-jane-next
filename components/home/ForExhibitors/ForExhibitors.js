@@ -19,9 +19,9 @@ const ForExhibitors = () => {
                 <BgPink />
                 <FeaturesContainer
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: .4 } }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }}
                     viewport={{ once: true }}
-                    amount="200"
+                    margin="500px"
                 >
                     <Features />
                 </FeaturesContainer>
@@ -29,7 +29,7 @@ const ForExhibitors = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     viewport={{ once: true }}
-                    amount="200"
+                    margin="500px"
                 >
                     <Title>Grow your business</Title>
                     <Text>

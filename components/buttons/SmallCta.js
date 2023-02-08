@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Button = styled.button`
+const Button = styled(motion.button)`
     background-color: var(--green);
     font-size: .8rem;
     padding: .7rem 2rem;
@@ -17,7 +18,10 @@ const Button = styled.button`
 
 const SmallCta = ({ children }) => {
   return (
-    <Button>{children}</Button>
+    <Button
+      whileHover={{ scale: 1.08 }}
+      transition={{ type: "spring", bounce: .5 }}
+    >{children}</Button>
   )
 }
 

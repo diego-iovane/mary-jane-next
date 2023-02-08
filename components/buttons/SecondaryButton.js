@@ -1,7 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-const Button = styled.button`
+const Button = styled(motion.button)`
     background-color: var(--pink);
     font-size: 1rem;
     padding: .7rem 2rem;
@@ -17,7 +17,10 @@ const Button = styled.button`
 
 const SecondaryButton = ({ children }) => {
     return (
-        <Button>{children}</Button>
+        <Button
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", bounce: .5 }}
+        >{children}</Button>
     )
 }
 

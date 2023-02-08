@@ -144,7 +144,7 @@ export const MenuLinkContainer = styled.li`
     }
 `
 
-export const TicketsBtn = styled.div`
+export const TicketsBtn = styled(motion.div)`
     background-color: var(--green);
     font-size: .7rem;
     width: 7rem;
@@ -163,7 +163,7 @@ export const TicketsBtn = styled.div`
     }
 `
 
-export const StandBtn = styled.div`
+export const StandBtn = styled(motion.div)`
     background-color: var(--pink);
     font-size: .7rem;
     width: 7rem;

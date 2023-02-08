@@ -25,6 +25,8 @@ const Hero = () => {
 
     const { content } = GetContentContext()
 
+    const subTitle = ` <span class="subtitle">Germanys leading<span class="subtitle-span"> Cannabis<br></br> Expo & Festival</span> since 2016</span>`
+
     return (
         <HeroSection>
             <VideoBack />
@@ -38,8 +40,12 @@ const Hero = () => {
                         animate='animate'
                         exit='exit'
                     >
-                        <SubTitle
+                        {/* <SubTitle
                             dangerouslySetInnerHTML={{ __html: content.hero.subTitle }}
+                            variants={elementsMotion}
+                        /> */}
+                        <SubTitle
+                            dangerouslySetInnerHTML={{ __html: subTitle }}
                             variants={elementsMotion}
                         />
                         <Title variants={elementsMotion}>

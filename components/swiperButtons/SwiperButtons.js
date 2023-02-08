@@ -1,4 +1,3 @@
-import React from 'react'
 import { SwiperButtonsContainer, Arrow } from './Elements'
 
 const SwiperButtons = ({ swiperRef }) => {

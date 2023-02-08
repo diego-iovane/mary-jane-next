@@ -13,11 +13,6 @@ export const Inner = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
-
-    &:hover .arrow {
-        opacity: 1;
-        bottom: 0;
-    }
 `
 
 export const Head = styled.div`

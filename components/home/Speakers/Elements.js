@@ -16,11 +16,6 @@ export const Inner = styled(motion.div)`
     position: relative;
     opacity: ${({isinview}) => isinview ? '1' : '0'};
     transition: opacity .2s ease-in-out;
-
-    &:hover .arrow {
-        opacity: 1;
-        bottom: 0;
-    }
 `
 
 export const Head = styled.div`
@@ -42,6 +37,12 @@ export const SectionTitle = styled.h2`
     align-self: flex-start;
 ` 
 
+export const SwiperInner = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
 export const LogoContainer = styled.div`
     position: relative;
     height: 12rem;
@@ -58,32 +59,30 @@ export const Logo = styled(Image)`
 
 export const NameContainer = styled(motion.div)`
     overflow: hidden;
-    position: absolute;
     left: 0;
     bottom: 0;
     max-height: ${({isinview}) => isinview ? '100rem' : '0rem'};
-    /* bottom: ${({isinview}) => isinview ? '0' : '-10px'}; */
-    /* opacity: ${({isinview}) => isinview ? '1' : '0'}; */
+    margin-top: .5rem;
     transition: all 3s ease-in-out .8s;
 `
 
 export const Name = styled.p`
     font-size: .9rem;
-    margin: 0;
-    color: #ffffff;
-    background-color: var(--text-color);
+    margin: 0 auto;
+    color: var(--text-color);
     width: fit-content;
     padding: .3rem;
     overflow: hidden;
+    line-height: .5;
 `
 
 export const Surname = styled.p`
+    margin: 0 auto;
     font-weight: bold;
-    margin: 0;
-    font-size: 1.5rem;
-    color: #ffffff;
-    background-color: var(--text-color);
+    font-size: 1.2rem;
+    color: var(--text-color);
     width: fit-content;
     padding: .3rem;
     overflow: hidden;
+    line-height: 1;
 `

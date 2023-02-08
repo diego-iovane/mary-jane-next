@@ -33,13 +33,21 @@ const SecondaryNav = ({ links, flags, scrolled }) => {
                     })
                 }
             </Links> */}
-            <TicketsBtn>
+            <TicketsBtn
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 1 }}
+                transition={{ type: "spring", bounce: .5 }}
+            >
                 <Link href="/">Get tickets</Link>
             </TicketsBtn>
-            <StandBtn>
+            <StandBtn
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 1 }}
+                transition={{ type: "spring", bounce: .5 }}
+            >
                 <Link href="/">Stand inquiry</Link>
             </StandBtn>
-            <LanguageDropdown flags={flags}/>
+            <LanguageDropdown flags={flags} />
         </Nav>
     )
 }
