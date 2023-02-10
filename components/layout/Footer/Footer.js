@@ -1,6 +1,6 @@
 import React from 'react'
 import { GetContentContext } from '../../../context/ContentContext'
-import SocialSection from '../../home/SocialSection/SocialSection'
+import SocialSection from './SocialSection/SocialSection'
 import {
   Section,
   Inner,
@@ -19,6 +19,7 @@ import {
   Links,
   FooterLink,
 } from './Elements'
+import NewsletterForm from './NewsletterForm/NewsletterForm'
 
 const Footer = () => {
 
@@ -26,6 +27,7 @@ const Footer = () => {
 
   return (
     <>
+      <NewsletterForm />
       <SocialSection />
       <Section>
         {

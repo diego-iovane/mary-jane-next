@@ -1,4 +1,4 @@
-import { GetContentContext } from '../../../context/ContentContext'
+import { GetContentContext } from '../../../../context/ContentContext'
 import {
     Section,
     Inner,

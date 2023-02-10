@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     min-height: 10rem;
-    padding: 7rem 0;
+    padding: 4rem 0;
     background-color: var(--black);
     position: relative;
 

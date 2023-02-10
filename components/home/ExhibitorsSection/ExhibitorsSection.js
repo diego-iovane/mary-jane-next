@@ -37,7 +37,6 @@ const ExhibitorsSection = () => {
     const handleSwiper = (swiper) => {
         
         const infinite = () => {
-            console.log(swiper.params)
             swiper.slideTo(swiper.slides.length, 30000)
             swiper.once('transitionEnd', function () {
                 swiper.slideTo(swiper.params.slidesPerView, 0, false);
