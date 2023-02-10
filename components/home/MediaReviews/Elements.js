@@ -39,11 +39,10 @@ export const ReviewContainer = styled.div`
     position: relative;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 100%);
     border-radius: 12px;
-    padding: 1rem 2rem;
+    padding: 2rem;
     min-height: 17rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     transition: transform .3s ease-in-out;
 `

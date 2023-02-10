@@ -156,10 +156,10 @@ export const TicketsBtn = styled(motion.div)`
     border-radius: 50px;
     margin: 0 .3rem;
     cursor: pointer;
-    transition: opacity .5s ease-in-out;
+    transition: background-color .2s ease-in-out;
 
     &:hover {
-        opacity: .8;
+        background-color: var(--green-hover);
     }
 `
 
@@ -175,9 +175,9 @@ export const StandBtn = styled(motion.div)`
     border-radius: 50px;
     margin: 0 .3rem;
     cursor: pointer;
-    transition: opacity .5s ease-in-out;
+    transition: background-color .2s ease-in-out;
 
     &:hover {
-        opacity: .8;
+        background-color: var(--pink-hover);
     }
 `

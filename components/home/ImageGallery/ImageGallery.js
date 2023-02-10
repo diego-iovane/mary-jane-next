@@ -53,10 +53,10 @@ const ImageGallery = () => {
                                 rows: 1,
                             }}
                             spaceBetween={30}
-                            autoplay={{
-                                delay: 2500,
-                                disableOnInteraction: true,
-                            }}
+                            // autoplay={{
+                            //     delay: 2500,
+                            //     disableOnInteraction: true,
+                            // }}
                             pauseOnMouseEnter={true}
                             pagination={{
                                 clickable: true,

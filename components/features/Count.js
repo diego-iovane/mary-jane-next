@@ -5,9 +5,9 @@ import {
 
 // For animation
 const easeOutQuad = t => t * ( 2 - t );
-const frameDuration = 1000 / 60;
+const frameDuration = 500 / 60;
 
-const Count = ({ children, duration = 1500 }) => {
+const Count = ({ children, duration = 3000 }) => {
   
   	const countTo = parseInt( children, 10 );
 	const [ count, setCount ] = useState( 0 );

@@ -1,5 +1,5 @@
 import Features from '../../features/Features'
-import PrimaryButton from '../../buttons/PrimaryButton'
+import TertiaryButton from '../../buttons/TertiaryButton'
 import {
     Section,
     Inner,
@@ -42,7 +42,7 @@ const ForExhibitors = () => {
                             At Mary Jane Berlin you have the opportunity to present your product to customers, all major merchants & producers from all over the world.
                         </p>
                     </Text>
-                    <PrimaryButton>learn more...</PrimaryButton>
+                    <TertiaryButton>learn more...</TertiaryButton>
                 </Content>
             </Inner>
         </Section>

@@ -3,21 +3,21 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 const Button = styled(motion.button)`
-    background-color: var(--green);
+    background-color: var(--gray-blue);
     font-size: 1rem;
     padding: .7rem 2rem;
     color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
 
-    transition: background-color .2s ease-in-out;
+    transition: background-color .5s ease-in-out;
 
     &:hover {
-        background-color: var(--green-hover);
+        background-color: var(--gray-blue-hover);
     }
 `
 
-const PrimaryButton = ({ children }) => {
+const TertiaryButton = ({ children }) => {
     return (
         <Button 
         whileHover={{ scale: 1.08 }} 
@@ -26,4 +26,4 @@ const PrimaryButton = ({ children }) => {
     )
 }
 
-export default PrimaryButton
+export default TertiaryButton

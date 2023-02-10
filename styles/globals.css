@@ -27,9 +27,13 @@ body {
 
   --text-color: #1E411D;
   --green: #93C244;
+  --green-hover: #5c772d;
   --pink: #e27baf;
+  --pink-hover: #7f4361;
   --bg-color: #F7F7F7;
   --black: #1E1E1E;
+  --gray-blue: #435a65;
+  --gray-blue-hover: #1e2c33;
 
 
   --dark-green: #1e411d;
@@ -37,7 +41,6 @@ body {
   --light-green: #93c244;
   --light-blue: #c7e1e0;
   --soft-gray: #e4e4e4;
-  --gray-blue: #435a65;
   --bg-gray: #ECEDED;
   --alert: #FF3838;
 
@@ -135,6 +138,7 @@ span {
 
 .exhibitorsSwyper .swiper-wrapper {
   margin-bottom: 3.5rem;
+  transition-timing-function: linear !important;
 }
 
 .exhibitorsSwyper .swiper-slide {

@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const HeroSection = styled.div`
-    height: 50rem;
+    height: 100vh;
+    max-height: 60rem;
+    min-height: 39rem;
     width: 100%;
     position: relative;
     display: flex;
@@ -15,14 +17,14 @@ export const HeroSection = styled.div`
     }
 `
 
-export const WhiteOverlay = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(247, 247, 247, 0) 84.58%, #F7F7F7 100%);
-`
+// export const WhiteOverlay = styled.div`
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(180deg, rgba(247, 247, 247, 0) 84.58%, #F7F7F7 100%);
+// `
 
 export const Inner = styled(motion.div)`
     width: var(--section-width);
@@ -30,10 +32,9 @@ export const Inner = styled(motion.div)`
     margin: 0 auto;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     position: relative;
-    bottom: 3rem;
+    padding-top: 4rem;
 `
 
 export const Content = styled(motion.div)`
@@ -56,18 +57,18 @@ export const Date = styled.h2`
 
 export const Month = styled.h2`
     color: #ffffff;
-    font-size: 7.1rem;
+    font-size: 7.6rem;
     margin-bottom: 1.1rem;
 `
 
 export const Year = styled.h2`
     color: var(--green);
-    font-size: 7.5rem;
+    font-size: 8.1rem;
 `
 
 export const SubTitle = styled(motion.h1)`
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.15rem;
     letter-spacing: .1rem;
     line-height: .8;
     margin-bottom: .5rem;

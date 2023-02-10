@@ -50,7 +50,7 @@ export default function Home() {
       <Speakers />
       <ReviewSection />
       <ImageGallery />
-      <TicketsSection />
+      {/* <TicketsSection /> */}
       <Location />
       <FloatingButton />
     </div>

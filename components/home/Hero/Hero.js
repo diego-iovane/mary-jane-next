@@ -17,7 +17,7 @@ import {
     SubTitle,
     CounterContainer,
     ButtonContainer,
-    WhiteOverlay,
+    // WhiteOverlay,
 } from './Elements'
 import Counter from '../../counter/Counter'
 
@@ -30,7 +30,7 @@ const Hero = () => {
     return (
         <HeroSection>
             <VideoBack />
-            <WhiteOverlay />
+            {/* <WhiteOverlay /> */}
             <Inner>
                 {
                     Object.entries(content).length !== 0 &&

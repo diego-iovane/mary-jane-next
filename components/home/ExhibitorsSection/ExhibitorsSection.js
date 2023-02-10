@@ -6,6 +6,7 @@ import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay } from "swiper"
 import { GetContentContext } from '../../../context/ContentContext'
 import SmallCta from '../../buttons/SmallCta'
+import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
     Section,
     Inner,
@@ -32,7 +33,7 @@ const ExhibitorsSection = () => {
                             <SmallCta>Become an exhibitor</SmallCta>
                         </ButtonContainer>
                         <ButtonContainer>
-                            <SmallCta>View all exhibitors</SmallCta>
+                            <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
                         </ButtonContainer>
                     </Head>
                     <Swiper

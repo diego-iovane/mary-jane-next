@@ -6,6 +6,7 @@ import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
 import { GetContentContext } from '../../../context/ContentContext'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
     Section,
     Inner,
@@ -19,7 +20,6 @@ import {
     Name,
     Surname,
 } from './Elements'
-import SmallCta from '../../buttons/SmallCta'
 
 const Speakers = () => {
 
@@ -59,7 +59,7 @@ const Speakers = () => {
                     <Head>
                         <SectionTitle>Speakers</SectionTitle>
                         <ButtonContainer>
-                            <SmallCta>Check the full agenda</SmallCta>
+                            <SmallCtaAlt>Check the full agenda</SmallCtaAlt>
                         </ButtonContainer>
                     </Head>
                     <Swiper

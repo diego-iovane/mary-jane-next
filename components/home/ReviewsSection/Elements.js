@@ -83,6 +83,8 @@ export const ReviewContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
+    transition: transform .3s ease-in-out;
 `
 
 export const QuotesIcon = styled.svg`
