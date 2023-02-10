@@ -34,6 +34,10 @@ export const Inner = styled(motion.div)`
     @media all and (max-width: 450px) {
         flex-direction: column;
     }
+
+    @media all and (min-width: 1400px) {
+        padding-left: 4rem;
+    }
 `
 
 export const Content = styled(motion.div)`
@@ -45,19 +49,33 @@ export const Content = styled(motion.div)`
 export const Title = styled.h2`
     font-size: 3.5rem;
     line-height: 1.2;
+
+    @media all and (min-width: 1400px) {
+        font-size: 4rem;
+    }
 `
 
 export const Text = styled.p`
     margin: 2rem 0;
+    font-size: 1rem;
+
+    @media all and (min-width: 1400px) {
+        font-size: 1.2rem;
+    }
 `
 
 export const Images = styled(motion.div)`
     width: 50%;
     position: relative;
-
+    
     &:hover .small-arrows {
         opacity: 1;
         top: 40%;
+    }
+    
+    @media all and (min-width: 1400px) {
+        top: 2rem;
+        left: 4rem;
     }
 `
 

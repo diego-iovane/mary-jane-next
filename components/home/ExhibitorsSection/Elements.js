@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 0 0;
 `
 
 export const Inner = styled.div`
@@ -19,6 +19,7 @@ export const Head = styled.div`
     display: flex;
     align-items: center;
     align-self: flex-start;
+    margin-bottom: 1.5rem;
 `
 
 export const ButtonContainer = styled.div`
@@ -38,9 +39,10 @@ export const LogoContainer = styled.div`
     position: relative;
     height: 9rem;
     width: 9rem;
-    padding: .5rem;
+    padding: 1rem;
     border-radius: 500px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%);
+    overflow: hidden;
 `
 
 export const Logo = styled(Image)`

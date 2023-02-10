@@ -20,6 +20,7 @@ export const Head = styled.div`
     display: flex;
     align-items: center;
     align-self: flex-start;
+    margin-bottom: 1.5rem;
 `
 
 export const ButtonContainer = styled.div`
