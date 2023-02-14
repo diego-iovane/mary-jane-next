@@ -29,7 +29,7 @@ const ForExhibitors = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     viewport={{ once: true }}
-                    margin="500px"
+                    margin="700px"
                 >
                     <Title>Grow your business</Title>
                     <Text>
@@ -42,7 +42,7 @@ const ForExhibitors = () => {
                             At Mary Jane Berlin you have the opportunity to present your product to customers, all major merchants & producers from all over the world.
                         </p>
                     </Text>
-                    <TertiaryButton>learn more...</TertiaryButton>
+                    <TertiaryButton>Become an Exhibitor</TertiaryButton>
                 </Content>
             </Inner>
         </Section>

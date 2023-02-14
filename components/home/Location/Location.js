@@ -1,4 +1,5 @@
 import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api'
+import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
     Section,
     Inner,
@@ -8,6 +9,7 @@ import {
     Title,
     SubTitle,
     Text,
+    ButtonContainer,
 } from './Elements'
 
 const Location = () => {
@@ -52,6 +54,9 @@ const Location = () => {
                     <Text>Lines 104, 194, 265, N65: Eichenstr./Puschkinallee</Text>
                     <Text>Parking:</Text>
                     <Text>There is free & paid parking in the immediate vicinity.</Text>
+                    <ButtonContainer>
+                        <SmallCtaAlt>See more</SmallCtaAlt>
+                    </ButtonContainer>
                 </DetailsContainer>
             </Inner>
         </Section>

@@ -30,7 +30,7 @@ const MediaSponsorsSection = () => {
                     <Head>
                         <SectionTitle>{content.mediaSponsorsSection.title}</SectionTitle>
                         <ButtonContainer>
-                            <SmallCta>Become a media sponsor</SmallCta>
+                            <SmallCta>Become a Media Sponsor</SmallCta>
                         </ButtonContainer>
                     </Head>
                     <Swiper

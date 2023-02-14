@@ -27,8 +27,8 @@ const Footer = () => {
 
   return (
     <>
-      <NewsletterForm />
       <SocialSection />
+      <NewsletterForm />
       <Section>
         {
           Object.entries(content).length !== 0 &&

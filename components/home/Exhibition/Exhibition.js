@@ -58,18 +58,18 @@ const Exhibition = () => {
     let direction = 'right'
 
     const callBack = () => {
-        if(swp.current !== null){
-            if(direction === 'right') swp.current.swiper.slideNext(500, false)
-            if(direction === 'left') swp.current.swiper.slidePrev(500, false)
-            if(swp.current.swiper.isEnd) direction = 'left'
-            if(swp.current.swiper.isBeginning) direction = 'right'
+        if (swp.current !== null) {
+            if (direction === 'right') swp.current.swiper.slideNext(500, false)
+            if (direction === 'left') swp.current.swiper.slidePrev(500, false)
+            if (swp.current.swiper.isEnd) direction = 'left'
+            if (swp.current.swiper.isBeginning) direction = 'right'
         }
     }
 
     const callBackRef = useRef(callBack)
 
     useEffect(() => {
-        const interval = setInterval( callBackRef.current, 4000)
+        const interval = setInterval(callBackRef.current, 4000)
 
         return () => clearInterval(interval)
     }, [])
@@ -93,10 +93,18 @@ const Exhibition = () => {
                     viewport={{ once: true }}
                     margin="500px"
                 >
-                    <Title>Germanys leading Cannabis Expo & Festival Since 2016</Title>
-                    <Text>Mary Jane Berlin is not only an expo, but also a festival with large live acts, and in combination with our exhibitors, we offer food stands, live concerts, conference on therapeutic properties, we have an extensive cultural and entertainment program offered to our visitors. As a visitor of Mary Jane Berlin, we inform you about the variety of THE green power plant – as food, cosmetic, building material, medicine and much more! As the world’s biggest Cannabis Expo, the Mary Jane Berlin offers a beach area with pool for the hot days of the Expo!</Text>
+                    <Title>Cannabis Expo and Beach Festival</Title>
+                    <Text>
+                        Mary Jane Berlin, is Germany’s leading Cannabis expo since 2016. Mary Jane Berlin is not only an expo, but also a festival with large live acts, and in combination with our exhibitors, we offer food stands, live concerts, conference on therapeutic properties, we have an extensive cultural and entertainment program offered to our visitors.
+                    </Text>
+                    <Text>
+                        As a visitor of Mary Jane Berlin, we inform you about the variety of THE green power plant – as food, cosmetic, building material, medicine and much more! You will get personal advices from exhibitors and be able to try samples directly at the booth. And why not gain and share knowledge about the industry with like-minded people and learn about cannabis aspects that the mainstream media does not report about.
+                    </Text>
+                    <Text>
+                        Welcome to Europe's biggest Cannabis Expo!!
+                    </Text>
                     <TertiaryButton>
-                        <Link href="/">learn more...</Link>
+                        <Link href="/">Show me more...</Link>
                     </TertiaryButton>
                 </Content>
                 <Images

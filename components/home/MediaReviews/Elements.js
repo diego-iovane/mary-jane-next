@@ -45,6 +45,7 @@ export const ReviewContainer = styled.div`
     flex-direction: column;
     transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     transition: transform .3s ease-in-out;
+    justify-content: center;
 `
 
 export const QuotesIcon = styled.svg`
@@ -67,11 +68,10 @@ export const Text = styled.p`
 `
 
 export const LogoPosition = styled.div`
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
     width: 10rem;
     height: 2rem;
+    align-self: flex-end;
+    margin-top: 1rem;
 `
 
 export const LogoContainer = styled.div`

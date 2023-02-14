@@ -19,6 +19,18 @@ export const HoverableArea = styled.div`
     width: 100%;
 `
 
+export const DesktopSwiper = styled.div`
+
+`
+
+export const TabletSwiper = styled.div`
+
+`
+
+export const  MobileSwiper = styled.div`
+
+`
+
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
     padding-bottom: 2rem;

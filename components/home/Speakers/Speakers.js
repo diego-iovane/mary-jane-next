@@ -19,6 +19,7 @@ import {
     NameContainer,
     Name,
     Surname,
+    Prof,
 } from './Elements'
 
 const Speakers = () => {
@@ -28,21 +29,25 @@ const Speakers = () => {
             src: '/temp/andre.webp',
             name: 'Andreas',
             surname: 'Muller',
+            prof: 'Scientist'
         },
         {
             src: '/temp/greg.jpg',
             name: 'Gregor',
             surname: 'Cichy',
+            prof: 'Scientist'
         },
         {
             src: '/temp/vane.jpg',
             name: 'Vanessa',
             surname: 'Wennninger',
+            prof: 'Scientist'
         },
         {
             src: '/temp/mir.jpg',
             name: 'Mirta',
             surname: 'Rostas',
+            prof: 'Scientist'
         },
     ]
 
@@ -57,9 +62,9 @@ const Speakers = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner isinview={isInView}>
                     <Head>
-                        <SectionTitle>Speakers</SectionTitle>
+                        <SectionTitle>Explore our featured speakers</SectionTitle>
                         <ButtonContainer>
-                            <SmallCtaAlt>Check the full agenda</SmallCtaAlt>
+                            <SmallCtaAlt>See more</SmallCtaAlt>
                         </ButtonContainer>
                     </Head>
                     <Swiper
@@ -103,6 +108,7 @@ const Speakers = () => {
                                             <NameContainer isinview={isInView}>
                                                 <Name>{item.name}</Name>
                                                 <Surname>{item.surname}</Surname>
+                                                <Prof>{item.prof}</Prof>
                                             </NameContainer>
                                         </SwiperInner>
                                     </SwiperSlide>

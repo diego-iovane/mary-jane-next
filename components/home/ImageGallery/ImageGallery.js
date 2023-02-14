@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination, Autoplay } from "swiper"
+import "swiper/css/navigation";
+import { Grid, Pagination, Autoplay, Navigation } from "swiper"
 import { GetContentContext } from '../../../context/ContentContext'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import PrimaryButton from '../../buttons/PrimaryButton'
@@ -22,6 +23,7 @@ import {
     CtaTitle,
     CtaSubTitle,
     ButtonContainer,
+    DesktopSwiper,
 } from './Elements'
 
 const ImageGallery = () => {
@@ -35,40 +37,64 @@ const ImageGallery = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner>
                     <HoverableArea>
-                        <Swiper
-                            ref={swiperRef}
-                            slidesPerView={1}
-                            breakpoints={{
-                                800: {
-                                    slidesPerView: 3,
-                                },
-                                650: {
-                                    slidesPerView: 2,
-                                },
-                                400: {
-                                    slidesPerView: 1,
-                                },
-                            }}
-                            grid={{
-                                rows: 1,
-                            }}
-                            spaceBetween={30}
-                            // autoplay={{
-                            //     delay: 2500,
-                            //     disableOnInteraction: true,
-                            // }}
-                            pauseOnMouseEnter={true}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            loop={true}
-                            modules={[Grid, Pagination, Autoplay]}
-                            className="imageGallerySwyper"
-                        >
-                            {
-                                content.imageGallery.img.map((item) => {
+                        <DesktopSwiper>
+                            
+                            <Swiper
+                                ref={swiperRef}
+                                slidesPerView={1}
+                                breakpoints={{
+                                    800: {
+                                        slidesPerView: 3,
+                                    },
+                                    650: {
+                                        slidesPerView: 2,
+                                    },
+                                    400: {
+                                        slidesPerView: 1,
+                                    },
+                                }}
+                                grid={{
+                                    rows: 1,
+                                }}
+                                spaceBetween={30}
+                                // autoplay={{
+                                //     delay: 2500,
+                                //     disableOnInteraction: true,
+                                // }}
+                                // navigation={true}
+                                slidesPerGroup={3}
+                                loopFillGroupWithBlank={false}
+                                pauseOnMouseEnter={true}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                loop={true}
+                                modules={[Grid, Pagination, Autoplay, Navigation]}
+                                className="imageGallerySwyper"
+                            >
+                                {
+                                    content.imageGallery.img.map((item) => {
 
-                                    if (item.isVideo) {
+                                        if (item.isVideo) {
+                                            return (
+                                                <SwiperSlide key={item.src}>
+                                                    <Frame >
+                                                        <AnchorOverlay
+                                                            // href={item.url}
+                                                            href="https://www.instagram.com/mary_jane_berlin/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        />
+                                                        <VideoContainer>
+                                                            <Video autoPlay loop muted playsInline>
+                                                                <source src={item.src} type='video/mp4' />
+                                                            </Video>
+                                                        </VideoContainer>
+                                                    </Frame>
+                                                </SwiperSlide>
+                                            )
+                                        }
+
                                         return (
                                             <SwiperSlide key={item.src}>
                                                 <Frame >
@@ -78,41 +104,23 @@ const ImageGallery = () => {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                     />
-                                                    <VideoContainer>
-                                                        <Video autoPlay loop muted playsInline>
-                                                            <source src={item.src} type='video/mp4' />
-                                                        </Video>
-                                                    </VideoContainer>
+                                                    <ImgContainer>
+                                                        <Img src={item.src} alt="mary jane berlin experience" fill />
+                                                    </ImgContainer>
                                                 </Frame>
                                             </SwiperSlide>
                                         )
-                                    }
-
-                                    return (
-                                        <SwiperSlide key={item.src}>
-                                            <Frame >
-                                                <AnchorOverlay
-                                                    // href={item.url}
-                                                    href="https://www.instagram.com/mary_jane_berlin/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                />
-                                                <ImgContainer>
-                                                    <Img src={item.src} alt="mary jane berlin experience" fill />
-                                                </ImgContainer>
-                                            </Frame>
-                                        </SwiperSlide>
-                                    )
-                                })
-                            }
-                        </Swiper>
+                                    })
+                                }
+                            </Swiper>
+                        </DesktopSwiper>
                     </HoverableArea>
                     <ButtonsContainer>
                         <SwiperButtons swiperRef={swiperRef} />
                     </ButtonsContainer>
                     <CtaContainer>
-                        <CtaTitle>Wanna Join?</CtaTitle>
-                        <CtaSubTitle>Get your tickets for a special price</CtaSubTitle>
+                        <CtaTitle>Want to join? </CtaTitle>
+                        {/* <CtaSubTitle>Get your tickets for a special price</CtaSubTitle> */}
                         <ButtonContainer>
                             <PrimaryButton>
                                 <a
@@ -120,7 +128,7 @@ const ImageGallery = () => {
                                     rel="noopener noreferrer"
                                     target="_blank"
                                 >
-                                    Get your tickets
+                                    Get your discounted tickets here
                                 </a>
                             </PrimaryButton>
                         </ButtonContainer>

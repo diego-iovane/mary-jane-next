@@ -86,3 +86,11 @@ export const Surname = styled.p`
     overflow: hidden;
     line-height: 1;
 `
+
+export const Prof = styled.p`
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-color);
+    width: fit-content;
+`

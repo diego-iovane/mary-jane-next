@@ -16,7 +16,6 @@ import ForExhibitors from '../components/home/ForExhibitors/ForExhibitors'
 import MediaReviews from '../components/home/MediaReviews/MediaReviews'
 import Speakers from '../components/home/Speakers/Speakers'
 import Location from '../components/home/Location/Location'
-import FeaturesSection from '../components/home/FeaturesSection/FeaturesSection'
 
 export default function Home() {
 
@@ -41,7 +40,6 @@ export default function Home() {
       <Hero />
       <Exhibition />
       <ForExhibitors />
-      <FeaturesSection />
       <MediaReviews />
       <ExhibitorsSection />
       <Rest />

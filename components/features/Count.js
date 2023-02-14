@@ -7,7 +7,7 @@ import {
 const easeOutQuad = t => t * ( 2 - t );
 const frameDuration = 500 / 60;
 
-const Count = ({ children, duration = 3000 }) => {
+const Count = ({ children, duration = 4000 }) => {
   
   	const countTo = parseInt( children, 10 );
 	const [ count, setCount ] = useState( 0 );
@@ -42,7 +42,7 @@ const Count = ({ children, duration = 3000 }) => {
 		whileInView={handleView}
 		viewport={{ once: true }}
 		> 
-			{ Math.floor( count ) }
+			{ Math.floor( count ).toLocaleString("en-GB") }
 		</CounterContainer>
 	) 
 }

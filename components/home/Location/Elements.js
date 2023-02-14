@@ -45,3 +45,7 @@ export const Text = styled.p`
     font-size: .9rem;
     margin-bottom: .5rem;
 `
+
+export const ButtonContainer = styled.div`
+    margin-top: 1.5rem;
+`
