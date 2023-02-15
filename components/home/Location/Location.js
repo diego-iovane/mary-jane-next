@@ -10,6 +10,7 @@ import {
     SubTitle,
     Text,
     ButtonContainer,
+    Item,
 } from './Elements'
 
 const Location = () => {
@@ -44,16 +45,26 @@ const Location = () => {
                         Arena Berlin
                         Eichenstr. 4,<br></br> 12435 Berlin
                     </SubTitle>
-                    <Text>Parking garage of Allianz Tower:</Text>
-                    <Text>Entrance Martin-Hoffmann-Str. 18, 12435 Berlin</Text>
-                    <Text>U-Bahn:</Text>
-                    <Text>Line U1: U-Bhf Schlesisches Tor + 10min. walk</Text>
-                    <Text>S-Bahn:</Text>
-                    <Text>Lines S8, S85, S9, S42, S41: S-Bhf Treptower Park + 5min. walk</Text>
-                    <Text>Bus:</Text>
-                    <Text>Lines 104, 194, 265, N65: Eichenstr./Puschkinallee</Text>
-                    <Text>Parking:</Text>
-                    <Text>There is free & paid parking in the immediate vicinity.</Text>
+                    <Item>
+                        <Text>Parking garage of Allianz Tower:</Text>
+                        <Text>Entrance Martin-Hoffmann-Str. 18, 12435 Berlin</Text>
+                    </Item>
+                    <Item>
+                        <Text>U-Bahn:</Text>
+                        <Text>Line U1: U-Bhf Schlesisches Tor + 10min. walk</Text>
+                    </Item>
+                    <Item>
+                        <Text>S-Bahn:</Text>
+                        <Text>Lines S8, S85, S9, S42, S41: S-Bhf Treptower Park + 5min. walk</Text>
+                    </Item>
+                    <Item>
+                        <Text>Bus:</Text>
+                        <Text>Lines 104, 194, 265, N65: Eichenstr./Puschkinallee</Text>
+                    </Item>
+                    <Item>
+                        <Text>Parking:</Text>
+                        <Text>There is free & paid parking in the immediate vicinity.</Text>
+                    </Item>
                     <ButtonContainer>
                         <SmallCtaAlt>See more</SmallCtaAlt>
                     </ButtonContainer>

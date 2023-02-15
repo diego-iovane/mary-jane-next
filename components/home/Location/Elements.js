@@ -10,6 +10,7 @@ export const Inner = styled.div`
     margin: 0 auto;
     display: flex;
     position: relative;
+    align-items: center;
 `
 
 export const MapContainer = styled.div`
@@ -18,7 +19,7 @@ export const MapContainer = styled.div`
 
 export const Map = styled.div`
     width: 100%;
-    height: 25rem;
+    height: 28rem;
     border-radius: 12px;
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -41,9 +42,13 @@ export const SubTitle = styled.h6`
     line-height: 1.7;
 `
 
+export const Item = styled.div`
+    margin-bottom: .5rem;
+`
+
 export const Text = styled.p`
     font-size: .9rem;
-    margin-bottom: .5rem;
+    margin-bottom: .1rem;
 `
 
 export const ButtonContainer = styled.div`

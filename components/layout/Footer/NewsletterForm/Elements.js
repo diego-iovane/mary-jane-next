@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-    /* height: 7rem; */
     width: 100%;
     position: relative;
     background-color: var(--black);
@@ -18,8 +17,9 @@ export const Title = styled.p`
     font-weight: bold;
     font-size: var(--desktop-title-font-size);
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: regular;
     color: #fff;
-    margin-bottom: 1rem;
 
     @media all and (max-width: 560px) {
         font-size: 1.3rem;
@@ -30,7 +30,7 @@ export const Title = styled.p`
 `
 
 export const Form = styled.form`
-    width: 27rem;
+    width: 25rem;
     margin: 0 auto;
 
     @media all and (max-width: 350px) {
@@ -54,7 +54,7 @@ export const InputContainer = styled.div`
 
 export const Input = styled.input`
         width: 75%;
-        height: 3rem;
+        height: 2.5rem;
         border: 1px solid var(--soft-lines-color);
         border-radius: 4px;
         padding: 0 .8rem;
@@ -68,8 +68,8 @@ export const Input = styled.input`
 
 export const Button = styled.button`
     width: 20%;
-    height: 3rem;
-    margin-left: .5rem;
+    height: 2.5rem;
+    margin-left: .2rem;
     border: 1px solid var(--soft-lines-color);
     background-color: ${({ dis }) => dis ? "gray" : "var(--light-green)"};
     border-radius: 4px;
