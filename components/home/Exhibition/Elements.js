@@ -68,10 +68,10 @@ export const Images = styled(motion.div)`
     width: 50%;
     position: relative;
     
-    &:hover .small-arrows {
+    /* &:hover .small-arrows {
         opacity: 1;
         top: 40%;
-    }
+    } */
     
     @media all and (min-width: 1400px) {
         top: 2rem;
@@ -129,14 +129,13 @@ export const IconTxt = styled.p`
 
 export const ButtonsContainer = styled.div`
     position: absolute;
-    top: 42%;
+    bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     width: 70%;
     display: flex;
     justify-content: space-between;
     z-index: 50;
-    opacity: 0;
     transition: all .3s ease-in-out;
 `
 
