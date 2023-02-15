@@ -25,6 +25,29 @@ const Footer = () => {
 
   const { content } = GetContentContext()
 
+  const links = [
+    {
+      title: 'FAQ',
+      url: '',
+    },
+    {
+      title: 'Terms & Conditions',
+      url: '',
+    },
+    {
+      title: 'Privacy policy',
+      url: '',
+    },
+    {
+      title: 'Press',
+      url: '',
+    },
+    {
+      title: 'Blog',
+      url: '',
+    },
+  ]
+
   return (
     <>
       <SocialSection />
@@ -49,7 +72,7 @@ const Footer = () => {
               <RightLeft>
                 <Links>
                   {
-                    content.footer.links.map(link => {
+                    links.map(link => {
                       return(
                         <FooterLink key={link.url} href={link.url}>
                           {link.title}
