@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
-import { Grid, Pagination } from "swiper";
+import { Grid, Pagination, Autoplay } from "swiper"
 import googleLogo from '../../../public/logos/google-logo.png'
 import { GetContentContext } from '../../../context/ContentContext'
 import Review from './Review'
+// import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
@@ -19,7 +20,6 @@ import {
     SectionTitle,
     ButtonsContainer,
 } from './Elements'
-import SwiperButtons from '../../swiperButtons/SwiperButtons'
 
 const ReviewSection = () => {
 
@@ -34,7 +34,7 @@ const ReviewSection = () => {
                     <SectionTitle>{content.reviewsSection.title}</SectionTitle>
                     <RevWidget>
                         <GContainer>
-                            <GImg src={googleLogo} alt="google reviews logo"/>
+                            <GImg src={googleLogo} alt="google reviews logo" />
                         </GContainer>
                         <StarsContainer>
                             <Num>4.7</Num>
@@ -66,7 +66,11 @@ const ReviewSection = () => {
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[Grid, Pagination]}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: true,
+                        }}
+                        modules={[Grid, Pagination, Autoplay]}
                         className="reviewSwyper"
                     >
                         {
@@ -79,9 +83,9 @@ const ReviewSection = () => {
                             })
                         }
                     </Swiper>
-                    <ButtonsContainer>
+                    {/* <ButtonsContainer>
                         <SwiperButtons swiperRef={swiperRef} />
-                    </ButtonsContainer>
+                    </ButtonsContainer> */}
                 </Inner>
             }
         </Section>

@@ -20,6 +20,10 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
             url: '',
         },
         {
+            title: 'Exhibitors 2023',
+            url: '',
+        },
+        {
             title: 'For exhibitors',
             url: '',
             dropdown: [
@@ -54,7 +58,7 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
                     url: '',
                 },
                 {
-                    title: 'Agenda',
+                    title: 'Cannabis festival',
                     url: '',
                 },
                 {
@@ -72,12 +76,18 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
             ]
         },
         {
-            title: 'Mary Jane 2023',
+            title: 'Mary Jane',
             url: '',
         },
         {
             title: 'Contact',
             url: '',
+            dropdown: [
+                {
+                    title: 'Media',
+                    url: '',
+                },
+            ]
         },
     ]
 

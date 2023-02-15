@@ -28,7 +28,7 @@ const MediaSponsorsSection = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner>
                     <Head>
-                        <SectionTitle>{content.mediaSponsorsSection.title}</SectionTitle>
+                        <SectionTitle>Media Sponsors 2023</SectionTitle>
                         <ButtonContainer>
                             <SmallCta>Become a Media Sponsor</SmallCta>
                         </ButtonContainer>

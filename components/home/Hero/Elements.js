@@ -35,6 +35,7 @@ export const Inner = styled(motion.div)`
     align-items: center;
     position: relative;
     padding-top: 4rem;
+    padding-left: 4rem;
 `
 
 export const Content = styled(motion.div)`
@@ -53,17 +54,30 @@ export const Date = styled.h2`
     color: #ffffff;
     font-size: 5.5rem;
     line-height: 1;
+
+    @media all and (min-width: 1400px) {
+        font-size: 7rem;
+    }
 `
 
 export const Month = styled.h2`
     color: #ffffff;
     font-size: 7.6rem;
     margin-bottom: 1.1rem;
+
+    @media all and (min-width: 1400px) {
+        font-size: 9.7rem;
+        margin-bottom: 1.5rem;
+    }
 `
 
 export const Year = styled.h2`
     color: var(--green);
     font-size: 8.1rem;
+
+    @media all and (min-width: 1400px) {
+        font-size: 10.4rem;
+    }
 `
 
 export const SubTitle = styled(motion.h1)`
@@ -72,12 +86,21 @@ export const SubTitle = styled(motion.h1)`
     letter-spacing: .1rem;
     line-height: .8;
     margin-bottom: .5rem;
+
+    @media all and (min-width: 1400px) {
+        font-size: 1.5rem;
+    }
 `
 
 export const CounterContainer = styled(motion.div)`
     border-top: 1px solid #ffffff;
     padding-top: .5rem;
     margin: 0 auto;
+
+    @media all and (min-width: 1400px) {
+        margin: 0;
+        width: 100%;
+    }
 `
 
 export const ButtonContainer = styled(motion.div)``

@@ -55,7 +55,7 @@ const ExhibitorsSection = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner>
                     <Head>
-                        <SectionTitle>{content.exhibitorsGallery.title}</SectionTitle>
+                        <SectionTitle>Exhibitors 2023</SectionTitle>
                         <ButtonContainer>
                             <SmallCta>Become an exhibitor</SmallCta>
                         </ButtonContainer>

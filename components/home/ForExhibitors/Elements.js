@@ -63,8 +63,9 @@ export const Title = styled.h2`
 
 export const Text = styled.div`
     margin: 2rem 0;
+    font-size: .8rem;
 
     @media all and (min-width: 1400px) {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 `

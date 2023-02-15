@@ -62,9 +62,9 @@ const Speakers = () => {
                 Object.entries(content).length !== 0 &&
                 <Inner isinview={isInView}>
                     <Head>
-                        <SectionTitle>Explore our featured speakers</SectionTitle>
+                        <SectionTitle>Meet our speakers</SectionTitle>
                         <ButtonContainer>
-                            <SmallCtaAlt>See more</SmallCtaAlt>
+                            <SmallCtaAlt>See all</SmallCtaAlt>
                         </ButtonContainer>
                     </Head>
                     <Swiper
@@ -106,7 +106,7 @@ const Speakers = () => {
                                                 />
                                             </LogoContainer>
                                             <NameContainer isinview={isInView}>
-                                                <Name>{item.name}</Name>
+                                                <Surname>{item.name}</Surname>
                                                 <Surname>{item.surname}</Surname>
                                                 <Prof>{item.prof}</Prof>
                                             </NameContainer>

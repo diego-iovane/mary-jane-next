@@ -57,10 +57,10 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
     margin: 2rem 0;
-    font-size: 1rem;
+    font-size: .8rem;
 
     @media all and (min-width: 1400px) {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 `
 
@@ -105,6 +105,10 @@ export const IconContainer = styled.div`
     width: 2rem;
     margin: 1rem auto 0 auto;
     position: relative;
+
+    @media all and (min-width: 450px) {
+        display: none;
+    }
 `
 
 export const Icon = styled(motion.div)`
@@ -146,6 +150,7 @@ export const Button = styled.button`
     align-items: center;
     cursor: pointer;
     transform: ${({right}) => right ? 'rotate(180deg)' : null};
+    
     svg {
         width: 1.2rem;
         height: 1.2rem;
