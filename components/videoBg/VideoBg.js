@@ -1,4 +1,3 @@
-import { useScroll, useTransform } from 'framer-motion'
 import {
     VideoBg,
     Overlay,
@@ -6,19 +5,10 @@ import {
 
 const VideoBack = () => {
 
-    // const { scrollY } = useScroll()
-    // const [ grPosition, setGrPosition ] = useState({
-        
-    // })
-
-    // console.log(scrollY)
-
-    // if(scrollY > 1000 )
-
     return (
         <>
         {/* autoPlay */}
-            <VideoBg autoPlay loop muted playsInline>
+            <VideoBg  loop muted playsInline>
                 <source src='/video/bg-video.mp4' type='video/mp4' />
             </VideoBg>
             <Overlay />

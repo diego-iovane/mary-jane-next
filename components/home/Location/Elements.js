@@ -32,13 +32,13 @@ export const DetailsContainer = styled.div`
 
 export const Title = styled.h3`
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
 `
 
 export const SubTitle = styled.h6`
     font-size: 1.4rem;
     font-weight: 400;
-    margin-bottom: 1.2rem;
+    margin-bottom: .7rem;
     line-height: 1.7;
 `
 
@@ -52,5 +52,5 @@ export const Text = styled.p`
 `
 
 export const ButtonContainer = styled.div`
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 `

@@ -24,7 +24,7 @@ const MediaReviews = () => {
             {
                 Object.entries(content).length !== 0 &&
                 <Inner>
-                    <SectionTitle>{content.features.title}</SectionTitle>
+                    <SectionTitle>As seen in</SectionTitle>
                     <Swiper
                         ref={swiperRef}
                         className="mediaReviewSwyper"

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Section = styled.section`
-    min-height: var(--section-min-height);
+    margin-bottom: 3rem;
     padding: 5rem 0 1rem 0;
 `
 
@@ -19,7 +20,7 @@ export const Inner = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 2.5rem;
     align-self: flex-start;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
 
     @media all and (max-width: 450px) {
         padding-bottom: 1rem;
@@ -35,12 +36,12 @@ export const ButtonsContainer = styled.div`
 `
 
 // REVIEW
-export const ReviewContainer = styled.div`
+export const ReviewContainer = styled(Link)`
     position: relative;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 100%);
     border-radius: 12px;
     padding: 2rem;
-    min-height: 17rem;
+    height: 6.5rem;
     display: flex;
     flex-direction: column;
     transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
@@ -48,38 +49,15 @@ export const ReviewContainer = styled.div`
     justify-content: center;
 `
 
-export const QuotesIcon = styled.svg`
-    width: 2rem;
-    height: 2rem;
-    
-    path { 
-        fill: var(--pink);
-    }
-`
-
-export const Text = styled.p`
-    font-size: .8rem !important;
-
-    p {
-        @media all and (max-width: 450px) {
-            font-size: .8rem; 
-        }
-    }
-`
-
-export const LogoPosition = styled.div`
-    width: 10rem;
-    height: 2rem;
-    align-self: flex-end;
-    margin-top: 1rem;
-`
-
 export const LogoContainer = styled.div`
     position: relative;
-    height: 2.1rem;
     width: auto;
+    height: 3rem;
+    cursor: pointer;
+    pointer-events: none;
 `
 
 export const Logo = styled(Image)`
+    pointer-events: none;
     object-fit: contain;
 `

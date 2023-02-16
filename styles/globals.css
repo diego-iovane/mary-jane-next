@@ -119,6 +119,11 @@ span {
   }
 }
 
+.mediaReviewSwyper {
+  position: relative;
+  bottom: 1rem;
+}
+
 .mediaReviewSwyper.swiper {
   width: 100%;
   height: 100%;
