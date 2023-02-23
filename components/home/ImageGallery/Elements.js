@@ -101,7 +101,7 @@ export const CtaContainer = styled.div`
 export const CtaTitle = styled.h2`
     margin: 2rem 0;
     text-align: center;
-    color: var(--pink);
+    color: var(--black);
     `
 
 export const CtaSubTitle = styled.h4`

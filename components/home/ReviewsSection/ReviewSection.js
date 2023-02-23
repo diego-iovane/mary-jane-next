@@ -68,7 +68,7 @@ const ReviewSection = () => {
                         }}
                         autoplay={{
                             delay: 5000,
-                            disableOnInteraction: true,
+                            disableOnInteraction: false,
                         }}
                         modules={[Grid, Pagination, Autoplay]}
                         className="reviewSwyper"

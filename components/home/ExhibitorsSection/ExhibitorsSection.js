@@ -20,22 +20,22 @@ import {
 const ExhibitorsSection = () => {
 
     const temp = [
-        {src: '/temp/1.png'},
-        {src: '/temp/2.png'},
-        {src: '/temp/3.webp'},
-        {src: '/temp/4.webp'},
-        {src: '/temp/5.webp'},
-        {src: '/temp/6.png'},
-        {src: '/temp/7.webp'},
-        {src: '/temp/8.png'},
-        {src: '/temp/9.webp'},
-        {src: '/temp/10.png'},
+        { src: '/temp/1.png' },
+        { src: '/temp/2.png' },
+        { src: '/temp/3.webp' },
+        { src: '/temp/4.webp' },
+        { src: '/temp/5.webp' },
+        { src: '/temp/6.png' },
+        { src: '/temp/7.webp' },
+        { src: '/temp/8.png' },
+        { src: '/temp/9.webp' },
+        { src: '/temp/10.png' },
     ]
 
     const { content } = GetContentContext()
 
     const handleSwiper = (swiper) => {
-        
+
         const infinite = () => {
             swiper.slideTo(swiper.slides.length, 30000)
             swiper.once('transitionEnd', function () {
@@ -53,19 +53,24 @@ const ExhibitorsSection = () => {
         <Section>
             {
                 Object.entries(content).length !== 0 &&
-                <Inner>
-                    <Head>
-                        <SectionTitle>Exhibitors 2023</SectionTitle>
-                        <ButtonContainer>
-                            <SmallCta>Become an exhibitor</SmallCta>
-                        </ButtonContainer>
-                        <ButtonContainer>
-                            <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
-                        </ButtonContainer>
-                    </Head>
+                <>
+                    <Inner>
+                        <Head>
+                            <SectionTitle>Exhibitors 2023</SectionTitle>
+                            <ButtonContainer>
+                                <SmallCta>Become an exhibitor</SmallCta>
+                            </ButtonContainer>
+                            <ButtonContainer>
+                                <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
+                            </ButtonContainer>
+                        </Head>
+                    </Inner>
                     <Swiper
                         slidesPerView={3}
                         breakpoints={{
+                            1600: {
+                                slidesPerView: 10,
+                            },
                             900: {
                                 slidesPerView: 7,
                             },
@@ -103,7 +108,7 @@ const ExhibitorsSection = () => {
                             })
                         }
                     </Swiper>
-                </Inner>
+                </>
             }
         </Section>
     )
