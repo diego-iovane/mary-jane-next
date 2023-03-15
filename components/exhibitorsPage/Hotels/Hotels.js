@@ -4,7 +4,6 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../../context/ContentContext'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import { Section, Inner, Title } from '../Elements'
 import {
@@ -19,13 +18,10 @@ import {
 
 const Hotels = () => {
 
-    const { content } = GetContentContext()
     const swiperRef = useRef()
-
-
     return (
         <Section id="hotels">
-            <Inner>
+            {/* <Inner>
                 <Hoverable>
                     <Title>{content.exhibitorsPage.hotelsTitle}</Title>
                     <Swiper
@@ -76,7 +72,7 @@ const Hotels = () => {
                         <SwiperButtons swiperRef={swiperRef} />
                     </ButtonsContainer>
                 </Hoverable>
-            </Inner>
+            </Inner> */}
         </Section>
     )
 }

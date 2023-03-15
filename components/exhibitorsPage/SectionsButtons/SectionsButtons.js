@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -12,16 +10,10 @@ import {
 
 const SectionsButtons = () => {
 
-    const { content } = GetContentContext()
-
-    console.log(content.exhibitorsPage.buttonsSection.buttons)
-
     return (
         <Section>
-            {/* { */}
-                {/* // Object.entries(content).length !== 0 && */}
-                <Inner>
-                    <Title>{content.exhibitorsPage.buttonsSection.title}</Title>
+            <Inner>
+                {/* <Title>{content.exhibitorsPage.buttonsSection.title}</Title>
                     <ButtonsContainer>
                         {
                             content.exhibitorsPage.buttonsSection.buttons.map(item => {
@@ -41,9 +33,8 @@ const SectionsButtons = () => {
                                 )
                             })
                         }
-                    </ButtonsContainer>
-                </Inner>
-            {/* } */}
+                    </ButtonsContainer> */}
+            </Inner>
         </Section>
     )
 }

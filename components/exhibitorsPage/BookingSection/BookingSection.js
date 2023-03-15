@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -16,11 +14,9 @@ import {
 
 const BookingSection = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <Section id="booking-section" bgColor="var(--bg-gray)">
-            <Inner>
+            {/* <Inner>
                 <Title>{content.bookingInfo.title}</Title>
                 <SubTitle>{content.bookingInfo.timeplanSubtitle}</SubTitle>
                 <TimePlanContainer>
@@ -50,7 +46,7 @@ const BookingSection = () => {
                         {content.bookingInfo.buttons[1].title}
                     </FileButton>
                 </ButtonsContainer>
-            </Inner>
+            </Inner> */}
         </Section>
     )
 }

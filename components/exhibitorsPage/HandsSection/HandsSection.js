@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import InstaCard from '../../instaCard/InstaCard'
 import {
     IllustrationsSectionContainer,
@@ -13,11 +11,9 @@ import {
 
 const HandsSection = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <IllustrationsSectionContainer>
-            <InstaCard
+            {/* <InstaCard
                 x="-2rem"
                 y="5rem"
                 rt="5"
@@ -66,7 +62,7 @@ const HandsSection = () => {
                         left="0rem"
                     >{content.exhibitorsPage.exhibitButton.title}</Button>
                 </IllustrationInner>
-            </IllustrationsContainer>
+            </IllustrationsContainer> */}
         </IllustrationsSectionContainer>
     )
 }

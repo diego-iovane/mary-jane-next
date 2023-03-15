@@ -1,5 +1,4 @@
 import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import InstaCard from '../../instaCard/InstaCard'
 import {
     Section,
@@ -20,12 +19,10 @@ import {
 
 const Furniture = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <Section id="furniture-section" bgColor="var(--bg-gray)">
             <Inner>
-                <Title>{content.exhibitorsPage.furniture.title}</Title>
+                {/* <Title>{content.exhibitorsPage.furniture.title}</Title>
                 <Content>
                     <Left>
                         <InstaCard
@@ -65,7 +62,7 @@ const Furniture = () => {
                             )
                         })
                     }
-                </FilesContainer>
+                </FilesContainer> */}
             </Inner>
         </Section>
     )

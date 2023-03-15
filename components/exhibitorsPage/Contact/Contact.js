@@ -1,5 +1,4 @@
 import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -14,22 +13,20 @@ import {
 
 const Contact = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <Section>
             <Inner>
                 <Container>
                     {/* <Text dangerouslySetInnerHTML={{ __html: {content.bookingInfo.contact.title} }} />
                     <Text dangerouslySetInnerHTML={{ __html: {content.bookingInfo.contact.contact} }} /> */}
-                    <BgIcon>
+                    {/* <BgIcon>
                         <IconContainer>
                             <Icon
                                 src={content.bookingInfo.contact.icon}
                                 fill
                             />
                         </IconContainer>
-                    </BgIcon>
+                    </BgIcon> */}
                 </Container>
             </Inner>
         </Section>
