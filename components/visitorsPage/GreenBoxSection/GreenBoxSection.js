@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import InstaCard from '../../instaCard/InstaCard'
 import { BdSection, Inner } from '../Elements'
 import {
@@ -14,11 +12,9 @@ import {
 
 const GreenBoxSection = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <BdSection>
-            <Inner>
+            {/* <Inner>
                 <Left>
                     <GreenBox>
                         <GreenBoxText>
@@ -54,7 +50,7 @@ const GreenBoxSection = () => {
                         rt="25"
                     />
                 </Right>
-            </Inner>
+            </Inner> */}
         </BdSection>
     )
 }

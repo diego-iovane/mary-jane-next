@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import { BdSection, Inner } from '../Elements'
 import InstaCard from '../../instaCard/InstaCard'
 import {
@@ -14,11 +12,9 @@ import {
 
 const Features = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <BdSection>
-            <Inner>
+            {/* <Inner>
                 <Left>
                     <InstaCard
                         src={content.visitorsPage.instaCardOne.src}
@@ -57,7 +53,7 @@ const Features = () => {
                         }
                     </FeaturesList>
                 </Right>
-            </Inner>
+            </Inner> */}
         </BdSection>
     )
 }

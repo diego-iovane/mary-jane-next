@@ -1,16 +1,12 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import { BdSection, Title } from '../Elements'
 import { Inner, CardsContainer, Card, Text, Icon } from './Elements'
 
 const Benefits = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <BdSection>
             <Inner>
-                <Title>{content.visitorsPage.benefits.title}</Title>
+                {/* <Title>{content.visitorsPage.benefits.title}</Title>
                 <CardsContainer>
                     {
                         content.visitorsPage.benefits.benefits.map(item => {
@@ -24,7 +20,7 @@ const Benefits = () => {
                             )
                         })
                     }
-                </CardsContainer>
+                </CardsContainer> */}
             </Inner>
         </BdSection>
     )

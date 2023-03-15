@@ -1,5 +1,3 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import { BdSection, Title } from '../Elements'
 import { 
     Inner,
@@ -12,11 +10,9 @@ import {
 
 const ProductsGrid = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <BdSection>
-            <Inner>
+            {/* <Inner>
                 <Title>{content.visitorsPage.products.title}</Title>
                 <Grid>
                     {
@@ -32,7 +28,7 @@ const ProductsGrid = () => {
                         })
                     }
                 </Grid>
-            </Inner>
+            </Inner> */}
         </BdSection>
     )
 }

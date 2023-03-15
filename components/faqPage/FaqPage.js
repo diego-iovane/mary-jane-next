@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { GetContentContext } from '../../context/ContentContext'
 import {
     HeroImage,
     HeroSection,
@@ -15,8 +14,6 @@ import {
 } from './Elements'
 
 const FaqPage = () => {
-
-    const { content } = GetContentContext()
     const [active, setActive] = useState(1)
     const handleActive = (id) => {
         active === id ? setActive(0) : setActive(id)
@@ -24,7 +21,7 @@ const FaqPage = () => {
 
     return (
         <>
-            {
+            {/* {
                 Object.entries(content).length !== 0 &&
                 <>
                     <HeroSection>
@@ -54,7 +51,7 @@ const FaqPage = () => {
                         }
                     </Inner>
                 </>
-            }
+            } */}
         </>
     )
 }

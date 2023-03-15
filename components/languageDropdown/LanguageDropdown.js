@@ -10,10 +10,8 @@ import {
     Arrow,
 } from "./Elements"
 
-
 const LanguageDropdown = () => {
 
-    
     const { language, setLanguage } = GetLanguageContext()
     const [active, setActive] = useState(language)
     const [opened, setOpened] = useState(false)
