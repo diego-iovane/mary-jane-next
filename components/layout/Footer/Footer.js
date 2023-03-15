@@ -1,5 +1,4 @@
 import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
 import SocialSection from './SocialSection/SocialSection'
 import {
   Section,
@@ -22,8 +21,6 @@ import {
 import NewsletterForm from './NewsletterForm/NewsletterForm'
 
 const Footer = () => {
-
-  const { content } = GetContentContext()
 
   const links = [
     {
@@ -52,7 +49,7 @@ const Footer = () => {
     <>
       <SocialSection />
       <NewsletterForm />
-      <Section>
+      {/* <Section>
         {
           Object.entries(content).length !== 0 &&
           <Inner>
@@ -102,7 +99,7 @@ const Footer = () => {
 
           </Inner>
         }
-      </Section>
+      </Section> */}
     </>
   )
 }

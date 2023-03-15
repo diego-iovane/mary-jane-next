@@ -11,33 +11,39 @@ import {
 } from "./Elements"
 
 
-const LanguageDropdown = ({ flags }) => {
+const LanguageDropdown = () => {
 
-    const [active, setActive] = useState('')
-    const [opened, setOpened] = useState(false)
-
+    
     const { language, setLanguage } = GetLanguageContext()
-
-    // console.log('mmmmmmmmm', flags)
+    const [active, setActive] = useState(language)
+    const [opened, setOpened] = useState(false)
+    const languages = [
+        {
+            src: "/icons/flags/en.jpg",
+            value: "en",
+        },
+        {
+            src: "/icons/flags/de.png",
+            value: "de",
+        },
+    ]
 
     useEffect(() => {
-        setActive(flags[0])
+        const activeLang = languages.find(lang => lang.value === language)
+        setActive(activeLang)
     }, [])
 
     const handleOpen = () => setOpened(!opened)
 
     const changeLanguage = (value) => {
 
-        setLanguage({
-            ...language,
-            locale: value
-        })
+        setLanguage(value)
 
         setOpened(!opened)
 
-        setActive(flags.find(lng => lng.value === value))
+        setActive(languages.find(lng => lng.value === value))
     }
-
+    
     return (
         <DropdownContainer opened={opened}>
             <Button onClick={handleOpen}>
@@ -48,7 +54,7 @@ const LanguageDropdown = ({ flags }) => {
             </Button>
             <DropdownBox opened={opened}>
                 {
-                    flags
+                    languages
                     .filter(lng => lng.value !== active.value)
                     .map(lng => {
                         return(

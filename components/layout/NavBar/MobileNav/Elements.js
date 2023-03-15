@@ -16,7 +16,7 @@ export const Hamb = styled.button`
     /* top: 50%;
     transform: translateY(-50%); */
 
-    @media all and (min-width: 960px) {
+    @media all and (min-width: 1024px) {
         display: none;
     }
 `
@@ -76,6 +76,8 @@ export const Link = styled.a`
 export const DropdownContainer = styled.div`
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
     margin-right: 1.5rem;
     margin-bottom: 1.5rem;
 `

@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 export const DropdownContainer = styled.div`
     position: relative;
-    margin: 0 .5rem 0 1rem;
     display: flex;
     align-items: center;
 
-    &:before {
+    /* &:before {
         content: '';
         position: absolute;
         top: 0;
@@ -16,7 +15,7 @@ export const DropdownContainer = styled.div`
         height: ${({opened}) => opened ? '262%' : '100%'};
         border-radius: 500px;
         transition: all .1s ease-in-out;
-    }
+    } */
 
     @media all and (max-width: 960px) {
         margin-top: 1rem;
@@ -55,15 +54,12 @@ export const FlagContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media all and (max-width: 960px) {
-        width: 2rem;
-        height: 2rem;
-    }
+    border-radius: 500px;
+    overflow: hidden;
 `
 
 export const Flag = styled.img`
-    width: 100%;
+    width: 180%;
     height: auto;
     object-fit: contain;
     cursor: pointer;

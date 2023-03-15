@@ -4,7 +4,6 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid } from "swiper"
-import { GetContentContext } from '../../../context/ContentContext'
 import SmallCta from '../../buttons/SmallCta'
 import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
@@ -15,6 +14,7 @@ import {
     SectionTitle,
     LogoContainer,
     Logo,
+    ButtonsContainer,
 } from './Elements'
 
 const ExhibitorsSection = () => {
@@ -31,8 +31,6 @@ const ExhibitorsSection = () => {
         { src: '/temp/9.webp' },
         { src: '/temp/10.png' },
     ]
-
-    const { content } = GetContentContext()
 
     const handleSwiper = (swiper) => {
 
@@ -51,34 +49,37 @@ const ExhibitorsSection = () => {
 
     return (
         <Section>
-            {
-                Object.entries(content).length !== 0 &&
                 <>
                     <Inner>
                         <Head>
                             <SectionTitle>Exhibitors 2023</SectionTitle>
-                            <ButtonContainer>
-                                <SmallCta>Become an exhibitor</SmallCta>
-                            </ButtonContainer>
-                            <ButtonContainer>
-                                <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
-                            </ButtonContainer>
+                            <ButtonsContainer>
+                                <ButtonContainer>
+                                    <SmallCta>Become an exhibitor</SmallCta>
+                                </ButtonContainer>
+                                <ButtonContainer>
+                                    <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
+                                </ButtonContainer>
+                            </ButtonsContainer>
                         </Head>
                     </Inner>
                     <Swiper
-                        slidesPerView={3}
+                        slidesPerView={1}
                         breakpoints={{
                             1600: {
                                 slidesPerView: 10,
                             },
-                            900: {
-                                slidesPerView: 7,
+                            1300: {
+                                slidesPerView: 9,
                             },
-                            650: {
+                            1100: {
+                                slidesPerView: 8,
+                            },
+                            700: {
                                 slidesPerView: 5,
                             },
                             400: {
-                                slidesPerView: 3,
+                                slidesPerView: 2,
                             },
                         }}
                         grid={{
@@ -109,7 +110,6 @@ const ExhibitorsSection = () => {
                         }
                     </Swiper>
                 </>
-            }
         </Section>
     )
 }

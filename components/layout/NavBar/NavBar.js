@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { GetContentContext } from '../../../context/ContentContext'
 import MainNav from './MainNav'
 import SecondaryNav from './SecondaryNav'
 import {
@@ -14,14 +13,15 @@ import {
 } from './Elements'
 import MobileNav from './MobileNav/MobileNav'
 import Hamburguer from './MobileNav/Hamburguer'
+import { GetLanguageContext } from '../../../context/LanguageContext'
 
 const NavBar = () => {
 
   const router = useRouter()
   const pathname = router.pathname
-  const { content } = GetContentContext()
   const [opened, setOpened] = useState(false)
   const [scrollPos, setScrollPos] = useState(false)
+  // const { language } = GetLanguageContext()
 
   const toTop = () => scrollTo(top)
   const handleScroll = () => setScrollPos(window.pageYOffset)
@@ -32,59 +32,47 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-
   return (
     <Container scrolled={scrollPos > 0.1}>
-      {
-        Object.entries(content).length !== 0 &&
-        <Inner>
-          <Left>
-            {
-              pathname === '/' ?
-                <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
+      <Inner>
+        <Left>
+          {
+            pathname === '/' ?
+              <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
+                {
+                  scrollPos > 0.1 ?
+                    <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
+                    <Logo src="/logos/logo-white.png" alt='logo' priority fill />
+                }
+              </LogoContainer> :
+              <Link href='/'>
+                <LogoContainer scrolled={scrollPos > 0.1}>
                   {
                     scrollPos > 0.1 ?
-                    <Logo src={content.mainNav.altLogo.src} alt='brand logo' priority fill /> :
-                    <Logo src={content.mainNav.logo.src} alt='logo' priority fill />
+                      <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
+                      <Logo src="/logos/logo-white.png" alt='logo' priority fill />
                   }
-                </LogoContainer> :
-                <Link href='/'>
-                  <LogoContainer scrolled={scrollPos > 0.1}>
-                    {
-                      scrollPos > 0.1 ?
-                      <Logo src={content.mainNav.altLogo.src} alt='brand logo' priority fill /> :
-                      <Logo src={content.mainNav.logo.src} alt='logo' priority fill />
-                    }
-                  </LogoContainer>
-                </Link>
-            }
-            <MainNav
-              links={content.mainNav.links}
-              ticketBtn={content.mainNav.ticketButton}
-              scrolled={scrollPos > 0.1}
-            />
-          </Left>
-          <Right>
-            <SecondaryNav
-              links={content.secondaryNav.links}
-              flags={content.secondaryNav.flags}
-              scrolled={scrollPos > 0.1}
-            />
-            <Hamburguer 
-              opened={opened}
-              setOpened={setOpened}
-            />
-          </Right>
-            <MobileNav
-              primaryLinks={content.mainNav.links}
-              secondaryLinks={content.secondaryNav.links}
-              flags={content.secondaryNav.flags}
-              scrolled={scrollPos > 0.1}
-              opened={opened}
-              setOpened={setOpened}
-            />
-        </Inner>
-      }
+                </LogoContainer>
+              </Link>
+          }
+          <MainNav scrolled={scrollPos > 0.1} />
+        </Left>
+        <Right>
+          <SecondaryNav scrolled={scrollPos > 0.1} />
+          <Hamburguer
+            opened={opened}
+            setOpened={setOpened}
+          />
+        </Right>
+        {/* <MobileNav
+          primaryLinks={content.mainNav.links}
+          secondaryLinks={content.secondaryNav.links}
+          flags={content.secondaryNav.flags}
+          scrolled={scrollPos > 0.1}
+          opened={opened}
+          setOpened={setOpened}
+        /> */}
+      </Inner>
     </Container>
   )
 }

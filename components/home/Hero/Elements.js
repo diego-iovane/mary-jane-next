@@ -17,15 +17,6 @@ export const HeroSection = styled.div`
     }
 `
 
-// export const WhiteOverlay = styled.div`
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background: linear-gradient(180deg, rgba(247, 247, 247, 0) 84.58%, #F7F7F7 100%);
-// `
-
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
@@ -51,22 +42,28 @@ export const Title = styled(motion.div)`
 `
 
 export const Date = styled.h2`
-    color: #ffffff;
-    font-size: 5.5rem;
-    line-height: 1;
+    font-size: 7.05rem;
 
-    @media all and (min-width: 1400px) {
-        font-size: 7rem;
+    span {
+        line-height: 1;
+    }
+
+    @media all and (max-width: 1400px) {
+        font-size: 5.5rem;
     }
 `
 
 export const Month = styled.h2`
     color: #ffffff;
-    font-size: 7.6rem;
+    font-size: ${({language}) => language === 'en' ? '7.6rem' : '8.6rem'};
     margin-bottom: 1.1rem;
 
+    span {
+        line-height: ${({language}) => language === 'en' ? '.3' : '.9'};
+    }
+
     @media all and (min-width: 1400px) {
-        font-size: 9.7rem;
+        font-size: ${({language}) => language === 'en' ? '9.7rem' : '11rem'};
         margin-bottom: 1.5rem;
     }
 `
@@ -82,13 +79,13 @@ export const Year = styled.h2`
 
 export const SubTitle = styled(motion.h1)`
     color: #ffffff;
-    font-size: 1.15rem;
+    font-size: ${({language}) => language === 'en' ? '1.15rem' : '1.05rem'};
     letter-spacing: .1rem;
     line-height: .8;
     margin-bottom: .5rem;
 
     @media all and (min-width: 1400px) {
-        font-size: 1.5rem;
+        font-size: ${({language}) => language === 'en' ? '1.5rem' : '1.4rem'};
     }
 `
 
@@ -96,11 +93,7 @@ export const CounterContainer = styled(motion.div)`
     border-top: 1px solid #ffffff;
     padding-top: .5rem;
     margin: 0 auto;
-
-    @media all and (min-width: 1400px) {
-        margin: 0;
-        width: 100%;
-    }
+    width: 100%;
 `
 
 export const ButtonContainer = styled(motion.div)``

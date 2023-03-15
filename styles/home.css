@@ -5,24 +5,19 @@
 
 /* EN */
 .date {
-    font-size: 6.3rem;
     color: #ffffff;
 }
 
 .month {
-    line-height: .3;
-    color: var(--greenl);
-    font-size: 9.5rem;
+    color: var(--green);
 }
 
 .year {
     color: var(--green);
-    font-size: 10rem;
 }
 
 .subtitle {
     color: #ffffff;
-    letter-spacing: .14;
 }
 
 .subtitle-span {

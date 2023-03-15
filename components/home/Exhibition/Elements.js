@@ -35,15 +35,25 @@ export const Inner = styled(motion.div)`
         flex-direction: column;
     }
 
+    @media all and (max-width: 980px) {
+        flex-direction: column;    
+    }
+
     @media all and (min-width: 1400px) {
         padding-left: 4rem;
     }
+
 `
 
 export const Content = styled(motion.div)`
-    width: 41rem;
+    width: 65%;
+    max-width: 41rem;
     position: relative;
     z-index: 10;
+
+    @media all and (max-width: 980px) {
+        width: 100%;   
+    }
 `
 
 export const Title = styled.h2`
@@ -66,12 +76,20 @@ export const Text = styled.p`
 
 export const Images = styled(motion.div)`
     width: 50%;
+    margin-left: 2.5rem;
     position: relative;
-    
+    display: flex;
+    align-items: center;
+
     /* &:hover .small-arrows {
         opacity: 1;
         top: 40%;
     } */
+
+    @media all and (max-width: 980px) {
+        width: 100%;
+        margin: 4rem auto;
+    }
     
     @media all and (min-width: 1400px) {
         top: 2rem;
@@ -137,6 +155,10 @@ export const ButtonsContainer = styled.div`
     justify-content: space-between;
     z-index: 50;
     transition: all .3s ease-in-out;
+
+    @media all and (max-width: 650px) {
+        display: none;
+    }
 `
 
 export const Button = styled.button`

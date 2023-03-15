@@ -14,7 +14,7 @@ export const Item = styled.div`
     }
 `
 
-export const Num = styled.p`
+export const Num = styled.div`
     color: #ffffff;
     font-weight: bold;
     text-align: center;
@@ -25,7 +25,7 @@ export const Num = styled.p`
     }
 `
 
-export const Text = styled.p`
+export const Text = styled.div`
     color: #ffffff;
     text-align: center;
     font-size: .8rem;

@@ -1,4 +1,3 @@
-import { GetContentContext } from '../../../../context/ContentContext'
 import {
     Section,
     Inner,
@@ -11,11 +10,9 @@ import {
 
 const SocialSection = () => {
 
-    const { content } = GetContentContext()
-
     return (
         <Section>
-            {
+            {/* {
                 Object.entries(content).length !== 0 &&
                 // <Inner>
                     <Content>
@@ -42,7 +39,7 @@ const SocialSection = () => {
                         </IconsContainer>
                     </Content>
                 // </Inner>
-            }
+            } */}
         </Section>
     )
 }

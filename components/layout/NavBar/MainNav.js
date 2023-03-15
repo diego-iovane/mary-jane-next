@@ -8,13 +8,15 @@ import {
     MegaMenu,
     MenuLinkContainer,
 } from './Elements'
+import { GetLanguageContext } from '../../../context/LanguageContext'
 
-const MainNav = ({ links, scrolled, ticketBtn }) => {
+const MainNav = ({ scrolled }) => {
 
+    const { language } = GetLanguageContext()
     const [megaMenuOpen, setMegaMenuOpen] = useState(false)
     const [activeLink, setActiveLink] = useState('')
 
-    const temp = [
+    const enLinks = [
         {
             title: 'Sponsoring',
             url: '',
@@ -28,7 +30,7 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
             url: '',
             dropdown: [
                 {
-                    title: 'General info.',
+                    title: 'General info',
                     url: '',
                 },
                 {
@@ -54,7 +56,7 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
             url: '',
             dropdown: [
                 {
-                    title: 'General info.',
+                    title: 'General info',
                     url: '',
                 },
                 {
@@ -81,6 +83,83 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
         },
         {
             title: 'Contact',
+            url: '',
+            dropdown: [
+                {
+                    title: 'Media',
+                    url: '',
+                },
+            ]
+        },
+    ]
+
+    const deLinks = [
+        {
+            title: 'Sponsoring',
+            url: '',
+        },
+        {
+            title: 'Austeller 2023',
+            url: '',
+        },
+        {
+            title: 'Für Aussteller',
+            url: '',
+            dropdown: [
+                {
+                    title: 'Allgemeine Info',
+                    url: '',
+                },
+                {
+                    title: 'Aussteller Guide',
+                    url: '',
+                },
+                {
+                    title: 'Standanfrage',
+                    url: '',
+                },
+                {
+                    title: 'Mietmöbel & Hostessen',
+                    url: '',
+                },
+                {
+                    title: 'Unterkunft',
+                    url: '',
+                },
+            ]
+        },
+        {
+            title: 'Für Besucher',
+            url: '',
+            dropdown: [
+                {
+                    title: 'Allgemeine Info',
+                    url: '',
+                },
+                {
+                    title: 'Cannabis Festival',
+                    url: '',
+                },
+                {
+                    title: 'Cannabis Konferenz',
+                    url: '',
+                },
+                {
+                    title: 'Tickets',
+                    url: '',
+                },
+                {
+                    title: 'FAQs',
+                    url: '',
+                },
+            ]
+        },
+        {
+            title: 'Mary Jane',
+            url: '',
+        },
+        {
+            title: 'Kontact',
             url: '',
             dropdown: [
                 {
@@ -119,11 +198,13 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
         }
     }
 
+    const links = language === "en" ? enLinks : deLinks
+
     return (
         <Nav scrolled={scrolled}>
             <Links>
                 {
-                    temp.map(link => {
+                    links.map(link => {
                         return (
                             <LinkContainer
                                 key={link.title}
@@ -170,24 +251,6 @@ const MainNav = ({ links, scrolled, ticketBtn }) => {
                     })
                 }
             </Links>
-            {/* <Links>
-                {
-                    links.map(link => {
-                        return (
-                            <LinkContainer key={link.title} >
-                                <Link href={link.url}>
-                                    {link.title}
-                                </Link>
-                            </LinkContainer>
-                        )
-                    })
-                }
-            </Links> */}
-            {/* <ButtonContainer>
-                <PrimaryButton>
-                    <a href={ticketBtn.url} rel="noopener noreferrer" target="_blank">{ticketBtn.title}</a>
-                </PrimaryButton>
-            </ButtonContainer> */}
         </Nav>
     )
 }

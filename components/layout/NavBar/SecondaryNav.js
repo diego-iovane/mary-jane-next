@@ -5,34 +5,13 @@ import {
     Nav,
     TicketsBtn,
     StandBtn,
+    DropdownContainer,
 } from './Elements'
 
-const SecondaryNav = ({ links, flags, scrolled }) => {
-
-    const temp = [
-        {
-            title: 'Get tickets',
-            url: '/',
-        },
-        {
-            title: 'Stand inquiry',
-            url: '/',
-        }
-    ]
+const SecondaryNav = ({ scrolled }) => {
 
     return (
         <Nav scrolled={scrolled}>
-            {/* <Links>
-                {
-                    links.map(link => {
-                        return (
-                            <LinkContainer key={link.url}>
-                                <Link href={link.url}>{link.title}</Link>
-                            </LinkContainer>
-                        )
-                    })
-                }
-            </Links> */}
             <TicketsBtn
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 1 }}
@@ -47,7 +26,9 @@ const SecondaryNav = ({ links, flags, scrolled }) => {
             >
                 <Link href="/">Stand inquiry</Link>
             </StandBtn>
-            <LanguageDropdown flags={flags} />
+            <DropdownContainer>
+                <LanguageDropdown />
+            </DropdownContainer>
         </Nav>
     )
 }

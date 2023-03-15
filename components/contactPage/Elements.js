@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const HeadSection = styled.div`
     height: 12rem;
@@ -27,9 +26,8 @@ export const HeadBg = styled(Image)`
     object-fit: cover;
 `
 
-export const Body = styled.div`
+export const Content = styled.div`
     width: 100%;
-    padding-bottom: 4rem;
 `
 
 export const Inner = styled(motion.div)`
@@ -37,54 +35,43 @@ export const Inner = styled(motion.div)`
     max-width: var(--section-max-width);
     margin: 1rem auto 2rem auto;
     display: flex;
-    justify-content: space-between;
     padding: 3rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    /* min-height: 24rem; */
+    flex-direction: column;
 `
-
-export const LeftContent = styled.div`
-    width: 50%;
-`
-
 
 export const Title = styled.h1`
     width: 100%;
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
     margin-bottom: 1rem;
-    font-size: 2.5rem;
 `
 
-export const TitleAlt = styled.h2`
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #1E411D;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+export const SubTitle = styled.h3`
+    font-weight: bold;
+    margin: 1.5rem 0;
+`
+
+export const Item = styled.div`
+    display: flex;
+    margin-bottom: 1.8rem;
+`
+
+export const Icon = styled.div`
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .8rem;
+`
+
+export const I = styled(Image)`
+    object-fit: contain;
 `
 
 export const Text = styled.p`
-    line-height: 2;
-    margin-bottom: 1rem;
-`
-
-export const ButtonContainer = styled(Link)`
-
-`
-
-export const RightContent = styled.div`
-    width: 23rem;
-    margin-right: 3%;
-`
-
-export const ImageContainer = styled.div`
-    width: 100%;
-    height: auto;
-`
-
-export const Img = styled(Image)`
-    object-fit: contain;
+    line-height: 1;
+    align-self: center;
+    position: relative;
 `

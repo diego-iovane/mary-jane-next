@@ -20,12 +20,34 @@ export const Head = styled.div`
     align-items: center;
     align-self: flex-start;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 850px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+`
+
+export const ButtonsContainer = styled.div`
+    display: flex;
+
+    @media all and (max-width: 850px) {
+        /* flex-direction: column; */
+    }
 `
 
 export const ButtonContainer = styled.div`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
+
+    @media all and (max-width: 850px) {
+        margin: 1rem 0;
+
+        &:nth-child(2) {
+            margin-left: 1rem;
+        }
+    }
 `
 
 export const SectionTitle = styled.h2`

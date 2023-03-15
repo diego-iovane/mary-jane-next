@@ -16,7 +16,7 @@ export const Container = styled(motion.header)`
 export const Inner = styled.div`
     margin: 0 auto;
     width: 100%;
-    max-width: calc(var(--section-max-width) + 5rem);
+    max-width: calc(var(--section-max-width) + 15rem);
     display: flex;
     justify-content: space-between;
 `
@@ -57,7 +57,7 @@ export const Nav = styled.nav`
     transition: all .5s ease-in-out;
     align-items: center;
 
-    @media all and (max-width: 960px) {
+    @media all and (max-width: 1024px) {
         display: none;
     }
 `
@@ -180,4 +180,8 @@ export const StandBtn = styled(motion.div)`
     &:hover {
         background-color: var(--pink-hover);
     }
+`
+
+export const DropdownContainer = styled.div`
+    margin-left: 1rem;
 `

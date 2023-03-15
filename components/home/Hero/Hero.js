@@ -1,6 +1,7 @@
+import { GetLanguageContext } from '../../../context/LanguageContext'
 import VideoBack from '../../videoBg/VideoBg'
-import { GetContentContext } from '../../../context/ContentContext'
 import PrimaryButton from '../../buttons/PrimaryButton'
+import Counter from '../../counter/Counter'
 import {
     containerMotion,
     elementsMotion,
@@ -17,58 +18,76 @@ import {
     SubTitle,
     CounterContainer,
     ButtonContainer,
-    // WhiteOverlay,
 } from './Elements'
-import Counter from '../../counter/Counter'
 
-const Hero = () => {
+const Hero = ({ data }) => {
 
-    const { content } = GetContentContext()
+    const { language } = GetLanguageContext()
 
-    const subTitle = ` <span class="subtitle">Germanys leading<span class="subtitle-span"> Cannabis<br></br> Expo & Festival</span> since 2016</span>`
+    const content = language === 'en' ?
+        {
+            subtitle: data.subtitleEn || '',
+            date: data.dateEn || '',
+            month: data.monthEn || '',
+            year: data.yearEn || '',
+            counter: {
+                days: data.counterDaysEn || '',
+                hours: data.counterHoursEn || '',
+                minutes: data.counterMinutesEn || '',
+                seconds: data.counterSecondsEn || '',
+            },
+            cta: data.ctaEn || '',
+            ctaUrl: data.ctaUrl || '',
+        } :
+        {
+            subtitle: data.subtitleDe || '',
+            date: data.dateDe || '',
+            month: data.monthDe || '',
+            year: data.yearDe || '',
+            counter: {
+                days: data.counterDaysDe || '',
+                hours: data.counterHoursDe || '',
+                minutes: data.counterMinutesDe || '',
+                seconds: data.counterSecondsDe || '',
+            },
+            cta: data.ctaDe || '',
+            ctaUrl: data.ctaUrl || '',
+        }
 
     return (
         <HeroSection>
             <VideoBack />
-            {/* <WhiteOverlay /> */}
             <Inner>
-                {
-                    Object.entries(content).length !== 0 &&
-                    <Content
-                        variants={containerMotion}
-                        initial='initial'
-                        animate='animate'
-                        exit='exit'
-                    >
-                        {/* <SubTitle
-                            dangerouslySetInnerHTML={{ __html: content.hero.subTitle }}
-                            variants={elementsMotion}
-                        /> */}
-                        <SubTitle
-                            dangerouslySetInnerHTML={{ __html: subTitle }}
-                            variants={elementsMotion}
-                        />
-                        <Title variants={elementsMotion}>
-                            <Date>23.-25.</Date>
-                            <Month> June</Month>
-                            <Year> 2023</Year>
-                        </Title>
-                        <CounterContainer variants={elementsMotion}>
-                            <Counter content={content.hero.counter} />
-                        </CounterContainer>
-                        <ButtonContainer variants={elementsMotion}>
-                            <PrimaryButton>
-                                <a
-                                    href={content.hero.button.url}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    {content.hero.button.text}
-                                </a>
-                            </PrimaryButton>
-                        </ButtonContainer>
-                    </Content>
-                }
+                <Content
+                    variants={containerMotion}
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                >
+                    <SubTitle
+                        dangerouslySetInnerHTML={{ __html: content.subtitle }}
+                        variants={elementsMotion}
+                    />
+                    <Title variants={elementsMotion}>
+                        <Date language={language} dangerouslySetInnerHTML={{ __html: content.date }} />
+                        <Month language={language} dangerouslySetInnerHTML={{ __html: content.month }} />
+                        <Year language={language} dangerouslySetInnerHTML={{ __html: content.year }} />
+                    </Title>
+                    <CounterContainer variants={elementsMotion}>
+                        <Counter content={content.counter} />
+                    </CounterContainer>
+                    <ButtonContainer variants={elementsMotion}>
+                        <PrimaryButton>
+                            <a
+                                href={content.ctaUrl}
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
+                                {content.cta}
+                            </a>
+                        </PrimaryButton>
+                    </ButtonContainer>
+                </Content>
             </Inner>
         </HeroSection>
     )

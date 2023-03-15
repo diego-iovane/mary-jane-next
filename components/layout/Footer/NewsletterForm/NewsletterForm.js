@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { GetContentContext } from '../../../../context/ContentContext'
 import { GetLanguageContext } from '../../../../context/LanguageContext'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
@@ -18,8 +17,7 @@ import {
 import Loader from '../../../loader/Loader'
 
 const NewsletterForm = () => {
-
-    const { content } = GetContentContext()
+    
     const { language } = GetLanguageContext()
     const [disabled, setDisabled] = useState(false)
     const [msg, setMsg] = useState('')
@@ -70,10 +68,10 @@ const NewsletterForm = () => {
 
     return (
         <Section>
-            {
+            {/* {
                 Object.entries(content).length !== 0 &&
                 <Content>
-                    {/* <Title dangerouslySetInnerHTML={{ __html: content.newsletterSection.title }} /> */}
+                    <Title dangerouslySetInnerHTML={{ __html: content.newsletterSection.title }} />
                     <Title>Subscribe to our newsletter</Title>
                     <Form onSubmit={formik.handleSubmit}>
                         <InputContainer>
@@ -105,7 +103,7 @@ const NewsletterForm = () => {
                         </InputContainer>
                     </Form>
                 </Content>
-            }
+            } */}
         </Section>
     )
 }
