@@ -8,34 +8,37 @@ import {
     Text,
 } from './Elements'
 
-const Features = () => {
+const Features = ({ data }) => {
 
-    return (<></>
-        // <Items>
-        //     {
-        //         Object.entries(content).length !== 0 &&
-        //         content.features.items.map(item => {
-        //             return (
-        //                 <ItemContainer key={item.img}>
-        //                     <IconContainer>
-        //                         <Icon
-        //                             src={item.img}
-        //                             alt="icon"
-        //                             fill
-        //                         />
-        //                     </IconContainer>
-        //                     <CountContainer>
-        //                         <Count>
-        //                             {item.num}
-        //                         </Count>
-        //                         <span>+</span>
-        //                     </CountContainer>
-        //                     <Text dangerouslySetInnerHTML={{ __html: item.text }} />
-        //                 </ItemContainer>
-        //             )
-        //         })
-        //     }
-        // </Items>
+    const dataArray = Object.keys(data).map(key => {
+        return { ...data[key] }
+    })
+
+    return (
+        <Items>
+            {
+                dataArray.map(item => {
+                    return (
+                        <ItemContainer key={item.icon.sourceUrl}>
+                            <IconContainer>
+                                <Icon
+                                    src={item.icon.sourceUrl}
+                                    alt={item.icon.altText}
+                                    fill
+                                />
+                            </IconContainer>
+                            <CountContainer>
+                                <Count>
+                                    {item.num}
+                                </Count>
+                                <span>+</span>
+                            </CountContainer>
+                            <Text dangerouslySetInnerHTML={{ __html: item.text }} />
+                        </ItemContainer>
+                    )
+                })
+            }
+        </Items>
     )
 }
 

@@ -30,6 +30,11 @@ export const SectionTitle = styled.h2`
 `
 
 export const ButtonsContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
     @media all and (max-width: 450px) {
         display: none;
     }
@@ -53,7 +58,6 @@ export const LogoContainer = styled.div`
     position: relative;
     width: auto;
     height: 3rem;
-    cursor: pointer;
     pointer-events: none;
 `
 

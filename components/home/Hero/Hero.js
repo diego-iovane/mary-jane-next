@@ -1,4 +1,3 @@
-import { GetLanguageContext } from '../../../context/LanguageContext'
 import VideoBack from '../../videoBg/VideoBg'
 import PrimaryButton from '../../buttons/PrimaryButton'
 import Counter from '../../counter/Counter'
@@ -20,9 +19,7 @@ import {
     ButtonContainer,
 } from './Elements'
 
-const Hero = ({ data }) => {
-
-    const { language } = GetLanguageContext()
+const Hero = ({ data, language }) => {
 
     const content = language === 'en' ?
         {

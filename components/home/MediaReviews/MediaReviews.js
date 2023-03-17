@@ -1,10 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../../context/ContentContext'
 import Review from './Review'
 import {
     Section,
@@ -14,17 +13,21 @@ import {
 } from './Elements'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
 
-const MediaReviews = () => {
+const MediaReviews = ({ data, content, language }) => {
 
-    const { content } = GetContentContext()
     const swiperRef = useRef()
+    const [reviews, setReviews] = useState([])
+
+    useEffect(() => {
+        setReviews(data)
+    }, [])
 
     return (
         <Section>
             {
-                Object.entries(content).length !== 0 &&
+                reviews.length !== 0 ?
                 <Inner>
-                    <SectionTitle>As seen in</SectionTitle>
+                    <SectionTitle>{language === 'en' ? content.mediaReviewsTitleEn : content.mediaReviewsTitleDe}</SectionTitle>
                     <Swiper
                         ref={swiperRef}
                         className="mediaReviewSwyper"
@@ -51,10 +54,10 @@ const MediaReviews = () => {
                         loop={true}
                     >
                         {
-                            content.features.mediaLogos.map((item, index) => {
+                            reviews.map((item, index) => {
                                 return (
                                     <SwiperSlide key={index}>
-                                        <Review content={item} />
+                                        <Review content={item.node} />
                                     </SwiperSlide>
                                 )
                             })
@@ -63,7 +66,7 @@ const MediaReviews = () => {
                     <ButtonsContainer>
                         <SwiperButtons swiperRef={swiperRef} />
                     </ButtonsContainer>
-                </Inner>
+                </Inner> : null
             }
         </Section>
     )

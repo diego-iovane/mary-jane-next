@@ -11,52 +11,19 @@ import {
     Text,
 } from './Elements'
 
-const ContactPage = () => {
+const ContactPage = ({ data, language }) => {
 
-    const temp = [
-        {
-            title: "Address of the office",
-            content: [
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "Rocket Cannabis GmbH<br></br>Attilastr. 18<br></br>12529 Schönefeld | Germany",
-                },
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "+49 (0) 175 88 666 47 (12 – 3 pm)",
-                },
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "+49 (0) 30 221 85334",
-                },
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "info@maryjane-berlin.com",
-                },
-            ]
-        },
-        {
-            title: "PR & Marketing",
-            content: [
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "info@maryjane-berlin.com",
-                }
-            ]
-        },
-        {
-            title: "Conference & Speeches",
-            content: [
-                {
-                    text: "Nhung Nguyen",
-                },
-                {
-                    icon: "/icons/temp/placeholder.png",
-                    text: "nhung@maryjane-berlin.com",
-                }
-            ]
-        },
-    ]
+    console.log(data)
+
+    const content = language === 'en' ? 
+    {
+        title: data.contactTitleEn || '',
+
+    } :
+    {
+        title: data.contactTitleDe || '',
+
+    }
 
     return (
         <>
@@ -65,8 +32,8 @@ const ContactPage = () => {
             </HeadSection>
             <Content>
                 <Inner>
-                    <Title>Contact</Title>
-                    {
+                    <Title>{content.title}</Title>
+                    {/* {
                         temp.map(item => {
                             return (
                                 <div key={item.title}>
@@ -89,7 +56,7 @@ const ContactPage = () => {
                                 </div>
                             )
                         })
-                    }
+                    } */}
                 </Inner>
             </Content>
         </>

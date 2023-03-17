@@ -17,20 +17,21 @@ import {
     ButtonsContainer,
 } from './Elements'
 
-const ExhibitorsSection = () => {
+const ExhibitorsSection = ({ data, content, language }) => {
 
-    const temp = [
-        { src: '/temp/1.png' },
-        { src: '/temp/2.png' },
-        { src: '/temp/3.webp' },
-        { src: '/temp/4.webp' },
-        { src: '/temp/5.webp' },
-        { src: '/temp/6.png' },
-        { src: '/temp/7.webp' },
-        { src: '/temp/8.png' },
-        { src: '/temp/9.webp' },
-        { src: '/temp/10.png' },
-    ]
+console.log(data)
+
+    const text = language === 'en' ? 
+    {
+        title: content.exhibitorsTitleEn || '',
+        ctaOne: content.exhibitorsCtaOneEn || '',
+        ctaTwo: content.exhibitorsCtaTwoEn || '',
+    } : 
+    {
+        title: content.exhibitorsTitleDe || '',
+        ctaOne: content.exhibitorsCtaOneDe || '',
+        ctaTwo: content.exhibitorsCtaTwoDe || '',
+    }
 
     const handleSwiper = (swiper) => {
 
@@ -52,13 +53,13 @@ const ExhibitorsSection = () => {
                 <>
                     <Inner>
                         <Head>
-                            <SectionTitle>Exhibitors 2023</SectionTitle>
+                            <SectionTitle>{text.title}</SectionTitle>
                             <ButtonsContainer>
                                 <ButtonContainer>
-                                    <SmallCta>Become an exhibitor</SmallCta>
+                                    <SmallCta>{text.ctaOne}</SmallCta>
                                 </ButtonContainer>
                                 <ButtonContainer>
-                                    <SmallCtaAlt>View all exhibitors</SmallCtaAlt>
+                                    <SmallCtaAlt>{text.ctaTwo}</SmallCtaAlt>
                                 </ButtonContainer>
                             </ButtonsContainer>
                         </Head>
@@ -94,13 +95,13 @@ const ExhibitorsSection = () => {
                         className="exhibitorsSwiper"
                     >
                         {
-                            temp.map(item => {
+                            data.map(item => {
                                 return (
-                                    <SwiperSlide key={item.src}>
+                                    <SwiperSlide key={item.node.logo.sourceUrl}>
                                         <LogoContainer>
                                             <Logo
-                                                src={item.src}
-                                                alt="exhibitors logo"
+                                                src={item.node.logo.sourceUrl}
+                                                alt={item.node.logo.altText}
                                                 fill
                                             />
                                         </LogoContainer>

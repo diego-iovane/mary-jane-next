@@ -10,10 +10,10 @@ const Review = ({ content }) => {
   const thisSlide = useSwiperSlide()
 
   return (
-    <ReviewContainer href='/' active={thisSlide.isNext}>
-      <LogoContainer>
-        <Logo src={content.src} alt={content.alt} fill />
-      </LogoContainer>
+    <ReviewContainer href={content.url} active={thisSlide.isNext}>
+        <LogoContainer>
+          <Logo src={content.logo.sourceUrl} alt="" fill />
+        </LogoContainer>
     </ReviewContainer>
   )
 }

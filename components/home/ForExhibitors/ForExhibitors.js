@@ -10,8 +10,24 @@ import {
     Title,
     Text,
 } from './Elements'
+import Link from 'next/link'
 
-const ForExhibitors = () => {
+const ForExhibitors = ({ data, language }) => {
+
+    const content = language === 'en' ?
+    {
+        title: data.titleForExhibitorsEn || '',
+        text: data.forExhibitorsTextEn || '',
+        cta: data.forExhibitorsCtaEn || '',
+        ctaUrl: data.forExhibitorsCtaUrlEn || '',
+    } : 
+    {
+        title: data.titleForExhibitorsDe || '',
+        text: data.forExhibitorsTextDe || '',
+        cta: data.forExhibitorsCtaDe || '',
+        ctaUrl: data.forExhibitorsCtaUrlDe || '',
+    }
+
     return (
         <Section>
             <Inner>
@@ -23,7 +39,7 @@ const ForExhibitors = () => {
                     viewport={{ once: true }}
                     margin="500px"
                 >
-                    <Features />
+                    <Features data={language === 'en' ? data.forExhibitorsFeaturesEn : data.forExhibitorsFeaturesDe} />
                 </FeaturesContainer>
                 <Content
                     initial={{ opacity: 0, y: 20 }}
@@ -31,18 +47,9 @@ const ForExhibitors = () => {
                     viewport={{ once: true }}
                     margin="700px"
                 >
-                    <Title>Grow your business</Title>
-                    <Text>
-                        <p>Mary Jane Berlin is Europe’s fastest growing Cannabis expo with over 300 international exhibitors, 30,000 visitors and 35,000 products.
-                        </p>
-                        <p>
-                            Don’t miss your unique market entry and exhibit at Mary Jane Berlin! We support you in the growth of your business.
-                        </p>
-                        <p>
-                            At Mary Jane Berlin you have the opportunity to present your product to customers, all major merchants & producers from all over the world.
-                        </p>
-                    </Text>
-                    <TertiaryButton>Become an Exhibitor</TertiaryButton>
+                    <Title>{content.title}</Title>
+                    <Text>{content.text}</Text>
+                    <TertiaryButton><Link href={content.ctaUrl}>{content.cta}</Link></TertiaryButton>
                 </Content>
             </Inner>
         </Section>

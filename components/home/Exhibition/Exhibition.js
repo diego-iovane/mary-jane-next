@@ -28,30 +28,25 @@ import {
 
 } from './Elements'
 
-const Exhibition = () => {
+const Exhibition = ({ data, language }) => {
 
-    const data = [
-        {
-            text: 'Exhibition',
-            img: 'https://firebasestorage.googleapis.com/v0/b/mary-jane-app.appspot.com/o/hover-gallery%2F_J7A4480%201.png?alt=media&token=1d8a2dca-44c0-489d-9d2a-0bfeab039a83',
-        },
-        {
-            text: 'Concerts',
-            img: 'https://firebasestorage.googleapis.com/v0/b/mary-jane-app.appspot.com/o/hover-gallery%2F_J7A4732%201.png?alt=media&token=ddf950c2-ad83-46d8-9b59-721620b43c9d',
-        },
-        {
-            text: 'Festival',
-            img: 'https://firebasestorage.googleapis.com/v0/b/mary-jane-app.appspot.com/o/hover-gallery%2F_J7A3938%201.png?alt=media&token=68cec2c8-5169-4f73-a8b2-72a589ffb580',
-        },
-        {
-            text: 'Food Stands',
-            img: 'https://firebasestorage.googleapis.com/v0/b/mary-jane-app.appspot.com/o/hover-gallery%2F_J7A4446%201.png?alt=media&token=184439a7-6496-41f4-a63b-b29970933916',
-        },
-        {
-            text: 'Conferences',
-            img: 'https://firebasestorage.googleapis.com/v0/b/mary-jane-app.appspot.com/o/hover-gallery%2F_J7A4170%201.png?alt=media&token=a54039c9-4b51-4ce2-8432-2de21164aaa3',
-        },
-    ]
+    const imgs = Object.keys(data.imageGalleryHomeExhibitor).map(key => {
+        return { ...data.imageGalleryHomeExhibitor[key]}
+    })
+
+    const content = language === 'en' ?
+    {
+        title: data.titleEnHomeExhibitor || '',
+        text: data.textEnHomeExhibitor || '',
+        cta: data.ctaEnHomeExhibitor || '',
+        ctaUrl: data.ctaUrlEnHomeExhibitor || '',
+    } : 
+    {
+        title: data.titleDeHomeExhibitor || '',
+        text: data.textDeHomeExhibitor || '',
+        cta: data.ctaDeHomeExhibitor || '',
+        ctaUrl: data.ctaUrlDeHomeExhibitor || '',
+    }
 
     const swp = useRef(null)
     const [rotate, setRotate] = useState(false)
@@ -93,18 +88,10 @@ const Exhibition = () => {
                     viewport={{ once: true }}
                     margin="500px"
                 >
-                    <Title>Cannabis Expo and Beach Festival</Title>
-                    <Text>
-                        Mary Jane Berlin, is Germany’s leading Cannabis expo since 2016. Mary Jane Berlin is not only an expo, but also a festival with large live acts, and in combination with our exhibitors, we offer food stands, live concerts, conference on therapeutic properties, we have an extensive cultural and entertainment program offered to our visitors.
-                    </Text>
-                    <Text>
-                        As a visitor of Mary Jane Berlin, we inform you about the variety of THE green power plant – as food, cosmetic, building material, medicine and much more! You will get personal advices from exhibitors and be able to try samples directly at the booth. And why not gain and share knowledge about the industry with like-minded people and learn about cannabis aspects that the mainstream media does not report about.
-                    </Text>
-                    <Text>
-                        Welcome to Europe's biggest Cannabis Expo!!
-                    </Text>
+                    <Title dangerouslySetInnerHTML={{ __html: content.title }} />
+                    <Text dangerouslySetInnerHTML={{ __html: content.text }} />
                     <TertiaryButton>
-                        <Link href="/">Show me more</Link>
+                        <Link href={content.ctaUrl}>{content.cta}</Link>
                     </TertiaryButton>
                 </Content>
                 <Images
@@ -123,14 +110,13 @@ const Exhibition = () => {
                         ref={swp}
                     >
                         {
-                            data.map(item => {
+                            imgs.map(img => {
                                 return (
-                                    <SwiperSlide key={item.text}>
+                                    <SwiperSlide key={img.sourceUrl}>
                                         <InstaCard>
                                             <InstaImgContainer>
-                                                <InstaImg src={item.img} alt="expo image" fill />
+                                                <InstaImg src={img.sourceUrl} alt={img.altText} fill />
                                             </InstaImgContainer>
-                                            {/* <InstaText>{item.text}</InstaText> */}
                                         </InstaCard>
                                     </SwiperSlide>
                                 )

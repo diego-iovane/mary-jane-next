@@ -7,7 +7,7 @@ const nextConfig = {
     locales: ["en", "de"],
   },
   images: {
-    domains: [ 'firebasestorage.googleapis.com' ],
+    domains: [ 'firebasestorage.googleapis.com', 'b3ta40.myraidbox.de' ],
     formats: ['image/avif', 'image/webp'],
   }
 }

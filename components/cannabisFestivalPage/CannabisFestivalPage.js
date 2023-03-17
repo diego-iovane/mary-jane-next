@@ -8,22 +8,33 @@ import {
     Poster,
 } from './Elements'
 
-const CannabisFestivalPage = () => {
+const CannabisFestivalPage = ({ data, language }) => {
+
+    const content = language === 'en' ? 
+    {
+        titleOne: data.titleOneEn || '',
+        titleTwo: data.titleTwoEn || '', 
+    } :
+    {
+        titleOne: data.titleOneEn || '',
+        titleTwo: data.titleTwoDe || '',
+    }
+
     return (
         <>
             <HeadSection>
-                <HeadBg src="/temp/contact-media-header-image.png" fill />
+                <HeadBg src="/temp/contact-media-header-image.png" alt="" fill />
             </HeadSection>
             <Content>
                 <Inner>
-                    <Title>Cannabis Festival Agenda</Title>
+                    <Title>{content.titleOne}</Title>
                     <PosterContainer>
-                        <Poster src="/temp/festival.png" fill />
+                        <Poster src={data.imageOne.sourceUrl} alt={data.imageOne.altText} fill />
                     </PosterContainer>
 
-                    <Title>Hoppetosse Boat Schedule</Title>
+                    <Title>{content.titleTwo}</Title>
                     <PosterContainer>
-                        <Poster src="/temp/hope.png" fill />
+                        <Poster src={data.imageTwo.sourceUrl} alt={data.imageTwo.altText} fill />
                     </PosterContainer>
                 </Inner>
             </Content>
