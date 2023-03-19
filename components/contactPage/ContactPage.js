@@ -13,17 +13,21 @@ import {
 
 const ContactPage = ({ data, language }) => {
 
-    console.log(data)
-
-    const content = language === 'en' ? 
+    const title = language === 'en' ? 
     {
-        title: data.contactTitleEn || '',
+        t: data.contactTitleEn || '',
 
     } :
     {
-        title: data.contactTitleDe || '',
+        t: data.contactTitleDe || '',
 
     }
+
+    const content = language === 'en' ? data.contentEn : data.contentDe
+
+    const contentArray = Object.keys(content).map(key => {
+        return { ...content[key] }
+    })
 
     return (
         <>
@@ -32,31 +36,36 @@ const ContactPage = ({ data, language }) => {
             </HeadSection>
             <Content>
                 <Inner>
-                    <Title>{content.title}</Title>
-                    {/* {
-                        temp.map(item => {
-                            return (
-                                <div key={item.title}>
-                                    <SubTitle>{item.title}</SubTitle>
+                    <Title>{title.t}</Title>
+                    {
+                        contentArray.map(item => {
+
+                            const itemsArray = Object.keys(item.items).map(key => {
+                                return { ...item.items[key] }
+                            })
+
+                            return(
+                                <>
+                                    <SubTitle>{item?.title}</SubTitle>
                                     {
-                                        item.content.map(item => {
-                                            return (
+                                        itemsArray.map(item => {
+                                            return(
                                                 <Item>
                                                     {
-                                                        item.icon &&
+                                                        item?.icon &&
                                                         <Icon>
-                                                            <I src={item.icon} fill />
+                                                            <I src={item?.icon.sourceUrl} alt={item?.icon.altText} fill />
                                                         </Icon>
                                                     }
-                                                    <Text dangerouslySetInnerHTML={{ __html: item.text }} />
+                                                    <Text dangerouslySetInnerHTML={{ __html: item?.text }} />
                                                 </Item>
                                             )
                                         })
                                     }
-                                </div>
+                                </>
                             )
                         })
-                    } */}
+                    }
                 </Inner>
             </Content>
         </>

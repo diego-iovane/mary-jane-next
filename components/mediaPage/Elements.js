@@ -78,6 +78,24 @@ export const Dot = styled.div`
 
 export const Text = styled.p`
     line-height: 1.4;
-    align-self: center;
     position: relative;
+`
+
+export const Note = styled.p`
+    font-style: italic;
+    line-height: 1.4;
+    position: relative;
+    margin-bottom: 2rem;
+`
+
+export const Contact = styled.div``
+
+export const ContactTitle = styled.h3`
+    margin-bottom: 1rem;
+`
+
+export const ContactText = styled.p`
+    line-height: 1.4;
+    position: relative;
+    margin: .3rem 0;
 `

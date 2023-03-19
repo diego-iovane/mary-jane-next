@@ -26,8 +26,67 @@ export async function getServerSideProps(context) {
               contact {
                 contactTitleDe
                 contactTitleEn
-                content {
-                  addressItemEn {
+                contentEn {
+                  addressItem {
+                    title
+                    items {
+                      itemOne {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                      itemTwo {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                      itemThree {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                      itemFour {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemFive {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                      itemSix {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                    }
+                  }
+                  marketingItem {
+                    title
+                    items {
+                      itemOne {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                    }
+                  }
+                  conferenceItem {
                     title
                     items {
                       itemOne {
@@ -46,13 +105,141 @@ export async function getServerSideProps(context) {
                       }
                     }
                   }
-                  marketingItemEn {
-                    itemOne {
-                      icon {
-                        altText
-                        sourceUrl
+                  pressItem {
+                    title
+                    items {
+                      itemOne {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
                       }
-                      text
+                      itemTwo {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                    }
+                  }
+                }
+                contentDe {
+                  addressItem {
+                    title
+                    items {
+                      itemOne {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemTwo {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemThree {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemFour {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemFive {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemSix {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                    }
+                  }
+                  conferenceItem {
+                    items {
+                      itemOne {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemTwo {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                    }
+                    title
+                  }
+                  marketingItem {
+                    title
+                    items {
+                      itemOne {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                    }
+                  }
+                  pressItem {
+                    title
+                    items {
+                      itemOne {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
+                      itemTwo {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                    }
+                  }
+                  addressAltItem {
+                    title
+                    items {
+                      itemOne {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
+                      itemTwo {
+                        text
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                      }
                     }
                   }
                 }

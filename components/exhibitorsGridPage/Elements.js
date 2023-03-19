@@ -33,45 +33,57 @@ export const Content = styled.div`
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
-    margin: 1rem auto 2rem auto;
-    display: flex;
-    padding: 3rem;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    flex-direction: column;
+    margin: 3rem auto;
 `
 
-export const Title = styled.h1`
+export const InnerHead = styled.div`
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;`
+
+export const Title = styled.h1``
+
+export const InputsContainer = styled.div`
+
 `
 
-export const SubTitle = styled.h3`
-    font-weight: bold;
-    margin: 1.5rem 0;
-`
-
-export const Item = styled.div`
-    display: flex;
-    margin-bottom: 1.8rem;
-`
-
-export const Icon = styled.div`
-    position: relative;
-    width: 2rem;
+export const Search = styled.input`
+    background-color: var(--soft-gray);
+    border-radius: 20px;
+    width: 5rem;
     height: 2rem;
-    margin-right: .8rem;
 `
 
-export const I = styled(Image)`
-    object-fit: contain;
+
+export const Grid = styled.div`
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 30px;
 `
 
-export const Text = styled.p`
-    line-height: 1;
-    align-self: center;
+export const GridItem = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const LogoContainer = styled.a`
     position: relative;
+    width: 12rem;
+    height: 12rem;
+    background-color: #ffffff;
+    border-radius: 500px;
+    overflow: hidden;
+    cursor: pointer;
+`
+
+export const Logo = styled(Image)`
+    object-fit: contain;
 `

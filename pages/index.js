@@ -32,7 +32,11 @@ export default function Home({ data }) {
       <Exhibition data={data.data.pages.edges[0].node.exhibition} language={language} />
       <ForExhibitors data={data.data.pages.edges[0].node.forExhibitors} language={language} />
       <MediaReviews data={data.data.mediaReviews.edges} content={data.data.pages.edges[0].node.mediaReviews} language={language}/>
-      <ExhibitorsSection data={data.data.exhibitors.edges} content={data.data.pages.edges[0].node.exhibitors} language={language} />
+      
+      {/* HAY UN PROBLEMA DE HYDRATION EN EXHIBTORS SECTION */}
+      {/* <ExhibitorsSection data={data.data.exhibitors.edges} content={data.data.pages.edges[0].node.exhibitors} language={language} /> */}
+
+
       {/* <Rest /> */}
       {/* <SponsorsSection /> */}
       {/* <MediaSponsorsSection /> */}

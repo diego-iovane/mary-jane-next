@@ -90,6 +90,15 @@ span {
   color: var(--text-color);
 }
 
+input {
+  background-color: transparent;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 
 /* SWIPERS */
 .swiper-pagination-bullet {
