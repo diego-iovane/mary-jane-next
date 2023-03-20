@@ -1,10 +1,12 @@
+import { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { EffectFade, Navigation, Pagination } from 'swiper'
+import { EffectFade, Pagination } from 'swiper'
 import PrimaryButton from '../buttons/PrimaryButton'
+import SwiperButtons from './swiperButtons/swiperButtons'
 import {
   HeadSection,
   HeadBg,
@@ -16,95 +18,85 @@ import {
   Text,
   ButtonContainer,
   RightContent,
-  SwiperContainer,
   ImageContainer,
   Img,
 } from './Elements'
 
-const SponsoringPage = () => {
+const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery, bg }) => {
 
-  const swiperImages = [
-    {
-      src: "/images/rest-bg.jpg",
-    },
-    {
-      src: "/images/rest-bg.jpg",
-    },
-    {
-      src: "/images/rest-bg.jpg",
-    },
-    {
-      src: "/images/rest-bg.jpg",
-    },
-  ]
+  const swiperRef = useRef()
+  const swiperAltRef = useRef()
 
   return (
     <>
       <HeadSection>
-        {/* CHANGE BG IMAGE FOR THE ADECUATE ONE */}
-        <HeadBg src="/temp/contact-media-header-image.png" fill />
+        <HeadBg src={bg.sourceUrl} alt={bg.altText} fill />
       </HeadSection>
       <Body>
         <Inner>
           <LeftContent>
-            <Title>Sponsoring</Title>
-            <Text>Are you looking to enhance your Mary Jane Berlin experience and take your brand to the next level? Each year companies expand their presence at the expo with the help of printed banners, sponsor opportunities for our beach festival and hoppetosse, see what fits your brand the best and get in contact with us for a tailor made sponsorship</Text>
-            <ButtonContainer href="/">
-              <PrimaryButton>Sponsoring Packages</PrimaryButton>
+            <Title>{sponsoringContent.title}</Title>
+            <Text>{sponsoringContent.text}</Text>
+            <ButtonContainer href={sponsoringContent.cta.url}>
+              <PrimaryButton>{sponsoringContent.cta.title}</PrimaryButton>
             </ButtonContainer>
           </LeftContent>
           <RightContent>
             <Swiper
+              ref={swiperRef}
               spaceBetween={30}
               effect={"fade"}
-              navigation={true}
+              loop={true}
               pagination={{ clickable: true }}
-              modules={[EffectFade, Navigation, Pagination]}
+              modules={[EffectFade, Pagination]}
               className="sponsoringSwiper"
             >
               {
-                swiperImages.map(slide => {
+                gallery.map(slide => {
                   return (
-                    <SwiperSlide key={slide.src}>
+                    <SwiperSlide key={slide.sourceUrl}>
                       <ImageContainer>
-                        <Img src={slide.src} fill />
+                        <Img src={slide.sourceUrl} alt={slide.altText} fill />
                       </ImageContainer>
                     </SwiperSlide>
                   )
                 })
               }
             </Swiper>
+            <SwiperButtons swiperRef={swiperRef} />
           </RightContent>
         </Inner>
         <Inner>
           <LeftContent>
-            <TitleAlt>Foyer Sponsoring</TitleAlt>
-            <Text>Take the opportunity to sponsor our super exclusive foyer section, be creative and let the ideas flow of how you can completely customize this foyer into a brand experence that your business partners and customers will never forget!</Text>
-            <ButtonContainer href="/">
-              <PrimaryButton>Foyer Hall</PrimaryButton>
+            <TitleAlt>{foyerContent.title}</TitleAlt>
+            <Text>{foyerContent.text}</Text>
+            <ButtonContainer href={foyerContent.cta.url}>
+              <PrimaryButton>{foyerContent.cta.title}</PrimaryButton>
             </ButtonContainer>
           </LeftContent>
           <RightContent>
             <Swiper
+              ref={swiperAltRef}
               spaceBetween={30}
               effect={"fade"}
-              navigation={true}
+              loop={true}
               pagination={{ clickable: true }}
-              modules={[EffectFade, Navigation, Pagination]}
+              modules={[EffectFade, Pagination]}
               className="foyerSponsoringSwiper"
             >
               {
-                swiperImages.map(slide => {
+                foyerGallery.map(slide => {
                   return (
-                    <SwiperSlide key={slide.src}>
+                    <SwiperSlide key={slide.sourceUrl}>
                       <ImageContainer>
-                        <Img src={slide.src} fill />
+                        <Img src={slide.sourceUrl} alt={slide.altText} fill />
                       </ImageContainer>
                     </SwiperSlide>
                   )
                 })
               }
             </Swiper>
+            <SwiperButtons swiperRef={swiperAltRef} />
           </RightContent>
         </Inner>
       </Body>

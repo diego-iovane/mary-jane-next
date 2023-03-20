@@ -38,11 +38,11 @@ export const Inner = styled(motion.div)`
     margin: 1rem auto 2rem auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    /* min-height: 24rem; */
 `
 
 export const LeftContent = styled.div`
@@ -76,8 +76,10 @@ export const ButtonContainer = styled(Link)`
 `
 
 export const RightContent = styled.div`
-    width: 23rem;
+    width: 27rem;
+    height: 20rem;
     margin-right: 3%;
+    position: relative;
 `
 
 export const ImageContainer = styled.div`
@@ -86,5 +88,5 @@ export const ImageContainer = styled.div`
 `
 
 export const Img = styled(Image)`
-    object-fit: contain;
+    object-fit: cover;
 `

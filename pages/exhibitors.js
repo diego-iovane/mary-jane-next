@@ -31,12 +31,13 @@ export async function getServerSideProps(context) {
                 sourceUrl
                 title
               }
+              title
+              website
               countryDe
               countryEn
               descriptionDe
               descriptionEn
               category
-              website
             }
           }
         }

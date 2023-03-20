@@ -34,6 +34,7 @@ export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
     margin: 3rem auto;
+    min-height: 100vh;
 `
 
 export const InnerHead = styled.div`
@@ -44,19 +45,43 @@ export const InnerHead = styled.div`
     border-bottom: 1px dashed #1E411D;
     margin-bottom: .5rem;`
 
-export const Title = styled.h1``
+export const Title = styled.h1`
+    position: relative;
+    top: 15px;
+`
 
 export const InputsContainer = styled.div`
-
+    display: flex;
+    align-items: center;
 `
 
 export const Search = styled.input`
     background-color: var(--soft-gray);
     border-radius: 20px;
-    width: 5rem;
-    height: 2rem;
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+
+    &::placeholder {
+        color: #979797;
+    }
 `
 
+export const Categories = styled.div`
+    background-color: var(--soft-gray);
+    border-radius: 20px;
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #979797;
+    cursor: pointer;
+    position: relative;
+    font-size: .8rem;
+`
 
 export const Grid = styled.div`
     margin-top: 3rem;
@@ -78,7 +103,7 @@ export const LogoContainer = styled.a`
     position: relative;
     width: 12rem;
     height: 12rem;
-    background-color: #ffffff;
+    background-color: ${({loading}) => loading ? '#ededed' : '#ffffff'};
     border-radius: 500px;
     overflow: hidden;
     cursor: pointer;
@@ -86,4 +111,34 @@ export const LogoContainer = styled.a`
 
 export const Logo = styled(Image)`
     object-fit: contain;
+    opacity: ${({isLoading}) => isLoading ? '0' : '1'};
+    transition: opacity .2s ease-in-out;
+`
+
+// CATEGORIES
+export const CategoriesContainer = styled.div`
+    position: absolute;
+    top: 45px;
+    max-height: ${({open}) => open ? '100rem' : '0rem'};
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: var(--soft-shadow);
+    border-radius: 12px;
+    z-index: 100;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+`
+
+export const Categorie = styled.button`
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+
+    &:hover {
+        background-color: var(--soft-gray);
+    }
 `

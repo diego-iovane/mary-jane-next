@@ -1,5 +1,5 @@
-import React from 'react'
-import { GetContentContext } from '../../../context/ContentContext'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import SmallCta from '../../buttons/SmallCta'
 import {
     Section,
@@ -12,38 +12,53 @@ import {
     Logo
 } from './Elements'
 
-const SponsorsSection = () => {
+const SponsorsSection = ({ data, content, language }) => {
 
-    const { content } = GetContentContext()
+    const [sponsors, setSponsors] = useState([])
+    const text = language === 'en' ?
+        {
+            title: content.sponsorsTitleEn,
+            cta: content.sponsorsCtaEn.title,
+            url: content.sponsorsCtaEn.url,
+        } :
+        {
+            title: content.sponsorsTitleDe,
+            cta: content.sponsorsCtaDe.title, 
+            url: content.sponsorsCtaDe.url,
+        }
+
+    useEffect(() => {
+        setSponsors(data)
+    }, [])
 
     return (
         <Section>
-            {
-                Object.entries(content).length !== 0 &&
-                <Inner>
-                    <Head>
-                        <SectionTitle>Sponsors 2023</SectionTitle>
-                        <ButtonContainer>
-                            <SmallCta>Become a sponsor</SmallCta>
-                        </ButtonContainer>
-                    </Head>
-                    <LogosContainer>
-                        {
-                            content.sponsorsSection.sponsors.map(item => {
-                                return (
-                                    <LogoContainer key={item.src}>
-                                        <Logo
-                                            src={item.src}
-                                            alt=""
-                                            fill
-                                        />
-                                    </LogoContainer>
-                                )
-                            })
-                        }
-                    </LogosContainer>
-                </Inner>
-            }
+            <Inner>
+                <Head>
+                    <SectionTitle>{text.title}</SectionTitle>
+                    <ButtonContainer>
+                        <Link href={text.url}>
+                            <SmallCta>{text.cta}</SmallCta>
+                        </Link>
+                    </ButtonContainer>
+                </Head>
+                <LogosContainer>
+                    {
+                        sponsors.length !== 0 ?
+                        sponsors.map(sponsor => {
+                            return (
+                                <LogoContainer key={sponsor.node.title}>
+                                    <Logo
+                                        src={sponsor.node.logo.sourceUrl}
+                                        alt={sponsor.node.logo.altText}
+                                        fill
+                                    />
+                                </LogoContainer>
+                            )
+                        }) : null
+                    }
+                </LogosContainer>
+            </Inner>
         </Section>
     )
 }

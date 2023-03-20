@@ -81,9 +81,9 @@ ul {
 button {
   border: none;
   background-color: transparent;
+  color: var(--text-color);
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: var(--text-color);
 }
 
 span {
@@ -97,6 +97,11 @@ input {
 
 input:focus {
   outline: none;
+}
+
+input::placeholder {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 
@@ -258,16 +263,8 @@ input:focus {
   height: 100%;
 }
 
-.sponsoringSwiper .swiper-button-prev {
-  border-radius: 500px;
-  opacity: 1 !important;
-  left: 2rem;
-  color: var(--green);
-}
-
-.sponsoringSwiper .swiper-button-next {
-  right: 2rem;
-  color: var(--green);
+.sponsoringSwiper .swiper-pagination-bullets span {
+  background-color: #fff !important;
 }
 
 .foyerSponsoringSwiper {
@@ -275,16 +272,8 @@ input:focus {
   height: 100%;
 }
 
-.foyerSponsoringSwiper .swiper-button-prev {
-  left: 2rem;
-  color: var(--green);
-}
-
-.foyerSponsoringSwiper .swiper-button-next {
-  border-radius: 500px;
-  opacity: 1 !important;
-  right: 2rem;
-  color: var(--green);
+.foyerSponsoringSwiper .swiper-pagination-bullets span {
+  background-color: #fff !important;
 }
 
 /* ACCOMODATION PAGE */

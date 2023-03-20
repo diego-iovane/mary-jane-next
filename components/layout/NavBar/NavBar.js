@@ -32,33 +32,38 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const navState = () => {
+    if(scrollPos > 0.1 || pathname === '/furniture-rental-hostesses') return true
+    return false
+  }
+  
   return (
-    <Container scrolled={scrollPos > 0.1}>
+    <Container scrolled={navState()}>
       <Inner>
         <Left>
           {
             pathname === '/' ?
-              <LogoContainer onClick={toTop} scrolled={scrollPos > 0.1}>
+              <LogoContainer onClick={toTop} scrolled={navState()}>
                 {
-                  scrollPos > 0.1 ?
+                  navState() ?
                     <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
                     <Logo src="/logos/logo-white.png" alt='logo' priority fill />
                 }
               </LogoContainer> :
               <Link href='/'>
-                <LogoContainer scrolled={scrollPos > 0.1}>
+                <LogoContainer scrolled={navState()}>
                   {
-                    scrollPos > 0.1 ?
+                    navState() ?
                       <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
                       <Logo src="/logos/logo-white.png" alt='logo' priority fill />
                   }
                 </LogoContainer>
               </Link>
           }
-          <MainNav scrolled={scrollPos > 0.1} />
+          <MainNav scrolled={navState()} />
         </Left>
         <Right>
-          <SecondaryNav scrolled={scrollPos > 0.1} />
+          <SecondaryNav scrolled={navState()} />
           <Hamburguer
             opened={opened}
             setOpened={setOpened}
