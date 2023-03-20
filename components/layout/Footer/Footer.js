@@ -1,4 +1,3 @@
-import React from 'react'
 import SocialSection from './SocialSection/SocialSection'
 import {
   Section,

@@ -6,7 +6,7 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import { EffectFade, Pagination } from 'swiper'
 import PrimaryButton from '../buttons/PrimaryButton'
-import SwiperButtons from './swiperButtons/swiperButtons'
+import SwiperButtons from './SwiperButtons/SwiperButtons'
 import {
   HeadSection,
   HeadBg,
