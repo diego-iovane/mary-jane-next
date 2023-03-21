@@ -1,40 +1,24 @@
-import React from 'react'
 import Jotform from 'react-jotform'
 import {
-    HeroSection,
-    HeroImage,
-    Overlay,
-    HeroContent,
-    HeroTitle,
     Inner,
+    HeadSection,
+    HeadBg,
 } from './Elements'
 
 
-const StandInquiryPage = () => {
+const StandInquiryPage = ({ content }) => {
+
+    console.log(content)
 
     return (
-        <></>
-        // <>
-        //     {
-        //         Object.entries(content).length !== 0 &&
-        //         <>
-        //             <HeroSection>
-        //                 <HeroImage
-        //                     src={content.standInquiry.heroImg.src}
-        //                     alt={content.standInquiry.heroImg.alt}
-        //                     fill
-        //                 />
-        //                 <Overlay />
-        //                 <HeroContent>
-        //                     <HeroTitle dangerouslySetInnerHTML={{ __html: content.standInquiry.title }} />
-        //                 </HeroContent>
-        //             </HeroSection>
-        //             <Inner>
-        //                 <Jotform src="https://form.jotform.com/73424744902356" />
-        //             </Inner>
-        //         </>
-        //     }
-        // </>
+        <>
+            <HeadSection>
+                <HeadBg src={content.bgImage.sourceUrl} alt="" fill />
+            </HeadSection>
+            <Inner>
+                <Jotform src="https://form.jotform.com/73424744902356" />
+            </Inner>
+        </>
     )
 }
 
