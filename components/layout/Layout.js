@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
     <LayoutContainer>
       <NavBar/>
       <main>{children}</main>
-      {/* <Footer data={data}/> */}
+      <Footer />
     </LayoutContainer>
   )
 }

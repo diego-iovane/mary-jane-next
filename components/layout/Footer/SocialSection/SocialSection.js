@@ -10,36 +10,49 @@ import {
 
 const SocialSection = () => {
 
+    const socials = [
+        {
+            src: '/logos/face.png',
+            alt: 'facebook logo',
+            url: '/',
+        },
+        {
+            src: '/logos/insta.png',
+            alt: 'instagram logo',
+            url: '/',
+        },
+        {
+            src: '/logos/youtu.png',
+            alt: 'youtube logo',
+            url: '/',
+        },
+    ]
+
     return (
         <Section>
-            {/* {
-                Object.entries(content).length !== 0 &&
-                // <Inner>
-                    <Content>
-                        <Title>{content.socialSection.title}</Title>
-                        <IconsContainer>
-                            {
-                                content.socialSection.items.map(item => {
-                                    return(
-                                        <IconContainer
-                                            key={item.src}
-                                            href={item.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <Icon
-                                                src={item.src}
-                                                alt={item.alt}
-                                                fill
-                                            />
-                                        </IconContainer>
-                                    )
-                                })
-                            }
-                        </IconsContainer>
-                    </Content>
-                // </Inner>
-            } */}
+            <Content>
+                <Title>Follow us</Title>
+                <IconsContainer>
+                    {
+                        socials.map(item => {
+                            return (
+                                <IconContainer
+                                    key={item.src}
+                                    href={item.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Icon
+                                        src={item.src}
+                                        alt={item.alt}
+                                        fill
+                                    />
+                                </IconContainer>
+                            )
+                        })
+                    }
+                </IconsContainer>
+            </Content>
         </Section>
     )
 }

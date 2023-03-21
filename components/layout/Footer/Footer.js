@@ -1,4 +1,5 @@
 import SocialSection from './SocialSection/SocialSection'
+import { GetLanguageContext } from '../../../context/LanguageContext'
 import {
   Section,
   Inner,
@@ -21,54 +22,108 @@ import NewsletterForm from './NewsletterForm/NewsletterForm'
 
 const Footer = () => {
 
-  const links = [
-    {
-      title: 'FAQ',
-      url: '',
+  const { language } = GetLanguageContext()
+
+  const enContent = {
+    information: {
+      title: 'Information according to § 5 TMG',
+      text: 'Mary Jane Berlin GmbH<br></br> Bernauer Str. 50<br></br> 10435 Berlin <br></br>Germany',
     },
-    {
-      title: 'Terms & Conditions',
-      url: '',
+    contact: {
+      title: 'Contact',
+      text: 'Phone: +49 175 – 88 666 47<br></br> Fax: +49 30 – 221 85334<br></br>E-Mail: info@maryjane-berlin.com',
     },
-    {
-      title: 'Privacy policy',
-      url: '',
+    register: {
+      title: 'Commercial Register',
+      text: 'Registered in the Commercial Register. <br></br>Register Court: Amtsgericht<br></br>Charlottenburg<br></br>Registration Number: HRB 180488 B <br></br>VAT Identification Number: <br></br>DE308384384',
     },
-    {
-      title: 'Press',
-      url: '',
+    links: [
+      {
+        title: 'FAQ',
+        url: '/',
+      },
+      {
+        title: 'Terms & Conditions',
+        url: '/',
+      },
+      {
+        title: 'Privacy policy',
+        url: '/',
+      },
+      {
+        title: 'Press',
+        url: '/',
+      },
+      {
+        title: 'Blog',
+        url: '/',
+      },
+    ]
+  }
+
+  const deContent = {
+    information: {
+      title: 'Information according to § 5 TMG',
+      text: 'Mary Jane Berlin GmbH<br></br> Bernauer Str. 50<br></br> 10435 Berlin <br></br>Germany',
     },
-    {
-      title: 'Blog',
-      url: '',
+    contact: {
+      title: 'Contact',
+      text: 'Phone: +49 175 – 88 666 47<br></br> Fax: +49 30 – 221 85334<br></br>E-Mail: info@maryjane-berlin.com',
     },
-  ]
+    register: {
+      title: 'Commercial Register',
+      text: 'Registered in the Commercial Register. <br></br>Register Court: Amtsgericht<br></br>Charlottenburg<br></br>Registration Number: HRB 180488 B <br></br>VAT Identification Number: <br></br>DE308384384',
+    },
+    links: [
+      {
+        title: 'FAQ',
+        url: '/',
+      },
+      {
+        title: 'Terms & Conditions',
+        url: '/',
+      },
+      {
+        title: 'Privacy policy',
+        url: '/',
+      },
+      {
+        title: 'Press',
+        url: '/',
+      },
+      {
+        title: 'Blog',
+        url: '/',
+      },
+    ]
+  }
+
+  const content = language === 'en' ? enContent : deContent
+
 
   return (
     <>
       <SocialSection />
       <NewsletterForm />
-      {/* <Section>
-        {
-          Object.entries(content).length !== 0 &&
+      <Section>
           <Inner>
             <Left>
               <LeftLeft>
-                <Title dangerouslySetInnerHTML={{ __html: content.footer.information.title }} />
-                <Text dangerouslySetInnerHTML={{ __html: content.footer.information.text }} />
-                <Title dangerouslySetInnerHTML={{ __html: content.footer.contact.title }} />
-                <Text dangerouslySetInnerHTML={{ __html: content.footer.contact.text }} />
+                <Title dangerouslySetInnerHTML={{ __html: content.information.title }} />
+                <Text dangerouslySetInnerHTML={{ __html: content.information.text }} />
+                <Title dangerouslySetInnerHTML={{ __html: content.contact.title }} />
+                <Text dangerouslySetInnerHTML={{ __html: content.contact.text }} />
               </LeftLeft>
               <LeftRight>
-                <Title dangerouslySetInnerHTML={{ __html: content.footer.register.title }} />
-                <Text dangerouslySetInnerHTML={{ __html: content.footer.register.text }} />
+                <Title dangerouslySetInnerHTML={{ __html: content.register.title }} />
+                <Text dangerouslySetInnerHTML={{ __html: content.register.text }} />
               </LeftRight>
             </Left>
             <Right>
               <RightLeft>
                 <Links>
                   {
-                    links.map(link => {
+                    content.links.map(link => {
                       return(
                         <FooterLink key={link.url} href={link.url}>
                           {link.title}
@@ -81,24 +136,22 @@ const Footer = () => {
               <RightRight>
                 <LogoContainer>
                   <Logo 
-                    src={content.footer.icon.src} 
-                    alt={content.footer.icon.alt}  
+                    src="/logos/logo-white.png" 
+                    alt="Mary Jane Logo" 
                     fill 
                   />
                 </LogoContainer>
                 <ScrubbleContainer>
                   <ScrubbleImg  
-                    src={content.footer.img.src}
-                    alt={content.footer.img.alt}
+                    src="/logos/scrubble.png"
+                    alt="Letters like scrubble saying cannabis"
                     fill
                   />
                 </ScrubbleContainer>
               </RightRight>
             </Right>
-
           </Inner>
-        }
-      </Section> */}
+      </Section>
     </>
   )
 }

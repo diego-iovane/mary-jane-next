@@ -59,8 +59,10 @@ export const Input = styled.input`
         border-radius: 4px;
         padding: 0 .8rem;
         box-shadow: var(--soft-shadow);
+        background-color: #fff;
+
         &&::placeholder {
-            color: var(--soft-gray);
+            color: var(--light-gray);
             font-family: var(--text-font);
             font-size: 1.2rem;
         }

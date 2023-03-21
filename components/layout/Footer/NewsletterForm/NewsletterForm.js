@@ -52,11 +52,11 @@ const NewsletterForm = () => {
                 }, 3000)
 
                 if (error) {
-                    setMsg(content.newsletterSection.emailError)
+                    setMsg('There was an error sending the email')
                     return;
                 }
 
-                setMsg(content.newsletterSection.emailSuccess)
+                setMsg('Email was sent')
 
             }
 
@@ -68,10 +68,8 @@ const NewsletterForm = () => {
 
     return (
         <Section>
-            {/* {
-                Object.entries(content).length !== 0 &&
+            {
                 <Content>
-                    <Title dangerouslySetInnerHTML={{ __html: content.newsletterSection.title }} />
                     <Title>Subscribe to our newsletter</Title>
                     <Form onSubmit={formik.handleSubmit}>
                         <InputContainer>
@@ -103,7 +101,7 @@ const NewsletterForm = () => {
                         </InputContainer>
                     </Form>
                 </Content>
-            } */}
+            }
         </Section>
     )
 }

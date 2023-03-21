@@ -8,9 +8,9 @@ import MediaReviews from '../components/home/MediaReviews/MediaReviews'
 import ExhibitorsSection from '../components/home/ExhibitorsSection/ExhibitorsSection'
 import Rest from '../components/home/Rest/Rest'
 import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
-// import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
-// import ImageGallery from '../components/home/ImageGallery/ImageGallery'
 // import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
+// import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
+import ImageGallery from '../components/home/ImageGallery/ImageGallery'
 // import TicketsSection from '../components/ticketsSection/TicketsSection'
 // import FloatingButton from '../components/floatingButton/FloatingButton'
 // import Speakers from '../components/home/Speakers/Speakers'
@@ -18,7 +18,7 @@ import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
 
 export default function Home({ res }) {
 
-  console.log(res)
+  // console.log(res)
   const { language } = GetLanguageContext()
 
   return (
@@ -40,7 +40,7 @@ export default function Home({ res }) {
       {/* <MediaSponsorsSection /> */}
       {/* <Speakers /> */}
       {/* <ReviewSection /> */}
-      {/* <ImageGallery /> */}
+      <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} />
       {/* <TicketsSection /> */}
       {/* <Location /> */}
       {/* <FloatingButton /> */}
@@ -199,6 +199,18 @@ export async function getServerSideProps(context) {
                   url
                 }
               }
+              imageGalleryCallToAction {
+                galleryCtaButtonEn {
+                  text
+                  url
+                }
+                galleryCtaTextEn
+                galleryCtaTextDe
+                galleryCtaButtonDe {
+                  text
+                  url
+                }
+              }
             }
           }
         }
@@ -236,6 +248,21 @@ export async function getServerSideProps(context) {
                 altText
                 sourceUrl
               }
+            }
+          }
+        }
+
+        homeImagesGallery {
+          edges {
+            node {
+              media {
+                altText
+                sourceUrl
+              }
+              uri
+              url
+              video
+              videoUrl
             }
           }
         }
