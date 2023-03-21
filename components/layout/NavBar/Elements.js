@@ -15,7 +15,7 @@ export const Container = styled(motion.header)`
 
 export const Inner = styled.div`
     margin: 0 auto;
-    width: 100%;
+    width: 98%;
     max-width: calc(var(--section-max-width) + 15rem);
     display: flex;
     justify-content: space-between;

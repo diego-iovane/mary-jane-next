@@ -33,7 +33,7 @@ const NavBar = () => {
   }, [])
 
   const navState = () => {
-    if(scrollPos > 0.1 || pathname === '/furniture-rental-hostesses') return true
+    if(scrollPos > 0.1 || pathname === '/furniture-rental-hostesses' || pathname === '/accomodation') return true
     return false
   }
   

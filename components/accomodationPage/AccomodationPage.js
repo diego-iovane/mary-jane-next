@@ -1,48 +1,23 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperButtons from '../swiperButtons/SwiperButtons'
 import "swiper/css"
 import "swiper/css/pagination"
 import { Pagination } from "swiper"
+
 import {
     Section,
     Inner,
     ButtonsContainer,
 } from './Elements'
 import AccomodationCard from './AccomodationCard'
+const AccomodationPage = ({ data, language }) => {
 
-const AccomodationPage = () => {
+    const [hotels, setHotels] = useState([])
 
-    const temp = [
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-        {
-            img: '/temp/hotel.png',
-            title: 'Hotel',
-        },
-    ]
+    useEffect(() => {
+        setHotels(data)
+    }, [])
 
     const swiperRef = useRef()
 
@@ -66,7 +41,7 @@ const AccomodationPage = () => {
                     grid={{
                         rows: 1,
                     }}
-                    spaceBetween={2}
+                    spaceBetween={30}
                     pagination={{
                         clickable: true,
                     }}
@@ -75,13 +50,14 @@ const AccomodationPage = () => {
                     className="accomodationSwyper"
                 >
                     {
-                        temp.map((item, index) => {
+                        hotels.length !== 0 ?
+                        hotels.map(item => {
                             return (
-                                <SwiperSlide key={index}>
-                                    <AccomodationCard content={item} />
+                                <SwiperSlide key={item.node.name}>
+                                    <AccomodationCard content={item.node} />
                                 </SwiperSlide>
                             )
-                        })
+                        }) : null
                     }
                 </Swiper>
                 <ButtonsContainer>
