@@ -9,13 +9,22 @@ const FurnitureRentalAndHostesses = ({ res }) => {
     res.data.pages.edges[0].node.furnitureRentalAndHostesses.furnitureContentEn :
     res.data.pages.edges[0].node.furnitureRentalAndHostesses.furnitureContentDe
 
+  const hostContent = language === 'en' ?
+    res.data.pages.edges[0].node.furnitureRentalAndHostesses.hostessesContentEn :
+    res.data.pages.edges[0].node.furnitureRentalAndHostesses.hostessesContentDe
+
   const rawGallery = res.data.pages.edges[0].node.furnitureRentalAndHostesses.furnitureRentalImageGallery
   const gallery = Object.keys(rawGallery).map(key => {
     return { ...rawGallery[key] }
   })
 
+  const hostRawGallery = res.data.pages.edges[0].node.furnitureRentalAndHostesses.hostessesImageGallery
+  const hostGallery = Object.keys(hostRawGallery).map(key => {
+    return { ...hostRawGallery[key] }
+  })
+
   return (
-    <FurnitureRentalPage gallery={gallery} content={content} />
+    <FurnitureRentalPage gallery={gallery} content={content} hostContent={hostContent} hostGallery={hostGallery}/>
   )
 }
 
@@ -72,6 +81,40 @@ export async function getServerSideProps(context) {
                     website
                   }
                   bottomTitle
+                }
+                hostessesContentEn {
+                  title
+                  shortText
+                  address
+                  details {
+                    phoneOne
+                    mail
+                    website
+                  }
+                }
+                hostessesContentDe {
+                  title
+                  shortText
+                  address
+                  details {
+                    phoneOne
+                    mail
+                    website
+                  }
+                }
+                hostessesImageGallery {
+                  one {
+                    altText
+                    sourceUrl
+                  }
+                  two {
+                    altText
+                    sourceUrl
+                  }
+                  three {
+                    altText
+                    sourceUrl
+                  }
                 }
               }
             }

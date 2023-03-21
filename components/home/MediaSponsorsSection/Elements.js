@@ -34,7 +34,7 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
     margin-right: 1rem;
     align-self: flex-start;
-` 
+`
 
 export const LogoContainer = styled.div`
     position: relative;
@@ -44,8 +44,20 @@ export const LogoContainer = styled.div`
     padding: .5rem;
     border-radius: 500px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%);
+    overflow: hidden;
 `
 
 export const Logo = styled(Image)`
     object-fit: contain;
+`
+
+export const SwiperButtonsContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    top: 54%;
+    transform: translateY(-50%);
+
+    @media all and (max-width: 450px) {
+        display: none;
+    }
 `

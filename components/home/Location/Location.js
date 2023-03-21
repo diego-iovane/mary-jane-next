@@ -1,4 +1,5 @@
 import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api'
+import Link from 'next/link'
 import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
     Section,
@@ -13,7 +14,7 @@ import {
     Item,
 } from './Elements'
 
-const Location = () => {
+const Location = ({ language }) => {
 
     const location = { lat: 52.51992, lng: 13.40531 }
 
@@ -66,7 +67,9 @@ const Location = () => {
                         <Text>There is free & paid parking in the immediate vicinity.</Text>
                     </Item>
                     <ButtonContainer>
-                        <SmallCtaAlt>See more</SmallCtaAlt>
+                        <Link href="/">
+                            <SmallCtaAlt>{language === 'en' ? 'See more' : 'Mehr Infos'}</SmallCtaAlt>
+                        </Link>
                     </ButtonContainer>
                 </DetailsContainer>
             </Inner>

@@ -21,12 +21,24 @@ export const InnerSection = styled.div`
     border-radius: 15px;
     box-shadow: var(--soft-shadow);
     display: flex;
+    overflow: hidden;
+    margin: 2rem 0;
+    ${({reverse}) => reverse && 'flex-direction: row-reverse'};
 `
 
 export const FurnitureLeft = styled.div`
     width: 40%;
     position: relative;
     height: 100%;
+`
+
+export const ImageContainer = styled.div`
+    height: 35rem;
+    width: auto;
+`
+
+export const Img = styled(Image)`
+    object-fit: cover;
 `
 
 export const FurnitureRight = styled.div`
@@ -52,17 +64,29 @@ export const SmallText = styled.p`
 `
 
 export const DetailsContainer = styled.div`
+    position: relative;
+    margin: 2rem 0;
     display: flex;
+    width: 100%;
+    padding-bottom: 1rem;
+    ${({dashed}) => dashed && 'border-bottom: 1px dashed #1E411D'};
+    margin-bottom: 1rem;
 `
 
 export const Address = styled.p`
-
+    width: 50%;
+    line-height: 1.1;
+    font-weight: bold;
 `
 
 export const DetailsList = styled.ul`
-
+    width: 50%;
 `
 
 export const DetailItem = styled.li`
+    margin-bottom: 1rem;
+`
+
+export const Footer = styled.div`
 
 `

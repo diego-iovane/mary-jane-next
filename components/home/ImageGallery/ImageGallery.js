@@ -40,8 +40,6 @@ const ImageGallery = ({ media, content, language }) => {
         cta: content.galleryCtaButtonDe,
     }
 
-    console.log(content)
-
     useEffect(() => {
         setHyMedia(media)
     }, [])

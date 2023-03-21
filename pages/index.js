@@ -8,13 +8,13 @@ import MediaReviews from '../components/home/MediaReviews/MediaReviews'
 import ExhibitorsSection from '../components/home/ExhibitorsSection/ExhibitorsSection'
 import Rest from '../components/home/Rest/Rest'
 import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
-// import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
-// import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
-import ImageGallery from '../components/home/ImageGallery/ImageGallery'
-// import TicketsSection from '../components/ticketsSection/TicketsSection'
-// import FloatingButton from '../components/floatingButton/FloatingButton'
+import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
 // import Speakers from '../components/home/Speakers/Speakers'
-// import Location from '../components/home/Location/Location'
+import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
+import ImageGallery from '../components/home/ImageGallery/ImageGallery'
+import TicketsSection from '../components/ticketsSection/TicketsSection'
+import Location from '../components/home/Location/Location'
+import FloatingButton from '../components/floatingButton/FloatingButton'
 
 export default function Home({ res }) {
 
@@ -35,15 +35,13 @@ export default function Home({ res }) {
       <ExhibitorsSection data={res.data.exhibitors.edges} content={res.data.pages.edges[0].node.exhibitors} language={language} />
       <Rest />
       <SponsorsSection data={res.data.sponsors.edges} content={res.data.pages.edges[0].node.sponsorsSection} language={language}/>
-
-
-      {/* <MediaSponsorsSection /> */}
+      <MediaSponsorsSection data={res.data.mediaSponsors.edges} content={res.data.pages.edges[0].node.mediaSponsorsSection} language={language} />
       {/* <Speakers /> */}
-      {/* <ReviewSection /> */}
+      <ReviewSection data={res.data.reviews.edges} content={res.data.pages.edges[0].node.peopleReviewsSection} />
       <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} />
-      {/* <TicketsSection /> */}
-      {/* <Location /> */}
-      {/* <FloatingButton /> */}
+      <TicketsSection />
+      <Location language={language} />
+      <FloatingButton />
     </div>
   )
 }
@@ -199,6 +197,25 @@ export async function getServerSideProps(context) {
                   url
                 }
               }
+              mediaSponsorsSection {
+                mediaSponsorsContentEn {
+                  title
+                  button {
+                    text
+                    url
+                  }
+                }
+                mediaSponsorsContentDe {
+                  title
+                  button {
+                    text
+                    url
+                  }
+                }
+              }
+              peopleReviewsSection {
+                reviewsTitle
+              }
               imageGalleryCallToAction {
                 galleryCtaButtonEn {
                   text
@@ -252,6 +269,18 @@ export async function getServerSideProps(context) {
           }
         }
 
+        mediaSponsors {
+          edges {
+            node {
+              logo {
+                altText
+                sourceUrl
+              }
+              website
+            }
+          }
+        }
+
         homeImagesGallery {
           edges {
             node {
@@ -263,6 +292,15 @@ export async function getServerSideProps(context) {
               url
               video
               videoUrl
+            }
+          }
+        }
+
+        reviews {
+          edges {
+            node {
+              name
+              text
             }
           }
         }

@@ -1,11 +1,12 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../../context/ContentContext'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SmallCta from '../../buttons/SmallCta'
 import {
     Section,
     Inner,
@@ -14,23 +15,28 @@ import {
     ButtonContainer,
     LogoContainer,
     Logo,
+    SwiperButtonsContainer,
 } from './Elements'
-import SmallCta from '../../buttons/SmallCta'
 
-const MediaSponsorsSection = () => {
+const MediaSponsorsSection = ({ data, content, language }) => {
 
-    const { content } = GetContentContext()
     const swiperRef = useRef()
+    const [sponsors, setSponsors] = useState([])
+    const text = language === 'en' ? content.mediaSponsorsContentEn : content.mediaSponsorsContentDe
+
+    useEffect(() => {
+        setSponsors(data)
+    }, [])
 
     return (
         <Section>
-            {
-                Object.entries(content).length !== 0 &&
                 <Inner>
                     <Head>
-                        <SectionTitle>Media Sponsors 2023</SectionTitle>
+                        <SectionTitle>{text.title}</SectionTitle>
                         <ButtonContainer>
-                            <SmallCta>Become a Media Sponsor</SmallCta>
+                            <Link href={text.button.url}>
+                                <SmallCta>{text.button.text}</SmallCta>
+                            </Link>
                         </ButtonContainer>
                     </Head>
                     <Swiper
@@ -60,24 +66,28 @@ const MediaSponsorsSection = () => {
                         className="reviewSwyper"
                     >
                         {
-                            content.mediaSponsorsSection.sponsors.map(item => {
+                            sponsors.length !== 0 ?
+                            sponsors.map(item => {
                                 return (
-                                    <SwiperSlide key={item.src}>
-                                        <LogoContainer>
-                                            <Logo
-                                                src={item.src}
-                                                alt="media sponsors logo"
-                                                fill
-                                            />
-                                        </LogoContainer>
+                                    <SwiperSlide key={item.node.src}>
+                                        <a href={item.node.website} target="_blank" rel="noopener noreferrer">
+                                            <LogoContainer>
+                                                <Logo
+                                                    src={item.node.logo.sourceUrl}
+                                                    alt={item.node.logo.altText}
+                                                    fill
+                                                />
+                                            </LogoContainer>
+                                        </a>
                                     </SwiperSlide>
                                 )
-                            })
+                            }) : null
                         }
                     </Swiper>
-                    <SwiperButtons swiperRef={swiperRef} />
+                    <SwiperButtonsContainer>
+                        <SwiperButtons swiperRef={swiperRef} />
+                    </SwiperButtonsContainer>
                 </Inner>
-            }
         </Section>
     )
 }
