@@ -106,10 +106,20 @@ export async function getServerSideProps(context) {
                       text
                       url
                     }
-                    image {
-                      altText
-                      srcSet
-                    }
+                    images {
+                      one {
+                        altText
+                        sourceUrl
+                      }
+                      two {
+                        altText
+                        sourceUrl
+                      }
+                      three {
+                        altText
+                        sourceUrl
+                      }
+                    } 
                   }
                   onboarding {
                     title

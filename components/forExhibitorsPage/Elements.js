@@ -31,10 +31,29 @@ export const Body = styled.div`
     width: 100%;
 `
 
+export const BgGreen = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(147, 194, 68, 0.40) 0%, rgba(147, 194, 68, 0) 100%);
+    position: absolute;
+    top: 10rem;
+    left: 35rem;
+`
+
+export const BgPink = styled.div`
+    width: 30rem;
+    height: 30rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(226, 123, 175, 0.20) 0%, rgba(226, 123, 175, 0) 100%);
+    position: absolute;
+    top: 1rem;
+    left: 6rem;
+`
+
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
     margin: 0 auto;
+    position: relative;
 `
 
 export const SectionHeader = styled.div`
@@ -89,8 +108,7 @@ export const ButtonContainer = styled(Link)`
 export const RightContainer = styled.div`
     width: 22rem;
     height: 29rem;
-    margin-top: 1rem;
-    margin-left: 10%;
+    margin-left: 12%;
     position: relative;
 `
 
@@ -145,6 +163,21 @@ export const GridText = styled.p`
 `
 
 // LOCATION
+export const LocationSection = styled.div`
+    background: rgba(228, 228, 228, 0.4);
+    position: relative;
+    padding: 7rem 0;
+    margin-bottom: 7rem;
+`
+
+export const LocationInner = styled(motion.div)`
+    width: var(--section-width);
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+`
+
 export const LocationTitle = styled.h2`
     margin-bottom: 1.5rem;
 `
@@ -161,3 +194,73 @@ export const LocationText = styled.p`
 `
 
 export const LocationButtonContainer = styled(Link)``
+
+export const LocationRightContainer = styled.div`
+    width: 28rem;
+    height: 20rem;
+    position: relative;
+    margin-left: 10%;
+`
+
+export const ImageContainer = styled.div`
+    width: 100%;
+    height: auto;
+`
+
+export const GalleryImage = styled(Image)`
+    object-fit: cover;
+`
+
+// Onboarding
+export const OnboardingTitle = styled.h2`
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+`
+
+export const OnboardingSubtitle = styled.p`
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+`
+
+export const StepsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+`
+
+export const StepContainer = styled(motion.div)`
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+`
+
+export const StepNum = styled(motion.div)`
+    color: #fff;
+    background-color: var(--green);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+`
+
+export const StepText = styled(motion.p)`
+    font-weight: bold;
+
+    a {
+        border-bottom: 1px solid var(--green);
+    }
+`
+
+export const Line = styled(motion.div)`
+
+`

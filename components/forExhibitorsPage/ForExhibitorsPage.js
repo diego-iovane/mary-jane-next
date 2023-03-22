@@ -1,5 +1,13 @@
+import { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import "swiper/css"
+import "swiper/css/effect-fade"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import { EffectFade, Pagination } from 'swiper'
 import SmallCta from '../buttons/SmallCta'
 import SmallCtaPink from '../buttons/SmallCtaPink'
+import SwiperButtons from './SwiperButtons/SwiperButtons'
 import {
     HeadBg,
     HeadSection,
@@ -21,19 +29,44 @@ import {
     GridIconContainer,
     GridIcon,
     GridText,
+    LocationSection,
+    LocationInner,
     LocationTitle,
     LocationSubtitle,
     LocationText,
     LocationButtonContainer,
+    LocationRightContainer,
+    BgPink,
+    BgGreen,
+    GalleryImage,
+    ImageContainer,
+    OnboardingTitle,
+    OnboardingSubtitle,
+    StepsContainer,
+    StepContainer,
+    StepNum,
+    StepText,
+    Line,
 } from './Elements'
 
 const ForExhibitorsPage = ({ content }) => {
 
     console.log(content)
+
+    const swiperRef = useRef()
+    const count = useRef(0)
     const features = Object.keys(content.features).map(key => {
-        return {...content.features[key]}
+        return { ...content.features[key] }
     })
-    
+    const imgGallery = Object.keys(content.location.images).map(key => {
+        return { ...content.location.images[key] }
+    })
+    const steps = Object.keys(content.onboarding.steps).map(key => {
+        return { ...content.onboarding.steps[key] }
+    })
+
+    console.log(steps)
+
     return (
         <>
             <HeadSection>
@@ -50,7 +83,7 @@ const ForExhibitorsPage = ({ content }) => {
                     </SectionHeader>
                     <InnerSection>
                         <LeftContainer>
-                            <Text dangerouslySetInnerHTML={{ __html: content.generalInfo.text}} />
+                            <Text dangerouslySetInnerHTML={{ __html: content.generalInfo.text }} />
                             <ButtonsContainer>
                                 <ButtonContainer href={content.generalInfo.ctaOne.url}>
                                     <SmallCta>{content.generalInfo.ctaOne.text}</SmallCta>
@@ -68,19 +101,23 @@ const ForExhibitorsPage = ({ content }) => {
                     <Grid>
                         {
                             features.map(feature => {
-                                return(
+                                return (
                                     <GridItem key={feature.text}>
                                         <GridIconContainer>
                                             <GridIcon src={feature.icon.sourceUrl} alt={feature.icon.altText} fill />
                                         </GridIconContainer>
-                                        <GridText dangerouslySetInnerHTML={{ __html: feature.text}} />
+                                        <GridText dangerouslySetInnerHTML={{ __html: feature.text }} />
                                     </GridItem>
                                 )
                             })
                         }
                     </Grid>
-                    {/* LOCATION */}
-                    <InnerSection>
+                </Inner>
+                {/* LOCATION */}
+                <LocationSection>
+                    <LocationInner>
+                        <BgPink />
+                        <BgGreen />
                         <LeftContainer>
                             <LocationTitle>{content.location.title}</LocationTitle>
                             <LocationSubtitle>{content.location.subtitle}</LocationSubtitle>
@@ -89,7 +126,71 @@ const ForExhibitorsPage = ({ content }) => {
                                 <SmallCta>{content.location.cta.text}</SmallCta>
                             </LocationButtonContainer>
                         </LeftContainer>
-                    </InnerSection>
+                        <LocationRightContainer>
+                            <Swiper
+                                ref={swiperRef}
+                                spaceBetween={30}
+                                effect={"fade"}
+                                loop={true}
+                                pagination={{ clickable: true }}
+                                modules={[EffectFade, Pagination]}
+                                className="sponsoringSwiper"
+                            >
+                                {
+                                    imgGallery.map(slide => {
+                                        return (
+                                            <SwiperSlide key={slide.sourceUrl}>
+                                                <ImageContainer>
+                                                    <GalleryImage src={slide.sourceUrl} alt={slide.altText} fill />
+                                                </ImageContainer>
+                                            </SwiperSlide>
+                                        )
+                                    })
+                                }
+                            </Swiper>
+                            <SwiperButtons swiperRef={swiperRef} />
+                        </LocationRightContainer>
+                    </LocationInner>
+                </LocationSection>
+                {/* How TO */}
+                <Inner>
+                    <OnboardingTitle>{content.onboarding.title}</OnboardingTitle>
+                    <OnboardingSubtitle>{content.onboarding.title}</OnboardingSubtitle>
+                    <StepsContainer>
+                        {/* {
+                            steps.map(step => {
+
+                                count + 1
+
+                                return(
+                                    <StepContainer key={step}>
+                                        <StepNum>count</StepNum>
+                                        <StepText>{step}</StepText>
+                                    </StepContainer>
+                                )
+                            })
+                        } */}
+                        <StepContainer>
+                            <StepNum>1</StepNum>
+                            <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.one}}  />
+                        </StepContainer>
+                        <StepContainer>
+                            <StepNum>2</StepNum>
+                            <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.two}}  />
+                        </StepContainer>
+                        <StepContainer>
+                            <StepNum>3</StepNum>
+                            <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.three}}  />
+                        </StepContainer>
+                        <StepContainer>
+                            <StepNum>4</StepNum>
+                            <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.four}}  />
+                        </StepContainer>
+                        <StepContainer>
+                            <StepNum>5</StepNum>
+                            <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.five}}  />
+                        </StepContainer>
+                    </StepsContainer>
                 </Inner>
             </Body>
         </>

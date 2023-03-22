@@ -27,7 +27,6 @@ const Speakers = ({ data, content, language }) => {
     const [isInView, setInView] = useState(false)
     const [speakers, setSpeakers] = useState([])
     const text = language === 'en' ? content.speakersContentEn : content.speakersContent.De
-    console.log(content)
     
     useEffect(() => {
         setSpeakers(data)
