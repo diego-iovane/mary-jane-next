@@ -78,6 +78,7 @@ const Speakers = ({ data, content, language }) => {
                                                     src={speaker.node.image.sourceUrl}
                                                     alt="speaker"
                                                     fill
+                                                    priority
                                                 />
                                             </LogoContainer>
                                             <NameContainer isinview={isInView}>

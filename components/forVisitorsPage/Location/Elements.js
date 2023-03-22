@@ -1,36 +1,42 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Section = styled.section`
-    padding: 4rem 0 8rem 0;
-`
-
-export const Inner = styled.div`
-    max-width: var(--section-max-width);
+export const Inner = styled(motion.div)`
     width: var(--section-width);
-    margin: 0 auto;
-    display: flex;
+    max-width: var(--section-max-width);
+    margin: 9rem auto;
     position: relative;
-    align-items: center;
 `
 
-export const MapContainer = styled.div`
-    width: 50%;
+export const Title = styled.h1`
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+`
+
+export const Grid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8%;
+    margin: 1rem auto;
+    width: 80%;
+`
+
+export const MapContainer = styled.div` 
 `
 
 export const Map = styled.div`
-    width: 100%;
-    height: 28rem;
+    width: 28rem;
+    height: 25rem;
     border-radius: 12px;
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 `
 
 export const DetailsContainer = styled.div`
-    width: 50%;
-    padding-left: 6rem;
+    /* padding-left: 6rem; */
 `
 
-export const Title = styled.h3`
+export const DetailsTitle = styled.h3`
     font-size: 1.8rem;
     margin-bottom: .8rem;
 `
@@ -53,8 +59,4 @@ export const Text = styled.p`
     span {
         font-weight: bold;
     }
-`
-
-export const ButtonContainer = styled.div`
-    margin-top: 1rem;
 `

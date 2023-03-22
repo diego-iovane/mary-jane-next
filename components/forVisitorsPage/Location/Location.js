@@ -1,13 +1,13 @@
 import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api'
 import Link from 'next/link'
-import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
-    Section,
     Inner,
+    Title,
+    Grid,
     MapContainer,
     DetailsContainer,
     Map,
-    Title,
+    DetailsTitle,
     SubTitle,
     Text,
     ButtonContainer,
@@ -23,8 +23,8 @@ const Location = ({ language }) => {
     })
 
     return (
-        <Section>
-            <Inner>
+        <Inner>
+            <Grid>
                 <MapContainer>
                     <Map>
                         {
@@ -41,7 +41,7 @@ const Location = ({ language }) => {
                     </Map>
                 </MapContainer>
                 <DetailsContainer>
-                    <Title>Location</Title>
+                    <DetailsTitle>Location</DetailsTitle>
                     <SubTitle>
                         Arena Berlin
                         Eichenstr. 4,<br></br> 12435 Berlin
@@ -66,14 +66,9 @@ const Location = ({ language }) => {
                         <Text><span>Parking:</span></Text>
                         <Text>There is free & paid parking in the immediate vicinity.</Text>
                     </Item>
-                    <ButtonContainer>
-                        <Link href="/">
-                            <SmallCtaAlt>{language === 'en' ? 'See more' : 'Mehr Infos'}</SmallCtaAlt>
-                        </Link>
-                    </ButtonContainer>
                 </DetailsContainer>
-            </Inner>
-        </Section>
+            </Grid>
+        </Inner>
     )
 }
 
