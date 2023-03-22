@@ -9,7 +9,7 @@ import ExhibitorsSection from '../components/home/ExhibitorsSection/ExhibitorsSe
 import Rest from '../components/home/Rest/Rest'
 import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
 import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
-// import Speakers from '../components/home/Speakers/Speakers'
+import Speakers from '../components/home/Speakers/Speakers'
 import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
 import ImageGallery from '../components/home/ImageGallery/ImageGallery'
 import TicketsSection from '../components/ticketsSection/TicketsSection'
@@ -31,12 +31,12 @@ export default function Home({ res }) {
       <Hero data={res.data.pages.edges[0].node.hero} language={language} />
       <Exhibition data={res.data.pages.edges[0].node.exhibition} language={language} />
       <ForExhibitors data={res.data.pages.edges[0].node.forExhibitors} language={language} />
-      <MediaReviews data={res.data.mediaReviews.edges} content={res.data.pages.edges[0].node.mediaReviews} language={language}/>
+      <MediaReviews data={res.data.mediaReviews.edges} content={res.data.pages.edges[0].node.mediaReviews} language={language} />
       <ExhibitorsSection data={res.data.exhibitors.edges} content={res.data.pages.edges[0].node.exhibitors} language={language} />
       <Rest />
-      <SponsorsSection data={res.data.sponsors.edges} content={res.data.pages.edges[0].node.sponsorsSection} language={language}/>
+      <SponsorsSection data={res.data.sponsors.edges} content={res.data.pages.edges[0].node.sponsorsSection} language={language} />
       <MediaSponsorsSection data={res.data.mediaSponsors.edges} content={res.data.pages.edges[0].node.mediaSponsorsSection} language={language} />
-      {/* <Speakers /> */}
+      <Speakers data={res.data.speakers.edges} content={res.data.pages.edges[0].node.speakersSection} language={language}/>
       <ReviewSection data={res.data.reviews.edges} content={res.data.pages.edges[0].node.peopleReviewsSection} />
       <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} />
       <TicketsSection />
@@ -213,6 +213,22 @@ export async function getServerSideProps(context) {
                   }
                 }
               }
+              speakersSection {
+                speakersContentEn {
+                  title
+                  cta {
+                    text
+                    url
+                  }
+                }
+                speakersContentDe {
+                  title
+                  cta {
+                    url
+                    text
+                  }
+                }
+              }
               peopleReviewsSection {
                 reviewsTitle
               }
@@ -277,6 +293,20 @@ export async function getServerSideProps(context) {
                 sourceUrl
               }
               website
+            }
+          }
+        }
+
+        speakers {
+          edges {
+            node {
+              name
+              surname
+              profession
+              image {
+                altText
+                sourceUrl
+              }
             }
           }
         }

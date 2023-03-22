@@ -1,10 +1,9 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import { GetContentContext } from '../../../context/ContentContext'
 import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
@@ -22,49 +21,25 @@ import {
     Prof,
 } from './Elements'
 
-const Speakers = () => {
+const Speakers = ({ data, content, language }) => {
 
-    const temp = [
-        {
-            src: '/temp/andre.webp',
-            name: 'Andreas',
-            surname: 'Muller',
-            prof: 'Scientist'
-        },
-        {
-            src: '/temp/greg.jpg',
-            name: 'Gregor',
-            surname: 'Cichy',
-            prof: 'Scientist'
-        },
-        {
-            src: '/temp/vane.jpg',
-            name: 'Vanessa',
-            surname: 'Wennninger',
-            prof: 'Scientist'
-        },
-        {
-            src: '/temp/mir.jpg',
-            name: 'Mirta',
-            surname: 'Rostas',
-            prof: 'Scientist'
-        },
-    ]
-
-    const { content } = GetContentContext()
     const swiperRef = useRef()
     const [isInView, setInView] = useState(false)
+    const [speakers, setSpeakers] = useState([])
+    const text = language === 'en' ? content.speakersContentEn : content.speakersContent.De
+    console.log(content)
     
+    useEffect(() => {
+        setSpeakers(data)
+    }, [])
 
     return (
         <Section whileInView={() => setInView(true)}>
-            {
-                Object.entries(content).length !== 0 &&
                 <Inner isinview={isInView}>
                     <Head>
-                        <SectionTitle>Meet our speakers</SectionTitle>
-                        <ButtonContainer>
-                            <SmallCtaAlt>See all</SmallCtaAlt>
+                        <SectionTitle>{text.title}</SectionTitle>
+                        <ButtonContainer href={text.cta.url}>
+                            <SmallCtaAlt>{text.cta.text}</SmallCtaAlt>
                         </ButtonContainer>
                     </Head>
                     <Swiper
@@ -94,31 +69,31 @@ const Speakers = () => {
                         className="speakersSwyper"
                     >
                         {
-                            temp.map(item => {
+                            speakers.length !== 0 ?
+                            speakers.map(speaker => {
                                 return (
-                                    <SwiperSlide key={item.surname}>
+                                    <SwiperSlide key={speaker.node.image.sourceUrl}>
                                         <SwiperInner>
                                             <LogoContainer>
                                                 <Logo
-                                                    src={item.src}
+                                                    src={speaker.node.image.sourceUrl}
                                                     alt="speaker"
                                                     fill
                                                 />
                                             </LogoContainer>
                                             <NameContainer isinview={isInView}>
-                                                <Surname>{item.name}</Surname>
-                                                <Surname>{item.surname}</Surname>
-                                                <Prof>{item.prof}</Prof>
+                                                <Surname>{speaker.node.name}</Surname>
+                                                <Surname>{speaker.node.surname}</Surname>
+                                                <Prof>{speaker.node?.profession}</Prof>
                                             </NameContainer>
                                         </SwiperInner>
                                     </SwiperSlide>
                                 )
-                            })
+                            }) : null
                         }
                     </Swiper>
                     <SwiperButtons swiperRef={swiperRef} />
                 </Inner>
-            }
         </Section>
     )
 }

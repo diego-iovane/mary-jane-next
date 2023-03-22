@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export const Section = styled(motion.section)`
@@ -24,7 +25,7 @@ export const Head = styled.div`
     align-self: flex-start;
 `
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled(Link)`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
@@ -90,7 +91,8 @@ export const Surname = styled.p`
 export const Prof = styled.p`
     margin: 0 auto;
     font-style: italic;
-    font-size: 1rem;
+    font-size: .7rem;
+    text-align: center;
     color: var(--text-color);
     width: fit-content;
 `
