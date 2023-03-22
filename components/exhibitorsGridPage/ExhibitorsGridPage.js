@@ -21,7 +21,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
 
     const [exhibitorsState, setExhibitorsState] = useState([])
     const [searchValue, setSearchValue] = useState("")
-    const [currentCategory, setCurrentCategory] = useState("")
+    const [currentCategory, setCurrentCategory] = useState("all")
     const [openCategories, setOpenCategories] = useState(false)
     const [currentExhibitors, setCurrentExhibitors] = useState([])
     const [loading, setLoading] = useState(false)
@@ -68,6 +68,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
         
     }, [currentCategory])
 
+    console.log(exhibitors)
 
     const handleInput = (e) => setSearchValue(e.target.value)
 
