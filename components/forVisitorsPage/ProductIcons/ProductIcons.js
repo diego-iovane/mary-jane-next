@@ -24,7 +24,7 @@ const ProductIcons = ({ content, text }) => {
                         return(
                             <GridElement>
                                 <IconContainer>
-                                    {/* <Icon src={product.icon.sourceUrl} alt={product.icon.altText} fill /> */}
+                                    <Icon src={product.icon?.sourceUrl} alt={product.icon?.altText} fill />
                                 </IconContainer>
                                 <Text>{product.text}</Text>
                             </GridElement>
