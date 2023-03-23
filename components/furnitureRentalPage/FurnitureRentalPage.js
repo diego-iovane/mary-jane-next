@@ -7,6 +7,8 @@ import "swiper/css/pagination"
 import { EffectFade, Pagination } from 'swiper'
 import SwiperButtons from './SwiperButtons/SwiperButtons'
 import {
+    HeadSection,
+    HeadBg,
     Section,
     Inner,
     InnerSection,
@@ -24,7 +26,8 @@ import {
     Footer,
 } from './Elements'
 
-const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery }) => {
+const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery, bg }) => {
+
 
     const swiperRef = useRef()
     const swiperAltRef = useRef()
@@ -35,93 +38,96 @@ const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery }) => 
         return content.details[key]
     })
 
-    console.log(hostContent, hostGallery)
-
     return (
-        <Section>
-            <Inner>
-                <InnerSection>
-                    <FurnitureLeft>
-                        <Swiper
-                            ref={swiperRef}
-                            spaceBetween={30}
-                            effect={"fade"}
-                            loop={true}
-                            pagination={{ clickable: true }}
-                            modules={[EffectFade, Pagination]}
-                            className="furnitureSwiper"
-                        >
-                            {
-                                gallery.map(slide => {
-                                    return (
-                                        <SwiperSlide key={slide.sourceUrl}>
-                                            <ImageContainer>
-                                                <Img src={slide.sourceUrl} alt={slide.altText} fill />
-                                            </ImageContainer>
-                                        </SwiperSlide>
-                                    )
-                                })
-                            }
-                        </Swiper>
-                        <SwiperButtons swiperRef={swiperRef} />
-                    </FurnitureLeft>
-                    <FurnitureRight>
-                        <Title>{content.title}</Title>
-                        <Subtitle>{content.subtitle}</Subtitle>
-                        <SmallText>{content.shortText}</SmallText>
-                        <DetailsContainer dashed={true}>
-                            <Address dangerouslySetInnerHTML={{ __html: content.address }} />
-                            <DetailsList>
+        <>
+            <HeadSection>
+                <HeadBg src={bg.sourceUrl} alt="" fill />
+            </HeadSection>
+            <Section>
+                <Inner>
+                    <InnerSection>
+                        <FurnitureLeft>
+                            <Swiper
+                                ref={swiperRef}
+                                spaceBetween={30}
+                                effect={"fade"}
+                                loop={true}
+                                pagination={{ clickable: true }}
+                                modules={[EffectFade, Pagination]}
+                                className="furnitureSwiper"
+                            >
                                 {
-                                    list.map(item => <DetailItem>{item}</DetailItem>)
+                                    gallery.map(slide => {
+                                        return (
+                                            <SwiperSlide key={slide.sourceUrl}>
+                                                <ImageContainer>
+                                                    <Img src={slide.sourceUrl} alt={slide.altText} fill />
+                                                </ImageContainer>
+                                            </SwiperSlide>
+                                        )
+                                    })
                                 }
-                            </DetailsList>
-                        </DetailsContainer>
-                        <Footer>
-                            <Subtitle>{content.bottomTitle}</Subtitle>
-                        </Footer>
-                    </FurnitureRight>
-                </InnerSection>
-                <InnerSection reverse={true}>
-                    <FurnitureLeft>
-                        <Swiper
-                            ref={swiperAltRef}
-                            spaceBetween={30}
-                            effect={"fade"}
-                            loop={true}
-                            pagination={{ clickable: true }}
-                            modules={[EffectFade, Pagination]}
-                            className="furnitureSwiper"
-                        >
-                            {
-                                hostGallery.map(slide => {
-                                    return (
-                                        <SwiperSlide key={slide.sourceUrl}>
-                                            <ImageContainer>
-                                                <Img src={slide.sourceUrl} alt={slide.altText} fill />
-                                            </ImageContainer>
-                                        </SwiperSlide>
-                                    )
-                                })
-                            }
-                        </Swiper>
-                        <SwiperButtons swiperRef={swiperAltRef} />
-                    </FurnitureLeft>
-                    <FurnitureRight>
-                        <Title>{hostContent.title}</Title>
-                        <SmallText>{hostContent.shortText}</SmallText>
-                        <DetailsContainer>
-                            <Address dangerouslySetInnerHTML={{ __html: hostContent.address }} />
-                            <DetailsList>
+                            </Swiper>
+                            <SwiperButtons swiperRef={swiperRef} />
+                        </FurnitureLeft>
+                        <FurnitureRight>
+                            <Title>{content.title}</Title>
+                            <Subtitle>{content.subtitle}</Subtitle>
+                            <SmallText>{content.shortText}</SmallText>
+                            <DetailsContainer dashed={true}>
+                                <Address dangerouslySetInnerHTML={{ __html: content.address }} />
+                                <DetailsList>
+                                    {
+                                        list.map(item => <DetailItem>{item}</DetailItem>)
+                                    }
+                                </DetailsList>
+                            </DetailsContainer>
+                            {/* <Footer>
+                                <Subtitle>{content.bottomTitle}</Subtitle>
+                            </Footer> */}
+                        </FurnitureRight>
+                    </InnerSection>
+                    <InnerSection reverse={true}>
+                        <FurnitureLeft>
+                            <Swiper
+                                ref={swiperAltRef}
+                                spaceBetween={30}
+                                effect={"fade"}
+                                loop={true}
+                                pagination={{ clickable: true }}
+                                modules={[EffectFade, Pagination]}
+                                className="furnitureSwiper"
+                            >
                                 {
-                                    hostList.map(item => <DetailItem>{item}</DetailItem>)
+                                    hostGallery.map(slide => {
+                                        return (
+                                            <SwiperSlide key={slide.sourceUrl}>
+                                                <ImageContainer>
+                                                    <Img src={slide.sourceUrl} alt={slide.altText} fill />
+                                                </ImageContainer>
+                                            </SwiperSlide>
+                                        )
+                                    })
                                 }
-                            </DetailsList>
-                        </DetailsContainer>
-                    </FurnitureRight>
-                </InnerSection>
-            </Inner>
-        </Section>
+                            </Swiper>
+                            <SwiperButtons swiperRef={swiperAltRef} />
+                        </FurnitureLeft>
+                        <FurnitureRight>
+                            <Title>{hostContent.title}</Title>
+                            <SmallText>{hostContent.shortText}</SmallText>
+                            <DetailsContainer>
+                                <Address dangerouslySetInnerHTML={{ __html: hostContent.address }} />
+                                <DetailsList>
+                                    {
+                                        hostList.map(item => <DetailItem>{item}</DetailItem>)
+                                    }
+                                </DetailsList>
+                            </DetailsContainer>
+                        </FurnitureRight>
+                    </InnerSection>
+                </Inner>
+            </Section>
+        </>
     )
 }
 

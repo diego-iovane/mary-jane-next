@@ -24,7 +24,7 @@ const FurnitureRentalAndHostesses = ({ res }) => {
   })
 
   return (
-    <FurnitureRentalPage gallery={gallery} content={content} hostContent={hostContent} hostGallery={hostGallery}/>
+    <FurnitureRentalPage gallery={gallery} content={content} hostContent={hostContent} hostGallery={hostGallery} bg={res.data.pages.edges[0].node.furnitureRentalAndHostesses.headerBackgroundImage}/>
   )
 }
 
@@ -42,6 +42,10 @@ export async function getServerSideProps(context) {
           edges {
             node {
               furnitureRentalAndHostesses {
+                headerBackgroundImage {
+                  altText
+                  sourceUrl
+                }
                 furnitureRentalImageGallery {
                   one {
                     altText

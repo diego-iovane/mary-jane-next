@@ -7,7 +7,7 @@ const Accomodation = ({ res }) => {
   const { language } = GetLanguageContext()
 
   return (
-    <AccomodationPage data={res.data.hotels.edges} language={language} />
+    <AccomodationPage data={res.data.hotels.edges} bg={res.data.pages.edges[0].node.accomodation.headerBackgroundImage} language={language} />
   )
 }
 
@@ -21,18 +21,30 @@ export async function getServerSideProps(context) {
     body: JSON.stringify({
       query: `
       query NewQuery {
+        pages(where: {id: 53}) {
+          edges {
+            node {
+              accomodation {
+                headerBackgroundImage {
+                  altText
+                  sourceUrl
+                }
+              }
+            }
+          }
+        }
         hotels {
           edges {
             node {
-              address
-              distanceInMinutes
-              name
-              phone
-              website
-              featuredImage {
-                sourceUrl
-              }
-            }
+                    address
+                    distanceInMinutes
+                    name
+                    phone
+                    website
+                    featuredImage {
+                      sourceUrl
+                    }
+                  }
           }
         }
       }

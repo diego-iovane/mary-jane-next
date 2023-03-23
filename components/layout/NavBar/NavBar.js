@@ -32,11 +32,16 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // const navState = () => {
+  //   if(scrollPos > 0.1 || pathname === '/furniture-rental-hostesses' || pathname === '/accomodation') return true
+  //   return false
+  // }
+
   const navState = () => {
-    if(scrollPos > 0.1 || pathname === '/furniture-rental-hostesses' || pathname === '/accomodation') return true
+    if (scrollPos > 0.1) return true
     return false
   }
-  
+
   return (
     <Container scrolled={navState()}>
       <Inner>

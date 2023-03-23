@@ -2,8 +2,32 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+export const HeadSection = styled.div`
+    height: 12rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.79) 0%, rgba(0, 0, 0, 0.29) 50%, rgba(255, 255, 255, 0.22) 75%, #F7F7F7 100%);
+    }
+`
+
+export const HeadBg = styled(Image)`
+    object-fit: cover;
+`
+
 export const Section = styled.section`
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
     width: 100%;
 `
 
@@ -69,7 +93,7 @@ export const DetailsContainer = styled.div`
     display: flex;
     width: 100%;
     padding-bottom: 1rem;
-    ${({dashed}) => dashed && 'border-bottom: 1px dashed #1E411D'};
+    /* ${({dashed}) => dashed && 'border-bottom: 1px dashed #1E411D'}; */
     margin-bottom: 1rem;
 `
 
