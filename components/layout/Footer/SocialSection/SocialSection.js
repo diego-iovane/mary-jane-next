@@ -26,6 +26,21 @@ const SocialSection = () => {
             alt: 'youtube logo',
             url: '/',
         },
+        {
+            src: '/logos/tiktok-logo.png',
+            alt: 'tiktok logo',
+            url: 'https://www.tiktok.com/@maryjane_berlin?is_from_webapp=1&sender_device=pc',
+        },
+        {
+            src: '/logos/twt-logo.png',
+            alt: 'twitter logo',
+            url: 'https://twitter.com/hanfmesse',
+        },
+        {
+            src: '/logos/in-logo.png',
+            alt: 'linkedin logo',
+            url: 'https://www.linkedin.com/company/mary-jane-berlin/',
+        },
     ]
 
     return (

@@ -35,20 +35,23 @@ export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
 ` 
 
-export const LogosContainer = styled.div`
+export const LogosContainer = styled.a`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    /* width: 90%; */
+    margin: 0 auto;
 
     @media all and (min-width: 950px) and (max-width: 1150px) {
         width: 75%;
     }
+
 `
 
 export const LogoContainer = styled.div`
     position: relative;
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     margin: 0 2rem;
 `
 

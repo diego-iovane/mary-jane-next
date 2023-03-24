@@ -20,7 +20,7 @@ export const Inner = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 2.5rem;
     align-self: flex-start;
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
 
     @media all and (max-width: 450px) {
         padding-bottom: 1rem;

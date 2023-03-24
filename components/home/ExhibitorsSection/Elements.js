@@ -63,12 +63,17 @@ export const LogoContainer = styled.div`
     width: 9rem;
     padding: 1rem;
     border-radius: 500px;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%);
+    background-color: #fff;
     overflow: hidden;
 `
 
 export const Logo = styled(Image)`
     object-fit: contain;
+    width: 90% !important;
+    height: 90% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
 `
 
 export const SwiperButtonsContainer = styled.div`

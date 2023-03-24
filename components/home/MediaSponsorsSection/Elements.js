@@ -49,6 +49,11 @@ export const LogoContainer = styled.div`
 
 export const Logo = styled(Image)`
     object-fit: contain;
+    width: 90% !important;
+    height: 90% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
 `
 
 export const SwiperButtonsContainer = styled.div`

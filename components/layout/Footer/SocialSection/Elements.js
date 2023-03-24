@@ -35,8 +35,10 @@ export const Title = styled.h2`
 
 export const IconsContainer = styled.div`
     width: 12rem;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    place-items: center;
     margin-top: 2rem;
 `
 
