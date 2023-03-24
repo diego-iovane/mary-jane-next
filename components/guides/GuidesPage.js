@@ -23,6 +23,13 @@ import {
     FileIconContainer,
     FileIcon,
     FileName,
+    Circle,
+    LogoContainer,
+    Logo,
+    Left,
+    Right,
+    Dot,
+    DotIcon,
 } from './Elements'
 
 
@@ -196,6 +203,24 @@ const GuidesPage = ({ content }) => {
                         </SmallSectionFilesGrid>
                     </Card>
                 </DoubleGrid>
+                <SimpleGrid>
+                    <Card>
+                        <Circle />
+                        <DoubleGrid>
+                            <Left>
+                                <Dot>
+                                    <DotIcon src="/icons/info-icon.png" alt="information icon" fill />
+                                </Dot>
+                                <Text dangerouslySetInnerHTML={{ __html: content.contact}} />
+                            </Left>
+                            <Right>
+                                <LogoContainer>
+                                    <Logo src="/logos/logo-light-green.png" alt="" fill />
+                                </LogoContainer>
+                            </Right>
+                        </DoubleGrid>
+                    </Card>
+                </SimpleGrid>
             </Inner>
         </>
     )

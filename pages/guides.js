@@ -170,6 +170,7 @@ export async function getServerSideProps(context) {
                               }
                             }
                           }
+                          contact
                         }
                       }
                     }

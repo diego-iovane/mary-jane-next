@@ -72,6 +72,10 @@ export const Box = styled.div`
     @media all and (max-width: 960px) {
         padding: 0;
     }
+
+    @media all and (max-width: 860px) {
+        margin-bottom: 2rem;
+    }
 `
 
 export const MainTitle = styled.h1`
@@ -102,6 +106,12 @@ export const FeaturedTitle = styled.h2`
     z-index: 1;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+
+    @media all and (max-width: 450px) {
+        line-height: 1;
+        bottom: .2rem;
+        font-size: 1rem;
+    }
 `
 
 export const FeaturedText = styled.p`
@@ -109,6 +119,10 @@ export const FeaturedText = styled.p`
     margin: 1.5rem 0;
     position: relative;
     top: .4rem;
+
+    @media all and (max-width: 450px) {
+        margin: .5rem 0 1.5rem 0;
+    }
 `
 
 export const ButtonContainer = styled(Link)``
@@ -194,3 +208,86 @@ export const FileIcon = styled(Image)`
 export const FileName = styled.p`
     font-size: 1rem;
 `
+
+export const Circle = styled.p`
+    position: absolute;
+    left: -15rem;
+    top: 0;
+    height: 22rem;
+    width: 22rem;
+    background-color: var(--green);
+    border-radius: 500px;
+
+    @media all and (max-width: 960px) {
+        display: none;
+    }
+`
+
+export const Left = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10rem;
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    @media all and (max-width: 1120px) {
+        padding-left: 7rem;
+    }
+
+    @media all and (max-width: 960px) {
+        padding-left: 0;
+    }
+
+    @media all and (max-width: 860px) {
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+`
+
+export const Right = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const Dot = styled.div`
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--green);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-radius: 500px;
+    position: relative;
+    padding: 1rem;
+    left: 7rem;
+
+    @media all and (max-width: 860px) {
+        left: 0;
+    }
+`
+
+export const DotIcon = styled(Image)`
+    object-fit: contain;
+    width: 75% !important;
+    height: 75% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+`
+
+export const LogoContainer = styled.div`
+    position: relative;
+    width: 14rem;
+    height: 11rem;
+`
+
+export const Logo = styled(Image)`
+    object-fit: contain;
+`
+
