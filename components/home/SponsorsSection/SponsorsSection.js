@@ -23,7 +23,7 @@ const SponsorsSection = ({ data, content, language }) => {
         } :
         {
             title: content.sponsorsTitleDe,
-            cta: content.sponsorsCtaDe.title, 
+            cta: content.sponsorsCtaDe.title,
             url: content.sponsorsCtaDe.url,
         }
 
@@ -45,17 +45,22 @@ const SponsorsSection = ({ data, content, language }) => {
                 <LogosContainer>
                     {
                         sponsors.length !== 0 ?
-                        sponsors.map(sponsor => {
-                            return (
-                                <LogoContainer key={sponsor.node.title}>
-                                    <Logo
-                                        src={sponsor.node.logo.sourceUrl}
-                                        alt={sponsor.node.logo.altText}
-                                        fill
-                                    />
-                                </LogoContainer>
-                            )
-                        }) : null
+                            sponsors.map(sponsor => {
+                                return (
+                                    <LogoContainer
+                                        href={sponsor.node.website}
+                                        key={sponsor.node.title}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Logo
+                                            src={sponsor.node.logo.sourceUrl}
+                                            alt={sponsor.node.logo.altText}
+                                            fill
+                                        />
+                                    </LogoContainer>
+                                )
+                            }) : null
                     }
                 </LogosContainer>
             </Inner>

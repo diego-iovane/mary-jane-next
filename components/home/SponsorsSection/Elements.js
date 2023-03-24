@@ -35,7 +35,7 @@ export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
 ` 
 
-export const LogosContainer = styled.a`
+export const LogosContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -48,11 +48,12 @@ export const LogosContainer = styled.a`
 
 `
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.a`
     position: relative;
     width: 12rem;
     height: 12rem;
     margin: 0 2rem;
+    cursor: pointer;
 `
 
 export const Logo = styled(Image)`

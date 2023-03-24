@@ -281,6 +281,7 @@ export async function getServerSideProps(context) {
                 altText
                 sourceUrl
               }
+              website
             }
           }
         }
