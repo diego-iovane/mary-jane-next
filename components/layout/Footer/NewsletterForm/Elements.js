@@ -33,6 +33,10 @@ export const Form = styled.form`
     width: 25rem;
     margin: 0 auto;
 
+    @media all and (max-width: 500px) {
+        width: 22rem;
+    }
+
     @media all and (max-width: 350px) {
         width: 80%;
         margin: 0 auto;

@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
     padding: 4rem 0 8rem 0;
+
+    @media all and (max-width: 550px) {
+        padding: 0 0 4rem 0;
+    }
 `
 
 export const Inner = styled.div`
@@ -11,10 +15,23 @@ export const Inner = styled.div`
     display: flex;
     position: relative;
     align-items: center;
+
+    @media all and (max-width: 860px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const MapContainer = styled.div`
     width: 50%;
+    
+    @media all and (max-width: 860px) {
+        width: 80%;
+        margin-top: 3rem;
+    }
+
+    @media all and (max-width: 550px) {
+        width: 100%;
+    }
 `
 
 export const Map = styled.div`
@@ -28,6 +45,19 @@ export const Map = styled.div`
 export const DetailsContainer = styled.div`
     width: 50%;
     padding-left: 6rem;
+
+    @media all and (max-width: 1024px) {
+        padding-left: 2.5rem;
+    }
+
+    @media all and (max-width: 860px) {
+        width: 90%;
+    }
+
+    @media all and (max-width: 550px) {
+        width: 100%;
+        padding-left: 0;
+    }
 `
 
 export const Title = styled.h3`

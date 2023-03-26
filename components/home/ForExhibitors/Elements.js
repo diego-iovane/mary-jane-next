@@ -12,7 +12,7 @@ export const Inner = styled.div`
     position: relative;
     display: flex;
 
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 980px) {
         flex-direction: column;
     }
 `
@@ -40,12 +40,22 @@ export const FeaturesContainer = styled(motion.div)`
     position: relative;
     padding: 0 2rem;
     z-index: 10;
+
+    @media all and (max-width: 980px) {
+        width: 100%;
+        padding: 0;
+    }
 `
 
 export const Content = styled(motion.div)`
     width: 50%;
     position: relative;
     z-index: 10;
+    max-width: 41rem;
+
+    @media all and (max-width: 980px) {
+        width: 100%;
+    }
 
     @media all and (min-width: 1400px) {
         width: 60%;

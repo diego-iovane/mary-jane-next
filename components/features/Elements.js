@@ -45,7 +45,7 @@ export const CountContainer = styled.div`
         color: var(--text-color);
 
         @media all and (max-width: 500px) {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 `

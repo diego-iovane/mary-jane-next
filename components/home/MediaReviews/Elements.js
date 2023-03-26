@@ -49,9 +49,12 @@ export const ReviewContainer = styled(Link)`
     height: 6.5rem;
     display: flex;
     flex-direction: column;
-    transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     transition: transform .3s ease-in-out;
     justify-content: center;
+
+    @media all and (min-width: 900px) {
+        transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
+    }
 `
 
 export const LogoContainer = styled.div`

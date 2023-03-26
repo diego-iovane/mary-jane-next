@@ -30,23 +30,41 @@ export const Head = styled.div`
 
 export const ButtonsContainer = styled.div`
     display: flex;
-
-    @media all and (max-width: 850px) {
-        /* flex-direction: column; */
-    }
 `
+
 
 export const ButtonContainer = styled.div`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
-
+    
     @media all and (max-width: 850px) {
         margin: 1rem 0;
-
+        
         &:nth-child(2) {
             margin-left: 1rem;
         }
+    }
+
+    @media all and (max-width: 450px) {
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+`
+
+export const AltButtonContainer = styled.div`
+    position: relative;
+    margin-left: 1rem;
+    display: none;
+    color: #fff;
+    
+    button {
+        font-size: 1.5rem;
+    }
+
+    @media all and (max-width: 450px) {
+        display: block;
     }
 `
 

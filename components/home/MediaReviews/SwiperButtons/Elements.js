@@ -9,8 +9,12 @@ export const SwiperButtonsContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
+    
+    @media all and (max-width: 900px) {
+        width: 107%;
+    }
 
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 550px) {
         display: none;
     }
 `
@@ -28,13 +32,23 @@ export const Arrow = styled.button`
     width: 4rem;
     height: 4rem;
 
+    @media all and (max-width: 900px) {
+        width: 2rem;
+        height: 2rem;
+    }
+
     svg {
 
         width: 2rem;
         height: 2rem;
+        
+        @media all and (max-width: 900px) {
+            width: 1rem;
+            height: 1rem;
+        }
 
         path {
-            fill: var(--pink);
+            fill: var(--pink)
         }
     }
 `

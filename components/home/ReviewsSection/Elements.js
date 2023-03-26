@@ -20,6 +20,10 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
     margin-right: 1rem;
     align-self: flex-start;
+
+    @media all and (max-width: 680px) {
+        line-height: 1;
+    }
 ` 
 
 export const RevWidget = styled.div`
@@ -83,8 +87,11 @@ export const ReviewContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     transition: transform .3s ease-in-out;
+
+    @media all and (min-width: 950px) {
+        transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
+    }
 `
 
 export const QuotesIcon = styled.svg`

@@ -4,6 +4,10 @@ import { motion } from 'framer-motion'
 
 export const Section = styled.section`
     padding: 5rem 0 2rem 0;
+
+    @media all and (max-width: 500px) {
+        padding: 5rem 0 0 0;
+    }
 `
 
 export const BgGreen = styled.div`
@@ -30,10 +34,6 @@ export const Inner = styled(motion.div)`
     margin: 0 auto;
     position: relative;
     display: flex;
-
-    @media all and (max-width: 450px) {
-        flex-direction: column;
-    }
 
     @media all and (max-width: 980px) {
         flex-direction: column;    

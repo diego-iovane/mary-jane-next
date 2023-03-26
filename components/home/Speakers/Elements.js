@@ -5,6 +5,10 @@ import { motion } from 'framer-motion'
 
 export const Section = styled(motion.section)`
     padding: 5rem 0;
+
+    @media all and (max-width: 600px) {
+        padding: 2rem 0 6rem 0;
+    }
 `
 
 export const Inner = styled(motion.div)`
@@ -24,12 +28,22 @@ export const Head = styled.div`
     align-items: center;
     align-self: flex-start;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 880px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const ButtonContainer = styled(Link)`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
+    
+    @media all and (max-width: 880px) {
+        margin-left: 0;
+        bottom: 0;   
+    }
 `
 
 export const SectionTitle = styled.h2`
@@ -37,6 +51,7 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
     margin-right: 1rem;
     align-self: flex-start;
+    line-height: 1;
 ` 
 
 export const SwiperInner = styled.div`

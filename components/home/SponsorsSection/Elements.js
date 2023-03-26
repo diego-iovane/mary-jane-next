@@ -19,12 +19,22 @@ export const Head = styled.div`
     display: flex;
     align-items: center;
     align-self: flex-start;
+
+    @media all and (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const ButtonContainer = styled.div`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
+
+    @media all and (max-width: 600px) {
+        margin-left: 0;
+        bottom: 0;   
+    }
 `
 
 export const SectionTitle = styled.h2`
@@ -54,6 +64,10 @@ export const LogoContainer = styled.a`
     height: 12rem;
     margin: 0 2rem;
     cursor: pointer;
+
+    @media all and (max-width: 600px) {
+        width: 10rem;
+    }
 `
 
 export const Logo = styled(Image)`

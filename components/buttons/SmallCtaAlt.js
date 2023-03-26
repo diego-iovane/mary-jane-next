@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Button = styled(motion.button)`
     background-color: var(--gray-blue);
     font-size: .8rem;
-    padding: .7rem 2rem;
+    padding: ${({pd}) => pd ? pd : '.7rem 2rem'};
     color: #ffffff;
     border-radius: 50px;
     cursor: pointer;
@@ -16,11 +16,12 @@ const Button = styled(motion.button)`
     }
 `
 
-const SmallCtaAlt = ({ children }) => {
+const SmallCtaAlt = ({ children, pd }) => {
   return (
     <Button
       whileHover={{ scale: 1.08 }}
       transition={{ type: "spring", bounce: .5 }}
+      pd={pd}
     >{children}</Button>
   )
 }

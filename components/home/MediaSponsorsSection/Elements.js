@@ -21,12 +21,22 @@ export const Head = styled.div`
     align-items: center;
     align-self: flex-start;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const ButtonContainer = styled.div`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
+
+    @media all and (max-width: 600px) {
+        margin-left: 0;
+        bottom: 0;   
+    }
 `
 
 export const SectionTitle = styled.h2`
@@ -43,7 +53,7 @@ export const LogoContainer = styled.div`
     width: 9rem;
     padding: .5rem;
     border-radius: 500px;
-    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 100%);
+    background-color: #fff;
     overflow: hidden;
 `
 

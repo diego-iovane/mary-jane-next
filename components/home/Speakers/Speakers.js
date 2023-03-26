@@ -4,7 +4,7 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SwiperButtons from './SwiperButtons/SwiperButtons'
 import SmallCtaAlt from '../../buttons/SmallCtaAlt'
 import {
     Section,
@@ -26,7 +26,7 @@ const Speakers = ({ data, content, language }) => {
     const swiperRef = useRef()
     const [isInView, setInView] = useState(false)
     const [speakers, setSpeakers] = useState([])
-    const text = language === 'en' ? content.speakersContentEn : content.speakersContent.De
+    const text = language === 'en' ? content.speakersContentEn : content.speakersContentDe
     
     useEffect(() => {
         setSpeakers(data)
@@ -43,16 +43,16 @@ const Speakers = ({ data, content, language }) => {
                     </Head>
                     <Swiper
                         ref={swiperRef}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         breakpoints={{
-                            900: {
+                            950: {
                                 slidesPerView: 4,
                             },
-                            650: {
-                                slidesPerView: 4,
-                            },
-                            400: {
+                            680: {
                                 slidesPerView: 3,
+                            },
+                            480: {
+                                slidesPerView: 2,
                             },
                         }}
                         grid={{

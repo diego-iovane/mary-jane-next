@@ -27,6 +27,11 @@ export const Inner = styled(motion.div)`
     position: relative;
     padding-top: 4rem;
     padding-left: 4rem;
+
+    @media all and (max-width: 700px) {
+        padding-left: 0;
+        justify-content: center;
+    }
 `
 
 export const Content = styled(motion.div)`
@@ -34,6 +39,10 @@ export const Content = styled(motion.div)`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media all and (max-width: 700px) {
+        align-items: center;
+    }
 `
 
 export const Title = styled(motion.div)`

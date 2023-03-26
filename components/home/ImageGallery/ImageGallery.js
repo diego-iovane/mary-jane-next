@@ -55,10 +55,10 @@ const ImageGallery = ({ media, content, language }) => {
                                     ref={swiperRef}
                                     slidesPerView={1}
                                     breakpoints={{
-                                        800: {
+                                        1024: {
                                             slidesPerView: 3,
                                         },
-                                        650: {
+                                        850: {
                                             slidesPerView: 2,
                                         },
                                         400: {

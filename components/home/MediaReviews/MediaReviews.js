@@ -11,7 +11,7 @@ import {
     SectionTitle,
     ButtonsContainer,
 } from './Elements'
-import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SwiperButtons from './SwiperButtons/SwiperButtons'
 
 const MediaReviews = ({ data, content, language }) => {
 
@@ -36,7 +36,7 @@ const MediaReviews = ({ data, content, language }) => {
                             900: {
                                 slidesPerView: 3,
                             },
-                            650: {
+                            550: {
                                 slidesPerView: 2,
                             },
                             400: {

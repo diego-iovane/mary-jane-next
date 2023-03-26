@@ -50,7 +50,7 @@ const ReviewSection = ({ data, content }) => {
                     ref={swiperRef}
                     slidesPerView={1}
                     breakpoints={{
-                        900: {
+                        950: {
                             slidesPerView: 3,
                         },
                         650: {

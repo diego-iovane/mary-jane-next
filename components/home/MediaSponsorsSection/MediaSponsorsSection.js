@@ -5,7 +5,7 @@ import "swiper/css"
 import "swiper/css/grid"
 import "swiper/css/pagination"
 import { Grid, Pagination } from "swiper";
-import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SwiperButtons from './SwiperButtons/SwiperButtons'
 import SmallCta from '../../buttons/SmallCta'
 import {
     Section,
@@ -41,12 +41,12 @@ const MediaSponsorsSection = ({ data, content, language }) => {
                     </Head>
                     <Swiper
                         ref={swiperRef}
-                        slidesPerView={3}
+                        slidesPerView={2}
                         breakpoints={{
-                            900: {
+                            1050: {
                                 slidesPerView: 5,
                             },
-                            650: {
+                            800: {
                                 slidesPerView: 4,
                             },
                             400: {

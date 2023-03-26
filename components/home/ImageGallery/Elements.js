@@ -46,6 +46,8 @@ export const Frame = styled.div`
     padding: .5rem .5rem 4rem .5rem;
     box-shadow: var(--light-shadow);
     position: relative;
+    max-width: 25rem;
+    margin: 0 auto;
 `
 
 export const AnchorOverlay = styled.a`

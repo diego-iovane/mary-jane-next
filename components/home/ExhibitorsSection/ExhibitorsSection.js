@@ -11,11 +11,12 @@ import {
     Section,
     Inner,
     Head,
-    ButtonContainer,
     SectionTitle,
     LogoContainer,
     Logo,
     ButtonsContainer,
+    ButtonContainer,
+    AltButtonContainer,
 } from './Elements'
 
 const ExhibitorsSection = ({ data, content, language }) => {
@@ -69,13 +70,18 @@ const ExhibitorsSection = ({ data, content, language }) => {
                                     <SmallCtaAlt>{text.ctaTwo}</SmallCtaAlt>
                                 </Link>
                             </ButtonContainer>
+                            <AltButtonContainer>
+                                <Link href="/exhibitors">
+                                    <SmallCtaAlt pd='.1rem 2rem'>+</SmallCtaAlt>
+                                </Link>
+                            </AltButtonContainer>
                         </ButtonsContainer>
                     </Head>
                 </Inner>
                 {
                     exhibitors.length !== 0 ?
                         <Swiper
-                            slidesPerView={1}
+                            slidesPerView={2}
                             breakpoints={{
                                 1600: {
                                     slidesPerView: 10,
@@ -84,13 +90,16 @@ const ExhibitorsSection = ({ data, content, language }) => {
                                     slidesPerView: 9,
                                 },
                                 1100: {
-                                    slidesPerView: 8,
+                                    slidesPerView: 7,
                                 },
-                                700: {
+                                780: {
                                     slidesPerView: 5,
                                 },
+                                550: {
+                                    slidesPerView: 4,
+                                },
                                 400: {
-                                    slidesPerView: 2,
+                                    slidesPerView: 3,
                                 },
                             }}
                             grid={{
