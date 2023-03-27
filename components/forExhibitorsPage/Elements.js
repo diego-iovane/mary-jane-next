@@ -68,6 +68,10 @@ export const Title = styled.h1`
     width: 100%;
     padding-bottom: 1rem;
     font-size: 4.5rem;
+
+    @media all and (max-width: 550px) {
+        line-height: 1;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -76,18 +80,31 @@ export const Subtitle = styled.p`
     left: 5px;
 `
 
+export const MainContent = styled.div`
+    display: flex;
+`
+
 export const HeaderButtonContainer = styled(Link)`
     position: absolute;
     right: 0;
     bottom: 1rem;
+
+    @media all and (max-width: 850px) {
+        display: none;
+    }
 `
 
 export const InnerSection = styled.div`
     display: flex;
+    flex-direction: column;
 `
 
 export const LeftContainer = styled.div`
     width: 50%;
+
+    @media all and (max-width: 860px) {
+        width: 100%;
+    }
 `
 
 export const Text = styled.p`
@@ -98,21 +115,34 @@ export const Text = styled.p`
 export const ButtonsContainer = styled.div`
     display: flex;
     margin-top: 1rem;
+
+    @media all and (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const ButtonContainer = styled(Link)`
-    margin-right: 1rem;
+    margin-right: 1.2rem;
+
+    @media all and (max-width: 500px) {
+        margin: .5rem 0;
+    }
 `
 
 
 export const RightContainer = styled.div`
-    width: 22rem;
-    height: 29rem;
-    margin-left: 12%;
+    width: 28rem;
+    height: 24rem;
+    margin: auto 0 auto 12%;
     position: relative;
 
     @media all and (max-width: 1000px) {
         height: 37rem;
+    }
+
+    @media all and (max-width: 860px) {
+        display: none;
     }
 `
 
@@ -133,6 +163,10 @@ export const Grid = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 125px;
     grid-gap: 30px;
+
+    @media all and (max-width: 500px) {
+        margin: 4rem 0 7rem 0;
+    }
 `
 
 export const GridItem = styled.div`
@@ -172,6 +206,10 @@ export const LocationSection = styled.div`
     position: relative;
     padding: 7rem 0;
     margin-bottom: 7rem;
+
+    @media all and (max-width: 950px) {
+        padding: 4rem 0;
+    }
 `
 
 export const LocationInner = styled(motion.div)`
@@ -180,6 +218,19 @@ export const LocationInner = styled(motion.div)`
     margin: 0 auto;
     position: relative;
     display: flex;
+
+    @media all and (max-width: 950px) {
+        flex-direction: column;
+    }
+`
+
+export const LocationLeftContainer = styled.div`
+    width: 50%;
+
+    @media all and (max-width: 950px) {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 `
 
 export const LocationTitle = styled.h2`
@@ -203,7 +254,17 @@ export const LocationRightContainer = styled.div`
     width: 28rem;
     height: 20rem;
     position: relative;
-    margin-left: 10%;
+    margin: auto 0 auto 10%;
+
+    @media all and (max-width: 950px) {
+        margin: 0 auto;
+        width: 25rem;
+    }
+
+    @media all and (max-width: 500px) {
+        width: 19rem;
+        height: 17rem;
+    }
 `
 
 export const ImageContainer = styled.div`
@@ -220,12 +281,25 @@ export const OnboardingTitle = styled.h2`
     width: 100%;
     text-align: center;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 680px) {
+        line-height: 1;
+        font-size: 2rem;
+    }
+
+    @media all and (max-width: 450px) {
+        text-align: left;
+    }
 `
 
 export const OnboardingSubtitle = styled.p`
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
+
+    @media all and (max-width: 450px) {
+        text-align: left;
+    }
 `
 
 export const StepsContainer = styled.div`
@@ -240,6 +314,14 @@ export const StepsContainer = styled.div`
 
     @media all and (max-width: 1050px) {
         width: 65%;
+    }
+
+    @media all and (max-width: 680px) {
+        width: 90%;
+    }
+
+    @media all and (max-width: 450px) {
+        margin-top: 1.5rem;
     }
 `
 

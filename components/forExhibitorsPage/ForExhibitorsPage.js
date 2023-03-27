@@ -16,6 +16,7 @@ import {
     SectionHeader,
     Title,
     Subtitle,
+    MainContent,
     HeaderButtonContainer,
     InnerSection,
     LeftContainer,
@@ -31,6 +32,7 @@ import {
     GridText,
     LocationSection,
     LocationInner,
+    LocationLeftContainer,
     LocationTitle,
     LocationSubtitle,
     LocationText,
@@ -78,8 +80,14 @@ const ForExhibitorsPage = ({ content }) => {
                         </HeaderButtonContainer>
                     </SectionHeader>
                     <InnerSection>
-                        <LeftContainer>
-                            <Text dangerouslySetInnerHTML={{ __html: content.generalInfo.text }} />
+                        <MainContent>
+                            <LeftContainer>
+                                <Text dangerouslySetInnerHTML={{ __html: content.generalInfo.text }} />
+                            </LeftContainer>
+                            <RightContainer>
+                                <Img src={content.generalInfo.image.sourceUrl} alt={content.generalInfo.image.altText} fill />
+                            </RightContainer>
+                        </MainContent>
                             <ButtonsContainer>
                                 <ButtonContainer href={content.generalInfo.ctaOne.url}>
                                     <SmallCta>{content.generalInfo.ctaOne.text}</SmallCta>
@@ -88,10 +96,6 @@ const ForExhibitorsPage = ({ content }) => {
                                     <SmallCtaPink>{content.generalInfo.ctaTwo.text}</SmallCtaPink>
                                 </ButtonContainer>
                             </ButtonsContainer>
-                        </LeftContainer>
-                        <RightContainer>
-                            <Img src={content.generalInfo.image.sourceUrl} alt={content.generalInfo.image.altText} fill />
-                        </RightContainer>
                     </InnerSection>
                     {/* FEATURES */}
                     <Grid>
@@ -114,14 +118,14 @@ const ForExhibitorsPage = ({ content }) => {
                     <LocationInner>
                         <BgPink />
                         <BgGreen />
-                        <LeftContainer>
+                        <LocationLeftContainer>
                             <LocationTitle>{content.location.title}</LocationTitle>
                             <LocationSubtitle>{content.location.subtitle}</LocationSubtitle>
                             <LocationText>{content.location.text}</LocationText>
                             <LocationButtonContainer href={content.location.cta.url}>
                                 <SmallCta>{content.location.cta.text}</SmallCta>
                             </LocationButtonContainer>
-                        </LeftContainer>
+                        </LocationLeftContainer>
                         <LocationRightContainer>
                             <Swiper
                                 ref={swiperRef}
@@ -151,7 +155,7 @@ const ForExhibitorsPage = ({ content }) => {
                 {/* How TO */}
                 <Inner>
                     <OnboardingTitle>{content.onboarding.title}</OnboardingTitle>
-                    <OnboardingSubtitle>{content.onboarding.title}</OnboardingSubtitle>
+                    <OnboardingSubtitle>{content.onboarding.subtitle}</OnboardingSubtitle>
                     <StepsContainer>
                         <Line />
                         <StepContainer>
