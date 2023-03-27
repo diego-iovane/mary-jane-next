@@ -40,6 +40,10 @@ export const Inner = styled(motion.div)`
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     flex-direction: column;
+
+    @media all and (max-width: 450px) {
+        padding: 2rem 1.2rem;
+    }
 `
 
 export const Title = styled.h1`
@@ -61,7 +65,7 @@ export const Item = styled.div`
 
 export const Icon = styled.div`
     position: relative;
-    width: 2rem;
+    min-width: 2rem;
     height: 2rem;
     margin-right: .8rem;
 `
@@ -71,7 +75,11 @@ export const I = styled(Image)`
 `
 
 export const Text = styled.p`
-    line-height: 1;
+    line-height: 1.4;
     align-self: center;
     position: relative;
+
+    a {
+        text-decoration: underline;
+    }
 `

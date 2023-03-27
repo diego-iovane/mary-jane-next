@@ -33,20 +33,23 @@ const AccomodationPage = ({ data, language, bg }) => {
                         ref={swiperRef}
                         slidesPerView={1}
                         breakpoints={{
-                            900: {
+                            1200: {
                                 slidesPerView: 3,
                             },
-                            650: {
+                            1100: {
+                                slidesPerView: 3,
+                            },
+                            750: {
                                 slidesPerView: 2,
                             },
                             400: {
                                 slidesPerView: 1,
                             },
                         }}
+                        spaceBetween={30}
                         grid={{
                             rows: 1,
                         }}
-                        spaceBetween={30}
                         pagination={{
                             clickable: true,
                         }}

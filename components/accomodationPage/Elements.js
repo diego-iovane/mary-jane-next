@@ -40,10 +40,14 @@ export const Inner = styled(motion.div)`
     flex-direction: column;
     position: relative;
     top: 1rem;
+
+    @media all and (max-width: 525px) {
+        width: 100%;
+    }
 `
 
 export const ButtonsContainer = styled.div`
-    @media all and (max-width: 450px) {
+    @media all and (max-width: 525px) {
         display: none;
     }
 `
@@ -54,11 +58,20 @@ export const CardContainer = styled.div`
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 100%);
     border-radius: 12px;
     min-height: 33rem;
-    transform: ${({ active }) => active ? 'scale(1)' : 'scale(.8)'};
     transition: transform .3s ease-in-out;
     overflow: hidden;
-    opacity: ${({ active }) => active ? '1' : '.5'};
     box-shadow: var(--soft-shadow);
+    
+    @media all and (min-width: 1100px) {
+        transform: ${({ active }) => active ? 'scale(1)' : 'scale(.8)'};
+        opacity: ${({ active }) => active ? '1' : '.5'};
+    }
+
+    @media all and (max-width: 750px) {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+
 `
 
 export const ImgContainer = styled.div`
