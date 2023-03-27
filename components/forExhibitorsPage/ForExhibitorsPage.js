@@ -51,8 +51,6 @@ import {
 
 const ForExhibitorsPage = ({ content }) => {
 
-    console.log(content)
-
     const swiperRef = useRef()
     const count = useRef(0)
     const features = Object.keys(content.features).map(key => {
@@ -64,8 +62,6 @@ const ForExhibitorsPage = ({ content }) => {
     const steps = Object.keys(content.onboarding.steps).map(key => {
         return { ...content.onboarding.steps[key] }
     })
-
-    console.log(steps)
 
     return (
         <>
@@ -157,19 +153,7 @@ const ForExhibitorsPage = ({ content }) => {
                     <OnboardingTitle>{content.onboarding.title}</OnboardingTitle>
                     <OnboardingSubtitle>{content.onboarding.title}</OnboardingSubtitle>
                     <StepsContainer>
-                        {/* {
-                            steps.map(step => {
-
-                                count + 1
-
-                                return(
-                                    <StepContainer key={step}>
-                                        <StepNum>count</StepNum>
-                                        <StepText>{step}</StepText>
-                                    </StepContainer>
-                                )
-                            })
-                        } */}
+                        <Line />
                         <StepContainer>
                             <StepNum>1</StepNum>
                             <StepText dangerouslySetInnerHTML={{__html: content.onboarding.steps.one}}  />

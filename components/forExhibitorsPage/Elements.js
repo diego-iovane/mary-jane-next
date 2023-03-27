@@ -110,6 +110,10 @@ export const RightContainer = styled.div`
     height: 29rem;
     margin-left: 12%;
     position: relative;
+
+    @media all and (max-width: 1000px) {
+        height: 37rem;
+    }
 `
 
 export const Img = styled(Image)`
@@ -233,18 +237,25 @@ export const StepsContainer = styled.div`
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
+
+    @media all and (max-width: 1050px) {
+        width: 65%;
+    }
 `
 
 export const StepContainer = styled(motion.div)`
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 10;
 `
 
 export const StepNum = styled(motion.div)`
     color: #fff;
     background-color: var(--green);
     width: 3rem;
+    min-width: 3rem;
     height: 3rem;
     border-radius: 500px;
     display: flex;
@@ -262,5 +273,10 @@ export const StepText = styled(motion.p)`
 `
 
 export const Line = styled(motion.div)`
-
+    position: absolute;
+    height: 85%;
+    width: .1rem;
+    background-color: var(--green);
+    top: 15px;
+    left: 23px;
 `
