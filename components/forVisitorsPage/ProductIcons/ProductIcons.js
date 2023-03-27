@@ -32,7 +32,7 @@ const ProductIcons = ({ content, text }) => {
                     })
                 }
             </Grid>
-            <Subtitle>{text.text}</Subtitle>
+            {/* <Subtitle>{text.text}</Subtitle> */}
         </Inner>
     )
 }

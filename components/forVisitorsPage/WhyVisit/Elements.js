@@ -19,13 +19,29 @@ export const Title = styled.h2`
     width: 100%;
     font-size: 2rem;
     text-align: center;
+
+    @media all and (max-width: 650px) {
+        width: 75%;
+        line-height: 1;
+        margin: 0 auto;
+    }
+
+    @media all and (max-width: 450px) {
+        width: 100%;
+    }
 `
 
 export const Grid = styled.div`
-    margin: 4rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
+    width: fit-content;
+    margin: 4rem auto;
+
+    @media all and (max-width: 760px) {
+        grid-template-columns: 1fr;
+        margin: 3rem auto;
+    }
 `
 
 export const Card = styled.div`
@@ -36,6 +52,8 @@ export const Card = styled.div`
     overflow: hidden;
     background-color: #fff;
     height: 18rem;
+    max-width: 20rem;
+    margin: 0 auto;
 `
 
 export const BgImgContainer = styled.div`
@@ -68,6 +86,14 @@ export const CardText = styled.p`
     font-weight: bold;
     color: #fff;
     padding: 2rem;
+
+    @media all and (max-width: 950px) {
+        font-size: 1.2rem;
+    }
+
+    @media all and (max-width: 760px) {
+        font-size: 1.4rem;
+    }
 `
 
 export const ButtonsContainer = styled.div`

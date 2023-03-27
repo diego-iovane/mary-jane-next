@@ -19,9 +19,27 @@ export const Grid = styled.div`
     grid-gap: 8%;
     margin: 1rem auto;
     width: 80%;
+
+    @media all and (max-width: 1200px) {
+        width: 100%;
+        grid-gap: 4%;
+    }
+
+    @media all and (max-width: 950px) {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    @media all and (max-width: 550px) {
+        width: 100%;
+        grid-gap: 2.5rem;
+    }
 `
 
-export const MapContainer = styled.div` 
+export const MapContainer = styled.div`
+    display: flex;
+    align-items: center;
 `
 
 export const Map = styled.div`
@@ -30,10 +48,14 @@ export const Map = styled.div`
     border-radius: 12px;
     box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+
+    @media all and (max-width: 650px) {
+        width: 100%;
+    }
 `
 
 export const DetailsContainer = styled.div`
-    /* padding-left: 6rem; */
+    margin: auto 0;
 `
 
 export const DetailsTitle = styled.h3`

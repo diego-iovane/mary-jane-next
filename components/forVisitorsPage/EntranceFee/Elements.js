@@ -18,6 +18,10 @@ export const Grid = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 4%;
     margin: 1rem 0;
+
+    @media all and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const Card = styled.div`
@@ -25,6 +29,7 @@ export const Card = styled.div`
     padding: 2rem;
     border-radius: 12px;
     transition: transform .2s ease-in-out;
+    min-width: 17rem;
 
     &:hover {
         transform: scale(1.1);

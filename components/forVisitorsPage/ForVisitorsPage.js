@@ -12,8 +12,6 @@ import {
 
 const ForVisitorsPage = ({ content }) => {
 
-    // console.log(content)
-
     return (
         <>
             <HeadSection>

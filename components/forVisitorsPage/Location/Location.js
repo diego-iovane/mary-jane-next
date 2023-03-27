@@ -52,11 +52,11 @@ const Location = ({ language }) => {
                     </Item>
                     <Item>
                         <Text><span>U-Bahn:</span></Text>
-                        <Text>Line U1: U-Bhf Schlesisches Tor + 10min. walk</Text>
+                        <Text>Line U1: U-Bhf Schlesisches Tor + 10 min. walk</Text>
                     </Item>
                     <Item>
                         <Text><span>S-Bahn:</span></Text>
-                        <Text>Lines S8, S85, S9, S42, S41: S-Bhf Treptower Park + 5min. walk</Text>
+                        <Text>Lines S8, S85, S9, S42, S41: S-Bhf Treptower Park + 5 min. walk</Text>
                     </Item>
                     <Item>
                         <Text><span>Bus:</span></Text>

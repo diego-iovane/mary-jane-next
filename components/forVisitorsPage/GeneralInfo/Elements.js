@@ -27,17 +27,29 @@ export const Title = styled.h1`
 export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 5rem 0;
+    margin: 4rem 0;
+
+    @media all and (max-width: 890px) {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+    }
 `
 
 export const RightContainer = styled.div`
+    @media all and (max-width: 1000px) {
+        margin-left: 1rem;
+    }
 
+    @media all and (max-width: 890px) {
+        margin-left: 0;
+    }
 `
 
 export const Subtitle = styled.p`
     font-size: 2rem;
     width: 25rem;
     font-weight: bold;
+    line-height: 1.2;
 `
 
 export const Text = styled.p`
@@ -58,6 +70,10 @@ export const LeftContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media all and (max-width: 890px) {
+        display: none;
+    }
 `
 
 export const ImgContainer = styled.div`

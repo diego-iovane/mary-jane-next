@@ -19,6 +19,21 @@ export const Title = styled.h2`
     width: 100%;
     font-size: 2rem;
     text-align: center;
+
+    @media all and (max-width: 1000px) {
+        width: 70%;
+        margin: 0 auto;
+        line-height: 1;
+    }
+    
+    @media all and (max-width: 800px) {
+        width: 90%;
+    }
+
+    @media all and (max-width: 600px) {
+        width: 100%;
+        text-align: left;
+    }
 `
 
 export const Grid = styled.div`
@@ -26,6 +41,17 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 15px;
+    width: fit-content;
+    margin: 4rem auto;
+
+    @media all and (max-width: 1125px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        margin: 2rem auto 4rem auto;
+    }
 `
 
 export const Card = styled.div`
@@ -35,6 +61,8 @@ export const Card = styled.div`
     border-radius: 10px;
     overflow: hidden;
     background-color: #fff;
+    max-width: 20rem;
+    margin: 0 auto;
 `
 
 export const ImgContainer = styled.div`

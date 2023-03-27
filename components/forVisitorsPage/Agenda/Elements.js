@@ -14,6 +14,10 @@ export const TitleContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-bottom: 1rem;
+
+    @media all and (max-width: 860px) {
+        flex-direction: column;
+    }
 `
 
 export const Title = styled.h1`
@@ -29,12 +33,20 @@ export const Subtitle = styled.p`
     font-size: 2rem;
     width: 25rem;
     font-weight: bold;
+
+    @media all and (max-width: 860px) {
+        margin-left: 0;
+    }
 `
 
 export const Content = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+
+    @media all and (max-width: 650px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const Box = styled.div`

@@ -13,6 +13,10 @@ export const Title = styled.h2`
     width: 100%;
     font-size: 2rem;
     text-align: center;
+
+    @media all and (max-width: 510px) {
+        line-height: 1;
+    }
 `
 
 export const Grid = styled.div`
@@ -21,6 +25,15 @@ export const Grid = styled.div`
     grid-gap: 2.5rem;
     width: fit-content;
     margin: 5rem auto 4rem auto;
+
+    @media all and (max-width: 1050px) {
+        grid-template-columns: repeat(4, 5rem);
+    }
+
+    @media all and (max-width: 550px) {
+        grid-template-columns: repeat(2, 5rem);
+        grid-gap: 3.8rem;
+    }
 `
 
 export const GridElement = styled.div`
