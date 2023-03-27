@@ -28,7 +28,6 @@ import {
 
 const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery, bg }) => {
 
-
     const swiperRef = useRef()
     const swiperAltRef = useRef()
     const list = Object.keys(content.details).map(key => {

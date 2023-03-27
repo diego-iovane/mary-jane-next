@@ -58,13 +58,6 @@ export async function getServerSideProps(context) {
                           sourceUrl
                         }
                       }
-                      itemFive {
-                        icon {
-                          altText
-                          sourceUrl
-                        }
-                        text
-                      }
                       itemSix {
                         text
                         icon {
@@ -151,13 +144,6 @@ export async function getServerSideProps(context) {
                         }
                       }
                       itemFour {
-                        text
-                        icon {
-                          altText
-                          sourceUrl
-                        }
-                      }
-                      itemFive {
                         text
                         icon {
                           altText

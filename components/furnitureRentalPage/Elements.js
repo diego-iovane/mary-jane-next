@@ -48,17 +48,29 @@ export const InnerSection = styled.div`
     overflow: hidden;
     margin: 2rem 0;
     ${({reverse}) => reverse && 'flex-direction: row-reverse'};
+
+    @media all and (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const FurnitureLeft = styled.div`
     width: 40%;
     position: relative;
     height: 100%;
+
+    @media all and (max-width: 900px) {
+        width: 100%;
+    }
 `
 
 export const ImageContainer = styled.div`
     height: 35rem;
     width: auto;
+
+    @media all and (max-width: 600px) {
+        height: 20rem;
+    }
 `
 
 export const Img = styled(Image)`
@@ -68,6 +80,11 @@ export const Img = styled(Image)`
 export const FurnitureRight = styled.div`
     padding: 3rem 2rem;
     width: 60%;
+
+    @media all and (max-width: 900px) {
+        width: 100%;
+        padding: 3rem 2rem 1rem 2rem;
+    }
 `
 
 export const Title = styled.h1`
@@ -95,20 +112,38 @@ export const DetailsContainer = styled.div`
     padding-bottom: 1rem;
     /* ${({dashed}) => dashed && 'border-bottom: 1px dashed #1E411D'}; */
     margin-bottom: 1rem;
+
+    @media all and (max-width: 600px) {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
 `
 
 export const Address = styled.p`
     width: 50%;
     line-height: 1.1;
     font-weight: bold;
+
+    @media all and (max-width: 600px) {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
 `
 
 export const DetailsList = styled.ul`
     width: 50%;
+    
+    @media all and (max-width: 600px) {
+        width: 100%;
+    }
 `
 
 export const DetailItem = styled.li`
     margin-bottom: 1rem;
+
+    @media all and (max-width: 600px) {
+        margin-bottom: .8rem;
+    }
 `
 
 export const Footer = styled.div`

@@ -56,12 +56,12 @@ export const HeroTitle = styled.h1`
 export const Inner = styled.div`
     width: 80%;
     max-width: var(--section-max-width);
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
     display: flex;
     position: relative;
     min-height: 25rem;
 
     @media all and (max-width: 540px) {
-        padding: 0 var(--mobile-section-padding);
+        width: 95%;
     }
 `

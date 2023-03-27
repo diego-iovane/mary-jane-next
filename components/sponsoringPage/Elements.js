@@ -43,10 +43,31 @@ export const Inner = styled(motion.div)`
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+
+    @media all and (max-width: 1150px) {
+        padding: 3rem 1.5rem;
+    }
+
+    @media all and (max-width: 1050px) {
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    @media all and (max-width: 650px) {
+        padding: 2rem .9rem;
+    }
 `
 
 export const LeftContent = styled.div`
     width: 50%;
+
+    @media all and (max-width: 1150px) {
+        width: 45%;
+    }
+
+    @media all and (max-width: 1050px) {
+        width: 100%;
+    }
 `
 
 
@@ -80,6 +101,19 @@ export const RightContent = styled.div`
     height: 20rem;
     margin-right: 3%;
     position: relative;
+
+    @media all and (max-width: 1050px) {
+        margin: 3rem auto 0 auto;
+    }
+
+    @media all and (max-width: 650px) {
+        width: 24rem;
+    }
+
+    @media all and (max-width: 500px) {
+        width: 19rem;
+        height: 14rem;
+    }
 `
 
 export const ImageContainer = styled.div`
