@@ -75,9 +75,9 @@ const ForExhibitorsPage = ({ content }) => {
                     <SectionHeader>
                         <Title>{content.generalInfo.title}</Title>
                         <Subtitle>{content.generalInfo.subtitle}</Subtitle>
-                        <HeaderButtonContainer href={content.generalInfo.titleCta.url}>
+                        {/* <HeaderButtonContainer href={content.generalInfo.titleCta.url}>
                             <SmallCta>{content.generalInfo.titleCta.text}</SmallCta>
-                        </HeaderButtonContainer>
+                        </HeaderButtonContainer> */}
                     </SectionHeader>
                     <InnerSection>
                         <MainContent>
