@@ -20,7 +20,6 @@ import {
     ButtonsContainer,
     CtaContainer,
     CtaTitle,
-    CtaSubTitle,
     ButtonContainer,
     DesktopSwiper,
 } from './Elements'
@@ -72,7 +71,6 @@ const ImageGallery = ({ media, content, language }) => {
                                         rows: 1,
                                     }}
                                     spaceBetween={30}
-                                    // slidesPerGroup={3}
                                     loopFillGroupWithBlank={false}
                                     pauseOnMouseEnter={true}
                                     pagination={{
@@ -123,85 +121,12 @@ const ImageGallery = ({ media, content, language }) => {
                                 </Swiper> : null
                             }
                         </DesktopSwiper>
-                        {/* <MobileSwiper>
-                            {
-                                hyMedia.length !== 0 ?
-                                <Swiper
-                                    ref={swiperRef}
-                                    slidesPerView={1}
-                                    breakpoints={{
-                                        1024: {
-                                            slidesPerView: 3,
-                                        },
-                                        850: {
-                                            slidesPerView: 2,
-                                        },
-                                        400: {
-                                            slidesPerView: 1,
-                                        },
-                                    }}
-                                    grid={{
-                                        rows: 1,
-                                    }}
-                                    spaceBetween={30}
-                                    slidesPerGroup={3}
-                                    loopFillGroupWithBlank={false}
-                                    pauseOnMouseEnter={true}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    loop={true}
-                                    modules={[Grid, Pagination, Autoplay, Navigation]}
-                                    className="imageGallerySwyper"
-                                >
-                                    {
-                                        hyMedia.map((item) => {
-    
-                                            if (item.node.video) {
-                                                return (
-                                                    <SwiperSlide key={item.node.videoUrl}>
-                                                        <Frame >
-                                                            <AnchorOverlay
-                                                                href="https://www.instagram.com/mary_jane_berlin/"
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                            />
-                                                            <VideoContainer>
-                                                                <Video autoPlay loop muted playsInline>
-                                                                    <source src={item.node.videoUrl} alt="" type='video/mp4' />
-                                                                </Video>
-                                                            </VideoContainer>
-                                                        </Frame>
-                                                    </SwiperSlide>
-                                                )
-                                            }
-    
-                                            return (
-                                                <SwiperSlide key={item.node.media.sourceUrl}>
-                                                    <Frame >
-                                                        <AnchorOverlay
-                                                            href="https://www.instagram.com/mary_jane_berlin/"
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                        />
-                                                        <ImgContainer>
-                                                            <Img src={item.node.media.sourceUrl} alt={item.node.media.altText} fill />
-                                                        </ImgContainer>
-                                                    </Frame>
-                                                </SwiperSlide>
-                                            )
-                                        })
-                                    }
-                                </Swiper> : null
-                            }
-                        </MobileSwiper> */}
                     </HoverableArea>
                     <ButtonsContainer>
                         <SwiperButtons swiperRef={swiperRef} />
                     </ButtonsContainer>
                     <CtaContainer>
                         <CtaTitle>{text.text}</CtaTitle>
-                        {/* <CtaSubTitle>Get your tickets for a special price</CtaSubTitle> */}
                         <ButtonContainer>
                             <PrimaryButton>
                                 <a

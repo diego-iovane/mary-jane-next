@@ -197,11 +197,11 @@ export async function getServerSideProps(context) {
                   url
                 }
                 exhibitorsCtaTwoEn {
-                  title
+                  text
                   url
                 }
                 exhibitorsCtaTwoMobileEn {
-                  title
+                  text
                   url
                 }
               }

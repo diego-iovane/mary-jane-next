@@ -19,23 +19,7 @@ export const HoverableArea = styled.div`
     width: 100%;
 `
 
-export const DesktopSwiper = styled.div`
-    /* @media all and (max-width: 600px) {
-        display: none;
-    } */
-`
-
-export const TabletSwiper = styled.div`
-
-`
-
-export const  MobileSwiper = styled.div`
-    display: none;
-
-    @media all and (max-width: 600px) {
-        display: block;
-    }
-`
+export const DesktopSwiper = styled.div``
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);

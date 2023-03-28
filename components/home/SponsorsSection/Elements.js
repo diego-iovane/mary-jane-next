@@ -55,7 +55,6 @@ export const LogosContainer = styled.div`
     @media all and (min-width: 950px) and (max-width: 1150px) {
         width: 75%;
     }
-
 `
 
 export const LogoContainer = styled.a`
@@ -66,7 +65,14 @@ export const LogoContainer = styled.a`
     cursor: pointer;
 
     @media all and (max-width: 600px) {
-        width: 10rem;
+        width: 9rem;
+        height: 10rem;
+        margin: 0 1rem;
+    }
+
+    @media all and (max-width: 380px) {
+        width: 7rem;
+        height: 7rem;
     }
 `
 

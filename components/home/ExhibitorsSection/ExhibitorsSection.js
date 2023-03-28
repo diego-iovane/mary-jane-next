@@ -56,7 +56,7 @@ const ExhibitorsSection = ({ data, content, language }) => {
         infinite()
     }
 
-    console.log(text.ctaTwoMobile)
+    console.log(text.ctaTwo)
 
     return (
         <Section>
@@ -77,7 +77,7 @@ const ExhibitorsSection = ({ data, content, language }) => {
                             </ButtonContainer>
                             <AltButtonContainer>
                                 <Link href={text.ctaTwoMobile.url}>
-                                    <SmallCtaAlt>{text.ctaTwoMobile.title}</SmallCtaAlt>
+                                    <SmallCtaAlt>{text.ctaTwoMobile.text}</SmallCtaAlt>
                                 </Link>
                             </AltButtonContainer>
                         </ButtonsContainer>
