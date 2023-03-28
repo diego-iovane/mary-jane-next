@@ -69,6 +69,7 @@ export const AltButtonContainer = styled.div`
 
     @media all and (max-width: 450px) {
         display: block;
+        margin-left: .3rem;
     }
 `
 

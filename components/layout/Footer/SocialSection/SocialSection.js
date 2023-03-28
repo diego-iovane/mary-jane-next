@@ -14,17 +14,17 @@ const SocialSection = () => {
         {
             src: '/logos/face.png',
             alt: 'facebook logo',
-            url: '/',
+            url: 'https://www.facebook.com/maryjane.berlin',
         },
         {
             src: '/logos/insta.png',
             alt: 'instagram logo',
-            url: '/',
+            url: 'https://www.instagram.com/mary_jane_berlin/',
         },
         {
             src: '/logos/youtu.png',
             alt: 'youtube logo',
-            url: '/',
+            url: 'https://www.youtube.com/@maryjaneberlin3979',
         },
         {
             src: '/logos/tiktok-logo.png',
