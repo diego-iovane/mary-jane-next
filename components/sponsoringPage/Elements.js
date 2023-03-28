@@ -108,6 +108,7 @@ export const RightContent = styled.div`
 
     @media all and (max-width: 650px) {
         width: 24rem;
+        margin: 1.5rem auto 0 auto;
     }
 
     @media all and (max-width: 500px) {

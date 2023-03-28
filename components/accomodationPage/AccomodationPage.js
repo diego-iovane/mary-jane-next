@@ -4,14 +4,16 @@ import SwiperButtons from '../swiperButtons/SwiperButtons'
 import "swiper/css"
 import "swiper/css/pagination"
 import { Pagination } from "swiper"
+import AccomodationCard from './AccomodationCard'
 import {
     HeadSection,
     HeadBg,
     Section,
     Inner,
+    MainTitle,
     ButtonsContainer,
 } from './Elements'
-import AccomodationCard from './AccomodationCard'
+
 const AccomodationPage = ({ data, language, bg }) => {
 
     const [hotels, setHotels] = useState([])
@@ -29,6 +31,7 @@ const AccomodationPage = ({ data, language, bg }) => {
             </HeadSection>
             <Section>
                 <Inner>
+                    <MainTitle>Accomodation</MainTitle>
                     <Swiper
                         ref={swiperRef}
                         slidesPerView={1}

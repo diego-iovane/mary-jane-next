@@ -96,6 +96,10 @@ export const SubTitle = styled(motion.h1)`
     @media all and (min-width: 1400px) {
         font-size: ${({language}) => language === 'en' ? '1.5rem' : '1.4rem'};
     }
+
+    @media all and (max-width: 450px) {
+        text-align: center;
+    }
 `
 
 export const CounterContainer = styled(motion.div)`

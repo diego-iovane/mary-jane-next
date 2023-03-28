@@ -4,7 +4,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { EffectFade, Pagination } from 'swiper'
+import { EffectFade, Pagination, Autoplay } from 'swiper'
 import PrimaryButton from '../buttons/PrimaryButton'
 import SwiperButtons from './SwiperButtons/SwiperButtons'
 import {
@@ -47,8 +47,9 @@ const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery
               spaceBetween={30}
               effect={"fade"}
               loop={true}
+              autoplay={{delay: 1500}}
               pagination={{ clickable: true }}
-              modules={[EffectFade, Pagination]}
+              modules={[EffectFade, Pagination, Autoplay]}
               className="sponsoringSwiper"
             >
               {

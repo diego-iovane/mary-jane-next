@@ -49,7 +49,7 @@ const MediaSponsorsSection = ({ data, content, language }) => {
                             800: {
                                 slidesPerView: 4,
                             },
-                            400: {
+                            500: {
                                 slidesPerView: 3,
                             },
                         }}

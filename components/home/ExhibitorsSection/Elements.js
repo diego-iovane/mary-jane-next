@@ -3,6 +3,10 @@ import Image from 'next/image'
 
 export const Section = styled.section`
     padding: 5rem 0 0 0;
+
+    @media all and (max-width: 500px) {
+        padding: 3rem 0 0 0;
+    }
 `
 
 export const Inner = styled.div`
@@ -60,7 +64,7 @@ export const AltButtonContainer = styled.div`
     color: #fff;
     
     button {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
 
     @media all and (max-width: 450px) {

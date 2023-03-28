@@ -29,7 +29,6 @@ export const HeadBg = styled(Image)`
 export const Section = styled.div`
     padding: 1rem 0 2rem 0;
     width: 100%;
-    min-height: 55rem;
 `
 
 export const Inner = styled(motion.div)`
@@ -40,10 +39,16 @@ export const Inner = styled(motion.div)`
     flex-direction: column;
     position: relative;
     top: 1rem;
+    margin-bottom: 2rem;
 
     @media all and (max-width: 525px) {
         width: 100%;
     }
+`
+
+export const MainTitle = styled.h1`
+    text-align: center;
+    margin-bottom: 2rem;
 `
 
 export const ButtonsContainer = styled.div`

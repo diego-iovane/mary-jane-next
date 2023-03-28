@@ -27,7 +27,7 @@ const AccomodationCard = ({ content }) => {
         <Title>{content.name}</Title>
         <Item>
           <Icon><I src="/icons/accomodation/car.png" alt="" fill /></Icon>
-          <Text>{content.distanceInMinutes}min drive</Text>
+          <Text>{content.distanceInMinutes} min drive</Text>
         </Item>
         <Item>
           <Icon><I src="/icons/accomodation/location.png" alt="" fill /></Icon>

@@ -13,12 +13,32 @@ const MobileNav = ({
     scrolled,
     opened,
     setOpened,
+
+
+    links
 }) => {
 
     return (
         <MenuContainer opened={opened}>
             <List>
                 {
+                    links.map(link => {
+                        return (
+                            <Link
+                                key={link.url}
+                                href={link.url}
+                                onClick={() => setOpened(!opened)}
+                            >
+                                / {link.title}
+                            </Link>
+                        )
+                    }
+                    )
+                }
+                
+
+
+                {/* {
                     primaryLinks.map(link => {
                         return (
                             <Link
@@ -45,11 +65,11 @@ const MobileNav = ({
                         )
                     }
                     )
-                }
+                } */}
             </List>
-            <DropdownContainer>
+            {/* <DropdownContainer>
                 <LanguageDropdown flags={flags} />
-            </DropdownContainer>
+            </DropdownContainer> */}
         </MenuContainer>
     )
 }

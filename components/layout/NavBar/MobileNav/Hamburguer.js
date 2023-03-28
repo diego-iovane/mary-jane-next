@@ -4,12 +4,12 @@ import {
     Span,
 } from './Elements'
 
-const Hamburguer = ({ opened, setOpened }) => {
+const Hamburguer = ({ opened, setOpened, scrolled }) => {
   return (
-    <Hamb onClick={() => setOpened(!opened)}>
-        <Span opened={opened} />
-        <Span opened={opened} />
-        <Span opened={opened} />
+    <Hamb onClick={() => setOpened(!opened)} scrolled={scrolled}>
+        <Span opened={opened} scrolled={scrolled}/>
+        <Span opened={opened} scrolled={scrolled}/>
+        <Span opened={opened} scrolled={scrolled}/>
     </Hamb>
   )
 }

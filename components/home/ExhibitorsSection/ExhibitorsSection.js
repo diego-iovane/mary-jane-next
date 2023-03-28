@@ -22,16 +22,19 @@ import {
 const ExhibitorsSection = ({ data, content, language }) => {
 
     const [exhibitors, setExhibitors] = useState([])
+    console.log(content)
     const text = language === 'en' ?
         {
             title: content.exhibitorsTitleEn || '',
             ctaOne: content.exhibitorsCtaOneEn || '',
             ctaTwo: content.exhibitorsCtaTwoEn || '',
+            ctaTwoMobile: content.exhibitorsCtaTwoMobileEn || '',
         } :
         {
             title: content.exhibitorsTitleDe || '',
             ctaOne: content.exhibitorsCtaOneDe || '',
             ctaTwo: content.exhibitorsCtaTwoDe || '',
+            ctaTwoMobile: content.exhibitorsCtaTwoMobileDe || '',
         }
 
     useEffect(() => {
@@ -53,6 +56,8 @@ const ExhibitorsSection = ({ data, content, language }) => {
         infinite()
     }
 
+    console.log(text.ctaTwoMobile)
+
     return (
         <Section>
             <>
@@ -61,18 +66,18 @@ const ExhibitorsSection = ({ data, content, language }) => {
                         <SectionTitle>{text.title}</SectionTitle>
                         <ButtonsContainer>
                             <ButtonContainer>
-                                <Link href="/">
-                                    <SmallCta>{text.ctaOne}</SmallCta>
+                                <Link href={text.ctaOne.url}>
+                                    <SmallCta>{text.ctaOne.text}</SmallCta>
                                 </Link>
                             </ButtonContainer>
                             <ButtonContainer>
-                                <Link href="/exhibitors">
-                                    <SmallCtaAlt>{text.ctaTwo}</SmallCtaAlt>
+                                <Link href={text.ctaTwo.url}>
+                                    <SmallCtaAlt>{text.ctaTwo.text}</SmallCtaAlt>
                                 </Link>
                             </ButtonContainer>
                             <AltButtonContainer>
-                                <Link href="/exhibitors">
-                                    <SmallCtaAlt pd='.1rem 2rem'>+</SmallCtaAlt>
+                                <Link href={text.ctaTwoMobile.url}>
+                                    <SmallCtaAlt>{text.ctaTwoMobile.title}</SmallCtaAlt>
                                 </Link>
                             </AltButtonContainer>
                         </ButtonsContainer>
@@ -98,7 +103,7 @@ const ExhibitorsSection = ({ data, content, language }) => {
                                 550: {
                                     slidesPerView: 4,
                                 },
-                                400: {
+                                500: {
                                     slidesPerView: 3,
                                 },
                             }}

@@ -40,6 +40,10 @@ export const Inner = styled(motion.div)`
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     flex-direction: column;
+
+    @media all and (max-width: 600px) {
+        padding: 3rem 1rem;
+    }
 `
 
 export const Title = styled.h1`

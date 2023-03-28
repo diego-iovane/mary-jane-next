@@ -3,7 +3,7 @@ import styled from 'styled-components'
 // ICON
 export const Hamb = styled.button`
     background: transparent;
-    border: 1px solid #ffffff;
+    border: ${({scrolled}) => scrolled ? '1px solid var(--green)' : '1px solid #ffffff'};
     outline: none;
     cursor: pointer;
     z-index: 800;
@@ -25,7 +25,7 @@ export const Span = styled.span`
     display: block;
     width: 22px;
     height: 2px;
-    background-color: white;
+    background-color:${({scrolled}) => scrolled ? 'var(--green)' : '#fff'};
     margin-block: 5px;
     border-radius: 1px;
     transition: transform .5s, opacity .25s;

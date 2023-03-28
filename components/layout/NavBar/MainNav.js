@@ -10,165 +10,11 @@ import {
 } from './Elements'
 import { GetLanguageContext } from '../../../context/LanguageContext'
 
-const MainNav = ({ scrolled }) => {
+const MainNav = ({ scrolled, links }) => {
 
     const { language } = GetLanguageContext()
     const [megaMenuOpen, setMegaMenuOpen] = useState(false)
     const [activeLink, setActiveLink] = useState('')
-
-    const enLinks = [
-        {
-            title: 'Sponsoring',
-            url: '',
-        },
-        {
-            title: 'Exhibitors 2023',
-            url: '',
-        },
-        {
-            title: 'For exhibitors',
-            url: '',
-            dropdown: [
-                {
-                    title: 'General info',
-                    url: '',
-                },
-                {
-                    title: 'Exhibitors guide',
-                    url: '',
-                },
-                {
-                    title: 'Stand inquiry',
-                    url: '',
-                },
-                {
-                    title: 'Furniture rental & Hostesses',
-                    url: '',
-                },
-                {
-                    title: 'Accomodation',
-                    url: '',
-                },
-            ]
-        },
-        {
-            title: 'For visitors',
-            url: '',
-            dropdown: [
-                {
-                    title: 'General info',
-                    url: '',
-                },
-                {
-                    title: 'Cannabis festival',
-                    url: '',
-                },
-                {
-                    title: 'Cannabis conferences',
-                    url: '',
-                },
-                {
-                    title: 'Tickets',
-                    url: '',
-                },
-                {
-                    title: 'FAQs',
-                    url: '',
-                },
-            ]
-        },
-        {
-            title: 'About us',
-            url: '',
-        },
-        {
-            title: 'Contact',
-            url: '',
-            dropdown: [
-                {
-                    title: 'Media',
-                    url: '',
-                },
-            ]
-        },
-    ]
-
-    const deLinks = [
-        {
-            title: 'Sponsoring',
-            url: '',
-        },
-        {
-            title: 'Austeller 2023',
-            url: '',
-        },
-        {
-            title: 'Für Aussteller',
-            url: '',
-            dropdown: [
-                {
-                    title: 'Allgemeine Info',
-                    url: '',
-                },
-                {
-                    title: 'Aussteller Guide',
-                    url: '',
-                },
-                {
-                    title: 'Standanfrage',
-                    url: '',
-                },
-                {
-                    title: 'Mietmöbel & Hostessen',
-                    url: '',
-                },
-                {
-                    title: 'Unterkunft',
-                    url: '',
-                },
-            ]
-        },
-        {
-            title: 'Für Besucher',
-            url: '',
-            dropdown: [
-                {
-                    title: 'Allgemeine Info',
-                    url: '',
-                },
-                {
-                    title: 'Cannabis Festival',
-                    url: '',
-                },
-                {
-                    title: 'Cannabis Konferenz',
-                    url: '',
-                },
-                {
-                    title: 'Tickets',
-                    url: '',
-                },
-                {
-                    title: 'FAQs',
-                    url: '',
-                },
-            ]
-        },
-        {
-            title: 'Über uns',
-            url: '',
-        },
-        {
-            title: 'Kontact',
-            url: '',
-            dropdown: [
-                {
-                    title: 'Media',
-                    url: '',
-                },
-            ]
-        },
-    ]
 
     const handleMouseEnter = (id) => {
         setMegaMenuOpen(true)
@@ -197,8 +43,6 @@ const MainNav = ({ scrolled }) => {
             opacity: 0,
         }
     }
-
-    const links = language === "en" ? enLinks : deLinks
 
     return (
         <Nav scrolled={scrolled}>

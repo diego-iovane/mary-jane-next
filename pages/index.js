@@ -179,11 +179,31 @@ export async function getServerSideProps(context) {
               }
               exhibitors {
                 exhibitorsTitleEn
-                exhibitorsCtaOneEn
-                exhibitorsCtaTwoEn
                 exhibitorsTitleDe
-                exhibitorsCtaOneDe
-                exhibitorsCtaTwoDe
+                exhibitorsCtaTwoMobileDe {
+                  text
+                  url
+                }
+                exhibitorsCtaOneDe {
+                  url
+                  text
+                }
+                exhibitorsCtaOneEn {
+                  text
+                  url
+                }
+                exhibitorsCtaTwoDe {
+                  text
+                  url
+                }
+                exhibitorsCtaTwoEn {
+                  title
+                  url
+                }
+                exhibitorsCtaTwoMobileEn {
+                  title
+                  url
+                }
               }
               sponsorsSection {
                 sponsorsTitleEn

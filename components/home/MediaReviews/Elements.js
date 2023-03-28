@@ -26,6 +26,7 @@ export const SectionTitle = styled.h2`
         padding-bottom: 1rem;
         line-height: 1.2;
         width: 90%;
+        margin-bottom: 2rem;
     }
 `
 
