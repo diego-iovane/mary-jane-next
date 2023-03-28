@@ -13,8 +13,6 @@ import {
 
 const EntranceFee = ({ content }) => {
 
-    console.log(content)
-
     const cards = Object.keys(content.items).map(key => {
         return { ...content.items[key] }
     })

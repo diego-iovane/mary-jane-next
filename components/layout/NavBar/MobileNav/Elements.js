@@ -83,7 +83,6 @@ export const FakeLink = styled.button`
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.1em;
-    /* color: white; */
     color: ${({opened}) => opened ? "var(--green)" : "#fff"};
     margin-bottom: 1rem;
     

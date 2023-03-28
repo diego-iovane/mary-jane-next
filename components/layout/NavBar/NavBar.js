@@ -179,7 +179,7 @@ const NavBar = () => {
   ]
 
   useEffect(() => {
-    setOpened(!opened)
+    setOpened(false)
   }, [pathname])
 
 

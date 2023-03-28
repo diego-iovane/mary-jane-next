@@ -5,6 +5,7 @@ import WhyVisit from './WhyVisit/WhyVisit'
 import Agenda from './Agenda/Agenda'
 import EntranceFee from './EntranceFee/EntranceFee'
 import Location from './Location/Location'
+import Faqs from './Faqs/Faqs'
 import {
     HeadSection,
     HeadBg,
@@ -24,6 +25,7 @@ const ForVisitorsPage = ({ content }) => {
             <Agenda content={content.agenda} />
             <EntranceFee content={content.agenda.entranceFee} />
             <Location />
+            <Faqs content={content.faq} />
         </>
     )
 }

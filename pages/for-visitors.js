@@ -188,6 +188,27 @@ export async function getServerSideProps(context) {
                               }
                             }
                         }
+                        faq {
+                          title
+                          questions {
+                            q1 {
+                              question
+                              answer
+                            }
+                            q2 {
+                              question
+                              answer
+                            }
+                            q3 {
+                              question
+                              answer
+                            }
+                            q4 {
+                              question
+                              answer
+                            }
+                          }
+                        }
                         productIcons {
                             icon1 {
                                 text

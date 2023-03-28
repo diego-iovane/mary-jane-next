@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 export const Inner = styled(motion.div)`
     width: var(--section-width);
     max-width: var(--section-max-width);
-    margin: 9rem auto;
+    margin: 9rem auto 3rem auto;
     position: relative;
 `
 
