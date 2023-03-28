@@ -1,8 +1,8 @@
 import LanguageDropdown from '../../../languageDropdown/LanguageDropdown'
+import LinkComponent from './LinkComponent'
 import {
     MenuContainer,
     List,
-    Link,
     DropdownContainer,
 } from './Elements'
 
@@ -24,52 +24,15 @@ const MobileNav = ({
                 {
                     links.map(link => {
                         return (
-                            <Link
-                                key={link.url}
-                                href={link.url}
-                                onClick={() => setOpened(!opened)}
-                            >
-                                / {link.title}
-                            </Link>
+                            <LinkComponent link={link} />
                         )
                     }
                     )
-                }
-                
-
-
-                {/* {
-                    primaryLinks.map(link => {
-                        return (
-                            <Link
-                                key={link.url}
-                                href={link.url}
-                                onClick={() => setOpened(!opened)}
-                            >
-                                / {link.title}
-                            </Link>
-                        )
-                    }
-                    )
-                }
-                {
-                    secondaryLinks.map(link => {
-                        return (
-                            <Link
-                                key={link.url}
-                                href={link.url}
-                                onClick={() => setOpened(!opened)}
-                            >
-                                / {link.title}
-                            </Link>
-                        )
-                    }
-                    )
-                } */}
+                }              
             </List>
-            {/* <DropdownContainer>
-                <LanguageDropdown flags={flags} />
-            </DropdownContainer> */}
+            <DropdownContainer>
+                <LanguageDropdown />
+            </DropdownContainer>
         </MenuContainer>
     )
 }

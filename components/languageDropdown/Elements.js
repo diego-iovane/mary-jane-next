@@ -5,18 +5,6 @@ export const DropdownContainer = styled.div`
     display: flex;
     align-items: center;
 
-    /* &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -5px;
-        background-color: #ffffff;
-        width: 100%;
-        height: ${({opened}) => opened ? '262%' : '100%'};
-        border-radius: 500px;
-        transition: all .1s ease-in-out;
-    } */
-
     @media all and (max-width: 960px) {
         margin-top: 1rem;
         margin-right: .8rem;
@@ -39,7 +27,7 @@ export const DropdownBox = styled.div`
     top: 3.3rem;
 
     @media all and (max-width: 960px) {
-        top: 0;
+        top: 5px;
         right: 3.7rem;
     }
 `
@@ -75,6 +63,10 @@ export const Arrow = styled.div`
     border-top: 4px solid #555;
     rotate: ${({opened}) => opened && 'x 180deg'};
     transition: rotate .5s;
+
+    @media all and (max-width: 1025px) {
+        rotate: ${({opened}) => opened && 'z 90deg'};   
+    }
 
     @media all and (max-width: 960px) {
         right: -17px;

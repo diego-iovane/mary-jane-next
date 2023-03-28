@@ -54,22 +54,49 @@ export const MenuContainer = styled.div`
     max-height: ${({opened}) => opened ? '100rem' : '0rem'};
     overflow: hidden;
     transition: max-height .5s cubic-bezier( 1, 0, 0, 1 );
+    box-shadow: var(--soft-shadow);
 `
 
 export const List = styled.ul`
     display: flex;
     flex-direction: column;
-    margin: 7rem 2rem 0 2rem;
+    margin: 5rem 2rem 0 2rem;
 `
 
-export const Link = styled.a`
+export const LinkContainer = styled.div`
     padding: 15px 0;
     line-height: 16px;
-    font-size: 20px;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.1em;
     color: white;
+    text-align: right;
+    max-height: ${({opened}) => opened ? '100rem' : '2.5rem'};
+    transition: max-height .5s cubic-bezier( 1, 0, 0, 1 );
+    overflow: hidden;
+`
+
+export const FakeLink = styled.button`
+    line-height: 16px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    /* color: white; */
+    color: ${({opened}) => opened ? "var(--green)" : "#fff"};
+    margin-bottom: 1rem;
+    
+`
+
+export const SubLinkContainer = styled.div`
+    padding: 15px 0;
+    line-height: 16px;
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #fff;
     text-align: right;
 `
 

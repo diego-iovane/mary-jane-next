@@ -178,6 +178,11 @@ const NavBar = () => {
     },
   ]
 
+  useEffect(() => {
+    setOpened(!opened)
+  }, [pathname])
+
+
   const links = language === "en" ? enLinks : deLinks
 
   const toTop = () => scrollTo(top)
