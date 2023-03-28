@@ -154,7 +154,7 @@ export const RegularTitle = styled.h2`
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
-    border-bottom: 1px dashed #1E411D;
+    /* border-bottom: 1px dashed #1E411D; */
 
     @media all and (max-width: 650px) {
         border-bottom: none;

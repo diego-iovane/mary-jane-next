@@ -50,11 +50,16 @@ export const IconContainer = styled.div`
     width: 5rem;
     height: 5rem;
     padding: .5rem;
+    box-shadow: var(--soft-shadow);
 `
 
 export const Icon = styled(Image)`
     object-fit: contain;
-    box-shadow: var(--soft-shadow);
+    width: 60% !important;
+    height: 60% !important;
+    transform: translate(-50%, -50%) !important;
+    top: 50% !important;
+    left: 50% !important;
 `
 
 export const Text = styled.p`

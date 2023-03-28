@@ -22,6 +22,11 @@ export const Title = styled.h1`
     width: 100%;
     padding-bottom: 1rem;
     font-size: 4.5rem;
+    
+    @media all and (max-width: 525px) {
+        font-size: 3rem;
+        padding-bottom: .8rem;
+    }
 `
 
 export const Grid = styled.div`
@@ -50,6 +55,11 @@ export const Subtitle = styled.p`
     width: 25rem;
     font-weight: bold;
     line-height: 1.2;
+
+    
+    @media all and (max-width: 400px) {
+        width: 24rem;   
+    }
 `
 
 export const Text = styled.p`
@@ -57,6 +67,11 @@ export const Text = styled.p`
     font-size: .9rem;
     width: 95%;
     margin: 1.5rem 0;
+
+    
+    @media all and (max-width: 400px) {
+        width: 20rem;   
+    }
 `
 
 export const ButtonsContainer = styled.div`

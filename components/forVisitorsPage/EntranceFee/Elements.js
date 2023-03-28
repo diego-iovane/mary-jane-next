@@ -24,7 +24,7 @@ export const Grid = styled.div`
     }
 `
 
-export const Card = styled.div`
+export const Card = styled.a`
     box-shadow: var(--soft-shadow);
     padding: 2rem;
     border-radius: 12px;
