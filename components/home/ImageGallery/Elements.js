@@ -20,7 +20,9 @@ export const HoverableArea = styled.div`
 `
 
 export const DesktopSwiper = styled.div`
-
+    /* @media all and (max-width: 600px) {
+        display: none;
+    } */
 `
 
 export const TabletSwiper = styled.div`
@@ -28,7 +30,11 @@ export const TabletSwiper = styled.div`
 `
 
 export const  MobileSwiper = styled.div`
+    display: none;
 
+    @media all and (max-width: 600px) {
+        display: block;
+    }
 `
 
 export const SectionTitle = styled.h2`

@@ -16,8 +16,6 @@ const AccomodationCard = ({ content }) => {
 
   const thisSlide = useSwiperSlide()
 
-  console.log(content)
-
   return (
     <CardContainer active={thisSlide.isNext}>
       <ImgContainer>
