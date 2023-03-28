@@ -78,7 +78,7 @@ const MainNav = ({ scrolled }) => {
             ]
         },
         {
-            title: 'Mary Jane',
+            title: 'About us',
             url: '',
         },
         {
@@ -155,7 +155,7 @@ const MainNav = ({ scrolled }) => {
             ]
         },
         {
-            title: 'Mary Jane',
+            title: 'Über uns',
             url: '',
         },
         {

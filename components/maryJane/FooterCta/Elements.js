@@ -21,12 +21,23 @@ export const Title = styled.h2`
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 500px) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1;
+    }
 `
 
 export const Subtitle = styled.p`
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 500px) {
+        font-size: 1rem;
+        line-height: 1;
+    }
 `
 
 export const ButtonsContainer = styled.div`

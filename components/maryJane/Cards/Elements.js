@@ -15,6 +15,10 @@ export const Inner = styled(motion.div)`
     display: flex;
     align-items: flex-end;
     padding: 7rem 0;
+
+    @media all and (max-width: 1100px) {
+        padding: 4rem 0;
+    }
 `
 
 export const Grid = styled.div`
@@ -23,6 +27,17 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+
+    @media all and (max-width: 1100px) {
+        width: 100%;
+        grid-gap: 1rem;
+    }
+
+    @media all and (max-width: 950px) {
+        grid-template-columns: 1fr;
+        width: fit-content;
+        margin: 0 auto;
+    }
 `
 
 export const Card = styled.div`
@@ -31,6 +46,8 @@ export const Card = styled.div`
     grid-template-columns: .5fr 2fr;
     box-shadow: var(--soft-shadow);
     border-radius: 12px;
+    max-width: 45rem;
+    margin: 0 auto;
 `
 
 export const ImageContainer = styled.div`
@@ -49,4 +66,8 @@ export const Img = styled(Image)`
 export const CardText = styled.p`
     display: flex;
     align-items: center;
+
+    @media all and (max-width: 450px) {
+        font-size: .8rem;
+    }
 `

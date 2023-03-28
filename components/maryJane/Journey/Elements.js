@@ -11,11 +11,20 @@ export const Inner = styled(motion.div)`
     flex-direction: column;
     position: relative;
     top: 2rem;
-    padding: 5rem 0 0 0;
+    padding: 2rem 0 0 0;
+
+    @media all and (max-width: 600px) {
+        padding: 1rem 0 0 0;
+    }
 `
 
 export const Title = styled.h2`
     font-size: 3rem;
+
+    @media all and (max-width: 600px) {
+        line-height: 1;
+        font-size: 2.5rem;
+    }
 `
 
 export const SwiperContainer = styled.div`

@@ -11,8 +11,6 @@ const MaryJanePage = ({ res }) => {
     const { language } = GetLanguageContext()
     const content = res.data.pages.edges[0].node.maryJane.maryJaneContentEn
 
-    // console.log(content)
-
     return (
         <Container>
             <Hero content={content.hero} />

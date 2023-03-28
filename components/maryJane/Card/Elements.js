@@ -10,6 +10,10 @@ export const Inner = styled(motion.div)`
     display: flex;
     align-items: flex-end;
     padding: 7rem 0;
+
+    @media all and (max-width: 700px) {
+        padding: 4rem 0;
+    }
 `
 
 export const Container = styled.div`
@@ -19,6 +23,12 @@ export const Container = styled.div`
     grid-template-columns: .5fr 2fr;
     box-shadow: var(--soft-shadow);
     border-radius: 12px;
+
+    @media all and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        padding: 0 0 2rem 0;
+        overflow: hidden;
+    }
 `
 
 export const ImageContainer = styled.div`
@@ -29,6 +39,18 @@ export const ImageContainer = styled.div`
     border-radius: 500px;
     overflow: hidden;
     right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media all and (max-width: 700px) {
+        width: 100%;
+        margin-right: 0;
+        border-radius: 0;
+        right: 0;
+        top: 0;
+        transform: translateY(0);
+
+    }
 `
 
 export const Img = styled(Image)`
@@ -39,10 +61,19 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem 1.5rem;
 `
 
 export const CardTitle = styled.h2`
     margin-bottom: 1rem;
+
+    @media all and (max-width: 1000px) {
+        line-height: 1;
+    }
+
+    @media all and (max-width: 450px) {
+        font-size: 2rem;
+    }
 `
 
 export const CardText = styled.p`

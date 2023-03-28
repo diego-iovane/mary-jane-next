@@ -6,6 +6,10 @@ export const HeroSection = styled.section`
     height: 100vh;
     position: relative;
     max-height: 45rem;
+
+    @media all and (max-width: 700px) {
+        max-height: 100vh;
+    }
 `
 
 export const HeroBg = styled(Image)`
@@ -42,12 +46,20 @@ export const Content = styled.div`
     position: relative;
     bottom: 8rem;
     width: 40rem; 
+
+    @media all and (max-width: 550px) {
+        bottom: 10rem;
+    }
 `
 
 export const Subtitle = styled.h3`
     color: var(--green);
     margin-bottom: 1rem;
     font-size: 2.5rem;
+
+    @media all and (max-width: 550px) {
+        font-size: 1.5rem;
+    }
 `
 
 export const Copy = styled.h1`
@@ -55,6 +67,10 @@ export const Copy = styled.h1`
     color: var(--light-blue);
     line-height: 1;
     margin-bottom: 1rem;
+
+    @media all and (max-width: 550px) {
+        font-size: 3rem;
+    }
 `
 
 export const Text = styled.p`
