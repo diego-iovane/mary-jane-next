@@ -36,6 +36,14 @@ export async function getServerSideProps(context) {
                   altText
                   sourceUrl
                 }
+                ctaFestivalEn {
+                  url
+                  text
+                }
+                ctaFestivalDe {
+                  text
+                  url
+                }
               }
             }
           }

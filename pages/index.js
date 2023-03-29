@@ -14,7 +14,6 @@ import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
 import ImageGallery from '../components/home/ImageGallery/ImageGallery'
 import TicketsSection from '../components/ticketsSection/TicketsSection'
 import Location from '../components/home/Location/Location'
-import FloatingButton from '../components/floatingButton/FloatingButton'
 
 export default function Home({ res }) {
 
@@ -41,7 +40,6 @@ export default function Home({ res }) {
       <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} />
       <TicketsSection />
       <Location language={language} />
-      <FloatingButton />
     </div>
   )
 }

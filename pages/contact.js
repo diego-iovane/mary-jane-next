@@ -58,13 +58,6 @@ export async function getServerSideProps(context) {
                           sourceUrl
                         }
                       }
-                      itemSix {
-                        text
-                        icon {
-                          altText
-                          sourceUrl
-                        }
-                      }
                     }
                   }
                   marketingItem {

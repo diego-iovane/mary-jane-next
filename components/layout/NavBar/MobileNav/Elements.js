@@ -13,8 +13,6 @@ export const Hamb = styled.button`
     border-radius: 4px;
     position: relative;
     top: .2rem;
-    /* top: 50%;
-    transform: translateY(-50%); */
 
     @media all and (min-width: 1024px) {
         display: none;
@@ -85,7 +83,7 @@ export const FakeLink = styled.button`
     letter-spacing: 0.1em;
     color: ${({opened}) => opened ? "var(--green)" : "#fff"};
     margin-bottom: 1rem;
-    
+    cursor: pointer;
 `
 
 export const SubLinkContainer = styled.div`

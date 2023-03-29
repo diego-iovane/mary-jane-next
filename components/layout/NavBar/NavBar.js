@@ -10,7 +10,6 @@ import {
   Right,
   LogoContainer,
   Logo,
-  Links,
 } from './Elements'
 import MobileNav from './MobileNav/MobileNav'
 import Hamburguer from './MobileNav/Hamburguer'
@@ -77,11 +76,7 @@ const NavBar = () => {
         // },
         {
           title: 'Tickets',
-          url: '/',
-        },
-        {
-          title: 'FAQs',
-          url: '/for-visitors',
+          url: 'https://maryjaneberlin.ticket.io/y7wu2yng/',
         },
       ]
     },
@@ -93,6 +88,10 @@ const NavBar = () => {
       title: 'Contact',
       url: '/contact',
       dropdown: [
+        {
+          title: 'Contact us',
+          url: '/contact',
+        },
         {
           title: 'Media',
           url: '/media',
@@ -138,41 +137,41 @@ const NavBar = () => {
     },
     {
       title: 'Für Besucher',
-      url: '',
+      url: '/for-visitors',
       dropdown: [
         {
           title: 'Allgemeine Info',
-          url: '',
+          url: '/for-visitors',
         },
         {
           title: 'Cannabis Festival',
-          url: '',
+          url: '/cannabis-festival',
         },
-        {
-          title: 'Cannabis Konferenz',
-          url: '',
-        },
+        // {
+        //   title: 'Cannabis Konferenz',
+        //   url: '',
+        // },
         {
           title: 'Tickets',
-          url: '',
-        },
-        {
-          title: 'FAQs',
-          url: '',
+          url: 'https://maryjaneberlin.ticket.io/y7wu2yng/',
         },
       ]
     },
     {
       title: 'Über uns',
-      url: '',
+      url: '/mary^jane',
     },
     {
-      title: 'Kontact',
-      url: '',
+      title: 'Kontakt',
+      url: '/contact',
       dropdown: [
         {
+          title: 'Kontakt',
+          url: '/contact',
+        },
+        {
           title: 'Media',
-          url: '',
+          url: '/media',
         },
       ]
     },
@@ -233,7 +232,6 @@ const NavBar = () => {
           />
         </Right>
         <MobileNav
-          // flags={content.secondaryNav.flags}
           links={links}
           scrolled={scrollPos > 0.1}
           opened={opened}

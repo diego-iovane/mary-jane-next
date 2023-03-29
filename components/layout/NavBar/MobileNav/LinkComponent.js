@@ -6,19 +6,17 @@ import {
     SubLinkContainer,
 } from './Elements'
 
-const LinkComponent = ({ link }) => {
-
-    const [opened, setOpened] = useState(false)
+const LinkComponent = ({ link, isActive, setActive }) => {
 
     return (
-        <LinkContainer opened={opened}>
+        <LinkContainer opened={isActive === link.url}>
             {
                 link.dropdown !== undefined ?
-                    <FakeLink opened={opened} onClick={() => setOpened(!opened)}>
-                        / {link.title}
+                    <FakeLink opened={isActive === link.url} onClick={() => setActive(link.url)}>
+                        {isActive === link.url ? '-' : '+'} {link.title}
                     </FakeLink> :
                     <Link href={link.url} >
-                        / {link.title}
+                         {link.title}
                     </Link>
             }
             {

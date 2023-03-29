@@ -313,28 +313,21 @@ input::placeholder {
 
 /* JOURNEY */
 .journeySwiper.swiper {
-  overflow: visible !important;
-}
-
-.journeySwiper .swiper-slide {
-  width: 22rem !important;
-  height: 32rem !important;
-  margin: 1rem 3.5rem 0 0;
-}
-
-/* .reviewSwyper.swiper {
   width: 100%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+  overflow: visible !important;
 }
 
-.reviewSwyper .swiper-wrapper {
+.journeySwiper .swiper-wrapper {
   margin-bottom: 3.5rem;
 }
 
-.reviewSwyper .swiper-slide {
-  width: auto;
-  height: calc((100% - 30px) / 2) !important;
-} */
+.journeySwiper .swiper-slide {
+  /* width: auto;
+  height: calc((100% - 30px) / 2) !important; */
+  width: 22rem !important;
+  height: 30rem !important;
+}

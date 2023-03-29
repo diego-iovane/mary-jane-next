@@ -34,7 +34,7 @@ const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery, bg })
         return content.details[key]
     })
     const hostList = Object.keys(hostContent.details).map(key => {
-        return content.details[key]
+        return hostContent.details[key]
     })
 
     return (
@@ -81,9 +81,6 @@ const FurnitureRentalPage = ({ gallery, content, hostContent, hostGallery, bg })
                                     }
                                 </DetailsList>
                             </DetailsContainer>
-                            {/* <Footer>
-                                <Subtitle>{content.bottomTitle}</Subtitle>
-                            </Footer> */}
                         </FurnitureRight>
                     </InnerSection>
                     <InnerSection reverse={true}>

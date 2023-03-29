@@ -89,10 +89,10 @@ const ForExhibitorsPage = ({ content }) => {
                             </RightContainer>
                         </MainContent>
                             <ButtonsContainer>
-                                <ButtonContainer href={content.generalInfo.ctaOne.url}>
+                                <ButtonContainer href={content.generalInfo.ctaOne.url} target="_blank" rel="noopener noreferrer" >
                                     <SmallCta>{content.generalInfo.ctaOne.text}</SmallCta>
                                 </ButtonContainer>
-                                <ButtonContainer href={content.generalInfo.ctaTwo.url}>
+                                <ButtonContainer href={content.generalInfo.ctaTwo.url} target="_blank" rel="noopener noreferrer" >
                                     <SmallCtaPink>{content.generalInfo.ctaTwo.text}</SmallCtaPink>
                                 </ButtonContainer>
                             </ButtonsContainer>
@@ -122,7 +122,7 @@ const ForExhibitorsPage = ({ content }) => {
                             <LocationTitle>{content.location.title}</LocationTitle>
                             <LocationSubtitle>{content.location.subtitle}</LocationSubtitle>
                             <LocationText>{content.location.text}</LocationText>
-                            <LocationButtonContainer href={content.location.cta.url}>
+                            <LocationButtonContainer href={content.location.cta.url} target="_blank" rel="noopener noreferrer">
                                 <SmallCta>{content.location.cta.text}</SmallCta>
                             </LocationButtonContainer>
                         </LocationLeftContainer>

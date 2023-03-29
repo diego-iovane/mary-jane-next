@@ -9,27 +9,21 @@ export const Button = styled(motion.a)`
     width: 4rem;
     height: 4rem;
     border-radius: 500px;
-    background-color: var(--light-green);
+    background-color: ${({isVisitor}) => isVisitor ? 'var(--light-green)' : 'var(--gray-blue)'};
     z-index: 100;
     display: none;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: .4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #fff;
 
-    /* opacity: ${({ appear }) => appear ? "1" : "0"}; */
-
-    svg {
-        width: 2rem;
-        height: 2rem;
-        transform: rotate(35deg);
-
-        path {
-            fill: #ffffff;
-        }
-    }
-
-    @media all and (max-width: 500px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media all and (min-width: 1025px) {
+        display: none;
     }
 `
 
@@ -37,8 +31,16 @@ export const ImgContainer = styled.div`
     position: relative;
     width: 3rem;
     height: 3rem;
+    display: ${({visible}) => visible ? 'block' : 'none'};
 `
 
 export const Img = styled(Image)`
     object-fit: contain;
+`
+
+export const Text = styled.p`
+    font-size: ${({isVisitor}) => isVisitor ? '.6rem' : '.7rem'};
+    color: #fff;
+    font-weight: 200;
+    text-align: center
 `

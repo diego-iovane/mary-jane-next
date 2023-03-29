@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import NavBar from "./NavBar/NavBar"
 import Footer from "./Footer/Footer"
+import FloatingButton from '../floatingButton/FloatingButton'
 
 //Styles
 const LayoutContainer = styled.div`
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
       <NavBar/>
       <main>{children}</main>
       <Footer />
+      <FloatingButton />
     </LayoutContainer>
   )
 }

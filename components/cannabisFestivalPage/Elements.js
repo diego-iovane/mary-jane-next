@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const HeadSection = styled.div`
     height: 12rem;
@@ -75,4 +76,8 @@ export const PosterContainer = styled.div`
 export const Poster = styled(Image)`
 top: 0;
     object-fit: contain;
+`
+
+export const ButtonContainer = styled(Link)`
+    margin: 2rem auto 4rem auto;
 `

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import LanguageDropdown from '../../../languageDropdown/LanguageDropdown'
 import LinkComponent from './LinkComponent'
 import {
@@ -6,17 +7,9 @@ import {
     DropdownContainer,
 } from './Elements'
 
-const MobileNav = ({
-    primaryLinks,
-    secondaryLinks,
-    flags,
-    scrolled,
-    opened,
-    setOpened,
+const MobileNav = ({ opened, links }) => {
 
-
-    links
-}) => {
+    const [isActive, setActive] = useState('')
 
     return (
         <MenuContainer opened={opened}>
@@ -24,7 +17,7 @@ const MobileNav = ({
                 {
                     links.map(link => {
                         return (
-                            <LinkComponent link={link} />
+                            <LinkComponent link={link} setActive={setActive} isActive={isActive}/>
                         )
                     }
                     )

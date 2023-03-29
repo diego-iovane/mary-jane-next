@@ -17,14 +17,14 @@ const SecondaryNav = ({ scrolled }) => {
                 whileTap={{ scale: 1 }}
                 transition={{ type: "spring", bounce: .5 }}
             >
-                <Link href="/">Get tickets</Link>
+                <Link href="https://maryjaneberlin.ticket.io/y7wu2yng/" target="_blank" rel="noopener noreferrer">Get tickets</Link>
             </TicketsBtn>
             <StandBtn
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 1 }}
                 transition={{ type: "spring", bounce: .5 }}
             >
-                <Link href="/">Stand inquiry</Link>
+                <Link href="/stand-inquiry">Stand inquiry</Link>
             </StandBtn>
             <DropdownContainer>
                 <LanguageDropdown />

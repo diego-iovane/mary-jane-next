@@ -83,6 +83,11 @@ export const Dot = styled.div`
 export const Text = styled.p`
     line-height: 1.4;
     position: relative;
+
+    a {
+        text-decoration: underline;
+        color: darkblue;
+    }
 `
 
 export const Note = styled.p`

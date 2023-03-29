@@ -6,7 +6,7 @@ import "swiper/css/pagination"
 import { Grid, Pagination, Autoplay } from "swiper"
 import googleLogo from '../../../public/logos/google-logo.png'
 import Review from './Review'
-// import SwiperButtons from '../../swiperButtons/SwiperButtons'
+import SwiperButtons from '../../swiperButtons/SwiperButtons'
 import {
     Section,
     Inner,
@@ -73,21 +73,22 @@ const ReviewSection = ({ data, content }) => {
                     }}
                     modules={[Grid, Pagination, Autoplay]}
                     className="reviewSwyper"
+                    loop={true}
                 >
                     {
                         reviews.length !== 0 ?
-                        reviews.map((review, index) => {
-                            return (
-                                <SwiperSlide key={review.node.text}>
-                                    <Review content={review.node} />
-                                </SwiperSlide>
-                            )
-                        }): null
+                            reviews.map((review) => {
+                                return (
+                                    <SwiperSlide key={review.node.text}>
+                                        <Review content={review.node} />
+                                    </SwiperSlide>
+                                )
+                            }) : null
                     }
                 </Swiper>
-                {/* <ButtonsContainer>
-                        <SwiperButtons swiperRef={swiperRef} />
-                    </ButtonsContainer> */}
+                <ButtonsContainer>
+                    <SwiperButtons swiperRef={swiperRef} />
+                </ButtonsContainer>
             </Inner>
         </Section>
     )

@@ -31,6 +31,10 @@ export const SwiperContainer = styled.div`
     position: relative;
     margin-top: 4rem;
     margin-left: 1rem;
+
+    & > div {
+        overflow: visible !important;
+    }
 `
 
 export const CardContainer = styled.article`
