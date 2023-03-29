@@ -43,16 +43,37 @@ export const InnerHead = styled.div`
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
-    margin-bottom: .5rem;`
+    margin-bottom: .5rem;
+
+    @media all and (max-width: 890px) {
+        /* padding-bottom: 2.5rem; */
+    }
+`
 
 export const Title = styled.h1`
     position: relative;
     top: 15px;
+
+    @media all and (max-width: 890px) {
+        top: 9px;
+    }
+
+    @media all and (max-width: 580px) {
+        opacity: ${({hidden}) => hidden ? '0' : '1'};
+    }
+
+    @media all and (max-width: 400px) {
+        font-size: 1.8rem;
+    }
 `
 
 export const InputsContainer = styled.div`
     display: flex;
     align-items: center;
+
+    @media all and (max-width: 890px) {
+        display: none;
+    }
 `
 
 export const Search = styled.input`
@@ -81,6 +102,21 @@ export const Categories = styled.div`
     cursor: pointer;
     position: relative;
     font-size: .8rem;
+`
+
+export const ChevronContainer = styled.div`
+    position: absolute;
+    right: .7rem;
+    top: 57%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    
+    svg {
+        rotate: ${({open}) => open && 'x 180deg'};
+        transition: rotate .5s;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 `
 
 export const Grid = styled.div`
@@ -141,4 +177,89 @@ export const Categorie = styled.button`
     &:hover {
         background-color: var(--soft-gray);
     }
+`
+
+export const MobileInputs = styled.div`
+    display: none;
+    position: relative;
+    padding-right: 2.5rem;
+    height: 2.5rem;
+    
+    @media all and (max-width: 890px) {
+        display: flex;
+        width: ${({opened}) => opened ? '100%' : 'fit-content'};
+    }
+`
+
+export const MobileCat = styled.button`
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--soft-gray);
+    border-radius: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-right: .5rem;
+    opacity: ${({hidden}) => hidden ? '0' : '1'};
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        pointer-events: none;
+    }
+`
+
+export const MobileSearch = styled.input`
+    background-color: var(--soft-gray);
+    border-radius: 20px;
+    width: ${({opened}) => opened ? '100%' : '2.5rem'};
+    height: 2.5rem;
+    padding: 0 1rem;
+    transition: width .3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+`
+
+export const SearchIcon = styled.div`
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    opacity: ${({opened}) => opened ? '0' : '1'};
+    pointer-events: none;
+
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+`
+
+export const CatPopupContainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+`
+
+export const MobileCategoriesContainer = styled.div`
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: var(--soft-shadow);
+    border-radius: 12px;
+    z-index: 100;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 `
