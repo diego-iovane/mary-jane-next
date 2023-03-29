@@ -55,8 +55,6 @@ export const IconContainer = styled.div`
 
 export const Icon = styled(Image)`
     object-fit: contain;
-    width: 60% !important;
-    height: 60% !important;
     transform: translate(-50%, -50%) !important;
     top: 50% !important;
     left: 50% !important;

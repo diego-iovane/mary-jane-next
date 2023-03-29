@@ -41,12 +41,12 @@ export const Qheader = styled.div`
 `
 
 export const Q = styled.h3`
-
+    line-height: 1.2;
 `
 
 export const Dot = styled.div`
-    width: .5rem;
-    height: .5rem;
+    min-width: .5rem;
+    min-height: .5rem;
     border-radius: 500px;
     background-color: ${({active}) => active ? 'var(--light-green)' : 'var(--gray)'};
 `

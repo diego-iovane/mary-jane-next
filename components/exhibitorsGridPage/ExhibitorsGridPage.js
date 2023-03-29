@@ -80,8 +80,6 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
 
     }, [currentCategory])
 
-    console.log(exhibitors)
-
     const handleInput = (e) => setSearchValue(e.target.value)
 
     const handleOpen = (e) => setOpenCategories(!openCategories)
@@ -157,6 +155,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                 onBlur={handleBlur}
                                 opened={mobileSearchOpen}
                                 onChange={handleInput} type="text"
+                                style={{fontSize: '18px'}}
                             />
                             <SearchIcon hidden={hiddenTitle}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">

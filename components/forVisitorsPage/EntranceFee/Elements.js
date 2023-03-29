@@ -31,9 +31,12 @@ export const Card = styled.a`
     transition: transform .2s ease-in-out;
     min-width: 17rem;
 
-    &:hover {
-        transform: scale(1.1);
+    @media all and (min-width: 550px) {
+        &:hover {
+            transform: scale(1.1);
+        }
     }
+
 `
 
 export const BoxTitle = styled.p`
