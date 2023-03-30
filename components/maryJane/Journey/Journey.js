@@ -4,7 +4,7 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import { Grid, Pagination, Autoplay } from "swiper"
+import { Pagination} from "swiper"
 import SwiperButtons from './SwiperButtons/SwiperButtons'
 import Card from './Card'
 import {
@@ -21,15 +21,23 @@ const Journey = ({ content, title }) => {
         return { ...content[key] }
     })
 
-    console.log(cards, title)
-
     return (
         <Inner>
             <Title>Follow our Journey</Title>
             <SwiperContainer>
                 <Swiper
                     ref={swiperRef}
-                    spaceBetween={30}
+                    breakpoints={{
+                        850: {
+                            slidesPerView: 3,
+                        },
+                        600: {
+                            slidesPerView: 14/8,
+                        }
+                    }}
+                    slidesPerView={9/8}
+                    spaceBetween={10}
+                    centeredSlides={true}
                     pagination={{
                         clickable: true,
                     }}
@@ -46,23 +54,8 @@ const Journey = ({ content, title }) => {
                         })
                     }
                 </Swiper>
-
-                {/* <Swiper
-                    ref={swiperRef}
-                    className="journeySwiper"
-                >
-                    {
-                        cards.map(card => {
-                            return (
-                                <SwiperSlide key={card.image.sourceUrl}>
-                                    <Card content={card} />
-                                </SwiperSlide>
-                            )
-                        })
-                    }
-                </Swiper> */}
-                <SwiperButtons swiperRef={swiperRef} />
             </SwiperContainer>
+            <SwiperButtons swiperRef={swiperRef} />
         </Inner>
     )
 }

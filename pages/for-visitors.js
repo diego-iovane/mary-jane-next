@@ -51,6 +51,10 @@ export async function getServerSideProps(context) {
                               text
                               url
                             }
+                            ctaTwo {
+                              text
+                              url
+                            }
                             cards {
                               one {
                                 title

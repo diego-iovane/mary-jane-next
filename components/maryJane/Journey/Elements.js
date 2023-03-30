@@ -35,19 +35,56 @@ export const SwiperContainer = styled.div`
     & > div {
         overflow: visible !important;
     }
+
+    @media all and (min-width: 600px) {
+        right: 6rem;
+    }
+
+    @media all and (min-width: 800px) {
+        right: 7.7rem;
+    }
+
+    @media all and (min-width: 850px) {
+        right: 15rem;
+    }
+
+    @media all and (min-width: 1000px) {
+        right: 17.3rem;
+    }
+
+    @media all and (min-width: 1100px) {
+        right: 19.2rem;
+    }
+
+    @media all and (min-width: 1200px) {
+        right: 21rem;
+    }
+
+    @media all and (min-width: 1300px) {
+        right: 22.8rem;
+    }
+
+    @media all and (min-width: 1400px) {
+        right: 24.1rem;
+    }
 `
 
 export const CardContainer = styled.article`
     height: 100%;
+    position: relative;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: var(--soft-shadow);
     background-color: #fff;
     ${({active}) => active && 'transform: scale(1.1)'};
+    ${({active}) => active && 'right: 20px'};
     opacity: ${({active}) => active ? '1' : '.7'};
-    /* &:hover {
-        transform: scale(1.2);
-    } */
+    min-height: 32rem;
+    transition: transform .3s ease-in-out;
+
+    @media all and (max-width: 450px) {
+        min-height: 35rem;
+    }
 `
 
 export const ImageContainer = styled.div`

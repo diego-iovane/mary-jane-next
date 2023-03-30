@@ -97,6 +97,17 @@ export const ButtonsContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+
+    @media all and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
-export const ButtonContainer = styled(Link)``
+export const ButtonContainer = styled(Link)`
+    margin: 0 .5rem;
+
+    @media all and (max-width: 600px) {
+        margin: .7rem 0;
+    }
+`

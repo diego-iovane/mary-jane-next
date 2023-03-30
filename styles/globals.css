@@ -312,22 +312,6 @@ input::placeholder {
 }
 
 /* JOURNEY */
-.journeySwiper.swiper {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  overflow: visible !important;
-}
-
 .journeySwiper .swiper-wrapper {
-  margin-bottom: 3.5rem;
-}
-
-.journeySwiper .swiper-slide {
-  /* width: auto;
-  height: calc((100% - 30px) / 2) !important; */
-  width: 22rem !important;
-  height: 30rem !important;
+  right: 24.5rem;
 }

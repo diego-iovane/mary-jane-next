@@ -1,4 +1,5 @@
 import SmallCta from '../../buttons/SmallCta'
+import SmallCtaPink from '../../buttons/SmallCtaPink'
 import {
     Section,
     Inner,
@@ -18,6 +19,8 @@ const GeneralCards = ({ content }) => {
     const cards = Object.keys(content.cards).map(key => {
         return { ...content.cards[key]}
     })
+
+    console.log(content)
 
     return (
         <Section>
@@ -41,6 +44,9 @@ const GeneralCards = ({ content }) => {
                 <ButtonsContainer>
                     <ButtonContainer href={content.cta.url}>
                         <SmallCta>{content.cta.text}</SmallCta>
+                    </ButtonContainer>
+                    <ButtonContainer href={content.ctaTwo.url}>
+                        <SmallCtaPink>{content.ctaTwo.text}</SmallCtaPink>
                     </ButtonContainer>
                 </ButtonsContainer>
             </Inner>
