@@ -117,4 +117,8 @@ export const Year = styled.p`
 export const Text = styled.p`
     font-size: 1rem;
     padding: 2rem;
+
+    @media all and (max-width: 550px) {
+        font-size: .9rem;
+    }
 `
