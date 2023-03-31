@@ -1,5 +1,4 @@
 import Head from 'next/head'
-// import { GetContentContext } from '../context/ContentContext'
 import { GetLanguageContext } from '../context/LanguageContext'
 import Hero from '../components/home/Hero/Hero'
 import Exhibition from '../components/home/Exhibition/Exhibition'
@@ -17,7 +16,6 @@ import Location from '../components/home/Location/Location'
 
 export default function Home({ res }) {
 
-  // console.log(res)
   const { language } = GetLanguageContext()
 
   return (
@@ -286,10 +284,10 @@ export async function getServerSideProps(context) {
                 title
               }
               website
+              uri
             }
           }
         }
-        
 
         sponsors {
           edges {

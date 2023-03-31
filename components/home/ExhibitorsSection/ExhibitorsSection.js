@@ -22,7 +22,6 @@ import {
 const ExhibitorsSection = ({ data, content, language }) => {
 
     const [exhibitors, setExhibitors] = useState([])
-    console.log(content)
     const text = language === 'en' ?
         {
             title: content.exhibitorsTitleEn || '',
@@ -55,8 +54,6 @@ const ExhibitorsSection = ({ data, content, language }) => {
 
         infinite()
     }
-
-    console.log(text.ctaTwo)
 
     return (
         <Section>
@@ -122,13 +119,15 @@ const ExhibitorsSection = ({ data, content, language }) => {
                                 exhibitors.map(item => {
                                     return (
                                         <SwiperSlide key={item.node.logo.sourceUrl}>
-                                            <LogoContainer>
-                                                <Logo
-                                                    src={item.node.logo.sourceUrl}
-                                                    alt={item.node.logo.altText}
-                                                    fill
-                                                />
-                                            </LogoContainer>
+                                            <Link href={item.node.uri}>
+                                                <LogoContainer>
+                                                    <Logo
+                                                        src={item.node.logo.sourceUrl}
+                                                        alt={item.node.logo.altText}
+                                                        fill
+                                                    />
+                                                </LogoContainer>
+                                            </Link>
                                         </SwiperSlide>
                                     )
                                 })

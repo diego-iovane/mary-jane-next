@@ -23,7 +23,7 @@ export async function getServerSideProps(context) {
     body: JSON.stringify({
       query: `
       query NewQuery {
-        exhibitors {
+        exhibitors(first: 1000) {
           edges {
             node {
               logo {
@@ -38,6 +38,7 @@ export async function getServerSideProps(context) {
               descriptionDe
               descriptionEn
               category
+              uri
             }
           }
         }

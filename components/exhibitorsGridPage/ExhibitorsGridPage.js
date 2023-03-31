@@ -103,6 +103,8 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
         }, 400)
     }
 
+    console.log(exhibitors)
+
     return (
         <>
             <HeadSection>
@@ -188,7 +190,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                         currentExhibitors.map(exhibitor => {
                                             return (
                                                 <GridItem key={exhibitor.node.logo.sourceUrl}>
-                                                    <LogoContainer target="_blank" href={exhibitor.node.website} rel="noopener noreferrer" loading={loading}>
+                                                    <LogoContainer href={exhibitor.node.uri} loading={loading}>
                                                         <Logo src={exhibitor.node.logo.sourceUrl} alt="" fill isLoading={loading} />
                                                     </LogoContainer>
                                                 </GridItem>
