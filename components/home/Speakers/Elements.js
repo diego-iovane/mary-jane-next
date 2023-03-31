@@ -33,6 +33,10 @@ export const Head = styled.div`
         flex-direction: column;
         align-items: flex-start;
     }
+
+    @media all and (max-width: 550px) {
+        margin: 0 auto 1.5rem auto;   
+    }
 `
 
 export const ButtonContainer = styled(Link)`
@@ -44,6 +48,10 @@ export const ButtonContainer = styled(Link)`
         margin-left: 0;
         bottom: 0;   
     }
+
+    @media all and (max-width: 550px) {
+        margin: 0 auto;   
+    }
 `
 
 export const SectionTitle = styled.h2`
@@ -52,6 +60,11 @@ export const SectionTitle = styled.h2`
     margin-right: 1rem;
     align-self: flex-start;
     line-height: 1;
+
+    @media all and (max-width: 550px) {
+        margin-right: 0;
+        text-align: center;   
+    }
 ` 
 
 export const SwiperInner = styled.div`

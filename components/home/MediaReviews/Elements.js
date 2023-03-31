@@ -22,6 +22,10 @@ export const SectionTitle = styled.h2`
     align-self: flex-start;
     margin-bottom: 4rem;
 
+    @media all and (max-width: 550px) {
+        text-align: center;   
+    }
+
     @media all and (max-width: 450px) {
         padding-bottom: 1rem;
         line-height: 1.2;

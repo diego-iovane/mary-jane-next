@@ -14,11 +14,11 @@ import {
     Content,
     Title,
     Text,
+    ButtonContainer,
     Images,
     InstaCard,
     InstaImgContainer,
     InstaImg,
-
     IconContainer,
     Icon,
     Img,
@@ -90,9 +90,11 @@ const Exhibition = ({ data, language }) => {
                 >
                     <Title dangerouslySetInnerHTML={{ __html: content.title }} />
                     <Text dangerouslySetInnerHTML={{ __html: content.text }} />
-                    <TertiaryButton>
-                        <Link href={content.ctaUrl}>{content.cta}</Link>
-                    </TertiaryButton>
+                    <ButtonContainer>
+                        <TertiaryButton>
+                            <Link href={content.ctaUrl}>{content.cta}</Link>
+                        </TertiaryButton>
+                    </ButtonContainer>
                 </Content>
                 <Images
                     initial={{ opacity: 0, y: 20 }}

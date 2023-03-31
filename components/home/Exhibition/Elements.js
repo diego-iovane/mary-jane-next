@@ -63,6 +63,10 @@ export const Title = styled.h2`
     @media all and (min-width: 1400px) {
         font-size: 4rem;
     }
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Text = styled.p`
@@ -71,6 +75,14 @@ export const Text = styled.p`
 
     @media all and (min-width: 1400px) {
         font-size: .9rem;
+    }
+`
+
+export const ButtonContainer = styled.div`
+    @media all and (max-width: 550px) {
+        margin: 0 auto;   
+        display: flex;
+        justify-content: center;
     }
 `
 

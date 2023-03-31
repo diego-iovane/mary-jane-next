@@ -24,6 +24,10 @@ export const Head = styled.div`
         flex-direction: column;
         align-items: flex-start;
     }
+
+    @media all and (max-width: 550px) {
+        margin: 0 auto;
+    }
 `
 
 export const ButtonContainer = styled.div`
@@ -35,6 +39,10 @@ export const ButtonContainer = styled.div`
         margin-left: 0;
         bottom: 0;   
     }
+
+    @media all and (max-width: 550px) {
+        margin: 0 auto;
+    }
 `
 
 export const SectionTitle = styled.h2`
@@ -43,6 +51,11 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
     margin-right: 1rem;
     font-size: var(--desktop-title-font-size);
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+        margin-right: 0;
+    }
 ` 
 
 export const LogosContainer = styled.div`

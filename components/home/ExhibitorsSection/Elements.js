@@ -34,6 +34,10 @@ export const Head = styled.div`
 
 export const ButtonsContainer = styled.div`
     display: flex;
+
+    @media all and (max-width: 550px) {
+        justify-content: center;
+    }
 `
 
 
@@ -78,6 +82,10 @@ export const SectionTitle = styled.h2`
     margin-bottom: 1.5rem;
     margin-right: 1rem;
     align-self: flex-start;
+
+    @media all and (max-width: 550px) {
+        text-align: center;   
+    }
 ` 
 
 export const LogoContainer = styled.div`

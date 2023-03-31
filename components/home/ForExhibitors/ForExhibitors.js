@@ -9,6 +9,7 @@ import {
     Content,
     Title,
     Text,
+    ButtonContainer,
 } from './Elements'
 import Link from 'next/link'
 
@@ -49,7 +50,9 @@ const ForExhibitors = ({ data, language }) => {
                 >
                     <Title>{content.title}</Title>
                     <Text>{content.text}</Text>
-                    <TertiaryButton><Link href={content.ctaUrl}>{content.cta}</Link></TertiaryButton>
+                    <ButtonContainer>
+                        <TertiaryButton><Link href={content.ctaUrl}>{content.cta}</Link></TertiaryButton>
+                    </ButtonContainer>
                 </Content>
             </Inner>
         </Section>
