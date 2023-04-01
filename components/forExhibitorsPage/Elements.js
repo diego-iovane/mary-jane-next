@@ -68,9 +68,11 @@ export const Title = styled.h1`
     width: 100%;
     padding-bottom: 1rem;
     font-size: 4.5rem;
+    line-height: 1;
 
     @media all and (max-width: 550px) {
         line-height: 1;
+        font-size: 3rem;
     }
 `
 

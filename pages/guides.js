@@ -4,7 +4,7 @@ import { GetLanguageContext } from '../context/LanguageContext'
 const Guides = ({ res }) => {
 
     const { language } = GetLanguageContext()
-    const content = res.data.pages.edges[0].node.exhibitorsGuides.exhibitorsGuidesContentEn
+    const content = language === 'en' ?  res.data.pages.edges[0].node.exhibitorsGuides.exhibitorsGuidesContentEn : res.data.pages.edges[0].node.exhibitorsGuides.exhibitorsGuidesContentDe
 
     return (
         <GuidesPage content={content}/>
@@ -172,6 +172,156 @@ export async function getServerSideProps(context) {
                           }
                           contact
                         }
+
+
+                        exhibitorsGuidesContentDe {
+                          headerBackgroundImage {
+                            altText
+                            sourceUrl
+                          }
+                          generalDocuments {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                name
+                                url
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                              file3 {
+                                name
+                                url
+                              }
+                              file4 {
+                                name
+                                url
+                              }
+                              file5 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          headerSection {
+                            title
+                            text
+                            cardTitle
+                            cardText
+                            cardCta {
+                              text
+                              url
+                            }
+                          }
+                          furniture {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                url
+                                name
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          shipping {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                url
+                                name
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          techSpecification {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                name
+                                url
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                              file3 {
+                                name
+                                url
+                              }
+                              file4 {
+                                name
+                                url
+                              }
+                              file5 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          plans {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                url
+                                name
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                              file3 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          materials {
+                            title
+                            icon {
+                              altText
+                              sourceUrl
+                            }
+                            files {
+                              file1 {
+                                name
+                                url
+                              }
+                              file2 {
+                                name
+                                url
+                              }
+                            }
+                          }
+                          contact
+                        }
+ 
                       }
                     }
                   }

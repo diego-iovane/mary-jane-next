@@ -4,9 +4,11 @@ import { GetLanguageContext } from '../context/LanguageContext'
 const ForExhibitors = ({ res }) => {
 
   const { language } = GetLanguageContext()
-  // const content = language === 'en' ? res.data.pages.edges[0].node.exhibitorsGridPage.contentEn : res.data.pages.edges[0].node.exhibitorsGridPage.contentDe
+  
+  
+  const content = language === 'en' ? res.data.pages.edges[0].node.forExhibitorsPage.forExhibitorsContentEn : res.data.pages.edges[0].node.forExhibitorsPage.forExhibitorsContentDe
 
-  const content = res.data.pages.edges[0].node.forExhibitorsPage.forExhibitorsContentEn
+  console.log(res)
 
   return (
     <ForExhibitorsPage content={content} />
@@ -29,31 +31,6 @@ export async function getServerSideProps(context) {
             node {
               forExhibitorsPage {
                 forExhibitorsContentEn {
-                  headerBg {
-                    altText
-                    sourceUrl
-                  }
-                  generalInfo {
-                    title
-                    subtitle
-                    text
-                    titleCta {
-                      text
-                      url
-                    }
-                    ctaOne {
-                      text
-                      url
-                    }
-                    ctaTwo {
-                      url
-                      text
-                    }
-                    image {
-                      altText
-                      sourceUrl
-                    }
-                  }
                   features {
                     one {
                       text
@@ -98,10 +75,31 @@ export async function getServerSideProps(context) {
                       }
                     }
                   }
-                  location {
+                  generalInfo {
+                    text
                     title
                     subtitle
+                    image {
+                      altText
+                      sourceUrl
+                    }
+                    ctaTwo {
+                      text
+                      url
+                    }
+                    ctaOne {
+                      text
+                      url
+                    }
+                  }
+                  headerBg {
+                    altText
+                    sourceUrl
+                  }
+                  location {
+                    subtitle
                     text
+                    title
                     cta {
                       text
                       url
@@ -119,11 +117,112 @@ export async function getServerSideProps(context) {
                         altText
                         sourceUrl
                       }
-                    } 
+                    }
                   }
                   onboarding {
+                    subtitle
+                    title
+                    steps {
+                      one
+                      two
+                      three
+                      four
+                      five
+                    }
+                  }
+                }
+                forExhibitorsContentDe {
+                  features {
+                    one {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                    two {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                    three {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                    four {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                    five {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                    six {
+                      text
+                      icon {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                  }
+                  generalInfo {
+                    text
                     title
                     subtitle
+                    image {
+                      altText
+                      sourceUrl
+                    }
+                    ctaTwo {
+                      text
+                      url
+                    }
+                    ctaOne {
+                      text
+                      url
+                    }
+                  }
+                  headerBg {
+                    altText
+                    sourceUrl
+                  }
+                  location {
+                    subtitle
+                    text
+                    title
+                    cta {
+                      text
+                      url
+                    }
+                    images {
+                      one {
+                        altText
+                        sourceUrl
+                      }
+                      two {
+                        altText
+                        sourceUrl
+                      }
+                      three {
+                        altText
+                        sourceUrl
+                      }
+                    }
+                  }
+                  onboarding {
+                    subtitle
+                    title
                     steps {
                       one
                       two

@@ -31,7 +31,7 @@ const AccomodationPage = ({ data, language, bg }) => {
             </HeadSection>
             <Section>
                 <Inner>
-                    <MainTitle>Accomodation</MainTitle>
+                    <MainTitle>{ language === 'en' ? 'Accomodation' : 'Unterkünfte'}</MainTitle>
                     <Swiper
                         ref={swiperRef}
                         slidesPerView={1}

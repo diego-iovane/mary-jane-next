@@ -36,8 +36,9 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
     const [currentExhibitors, setCurrentExhibitors] = useState([])
     const [loading, setLoading] = useState(false)
 
-    // TEMP
-    const categories = ['All', 'Cbd', 'Paraphernalia', 'Food']
+    const categories = Object.keys(content.categories).map(key => {
+        return { ...content.categories[key]}
+    })
 
     const observeClicks = (e) => !e.target.className.includes("cat-btn") && setOpenCategories(false)
 
@@ -82,13 +83,15 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
 
     const handleInput = (e) => setSearchValue(e.target.value)
 
-    const handleOpen = (e) => setOpenCategories(!openCategories)
+    const handleOpen = () => setOpenCategories(!openCategories)
 
-    const handleClick = (e) => setCurrentCategory(e.target.innerText.toLowerCase())
+    const handleClick = (value) => {
+        setCurrentCategory(value)
+    }
 
-    const handleMobileClick = (e) => {
+    const handleMobileClick = (value) => {
         setMobileCatOpen(false)
-        setCurrentCategory(e.target.innerText.toLowerCase())
+        setCurrentCategory(value)
     }
 
     const handleFocus = () => {
@@ -102,8 +105,6 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
             setHiddenTitle(false)
         }, 400)
     }
-
-    console.log(exhibitors)
 
     return (
         <>
@@ -128,7 +129,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                     {
                                         categories.map(category => {
                                             return (
-                                                <Categorie onClick={handleClick} className="cat-btn" >{category}</Categorie>
+                                                <Categorie onClick={() => handleClick(category.value)} className="cat-btn" >{category.name}</Categorie>
                                             )
                                         })
                                     }
@@ -174,7 +175,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                     {
                                         categories.map(category => {
                                             return (
-                                                <Categorie onClick={handleMobileClick} className="cat-btn" >{category}</Categorie>
+                                                <Categorie onClick={() => handleMobileClick(category.value)} className="cat-btn" >{category.name}</Categorie>
                                             )
                                         })
                                     }

@@ -42,16 +42,101 @@ export async function getServerSideProps(context) {
             }
           }
         }
+
         pages(where: {id: 475}) {
           edges {
             node {
               exhibitorsGridPage {
                 contentEn {
-                  title
-                  searchInputPlaceholder
+                  categories {
+                    catA {
+                      name
+                      value
+                    }
+                    catB {
+                      name
+                      value
+                    }
+                    catC {
+                      name
+                      value
+                    }
+                    catD {
+                      name
+                      value
+                    }
+                    catE {
+                      name
+                      value
+                    }
+                    catF {
+                      name
+                      value
+                    }
+                    catG {
+                      name
+                      value
+                    }
+                    catH {
+                      name
+                      value
+                    }
+                    catI {
+                      name
+                      value
+                    }
+                    catJ {
+                      name
+                      value
+                    }
+                  }
                   categoryInputPlaceholder
+                  searchInputPlaceholder
+                  title
                 }
                 contentDe {
+                  categories {
+                    catA {
+                      value
+                      name
+                    }
+                    catB {
+                      name
+                      value
+                    }
+                    catC {
+                      name
+                      value
+                    }
+                    catD {
+                      name
+                      value
+                    }
+                    catE {
+                      name
+                      value
+                    }
+                    catF {
+                      name
+                      value
+                    }
+                    catG {
+                      name
+                      value
+                    }
+                    catH {
+                      name
+                      value
+                    }
+                    catI {
+                      name
+                      value
+                    }
+                    catJ {
+                      name
+                      value
+                    }
+                  }
                   categoryInputPlaceholder
                   searchInputPlaceholder
                   title
@@ -60,6 +145,7 @@ export async function getServerSideProps(context) {
             }
           }
         }
+       
       }
       `
     })
@@ -73,3 +159,5 @@ export async function getServerSideProps(context) {
     }
   }
 }
+
+
