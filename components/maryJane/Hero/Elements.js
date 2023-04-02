@@ -48,7 +48,7 @@ export const Content = styled.div`
     width: 40rem; 
 
     @media all and (max-width: 550px) {
-        bottom: 10rem;
+        bottom: 6rem;
     }
 `
 
@@ -58,7 +58,8 @@ export const Subtitle = styled.h3`
     font-size: 2.5rem;
 
     @media all and (max-width: 550px) {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
+        display: none;
     }
 `
 

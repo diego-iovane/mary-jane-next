@@ -71,6 +71,10 @@ export const CardTitle = styled.h2`
         line-height: 1;
     }
 
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
+
     @media all and (max-width: 450px) {
         font-size: 2rem;
     }

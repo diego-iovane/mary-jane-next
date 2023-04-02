@@ -19,7 +19,7 @@ const CannabisFestivalPage = ({ data, language }) => {
         cta: data.ctaFestivalEn || '',
     } :
     {
-        titleOne: data.titleOneEn || '',
+        titleOne: data.titleOneDe || '',
         titleTwo: data.titleTwoDe || '',
         cta: data.ctaFestivalDe || '',
     }

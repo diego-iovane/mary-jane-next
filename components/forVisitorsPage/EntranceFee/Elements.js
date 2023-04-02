@@ -11,6 +11,11 @@ export const Inner = styled(motion.div)`
 export const Title = styled.h1`
     padding-bottom: 1rem;
     font-size: 2.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+        line-height: 1;
+    }
 `
 
 export const Grid = styled.div`

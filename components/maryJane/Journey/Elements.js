@@ -24,6 +24,7 @@ export const Title = styled.h2`
     @media all and (max-width: 600px) {
         line-height: 1;
         font-size: 2.5rem;
+        text-align: center;
     }
 `
 

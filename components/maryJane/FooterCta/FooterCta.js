@@ -17,11 +17,11 @@ const FooterCta = ({ content }) => {
                 <Title>{content.title}</Title>
                 <Subtitle>{content.subtitle}</Subtitle>
                 <ButtonsContainer>
-                    <ButtonContainer href={content.button1.url}>
+                    <a href={content.button1.url} target="_blank" rel="noopener noreferrer">
                         <SmallCta>
                             {content.button1.text}
                         </SmallCta>
-                    </ButtonContainer>
+                    </a>
                     <ButtonContainer href={content.button2.url}>
                         <SmallCtaPink>
                             {content.button2.text}

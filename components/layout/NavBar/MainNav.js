@@ -77,9 +77,15 @@ const MainNav = ({ scrolled, links }) => {
                                                                 link.dropdown.map(link => {
                                                                     return (
                                                                         <MenuLinkContainer key={link.title}>
-                                                                            <Link href={link.url}>
-                                                                                {link.title}
-                                                                            </Link>
+                                                                            {
+                                                                                link.title === 'Tickets' ?
+                                                                                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                                                                    {link.title}
+                                                                                </a> :
+                                                                                <Link href={link.url}>
+                                                                                    {link.title}
+                                                                                </Link>
+                                                                            }
                                                                         </MenuLinkContainer>
                                                                     )
                                                                 }

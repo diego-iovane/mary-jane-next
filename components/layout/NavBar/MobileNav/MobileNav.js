@@ -7,7 +7,7 @@ import {
     DropdownContainer,
 } from './Elements'
 
-const MobileNav = ({ opened, links }) => {
+const MobileNav = ({ links, opened, setOpened }) => {
 
     const [isActive, setActive] = useState('')
 
@@ -24,7 +24,7 @@ const MobileNav = ({ opened, links }) => {
                 }              
             </List>
             <DropdownContainer>
-                <LanguageDropdown />
+                <LanguageDropdown setOpenedMenu={setOpened}/>
             </DropdownContainer>
         </MenuContainer>
     )

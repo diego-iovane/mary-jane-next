@@ -24,6 +24,10 @@ export const Title = styled.h1`
     padding-bottom: 1rem;
     font-size: 2.5rem;
     color: var(--green);
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -36,6 +40,11 @@ export const Subtitle = styled.p`
 
     @media all and (max-width: 860px) {
         margin-left: 0;
+    }
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+        width: 100%;
     }
 `
 

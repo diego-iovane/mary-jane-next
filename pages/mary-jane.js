@@ -134,6 +134,119 @@ export async function getServerSideProps(context) {
                                         }
                                     }
                                 }
+
+                                maryJaneContentDe {
+                                  hero {
+                                  text
+                                  subtitle
+                                  copy
+                                  backgroundImage {
+                                      altText
+                                      sourceUrl
+                                      }
+                                  }
+                                  cards {
+                                      card1 {
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card2 {
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card3 {
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card4 {
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                  }
+                                  card {
+                                      title
+                                      text
+                                      image {
+                                        altText
+                                        sourceUrl
+                                      }
+                                  }
+                                  footerCta {
+                                      title
+                                      subtitle
+                                      button1 {
+                                          text
+                                          url
+                                      }
+                                      button2 {
+                                          text
+                                          url
+                                      }
+                                  }
+                                  journeyTitle
+                                  journey {
+                                      card1 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card2 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card3 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card4 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card5 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                      card6 {
+                                        year
+                                        text
+                                        image {
+                                          altText
+                                          sourceUrl
+                                        }
+                                      }
+                                  }
+                              }
                             }
                         }
                     }

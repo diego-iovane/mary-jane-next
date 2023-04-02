@@ -63,7 +63,7 @@ export const Title = styled.h1`
 
 export const PosterContainer = styled.div`
     position: relative;
-    margin: 1rem auto 4rem auto;
+    margin: 1rem auto 2rem auto;
     width: 35rem;
     height: 50rem;
 
@@ -79,5 +79,5 @@ top: 0;
 `
 
 export const ButtonContainer = styled(Link)`
-    margin: 2rem auto 4rem auto;
+    margin: 0 auto 4rem auto;
 `

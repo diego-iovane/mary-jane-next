@@ -26,6 +26,7 @@ export const Title = styled.h1`
     @media all and (max-width: 525px) {
         font-size: 3rem;
         padding-bottom: .8rem;
+        text-align: center;
     }
 `
 
@@ -48,6 +49,11 @@ export const RightContainer = styled.div`
     @media all and (max-width: 890px) {
         margin-left: 0;
     }
+
+    @media all and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const Subtitle = styled.p`
@@ -55,10 +61,10 @@ export const Subtitle = styled.p`
     width: 25rem;
     font-weight: bold;
     line-height: 1.2;
-
     
     @media all and (max-width: 400px) {
-        width: 24rem;   
+        width: 100%;   
+        text-align: center;
     }
 `
 
@@ -79,7 +85,11 @@ export const ButtonsContainer = styled.div`
     margin-top: 1rem;
 `
 
-export const ButtonContainer = styled(Link)``
+export const ButtonContainer = styled(Link)`
+    @media all and (max-width: 550px) {
+        margin: 0 auto;
+    }
+`
 
 export const LeftContainer = styled.div`
     display: flex;

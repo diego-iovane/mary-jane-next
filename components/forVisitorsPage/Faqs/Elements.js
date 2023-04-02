@@ -27,6 +27,10 @@ export const Inner = styled.div`
 export const Title = styled.h2`
     text-align: left;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Item = styled.div``

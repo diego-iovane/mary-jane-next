@@ -20,8 +20,6 @@ const GeneralCards = ({ content }) => {
         return { ...content.cards[key]}
     })
 
-    console.log(content)
-
     return (
         <Section>
             <Inner>

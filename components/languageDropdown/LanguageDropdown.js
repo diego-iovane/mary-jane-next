@@ -10,7 +10,7 @@ import {
     Arrow,
 } from "./Elements"
 
-const LanguageDropdown = () => {
+const LanguageDropdown = ({ setOpenedMenu }) => {
 
     const { language, setLanguage } = GetLanguageContext()
     const [active, setActive] = useState(language)
@@ -56,7 +56,7 @@ const LanguageDropdown = () => {
                     .filter(lng => lng.value !== active.value)
                     .map(lng => {
                         return(
-                            <DropdownItem key={lng.value}>
+                            <DropdownItem key={lng.value} onClick={() => setOpenedMenu(false)}>
                                 <FlagContainer onClick={() => changeLanguage(lng.value)}>
                                     <Flag src={lng.src} alt={lng.value}/>
                                 </FlagContainer>

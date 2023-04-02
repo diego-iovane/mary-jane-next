@@ -9,7 +9,7 @@ import Journey from './Journey/Journey'
 const MaryJanePage = ({ res }) => {
 
     const { language } = GetLanguageContext()
-    const content = res.data.pages.edges[0].node.maryJane.maryJaneContentEn
+    const content = language === 'en' ? res.data.pages.edges[0].node.maryJane.maryJaneContentEn : res.data.pages.edges[0].node.maryJane.maryJaneContentDe
 
     return (
         <Container>

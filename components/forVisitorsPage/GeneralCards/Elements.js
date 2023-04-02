@@ -34,6 +34,11 @@ export const Title = styled.h2`
         width: 100%;
         text-align: left;
     }
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+        width: 90%;
+    }
 `
 
 export const Grid = styled.div`

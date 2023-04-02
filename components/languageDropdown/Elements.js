@@ -66,12 +66,13 @@ export const Arrow = styled.div`
 
     @media all and (max-width: 1025px) {
         rotate: ${({opened}) => opened && 'z 90deg'};   
+        border-top: 4px solid #fff;
     }
 
     @media all and (max-width: 960px) {
         right: -17px;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 6px solid #555;
+        border-top: 6px solid #fff;
     }
 `

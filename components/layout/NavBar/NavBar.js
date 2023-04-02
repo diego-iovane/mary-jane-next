@@ -115,23 +115,23 @@ const NavBar = () => {
       dropdown: [
         {
           title: 'Allgemeine Info',
-          url: '',
+          url: '/for-exhibitors',
         },
         {
           title: 'Aussteller Guide',
-          url: '',
+          url: '/guides',
         },
         {
           title: 'Standanfrage',
-          url: '',
+          url: '/stand-inquiry',
         },
         {
           title: 'Mietmöbel & Hostessen',
-          url: '',
+          url: '/furniture-rental-hostesses',
         },
         {
           title: 'Unterkunft',
-          url: '',
+          url: '/accomodation',
         },
       ]
     },
@@ -159,7 +159,7 @@ const NavBar = () => {
     },
     {
       title: 'Über uns',
-      url: '/mary^jane',
+      url: '/mary-jane',
     },
     {
       title: 'Kontakt',
