@@ -40,7 +40,7 @@ const Footer = () => {
     links: [
       {
         title: 'FAQ',
-        url: '/',
+        url: '/visitors',
       },
       {
         title: 'Terms & Conditions',
@@ -52,7 +52,7 @@ const Footer = () => {
       },
       {
         title: 'Press',
-        url: '/',
+        url: '/media',
       },
       {
         title: 'Blog',
