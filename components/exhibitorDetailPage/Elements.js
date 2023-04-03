@@ -35,14 +35,10 @@ export const Inner = styled(motion.div)`
     box-shadow: var(--soft-shadow);
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: .5rem;
 
-    @media all and (max-width: 600px) {
         grid-template-columns: 1fr;
         grid-gap: 2rem;
         padding: 3rem 1.5rem;
-    }
 `
 
 export const Left = styled.div`
@@ -59,7 +55,7 @@ export const LogoContainer = styled.div`
     width: 12rem;
     padding: 1rem;
     border-radius: 500px;
-    background-color: #fff;
+    background-color: ${({ isWhiteLogo }) => isWhiteLogo ? '#aad771' : '#fff'};
     overflow: hidden;
 `
 
@@ -73,11 +69,9 @@ export const Logo = styled(Image)`
 `
 
 export const Content = styled.div`
-    @media all and (max-width: 600px) {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
 `
 
 export const Title = styled.h3`

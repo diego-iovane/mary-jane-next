@@ -21,15 +21,8 @@ export const Inner = styled.div`
 
 export const Head = styled.div`
     display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin-bottom: 1.5rem;
-
-    @media all and (max-width: 850px) {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 0;
-    }
+    flex-direction: column;
+    margin: 0 auto 1.5rem auto;
 `
 
 export const ButtonsContainer = styled.div`
@@ -45,16 +38,14 @@ export const ButtonContainer = styled.div`
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
-    
-    @media all and (max-width: 850px) {
-        margin: 1rem 0;
-        
-        &:nth-child(2) {
-            margin-left: 1rem;
-        }
+
+    &:first-child {
+        margin-left: 0;
     }
 
     @media all and (max-width: 450px) {
+        bottom: 0;
+
         &:nth-child(2) {
             display: none;
         }
@@ -79,12 +70,15 @@ export const AltButtonContainer = styled.div`
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
-    align-self: flex-start;
+    margin-bottom: 3.5rem;
+    text-align: center;
 
-    @media all and (max-width: 550px) {
-        text-align: center;   
+    @media all and (max-width: 850px) {
+        margin-bottom: 2.5rem;
+    }
+
+    @media all and (max-width: 450px) {
+        margin-bottom: 1.5rem;
     }
 ` 
 

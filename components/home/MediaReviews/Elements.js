@@ -20,7 +20,7 @@ export const Inner = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 2.5rem;
     align-self: flex-start;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem auto;
 
     @media all and (max-width: 550px) {
         text-align: center;   

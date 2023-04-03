@@ -18,45 +18,20 @@ export const Inner = styled.div`
 
 export const Head = styled.div`
     display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin-bottom: 1.5rem;
-
-    @media all and (max-width: 600px) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    @media all and (max-width: 550px) {
-        margin: 0 auto;   
-    }
+    flex-direction: column;
+    margin-bottom: 0 auto 1.5rem auto;
 `
 
 export const ButtonContainer = styled.div`
     position: relative;
-    bottom: 1rem;
-    margin-left: 1rem;
-
-    @media all and (max-width: 600px) {
-        margin-left: 0;
-        bottom: 0;   
-    }
-
-    @media all and (max-width: 550px) {
-        margin: 0 auto 1rem auto;   
-    }
+    margin: 0 auto 2rem auto;   
 `
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
+    margin-bottom: 2rem;
     align-self: flex-start;
-
-    @media all and (max-width: 550px) {
-        text-align: center;
-        margin-right: 0;
-    }
+    text-align: center;
 `
 
 export const LogoContainer = styled.div`

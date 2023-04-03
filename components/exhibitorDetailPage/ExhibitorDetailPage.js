@@ -17,6 +17,8 @@ const ExhibitorDetailPage = ({ data, img }) => {
 
   const { language } = GetLanguageContext()
 
+  console.log(data)
+
   return (
     <>
       <HeadSection>
@@ -24,7 +26,7 @@ const ExhibitorDetailPage = ({ data, img }) => {
       </HeadSection>
       <Inner>
         <Left>
-          <LogoContainer>
+          <LogoContainer isWhiteLogo={data.isWhiteLogo}>
             <Logo src={data.logo.sourceUrl} alt={data.logo.altText} fill />
           </LogoContainer>
         </Left>

@@ -37,6 +37,7 @@ export async function getServerSideProps(context) {
               website
               countryEn
               countryDe
+              isWhiteLogo
             }
           }
         }

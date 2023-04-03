@@ -25,46 +25,20 @@ export const Inner = styled(motion.div)`
 
 export const Head = styled.div`
     display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin-bottom: 1.5rem;
-
-    @media all and (max-width: 880px) {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    @media all and (max-width: 550px) {
-        margin: 0 auto 1.5rem auto;   
-    }
+    flex-direction: column;
+    margin: 0 auto 1.5rem auto;   
 `
 
 export const ButtonContainer = styled(Link)`
     position: relative;
-    bottom: 1rem;
-    margin-left: 1rem;
-    
-    @media all and (max-width: 880px) {
-        margin-left: 0;
-        bottom: 0;   
-    }
-
-    @media all and (max-width: 550px) {
-        margin: 0 auto;   
-    }
+    margin: 0 auto 1rem auto;
 `
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
-    align-self: flex-start;
+    margin-bottom: 2rem;
+    text-align: center;
     line-height: 1;
-
-    @media all and (max-width: 550px) {
-        margin-right: 0;
-        text-align: center;   
-    }
 ` 
 
 export const SwiperInner = styled.div`

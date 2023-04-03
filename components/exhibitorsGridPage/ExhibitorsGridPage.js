@@ -191,7 +191,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                         currentExhibitors.map(exhibitor => {
                                             return (
                                                 <GridItem key={exhibitor.node.logo.sourceUrl}>
-                                                    <LogoContainer href={exhibitor.node.uri} loading={loading}>
+                                                    <LogoContainer href={exhibitor.node.uri} loading={loading} isWhiteLogo={exhibitor.node.isWhiteLogo}>
                                                         <Logo src={exhibitor.node.logo.sourceUrl} alt="" fill isLoading={loading} priority/>
                                                     </LogoContainer>
                                                 </GridItem>

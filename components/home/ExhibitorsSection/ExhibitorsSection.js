@@ -43,7 +43,7 @@ const ExhibitorsSection = ({ data, content, language }) => {
     const handleSwiper = (swiper) => {
 
         const infinite = () => {
-            swiper.slideTo(swiper.slides.length, 30000)
+            swiper.slideTo(swiper.slides.length, 80000)
             swiper.once('transitionEnd', function () {
                 swiper.slideTo(swiper.params.slidesPerView, 0, false);
                 setTimeout(function () {

@@ -17,17 +17,11 @@ export const Inner = styled.div`
 
 export const SectionTitle = styled.h2`
     font-size: var(--desktop-title-font-size);
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
-    align-self: flex-start;
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
 
     @media all and (max-width: 680px) {
         line-height: 1;
-    }
-
-    @media all and (max-width: 550px) {
-        margin-right: 0;
-        text-align: center;   
     }
 ` 
 
@@ -35,11 +29,7 @@ export const RevWidget = styled.div`
     display: flex;
     justify-content: space-between;
     width: 16.5rem;
-    margin-bottom: .5rem;
-
-    @media all and (max-width: 550px) {
-        margin: 0 auto .5rem auto;   
-    }
+    margin: 0 auto .5rem auto;
 `
 
 export const GContainer = styled.div`

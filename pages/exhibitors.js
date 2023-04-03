@@ -39,6 +39,7 @@ export async function getServerSideProps(context) {
               descriptionEn
               category
               uri
+              isWhiteLogo
             }
           }
         }

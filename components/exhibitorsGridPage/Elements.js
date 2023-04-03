@@ -139,7 +139,7 @@ export const LogoContainer = styled.a`
     position: relative;
     width: 12rem;
     height: 12rem;
-    background-color: ${({loading}) => loading ? '#ededed' : '#ffffff'};
+    background-color: ${({isWhiteLogo}) => isWhiteLogo ? '#aad771' : '#fff'};
     border-radius: 500px;
     overflow: hidden;
     cursor: pointer;
@@ -149,6 +149,11 @@ export const Logo = styled(Image)`
     object-fit: contain;
     opacity: ${({isLoading}) => isLoading ? '0' : '1'};
     transition: opacity .2s ease-in-out;
+    width: 80% !important;
+    height: 80% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
 `
 
 // CATEGORIES
