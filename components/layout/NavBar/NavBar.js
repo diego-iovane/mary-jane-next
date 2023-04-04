@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { GetLanguageContext } from '../../../context/LanguageContext'
 import Link from 'next/link'
 import MainNav from './MainNav'
 import SecondaryNav from './SecondaryNav'
+import MobileNav from './MobileNav/MobileNav'
+import Hamburguer from './MobileNav/Hamburguer'
 import {
   Container,
   Inner,
@@ -11,9 +14,6 @@ import {
   LogoContainer,
   Logo,
 } from './Elements'
-import MobileNav from './MobileNav/MobileNav'
-import Hamburguer from './MobileNav/Hamburguer'
-import { GetLanguageContext } from '../../../context/LanguageContext'
 
 const NavBar = () => {
 

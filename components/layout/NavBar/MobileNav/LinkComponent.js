@@ -8,11 +8,20 @@ import {
 
 const LinkComponent = ({ link, isActive, setActive }) => {
 
+    const handleClick = () => {
+        
+        if(isActive === link.url) {
+            setActive('')
+        } else {
+            setActive(link.url)
+        }
+    }
+
     return (
         <LinkContainer opened={isActive === link.url}>
             {
                 link.dropdown !== undefined ?
-                    <FakeLink opened={isActive === link.url} onClick={() => setActive(link.url)}>
+                    <FakeLink opened={isActive === link.url} onClick={handleClick}>
                         {isActive === link.url ? '-' : '+'} {link.title}
                     </FakeLink> :
                     <Link href={link.url} >
