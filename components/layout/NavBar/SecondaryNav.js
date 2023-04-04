@@ -12,20 +12,24 @@ const SecondaryNav = ({ scrolled }) => {
 
     return (
         <Nav scrolled={scrolled}>
-            <TicketsBtn
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 1 }}
-                transition={{ type: "spring", bounce: .5 }}
-            >
-                <Link href="https://maryjaneberlin.ticket.io/y7wu2yng/" target="_blank" rel="noopener noreferrer">Get tickets</Link>
-            </TicketsBtn>
-            <StandBtn
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 1 }}
-                transition={{ type: "spring", bounce: .5 }}
-            >
-                <Link href="/stand-inquiry">Stand inquiry</Link>
-            </StandBtn>
+            <Link href="https://maryjaneberlin.ticket.io/y7wu2yng/" target="_blank" rel="noopener noreferrer">
+                <TicketsBtn
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: .5 }}
+                >
+                    Get tickets
+                </TicketsBtn>
+            </Link>
+            <Link href="/stand-inquiry">
+                <StandBtn
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: .5 }}
+                >
+                    Stand inquiry
+                </StandBtn>
+            </Link>
             <DropdownContainer>
                 <LanguageDropdown />
             </DropdownContainer>
