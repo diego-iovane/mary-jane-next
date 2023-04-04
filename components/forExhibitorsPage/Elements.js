@@ -73,6 +73,7 @@ export const Title = styled.h1`
     @media all and (max-width: 550px) {
         line-height: 1;
         font-size: 3rem;
+        text-align: center;
     }
 `
 
@@ -80,6 +81,10 @@ export const Subtitle = styled.p`
     font-size: 1.2rem;
     position: relative;
     left: 5px;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const MainContent = styled.div`
@@ -112,6 +117,10 @@ export const LeftContainer = styled.div`
 export const Text = styled.p`
     line-height: 1.5;
     font-size: .9rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const ButtonsContainer = styled.div`
@@ -233,24 +242,45 @@ export const LocationLeftContainer = styled.div`
         width: 100%;
         margin-bottom: 2rem;
     }
+
+    @media all and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const LocationTitle = styled.h2`
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const LocationSubtitle = styled.p`
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const LocationText = styled.p`
     line-height: 1.5;
     font-size: .9rem;
     margin-bottom: 1.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
-export const LocationButtonContainer = styled(Link)``
+export const LocationButtonContainer = styled(Link)`
+    @media all and (max-width: 550px) {
+        margin: 0 auto;
+    }
+`
 
 export const LocationRightContainer = styled.div`
     width: 28rem;
@@ -288,20 +318,12 @@ export const OnboardingTitle = styled.h2`
         line-height: 1;
         font-size: 2rem;
     }
-
-    @media all and (max-width: 450px) {
-        text-align: left;
-    }
 `
 
 export const OnboardingSubtitle = styled.p`
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     text-align: center;
-
-    @media all and (max-width: 450px) {
-        text-align: left;
-    }
 `
 
 export const StepsContainer = styled.div`
@@ -333,6 +355,10 @@ export const StepContainer = styled(motion.div)`
     align-items: center;
     position: relative;
     z-index: 10;
+
+    @media all and (max-width: 500px) {
+        min-height: 5rem;
+    }
 `
 
 export const StepNum = styled(motion.div)`
@@ -363,4 +389,8 @@ export const Line = styled(motion.div)`
     background-color: var(--green);
     top: 15px;
     left: 23px;
+
+    @media all and (max-width: 500px) {
+        top: 30px;
+    }
 `

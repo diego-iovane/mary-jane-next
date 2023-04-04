@@ -51,12 +51,20 @@ export const Title = styled.h1`
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
     margin-bottom: .5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const SubTitle = styled.h3`
     font-weight: bold;
     margin: 1rem 0 1.5rem 0;
     line-height: 1.3;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Item = styled.div`
@@ -95,16 +103,28 @@ export const Note = styled.p`
     line-height: 1.4;
     position: relative;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Contact = styled.div``
 
 export const ContactTitle = styled.h3`
     margin-bottom: 1rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const ContactText = styled.p`
     line-height: 1.4;
     position: relative;
     margin: .3rem 0;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `

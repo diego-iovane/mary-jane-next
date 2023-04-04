@@ -93,15 +93,27 @@ export const Title = styled.h1`
     border-bottom: 1px dashed #1E411D;
     margin-bottom: 1rem;
     font-size: 2rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Subtitle = styled.p`
     margin: 1.5rem 0 1rem 0;
     font-size: 1.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const SmallText = styled.p`
     font-size: .9rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const DetailsContainer = styled.div`
@@ -128,6 +140,10 @@ export const Address = styled.p`
         margin-bottom: 2rem;
         width: 100%;
     }
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const DetailsList = styled.ul`
@@ -143,6 +159,10 @@ export const DetailItem = styled.li`
 
     @media all and (max-width: 600px) {
         margin-bottom: .8rem;
+    }
+
+    @media all and (max-width: 550px) {
+        text-align: center;
     }
 `
 

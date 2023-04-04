@@ -84,10 +84,18 @@ export const MainTitle = styled.h1`
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
     line-height: 1;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Text = styled.p`
     font-size: .9rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const FeaturedTitleContainer = styled.div`

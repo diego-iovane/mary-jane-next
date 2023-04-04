@@ -60,6 +60,7 @@ export const Subtitle = styled.h3`
     @media all and (max-width: 550px) {
         /* font-size: 1.5rem; */
         display: none;
+        text-align: center;
     }
 `
 
@@ -71,6 +72,7 @@ export const Copy = styled.h1`
 
     @media all and (max-width: 550px) {
         font-size: 3rem;
+        text-align: center;
     }
 `
 
@@ -79,4 +81,8 @@ export const Text = styled.p`
     font-size: .9rem;
     position: relative;
     left: 5px;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `

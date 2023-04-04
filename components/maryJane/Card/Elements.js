@@ -85,4 +85,9 @@ export const CardText = styled.p`
     display: flex;
     align-items: center;
     width: 90%;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+        margin: 0 auto;
+    }
 `

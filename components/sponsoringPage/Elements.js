@@ -68,6 +68,11 @@ export const LeftContent = styled.div`
     @media all and (max-width: 1050px) {
         width: 100%;
     }
+
+    @media all and (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 
@@ -77,6 +82,10 @@ export const Title = styled.h1`
     border-bottom: 1px dashed #1E411D;
     margin-bottom: 1rem;
     font-size: 2.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const TitleAlt = styled.h2`
@@ -85,15 +94,25 @@ export const TitleAlt = styled.h2`
     border-bottom: 1px dashed #1E411D;
     margin-bottom: 1rem;
     font-size: 2rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Text = styled.p`
     line-height: 2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const ButtonContainer = styled(Link)`
-
+    @media all and (max-width: 550px) {
+        margin: 0 auto 1rem auto;
+    }
 `
 
 export const RightContent = styled.div`

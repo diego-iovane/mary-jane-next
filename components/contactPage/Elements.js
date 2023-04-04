@@ -51,16 +51,28 @@ export const Title = styled.h1`
     padding-bottom: 1rem;
     border-bottom: 1px dashed #1E411D;
     margin-bottom: 1rem;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const SubTitle = styled.h3`
     font-weight: bold;
     margin: 1.5rem 0;
+
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
 `
 
 export const Item = styled.div`
     display: flex;
     margin-bottom: 1.8rem;
+
+    @media all and (max-width: 550px) {
+        margin: 0 auto 1.8rem auto;
+    }
 `
 
 export const Icon = styled.div`

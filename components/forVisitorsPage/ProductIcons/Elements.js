@@ -14,7 +14,7 @@ export const Title = styled.h2`
     font-size: 2rem;
     text-align: center;
 
-    @media all and (max-width: 510px) {
+    @media all and (max-width: 550px) {
         line-height: 1;
     }
 `

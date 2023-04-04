@@ -62,7 +62,7 @@ export const Subtitle = styled.p`
     font-weight: bold;
     line-height: 1.2;
     
-    @media all and (max-width: 400px) {
+    @media all and (max-width: 550px) {
         width: 100%;   
         text-align: center;
     }
@@ -74,6 +74,9 @@ export const Text = styled.p`
     width: 95%;
     margin: 1.5rem 0;
 
+    @media all and (max-width: 550px) {
+        text-align: center;
+    }
     
     @media all and (max-width: 400px) {
         width: 20rem;   
