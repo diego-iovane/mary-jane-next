@@ -285,6 +285,7 @@ export async function getServerSideProps(context) {
               }
               website
               uri
+              isWhiteLogo
             }
           }
         }

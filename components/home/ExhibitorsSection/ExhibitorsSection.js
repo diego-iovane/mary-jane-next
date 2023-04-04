@@ -116,14 +116,16 @@ const ExhibitorsSection = ({ data, content, language }) => {
                             className="exhibitorsSwiper"
                         >
                             {
-                                exhibitors.map((item, index) => {
+                                exhibitors.map((exhibitor, index) => {
+
+                                    console.log(exhibitor)
                                     return (
                                         <SwiperSlide key={index}>
-                                            <Link href={item.node.uri}>
-                                                <LogoContainer>
+                                            <Link href={exhibitor.node.uri}>
+                                                <LogoContainer iswhitelogo={exhibitor.node.isWhiteLogo}>
                                                     <Logo
-                                                        src={item.node.logo.sourceUrl}
-                                                        alt={item.node.logo.altText}
+                                                        src={exhibitor.node.logo.sourceUrl}
+                                                        alt={exhibitor.node.logo.altText}
                                                         fill
                                                     />
                                                 </LogoContainer>

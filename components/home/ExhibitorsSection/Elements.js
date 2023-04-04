@@ -88,7 +88,7 @@ export const LogoContainer = styled.div`
     width: 9rem;
     padding: 1rem;
     border-radius: 500px;
-    background-color: #fff;
+    background-color: ${({ iswhitelogo }) => iswhitelogo ? '#aad771' : '#fff'};
     overflow: hidden;
 `
 
