@@ -8,7 +8,7 @@ import {
   RightContainer,
   Subtitle,
   Text,
-  ButtonContainer,
+  // ButtonContainer,
   Img,
   ImgContainer,
 } from './Elements'
@@ -30,9 +30,9 @@ const GeneralInfo = ({ content }) => {
         <RightContainer>
           <Subtitle>{content.subtitle}</Subtitle>
           <Text>{content.text}</Text>
-          <ButtonContainer href={content.cta.url}>
+          {/* <ButtonContainer href={content.cta.url}>
             <SmallCta>{content.cta.text}</SmallCta>
-          </ButtonContainer>
+          </ButtonContainer> */}
         </RightContainer>
       </Grid>
     </Inner>

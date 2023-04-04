@@ -42,6 +42,10 @@ export const Grid = styled.div`
 `
 
 export const RightContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @media all and (max-width: 1000px) {
         margin-left: 1rem;
     }

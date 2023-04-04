@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Section = styled.section`
     padding: 5rem 0 2rem 0;
@@ -45,7 +46,7 @@ export const LogosContainer = styled.div`
     }
 `
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled(Link)`
     position: relative;
     width: 12rem;
     height: 12rem;

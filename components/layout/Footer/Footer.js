@@ -123,9 +123,9 @@ const Footer = () => {
               <RightLeft>
                 <Links>
                   {
-                    content.links.map(link => {
+                    content.links.map((link, index) => {
                       return(
-                        <FooterLink key={link.url} href={link.url}>
+                        <FooterLink key={index} href={link.url}>
                           {link.title}
                         </FooterLink>
                       )

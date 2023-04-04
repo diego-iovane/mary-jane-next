@@ -116,9 +116,9 @@ const ExhibitorsSection = ({ data, content, language }) => {
                             className="exhibitorsSwiper"
                         >
                             {
-                                exhibitors.map(item => {
+                                exhibitors.map((item, index) => {
                                     return (
-                                        <SwiperSlide key={item.node.logo.sourceUrl}>
+                                        <SwiperSlide key={index}>
                                             <Link href={item.node.uri}>
                                                 <LogoContainer>
                                                     <Logo

@@ -17,7 +17,7 @@ const FloatingButton = () => {
             href={ isVisitor ? "https://maryjaneberlin.ticket.io/y7wu2yng/" : "/stand-inquiry"}
             rel="noopener noreferrer"
             target="_blank"
-            isVisitor={isVisitor}
+            isvisitor={isVisitor}
         >
             <ImgContainer visible={isVisitor}>
                 <Img
@@ -26,7 +26,7 @@ const FloatingButton = () => {
                     fill
                 />
             </ImgContainer>
-            <Text isVisitor={isVisitor}>
+            <Text isvisitor={isVisitor}>
                 { isVisitor ? 'Tickets' : 'Stand inquiry'}
             </Text>
         </Button>

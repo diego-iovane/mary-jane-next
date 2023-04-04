@@ -9,7 +9,7 @@ export const Button = styled(motion.a)`
     width: 4rem;
     height: 4rem;
     border-radius: 500px;
-    background-color: ${({isVisitor}) => isVisitor ? 'var(--light-green)' : 'var(--gray-blue)'};
+    background-color: ${({isvisitor}) => isvisitor ? 'var(--light-green)' : 'var(--gray-blue)'};
     z-index: 100;
     display: none;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
@@ -39,7 +39,7 @@ export const Img = styled(Image)`
 `
 
 export const Text = styled.p`
-    font-size: ${({isVisitor}) => isVisitor ? '.6rem' : '.7rem'};
+    font-size: ${({isvisitor}) => isvisitor ? '.6rem' : '.7rem'};
     color: #fff;
     font-weight: 200;
     text-align: center

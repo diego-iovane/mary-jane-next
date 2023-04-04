@@ -199,12 +199,12 @@ const NavBar = () => {
   }
 
   return (
-    <Container scrolled={navState()}>
+    <Container scrolled={navState().toString()}>
       <Inner>
         <Left>
           {
             pathname === '/' ?
-              <LogoContainer onClick={toTop} scrolled={navState()}>
+              <LogoContainer onClick={toTop} scrolled={navState().toString()}>
                 {
                   navState() ?
                     <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
@@ -212,7 +212,7 @@ const NavBar = () => {
                 }
               </LogoContainer> :
               <Link href='/'>
-                <LogoContainer scrolled={navState()}>
+                <LogoContainer scrolled={navState().toString()}>
                   {
                     navState() ?
                       <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
@@ -221,14 +221,14 @@ const NavBar = () => {
                 </LogoContainer>
               </Link>
           }
-          <MainNav scrolled={navState()} links={links}/>
+          <MainNav scrolled={navState().toString()} links={links}/>
         </Left>
         <Right>
-          <SecondaryNav scrolled={navState()} />
+          <SecondaryNav scrolled={navState().toString()} />
           <Hamburguer
             opened={opened}
             setOpened={setOpened}
-            scrolled={navState()}
+            scrolled={navState().toString()}
           />
         </Right>
         <MobileNav

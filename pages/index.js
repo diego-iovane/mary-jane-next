@@ -298,6 +298,7 @@ export async function getServerSideProps(context) {
                 sourceUrl
               }
               website
+              uri
             }
           }
         }

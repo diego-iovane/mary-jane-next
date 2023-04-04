@@ -48,10 +48,8 @@ const SponsorsSection = ({ data, content, language }) => {
                             sponsors.map(sponsor => {
                                 return (
                                     <LogoContainer
-                                        href={sponsor.node.website}
+                                        href={sponsor.node.uri}
                                         key={sponsor.node.title}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                     >
                                         <Logo
                                             src={sponsor.node.logo.sourceUrl}

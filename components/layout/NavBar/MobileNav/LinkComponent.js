@@ -31,7 +31,7 @@ const LinkComponent = ({ link, isActive, setActive }) => {
             {
                 link.dropdown?.map(subLink => {
                     return (
-                        <SubLinkContainer>
+                        <SubLinkContainer key={subLink.title}>
                             <Link href={subLink.url}>{subLink.title}</Link>
                         </SubLinkContainer>
                     )
