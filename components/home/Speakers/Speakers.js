@@ -34,7 +34,7 @@ const Speakers = ({ data, content, language }) => {
 
     return (
         <Section whileInView={() => setInView(true)}>
-                <Inner isinview={isInView.toString()}>
+                <Inner isinview={isInView}>
                     <Head>
                         <SectionTitle>{text.title}</SectionTitle>
                         <ButtonContainer href={text.cta.url}>
