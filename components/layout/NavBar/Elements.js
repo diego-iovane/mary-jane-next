@@ -72,7 +72,7 @@ export const LinkContainer = styled.li`
     margin-left: 2.5rem;
     padding: 1rem 0;
     transition: opacity .2s ease-in-out;
-    font-size: .7rem;
+    font-size: .8rem;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@ export const MegaMenu = styled(motion.div)`
 export const MenuLinkContainer = styled.li`
     width: 100%;
     transition: opacity .2s ease-in-out;
-    font-size: .7rem;
+    font-size: .8rem;
     display: flex;
     align-items: center;
     
