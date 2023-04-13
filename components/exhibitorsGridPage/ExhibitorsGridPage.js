@@ -23,6 +23,7 @@ import {
     CatPopupContainer,
     MobileCategoriesContainer
 } from './Elements'
+import BackToTopButton from '../backToTopButton/BackToTopButton'
 
 const ExhibitorsGridPage = ({ content, exhibitors }) => {
 
@@ -202,6 +203,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                     }
                 </Inner>
             </Content>
+            <BackToTopButton />
         </>
     )
 }

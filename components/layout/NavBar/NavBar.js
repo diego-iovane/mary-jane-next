@@ -70,10 +70,10 @@ const NavBar = () => {
           title: 'Cannabis festival',
           url: '/cannabis-festival',
         },
-        // {
-        //   title: 'Cannabis conferences',
-        //   url: '',
-        // },
+        {
+          title: 'Cannabis conferences',
+          url: '/conferences',
+        },
         {
           title: 'Tickets',
           url: 'https://maryjaneberlin.ticket.io/y7wu2yng/',
@@ -147,10 +147,10 @@ const NavBar = () => {
           title: 'Cannabis Festival',
           url: '/cannabis-festival',
         },
-        // {
-        //   title: 'Cannabis Konferenz',
-        //   url: '',
-        // },
+        {
+          title: 'Cannabis Konferenz',
+          url: '/conferences',
+        },
         {
           title: 'Tickets',
           url: 'https://maryjaneberlin.ticket.io/y7wu2yng/',

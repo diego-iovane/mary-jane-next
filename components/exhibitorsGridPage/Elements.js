@@ -139,8 +139,7 @@ export const LogoContainer = styled.a`
     position: relative;
     width: 12rem;
     height: 12rem;
-    /* background-color: ${({isWhiteLogo}) => isWhiteLogo ? '#aad771' : '#fff'}; */
-    background-color: black;
+    background-color: ${({isWhiteLogo}) => isWhiteLogo ? '#aad771' : '#fff'};
     box-shadow: var(--light-shadow);
     border-radius: 500px;
     overflow: hidden;
