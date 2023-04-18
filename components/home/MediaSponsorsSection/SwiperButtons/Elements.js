@@ -5,9 +5,9 @@ export const SwiperButtonsContainer = styled.div`
     width: 110%;
     display: flex;
     justify-content: space-between;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -15%);
     z-index: 20;
     
     @media all and (max-width: 900px) {

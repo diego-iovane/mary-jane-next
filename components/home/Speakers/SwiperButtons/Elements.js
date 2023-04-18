@@ -7,7 +7,7 @@ export const SwiperButtonsContainer = styled.div`
     justify-content: space-between;
     top: 44%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     z-index: 20;
     
     @media all and (max-width: 900px) {
