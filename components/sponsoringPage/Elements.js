@@ -109,7 +109,21 @@ export const Text = styled.p`
     }
 `
 
+export const ButtonsContainer = styled.div`
+    display: flex;
+    
+    @media all and (max-width: 550px) {
+        display: block;
+        margin: 0 auto;
+    }
+`
+
 export const ButtonContainer = styled(Link)`
+    
+    &:first-child {
+        margin-right: 1rem;
+    }
+
     @media all and (max-width: 550px) {
         margin: 0 auto 1rem auto;
     }

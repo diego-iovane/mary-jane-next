@@ -67,7 +67,7 @@ const Location = ({ language }) => {
                         <Text>There is free & paid parking in the immediate vicinity.</Text>
                     </Item>
                     <ButtonContainer>
-                        <Link href="/">
+                        <Link href="/for-visitors">
                             <SmallCtaAlt>{language === 'en' ? 'See more' : 'Mehr Infos'}</SmallCtaAlt>
                         </Link>
                     </ButtonContainer>

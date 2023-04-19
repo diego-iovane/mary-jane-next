@@ -20,9 +20,10 @@ import {
   RightContent,
   ImageContainer,
   Img,
+  ButtonsContainer,
 } from './Elements'
 
-const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery, bg }) => {
+const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery, bg, files }) => {
 
   const swiperRef = useRef()
   const swiperAltRef = useRef()
@@ -37,7 +38,7 @@ const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery
           <LeftContent>
             <Title>{sponsoringContent.title}</Title>
             <Text>{sponsoringContent.text}</Text>
-            <ButtonContainer href={sponsoringContent.cta.url}>
+            <ButtonContainer href={files.packages} target="_blank" rel="noopener noreferrer" download>
               <PrimaryButton>{sponsoringContent.cta.title}</PrimaryButton>
             </ButtonContainer>
           </LeftContent>
@@ -71,9 +72,14 @@ const SponsoringPage = ({ gallery, sponsoringContent, foyerContent, foyerGallery
           <LeftContent>
             <TitleAlt>{foyerContent.title}</TitleAlt>
             <Text>{foyerContent.text}</Text>
-            <ButtonContainer href={foyerContent.cta.url}>
-              <PrimaryButton>{foyerContent.cta.title}</PrimaryButton>
-            </ButtonContainer>
+            <ButtonsContainer>
+              <ButtonContainer href={files.foyerOne} target="_blank" rel="noopener noreferrer" download>
+                <PrimaryButton>Foyer 1</PrimaryButton>
+              </ButtonContainer>
+              <ButtonContainer href={files.foyerTwo} target="_blank" rel="noopener noreferrer" download>
+                <PrimaryButton>Foyer 2</PrimaryButton>
+              </ButtonContainer>
+            </ButtonsContainer>
           </LeftContent>
           <RightContent>
             <Swiper

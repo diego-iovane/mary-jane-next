@@ -23,12 +23,23 @@ const sponsoring = ({ res }) => {
     return { ...rawFoyerGallery[key] }
   })
 
-  console.log(foyerGallery)
+  const files = {
+    packages: res.data.pages.edges[0].node.sponsoringPage.sponsoringpackagespdf,
+    foyerOne: res.data.pages.edges[0].node.sponsoringPage.foyerOnePdf,
+    foyerTwo: res.data.pages.edges[0].node.sponsoringPage.foyerTwoPdf,
+  }
 
   const bg = res.data.pages.edges[0].node.sponsoringPage.sponsoringHeaderBackgroundImage
 
   return (
-    <SponsoringPage gallery={gallery} foyerGallery={foyerGallery} sponsoringContent={sponsoringContent} foyerContent={foyerContent} bg={bg} />
+    <SponsoringPage 
+      gallery={gallery} 
+      foyerGallery={foyerGallery} 
+      sponsoringContent={sponsoringContent} 
+      foyerContent={foyerContent} 
+      bg={bg} 
+      files={files}
+      />
   )
 }
 
@@ -115,6 +126,9 @@ export async function getServerSideProps(context) {
                     sourceUrl
                   }
                 }
+                sponsoringpackagespdf
+                foyerOnePdf
+                foyerTwoPdf
               }
             }
           }
