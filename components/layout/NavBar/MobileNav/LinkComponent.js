@@ -9,8 +9,8 @@ import {
 const LinkComponent = ({ link, isActive, setActive }) => {
 
     const handleClick = () => {
-        
-        if(isActive === link.url) {
+
+        if (isActive === link.url) {
             setActive('')
         } else {
             setActive(link.url)
@@ -25,14 +25,20 @@ const LinkComponent = ({ link, isActive, setActive }) => {
                         {isActive === link.url ? '-' : '+'} {link.title}
                     </FakeLink> :
                     <Link href={link.url} >
-                         {link.title}
+                        {link.title}
                     </Link>
             }
             {
                 link.dropdown?.map(subLink => {
                     return (
                         <SubLinkContainer key={subLink.title}>
-                            <Link href={subLink.url}>{subLink.title}</Link>
+                            {
+                                subLink.title === "Tickets" || subLink.title === "Cannabis Cup"?
+                                <a href={subLink.url} target="_blank" rel="noopener noreferrer">
+                                    {subLink.title}
+                                </a> :
+                                <Link href={subLink.url}>{subLink.title}</Link>
+                            }
                         </SubLinkContainer>
                     )
                 })
