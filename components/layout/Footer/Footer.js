@@ -64,7 +64,8 @@ const Footer = () => {
   const deContent = {
     information: {
       title: 'Information according to § 5 TMG',
-      text: 'Mary Jane Berlin GmbH<br></br> Bernauer Str. 50<br></br> 10435 Berlin <br></br>Germany',
+      // text: 'Mary Jane Berlin GmbH<br></br> Bernauer Str. 50<br></br> 10435 Berlin <br></br>Germany',
+      text: 'Rocket Canna GmbH<br></br> Attilastr. 18 <br></br> 10435 Schönefeld <br></br>Germany',
     },
     contact: {
       title: 'Contact',
@@ -72,7 +73,7 @@ const Footer = () => {
     },
     register: {
       title: 'Commercial Register',
-      text: 'Registered in the Commercial Register. <br></br>Register Court: Amtsgericht<br></br>Charlottenburg<br></br>Registration Number: HRB 180488 B <br></br>VAT Identification Number: <br></br>DE308384384',
+      text: 'Registered in the Commercial Register. <br></br>Register Court: Amtsgericht<br></br>Cottbus<br></br>Registration Number: HRB 180488 B <br></br>VAT Identification Number: <br></br>DE348537356',
     },
     links: [
       {
