@@ -78,7 +78,7 @@ const MainNav = ({ scrolled, links }) => {
                                                                     return (
                                                                         <MenuLinkContainer key={link.title}>
                                                                             {
-                                                                                link.title === 'Tickets' ?
+                                                                                link.title === "Tickets" || link.title === "Cannabis Cup"?
                                                                                 <a href={link.url} target="_blank" rel="noopener noreferrer">
                                                                                     {link.title}
                                                                                 </a> :

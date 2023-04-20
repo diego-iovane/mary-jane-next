@@ -56,6 +56,10 @@ const NavBar = () => {
           title: 'Accomodation',
           url: '/accomodation',
         },
+        {
+          title: 'Cannabis Cup',
+          url: 'https://www.jackherercup.de/'
+        }
       ]
     },
     {
@@ -133,6 +137,10 @@ const NavBar = () => {
           title: 'Unterkunft',
           url: '/accomodation',
         },
+        {
+          title: 'Cannabis Cup',
+          url: 'https://www.jackherercup.de/'
+        }
       ]
     },
     {
