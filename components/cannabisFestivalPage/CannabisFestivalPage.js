@@ -35,12 +35,12 @@ const CannabisFestivalPage = ({ data, language }) => {
                     <PosterContainer>
                         <Poster src={data.imageOne.sourceUrl} alt={data.imageOne.altText} fill />
                     </PosterContainer>
-                    <PosterContainer>
-                        <Poster src={data.imageThree.sourceUrl} alt={data.imageThree.altText} fill />
-                    </PosterContainer>
                     <ButtonContainer href={content.cta.url} target="_blank" rel="noopener noreferrer">
                         <SmallCta>{content.cta.text}</SmallCta>
                     </ButtonContainer>
+                    <PosterContainer>
+                        <Poster src={data.imageThree.sourceUrl} alt={data.imageThree.altText} fill />
+                    </PosterContainer>
                     <Title>{content.titleTwo}</Title>
                     <PosterContainer>
                         <Poster src={data.imageTwo.sourceUrl} alt={data.imageTwo.altText} fill />
