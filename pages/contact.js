@@ -30,6 +30,13 @@ export async function getServerSideProps(context) {
                   addressItem {
                     title
                     items {
+                      itemZero {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
                       itemOne {
                         icon {
                           altText
@@ -115,6 +122,13 @@ export async function getServerSideProps(context) {
                   addressItem {
                     title
                     items {
+                      itemZero {
+                        icon {
+                          altText
+                          sourceUrl
+                        }
+                        text
+                      }
                       itemOne {
                         text
                         icon {
