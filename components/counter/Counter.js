@@ -11,7 +11,7 @@ const Counter = ({ content }) => {
 
     const [date, setDate] = useState()
 
-    useEffect(() => { setDate(new Date(2023, 6, 23, 0)) }, [])
+    useEffect(() => { setDate(new Date(2023, 5, 23, 0)) }, [])
 
     const renderer = ({ days, hours, minutes, seconds }) => {
         return (
@@ -35,6 +35,8 @@ const Counter = ({ content }) => {
             </Container>
         )
     }
+
+    console.log(date)
 
     return (
         <>
