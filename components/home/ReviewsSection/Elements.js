@@ -110,10 +110,10 @@ export const Name = styled.p`
 `
 
 export const Text = styled.p`
-    font-size: .8rem !important;
+    /* font-size: .8rem !important; */
 
     span {
-        font-size: 12px !important !important; 
+        font-size: 12px !important; 
     }
 
 `
