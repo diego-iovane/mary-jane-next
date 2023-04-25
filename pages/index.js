@@ -316,12 +316,13 @@ export async function getServerSideProps(context) {
           }
         }
 
-        speakers {
+        speakers(first: 1000) {
           edges {
             node {
               name
               surname
               profession
+              hideOnLandingPage
               image {
                 altText
                 sourceUrl

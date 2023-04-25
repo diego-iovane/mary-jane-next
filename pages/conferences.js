@@ -1,8 +1,10 @@
 import ConferencesPage from "../components/conferencesPage/ConferencesPage"
+import { GetLanguageContext } from '../context/LanguageContext'
 
 const Conferences = (props) => {
 
-  const content = props.res.data.pages.edges[0].node.conferences.contentEn
+  const { language } = GetLanguageContext()
+  const content = language === 'en' ? props.res.data.pages.edges[0].node.conferences.contentEn :  props.res.data.pages.edges[0].node.conferences.contentDe
   const data = props.res.data.conferences.edges
 
   return (
@@ -54,6 +56,33 @@ export async function getServerSideProps(context) {
                     altText
                     sourceUrl
                   }
+                  topic
+                  topics {
+                    one {
+                      label
+                      value
+                    }
+                    two {
+                      label
+                      value
+                    }
+                    three {
+                      label
+                      value
+                    }
+                    four {
+                      label
+                      value
+                    }
+                  }
+                }
+                contentDe {
+                  title
+                  bgimg {
+                    altText
+                    sourceUrl
+                  }
+                  topic
                   topics {
                     one {
                       label

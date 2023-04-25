@@ -101,6 +101,9 @@ const ConferencesPage = ({ data, content }) => {
         setDate(e.target.id)
     }
 
+
+    console.log(content)
+
     return (
         <>
             <HeadSection>
@@ -118,7 +121,7 @@ const ConferencesPage = ({ data, content }) => {
                                 id="cat"
                                 onClick={() => setOpenTopics(!openTopics)}
                             >
-                                Topic
+                                {content.topic}
                                 <ChevronContainer open={openTopics}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
                                         <g id="Arrow / Chevron_Down">

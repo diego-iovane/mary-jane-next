@@ -27,73 +27,78 @@ const Speakers = ({ data, content, language }) => {
     const [isInView, setInView] = useState(false)
     const [speakers, setSpeakers] = useState([])
     const text = language === 'en' ? content.speakersContentEn : content.speakersContentDe
-    
+
     useEffect(() => {
         setSpeakers(data)
     }, [])
 
     return (
         <Section whileInView={() => setInView(true)}>
-                <Inner isinview={isInView}>
-                    <Head>
-                        <SectionTitle>{text.title}</SectionTitle>
-                        <ButtonContainer href={text.cta.url}>
-                            <SmallCtaAlt>{text.cta.text}</SmallCtaAlt>
-                        </ButtonContainer>
-                    </Head>
-                    <Swiper
-                        ref={swiperRef}
-                        slidesPerView={1}
-                        breakpoints={{
-                            950: {
-                                slidesPerView: 4,
-                            },
-                            680: {
-                                slidesPerView: 3,
-                            },
-                            480: {
-                                slidesPerView: 2,
-                            },
-                        }}
-                        grid={{
-                            rows: 1,
-                        }}
-                        spaceBetween={30}
-                        autoplay={true}
-                        loop={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Grid, Pagination]}
-                        className="speakersSwyper"
-                    >
-                        {
-                            speakers.length !== 0 ?
+            <Inner isinview={isInView}>
+                <Head>
+                    <SectionTitle>{text.title}</SectionTitle>
+                    <ButtonContainer href={text.cta.url}>
+                        <SmallCtaAlt>{text.cta.text}</SmallCtaAlt>
+                    </ButtonContainer>
+                </Head>
+                <Swiper
+                    ref={swiperRef}
+                    slidesPerView={1}
+                    breakpoints={{
+                        950: {
+                            slidesPerView: 4,
+                        },
+                        680: {
+                            slidesPerView: 3,
+                        },
+                        480: {
+                            slidesPerView: 2,
+                        },
+                    }}
+                    grid={{
+                        rows: 1,
+                    }}
+                    spaceBetween={30}
+                    autoplay={true}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Grid, Pagination]}
+                    className="speakersSwyper"
+                >
+                    {
+                        speakers.length !== 0 ?
                             speakers.map(speaker => {
                                 return (
-                                    <SwiperSlide key={speaker.node.image.sourceUrl}>
-                                        <SwiperInner>
-                                            <LogoContainer>
-                                                <Logo
-                                                    src={speaker.node.image.sourceUrl}
-                                                    alt="speaker"
-                                                    fill
-                                                    priority
-                                                />
-                                            </LogoContainer>
-                                            <NameContainer isinview={isInView}>
-                                                <Surname>{speaker.node.name}</Surname>
-                                                <Surname>{speaker.node.surname}</Surname>
-                                                <Prof>{speaker.node?.profession}</Prof>
-                                            </NameContainer>
-                                        </SwiperInner>
-                                    </SwiperSlide>
+                                    <>
+                                        {
+                                            speaker.node.hideOnLandingPage !== true &&
+                                                <SwiperSlide key={speaker.node.image.sourceUrl}>
+                                                    <SwiperInner>
+                                                        <LogoContainer>
+                                                            <Logo
+                                                                src={speaker.node.image.sourceUrl}
+                                                                alt="speaker"
+                                                                fill
+                                                                priority
+                                                            />
+                                                        </LogoContainer>
+                                                        <NameContainer isinview={isInView}>
+                                                            <Surname>{speaker.node.name}</Surname>
+                                                            <Surname>{speaker.node.surname}</Surname>
+                                                            <Prof>{speaker.node?.profession}</Prof>
+                                                        </NameContainer>
+                                                    </SwiperInner>
+                                                </SwiperSlide>
+                                        }
+                                    </>
                                 )
                             }) : null
-                        }
-                    </Swiper>
-                    <SwiperButtons swiperRef={swiperRef} />
-                </Inner>
+                    }
+                </Swiper>
+                <SwiperButtons swiperRef={swiperRef} />
+            </Inner>
         </Section>
     )
 }

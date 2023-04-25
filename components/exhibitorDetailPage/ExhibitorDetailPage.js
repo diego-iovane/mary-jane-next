@@ -17,8 +17,6 @@ const ExhibitorDetailPage = ({ data, img }) => {
 
   const { language } = GetLanguageContext()
 
-  console.log(data)
-
   return (
     <>
       <HeadSection>

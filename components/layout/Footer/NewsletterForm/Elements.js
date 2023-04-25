@@ -4,9 +4,8 @@ export const Section = styled.section`
     width: 100%;
     position: relative;
     background-color: var(--black);
-    padding-top: 4rem;
+    padding-top: 1.5rem;
 `
-
 
 export const Content = styled.div`
     display: flex;
@@ -17,13 +16,10 @@ export const Title = styled.p`
     font-weight: bold;
     font-size: var(--desktop-title-font-size);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: regular;
     color: #fff;
 
-    @media all and (max-width: 560px) {
-        font-size: 1.3rem;
-    }
     @media all and (max-width: 450px) {
         font-size: 1.1rem;
     }

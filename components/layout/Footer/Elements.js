@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const Section = styled.section`
-    min-height: var(--section-min-height);
+    /* min-height: var(--section-min-height); */
     background-color: var(--black);
-    padding: 3rem 0;
+    padding: 1rem 0 2rem 0;
     position: relative;
     z-index: 1;
 `
@@ -24,13 +24,13 @@ export const Inner = styled.div`
 
 export const Title = styled.p`
     font-weight: bold;
-    font-size: .8rem;
+    font-size: .6rem;
     margin: 2.5rem 0 1rem 0;
     color: #ffffff;
 `
 
 export const Text = styled.div`
-    font-size: .8rem;
+    font-size: .6rem;
     color: #ffffff;
 
     p {
@@ -124,8 +124,8 @@ export const Logo = styled(Image)`
 `
 
 export const ScrubbleContainer = styled.div`
-    width: 22rem;
-    height: 20rem;
+    width: 18rem;
+    height: 14rem;
     position: absolute;
     top: 9rem;
     left: -1rem;
@@ -152,7 +152,7 @@ export const Links = styled.ul`
 `
 
 export const FooterLink = styled(Link)`
-    font-size: .8rem;
+    font-size: .6rem;
     font-weight: bold;
     margin-bottom: .5rem;
     color: #ffffff;

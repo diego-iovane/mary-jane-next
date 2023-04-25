@@ -10,7 +10,7 @@ const LanguageContext = ({ children }) => {
   
     useEffect(() => {
       setLanguage(locale)
-    }, [locale])
+    }, [])
   
     return(
         <LanguageCtx.Provider value={{language, setLanguage}}>

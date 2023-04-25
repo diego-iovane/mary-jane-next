@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const HeadSection = styled.div`
     height: 12rem;
@@ -135,11 +136,11 @@ export const GridItem = styled.div`
     align-items: center;
 `
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled(Link)`
     position: relative;
     width: 12rem;
     height: 12rem;
-    background-color: ${({isWhiteLogo}) => isWhiteLogo ? '#aad771' : '#fff'};
+    background-color: ${({iswhitelogo}) => iswhitelogo ? '#aad771' : '#fff'};
     box-shadow: var(--light-shadow);
     border-radius: 500px;
     overflow: hidden;

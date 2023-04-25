@@ -38,18 +38,21 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
     const [loading, setLoading] = useState(false)
 
     const categories = Object.keys(content.categories).map(key => {
-        return { ...content.categories[key]}
+        return { ...content.categories[key] }
     })
 
     const observeClicks = (e) => !e.target.className.includes("cat-btn") && setOpenCategories(false)
 
     // const observeClicks = (e) => console.log(e.target.className)
+    // console.log(currentExhibitors)
+    // console.log(exhibitors)
 
     useEffect(() => {
         setLoading(true)
         window.addEventListener('click', observeClicks)
         setTimeout(() => setLoading(false), 2500)
         setExhibitorsState(exhibitors)
+        setCurrentExhibitors(exhibitors)
 
         return () => window.removeEventListener('click', observeClicks)
     }, [])
@@ -57,11 +60,19 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
     useEffect(() => {
 
         if (searchValue.length !== 0) {
+
+            console.log(searchValue)
+
             const filtered = exhibitorsState.filter(exhibitor => {
                 if (exhibitor.node.title.toLowerCase().includes(searchValue.toLowerCase())) return exhibitor
             })
+
+            console.log(filtered)
+
             setCurrentExhibitors(filtered)
+
         } else {
+
             setCurrentExhibitors(exhibitors)
         }
 
@@ -159,7 +170,7 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                                 onBlur={handleBlur}
                                 opened={mobileSearchOpen}
                                 onChange={handleInput} type="text"
-                                style={{fontSize: '18px'}}
+                                style={{ fontSize: '18px' }}
                             />
                             <SearchIcon hidden={hiddenTitle}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none">
@@ -171,36 +182,30 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                         </MobileInputs>
                         {
                             mobileCatOpen ?
-                            <CatPopupContainer>
-                                <MobileCategoriesContainer open={openCategories}>
-                                    {
-                                        categories.map(category => {
-                                            return (
-                                                <Categorie onClick={() => handleMobileClick(category.value)} className="cat-btn" >{category.name}</Categorie>
-                                            )
-                                        })
-                                    }
-                                </MobileCategoriesContainer>
-                            </CatPopupContainer> : null
+                                <CatPopupContainer>
+                                    <MobileCategoriesContainer open={openCategories}>
+                                        {
+                                            categories.map(category => {
+                                                return (
+                                                    <Categorie onClick={() => handleMobileClick(category.value)} className="cat-btn" >{category.name}</Categorie>
+                                                )
+                                            })
+                                        }
+                                    </MobileCategoriesContainer>
+                                </CatPopupContainer> : null
                         }
                     </InnerHead>
-                    {
-                        exhibitorsState.length !== 0 ?
-                            <Grid>
-                                {
-                                    currentExhibitors.length !== 0 ?
-                                        currentExhibitors.map(exhibitor => {
-                                            return (
-                                                <GridItem key={exhibitor.node.logo.sourceUrl}>
-                                                    <LogoContainer href={exhibitor.node.uri} loading={loading} isWhiteLogo={exhibitor.node.isWhiteLogo}>
-                                                        <Logo src={exhibitor.node.logo.sourceUrl} alt="" fill isLoading={loading} priority/>
-                                                    </LogoContainer>
-                                                </GridItem>
-                                            )
-                                        }) : <p>No results</p>
-                                }
-                            </Grid> : null
-                    }
+                    <Grid>
+                        {currentExhibitors.map((exhibitor, index) => {
+                            return (
+                                <GridItem key={index}>
+                                    <LogoContainer href={exhibitor.node.uri} loading={loading} iswhitelogo={exhibitor.node.isWhiteLogo}>
+                                        <Logo src={exhibitor.node.logo.sourceUrl} alt="" fill isLoading={loading} priority />
+                                    </LogoContainer>
+                                </GridItem>
+                            )
+                        })}
+                    </Grid>
                 </Inner>
             </Content>
             <BackToTopButton />
