@@ -89,7 +89,7 @@ const ForExhibitorsPage = ({ content }) => {
                                 <ButtonContainer href={content.generalInfo.ctaOne.url} target="_blank" rel="noopener noreferrer" >
                                     <SmallCta>{content.generalInfo.ctaOne.text}</SmallCta>
                                 </ButtonContainer>
-                                <ButtonContainer href={content.generalInfo.ctaTwo.url} target="_blank" rel="noopener noreferrer" >
+                                <ButtonContainer href={content.generalInfo.ctaTwo.url}>
                                     <SmallCtaPink>{content.generalInfo.ctaTwo.text}</SmallCtaPink>
                                 </ButtonContainer>
                             </ButtonsContainer>
