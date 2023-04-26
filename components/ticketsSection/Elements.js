@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
     /* background-color: var(--light-blue); */
 `
 
