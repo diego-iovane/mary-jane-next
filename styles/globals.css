@@ -202,7 +202,13 @@ input::placeholder {
 }
 
 .reviewSwyper .swiper-slide p {
-  font-size: 8px !important;
+  font-size: .8rem !important;
+}
+
+@media all and (max-width: 500px) {
+  .reviewSwyper .swiper-slide p {
+    font-size: 8px !important;
+  }
 }
 
 /*  */
