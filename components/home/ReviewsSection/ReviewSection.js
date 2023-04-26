@@ -31,7 +31,51 @@ const ReviewSection = ({ data, content }) => {
 
     return (
         <Section>
+
             <Inner>
+                <Swiper
+                    ref={swiperRef}
+                    slidesPerView={1}
+                    breakpoints={{
+                        950: {
+                            slidesPerView: 4,
+                        },
+                        680: {
+                            slidesPerView: 3,
+                        },
+                        480: {
+                            slidesPerView: 2,
+                        },
+                    }}
+                    grid={{
+                        rows: 1,
+                    }}
+                    spaceBetween={30}
+                    autoplay={true}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[Grid, Pagination]}
+                    className="reviewSwyper"
+                >
+                    {
+                        reviews.length !== 0 ?
+                            reviews.map((review, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <p>{review.node.text}</p>
+                                    </SwiperSlide>
+                                )
+                            }) : null
+                    }
+                </Swiper>
+                <SwiperButtons swiperRef={swiperRef} />
+            </Inner>
+
+
+
+            {/* <Inner>
                 <SectionTitle>{content.reviewsTitle}</SectionTitle>
                 <RevWidget>
                     <GContainer>
@@ -89,7 +133,7 @@ const ReviewSection = ({ data, content }) => {
                 <ButtonsContainer>
                     <SwiperButtons swiperRef={swiperRef} />
                 </ButtonsContainer>
-            </Inner>
+            </Inner> */}
         </Section>
     )
 }

@@ -201,6 +201,10 @@ input::placeholder {
   height: calc((100% - 30px) / 2) !important;
 }
 
+.reviewSwyper .swiper-slide p {
+  font-size: 8px !important;
+}
+
 /*  */
 .speakersSwyper.swiper {
   width: 100%;
