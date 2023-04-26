@@ -92,6 +92,10 @@ export const ReviewContainer = styled.div`
         transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     }
 
+    p {
+        font-size: 8px !important;
+    }
+
 `
 
 export const QuotesIcon = styled.svg`
@@ -103,9 +107,9 @@ export const QuotesIcon = styled.svg`
     }
 `
 
-export const Name = styled.p`
+export const Name = styled.h5`
     font-weight: 700;
-    font-size: .9rem;
+    font-size: .8rem;
     text-align: right;
     margin-top: 1rem;
 `
