@@ -53,10 +53,6 @@ export async function getServerSideProps(context) {
                                 name
                                 url
                               }
-                              file5 {
-                                name
-                                url
-                              }
                             }
                           }
                           headerSection {
@@ -119,14 +115,6 @@ export async function getServerSideProps(context) {
                                 url
                               }
                               file3 {
-                                name
-                                url
-                              }
-                              file4 {
-                                name
-                                url
-                              }
-                              file5 {
                                 name
                                 url
                               }
@@ -202,10 +190,6 @@ export async function getServerSideProps(context) {
                                 name
                                 url
                               }
-                              file5 {
-                                name
-                                url
-                              }
                             }
                           }
                           headerSection {
@@ -268,14 +252,6 @@ export async function getServerSideProps(context) {
                                 url
                               }
                               file3 {
-                                name
-                                url
-                              }
-                              file4 {
-                                name
-                                url
-                              }
-                              file5 {
                                 name
                                 url
                               }

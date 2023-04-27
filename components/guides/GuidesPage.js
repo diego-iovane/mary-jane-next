@@ -32,10 +32,7 @@ import {
     DotIcon,
 } from './Elements'
 
-
 const GuidesPage = ({ content }) => {
-
-    console.log(content)
 
     const getArray = (object) => {
         return Object.keys(object).map(key => {
