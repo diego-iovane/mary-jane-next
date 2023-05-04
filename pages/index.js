@@ -52,7 +52,6 @@ export default function Home({ res }) {
       <MediaSponsorsSection data={res.data.mediaSponsors.edges} content={res.data.pages.edges[0].node.mediaSponsorsSection} language={language} />
       <Speakers data={res.data.speakers.edges} content={res.data.pages.edges[0].node.speakersSection} language={language}/>
       <ReviewSection data={res.data.reviews.edges} content={res.data.pages.edges[0].node.peopleReviewsSection} />
-      {/* <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} /> */}
       {
         showThirdPartyWidgets ? <DynamicImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} /> : null
       }
@@ -62,7 +61,6 @@ export default function Home({ res }) {
       {
         showThirdPartyWidgets ? <DynamicLocation language={language} /> : null
       }
-      {/* <Location language={language} /> */}
     </div>
   )
 }

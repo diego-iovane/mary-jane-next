@@ -90,16 +90,6 @@ export const ReviewContainer = styled.div`
     @media all and (min-width: 950px) {
         transform: ${({active}) => active ? 'scale(1.1)' : 'scale(.9)'};
     }
-
-    /* p {
-        font-size: 1rem !important;
-    }
-
-    @media all and (max-width: 500px) {
-        p {
-            font-size: 8px !important;
-        }
-    } */
 `
 
 export const QuotesIcon = styled.svg`
