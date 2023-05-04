@@ -21,7 +21,9 @@ import {
     MobileSearch,
     SearchIcon,
     CatPopupContainer,
-    MobileCategoriesContainer
+    MobileCategoriesContainer,
+    PlaceHolderText,
+    PlaceHolderLogo
 } from './Elements'
 import BackToTopButton from '../backToTopButton/BackToTopButton'
 
@@ -42,10 +44,6 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
     })
 
     const observeClicks = (e) => !e.target.className.includes("cat-btn") && setOpenCategories(false)
-
-    // const observeClicks = (e) => console.log(e.target.className)
-    // console.log(currentExhibitors)
-    // console.log(exhibitors)
 
     useEffect(() => {
         setLoading(true)
@@ -200,7 +198,14 @@ const ExhibitorsGridPage = ({ content, exhibitors }) => {
                             return (
                                 <GridItem key={index}>
                                     <LogoContainer href={exhibitor.node.uri} loading={loading} iswhitelogo={exhibitor.node.isWhiteLogo}>
-                                        <Logo src={exhibitor.node.logo.sourceUrl} alt="" fill isLoading={loading} priority />
+                                        {
+                                            exhibitor.node.hasNoLogo ?
+                                            <>
+                                                <PlaceHolderText>{exhibitor.node.title}</PlaceHolderText>
+                                                <PlaceHolderLogo src="/images/exhibitor-placeholder.png" alt={exhibitor.node.title} fill isLoading={loading} priority /> 
+                                            </> :
+                                            <Logo src={exhibitor.node.logo.sourceUrl} alt={exhibitor.node.title} fill isLoading={loading} priority />
+                                        }
                                     </LogoContainer>
                                 </GridItem>
                             )

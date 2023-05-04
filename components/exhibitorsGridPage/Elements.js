@@ -60,7 +60,7 @@ export const Title = styled.h1`
     }
 
     @media all and (max-width: 580px) {
-        opacity: ${({hidden}) => hidden ? '0' : '1'};
+        opacity: ${({ hidden }) => hidden ? '0' : '1'};
     }
 
     @media all and (max-width: 400px) {
@@ -113,7 +113,7 @@ export const ChevronContainer = styled.div`
     pointer-events: none;
     
     svg {
-        rotate: ${({open}) => open && 'x 180deg'};
+        rotate: ${({ open }) => open && 'x 180deg'};
         transition: rotate .5s;
         width: 1.5rem;
         height: 1.5rem;
@@ -140,16 +140,19 @@ export const LogoContainer = styled(Link)`
     position: relative;
     width: 12rem;
     height: 12rem;
-    background-color: ${({iswhitelogo}) => iswhitelogo ? '#aad771' : '#fff'};
+    background-color: ${({ iswhitelogo }) => iswhitelogo ? '#aad771' : '#fff'};
     box-shadow: var(--light-shadow);
     border-radius: 500px;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 export const Logo = styled(Image)`
     object-fit: contain;
-    opacity: ${({isLoading}) => isLoading ? '0' : '1'};
+    opacity: ${({ isLoading }) => isLoading ? '0' : '1'};
     transition: opacity .2s ease-in-out;
     width: 80% !important;
     height: 80% !important;
@@ -158,11 +161,31 @@ export const Logo = styled(Image)`
     transform: translate(-50%, -50%);
 `
 
+export const PlaceHolderLogo = styled(Image)`
+    object-fit: contain;
+    opacity: ${({ isLoading }) => isLoading ? '0' : '1'};
+    transition: opacity .2s ease-in-out;
+    width: 70% !important;
+    height: 70% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    opacity: .1;
+`
+
+export const PlaceHolderText = styled.p`
+    position: relative;
+    opacity: ${({ isLoading }) => isLoading ? '0' : '1'};
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+`
+
 // CATEGORIES
 export const CategoriesContainer = styled.div`
     position: absolute;
     top: 45px;
-    max-height: ${({open}) => open ? '100rem' : '0rem'};
+    max-height: ${({ open }) => open ? '100rem' : '0rem'};
     left: 0;
     width: 100%;
     background-color: #ffffff;
@@ -194,7 +217,7 @@ export const MobileInputs = styled.div`
     
     @media all and (max-width: 890px) {
         display: flex;
-        width: ${({opened}) => opened ? '100%' : 'fit-content'};
+        width: ${({ opened }) => opened ? '100%' : 'fit-content'};
     }
 `
 
@@ -206,7 +229,7 @@ export const MobileCat = styled.button`
     justify-content: center;
     align-items: center;
     margin-right: .5rem;
-    opacity: ${({hidden}) => hidden ? '0' : '1'};
+    opacity: ${({ hidden }) => hidden ? '0' : '1'};
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -222,7 +245,7 @@ export const MobileCat = styled.button`
 export const MobileSearch = styled.input`
     background-color: var(--soft-gray);
     border-radius: 20px;
-    width: ${({opened}) => opened ? '100%' : '2.5rem'};
+    width: ${({ opened }) => opened ? '100%' : '2.5rem'};
     height: 2.5rem;
     padding: 0 1rem;
     transition: width .3s ease-in-out;
@@ -236,7 +259,7 @@ export const SearchIcon = styled.div`
     position: absolute;
     right: 8px;
     top: 8px;
-    opacity: ${({opened}) => opened ? '0' : '1'};
+    opacity: ${({ opened }) => opened ? '0' : '1'};
     pointer-events: none;
 
     svg {

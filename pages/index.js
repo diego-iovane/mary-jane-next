@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { GetLanguageContext } from '../context/LanguageContext'
 import Hero from '../components/home/Hero/Hero'
 import Exhibition from '../components/home/Exhibition/Exhibition'
@@ -10,13 +13,26 @@ import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
 import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
 import Speakers from '../components/home/Speakers/Speakers'
 import ReviewSection from '../components/home/ReviewsSection/ReviewSection'
-import ImageGallery from '../components/home/ImageGallery/ImageGallery'
-import TicketsSection from '../components/ticketsSection/TicketsSection'
-import Location from '../components/home/Location/Location'
 
 export default function Home({ res }) {
 
   const { language } = GetLanguageContext()
+  const [showThirdPartyWidgets, setShowThirdPartyWidgets] = useState(false)
+
+  const DynamicImageGallery = dynamic(() => import('../components/home/ImageGallery/ImageGallery'), {
+    ssr: false,
+    loading: () => <></>
+  })
+
+  const DynamicTicketsSection = dynamic(() => import('../components/ticketsSection/TicketsSection'), {
+    ssr: false,
+    loading: () => <></>
+  })
+
+  const DynamicLocation = dynamic(() => import('../components/home/Location/Location'), {
+    ssr: false,
+    loading: () => <></>
+  })
 
   return (
     <div>
@@ -31,13 +47,22 @@ export default function Home({ res }) {
       <MediaReviews data={res.data.mediaReviews.edges} content={res.data.pages.edges[0].node.mediaReviews} language={language} />
       <ExhibitorsSection data={res.data.exhibitors.edges} content={res.data.pages.edges[0].node.exhibitors} language={language} />
       <Rest />
+      <motion.div onViewportEnter={() => setShowThirdPartyWidgets(true)} />
       <SponsorsSection data={res.data.sponsors.edges} content={res.data.pages.edges[0].node.sponsorsSection} language={language} />
       <MediaSponsorsSection data={res.data.mediaSponsors.edges} content={res.data.pages.edges[0].node.mediaSponsorsSection} language={language} />
       <Speakers data={res.data.speakers.edges} content={res.data.pages.edges[0].node.speakersSection} language={language}/>
       <ReviewSection data={res.data.reviews.edges} content={res.data.pages.edges[0].node.peopleReviewsSection} />
-      <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} />
-      <TicketsSection />
-      <Location language={language} />
+      {/* <ImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} /> */}
+      {
+        showThirdPartyWidgets ? <DynamicImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} /> : null
+      }
+      {
+        showThirdPartyWidgets ? <DynamicTicketsSection /> : null
+      }
+      {
+        showThirdPartyWidgets ? <DynamicLocation language={language} /> : null
+      }
+      {/* <Location language={language} /> */}
     </div>
   )
 }
