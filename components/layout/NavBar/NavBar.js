@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { GetLanguageContext } from '../../../context/LanguageContext'
 import Link from 'next/link'
 import MainNav from './MainNav'
 import SecondaryNav from './SecondaryNav'
-import MobileNav from './MobileNav/MobileNav'
+// import MobileNav from './MobileNav/MobileNav'
 import Hamburguer from './MobileNav/Hamburguer'
 import {
   Container,
@@ -22,6 +23,11 @@ const NavBar = () => {
   const [opened, setOpened] = useState(false)
   const [scrollPos, setScrollPos] = useState(false)
   const { language } = GetLanguageContext()
+
+  const DynamicMobileMenu = dynamic(() => import('./MobileNav/MobileNav'), {
+    ssr: false,
+    loading: () => <></>
+  })
 
   const enLinks = [
     {
@@ -229,7 +235,7 @@ const NavBar = () => {
                 </LogoContainer>
               </Link>
           }
-          <MainNav scrolled={navState()} links={links}/>
+          <MainNav scrolled={navState()} links={links} />
         </Left>
         <Right>
           <SecondaryNav scrolled={navState()} />
@@ -239,12 +245,16 @@ const NavBar = () => {
             scrolled={navState()}
           />
         </Right>
-        <MobileNav
-          links={links}
-          scrolled={scrollPos > 0.1}
-          opened={opened}
-          setOpened={setOpened}
-        />
+        {
+          opened ?
+            <DynamicMobileMenu
+              links={links}
+              scrolled={scrollPos > 0.1}
+              opened={opened}
+              setOpened={setOpened}
+            /> : null
+        }
+        
       </Inner>
     </Container>
   )

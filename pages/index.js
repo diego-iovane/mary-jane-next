@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { GetLanguageContext } from '../context/LanguageContext'
 import Hero from '../components/home/Hero/Hero'
 import Exhibition from '../components/home/Exhibition/Exhibition'
 import ForExhibitors from '../components/home/ForExhibitors/ForExhibitors'
 import MediaReviews from '../components/home/MediaReviews/MediaReviews'
-import ExhibitorsSection from '../components/home/ExhibitorsSection/ExhibitorsSection'
+// import ExhibitorsSection from '../components/home/ExhibitorsSection/ExhibitorsSection'
 import Rest from '../components/home/Rest/Rest'
 import SponsorsSection from '../components/home/SponsorsSection/SponsorsSection'
 import MediaSponsorsSection from '../components/home/MediaSponsorsSection/MediaSponsorsSection'
@@ -18,6 +18,12 @@ export default function Home({ res }) {
 
   const { language } = GetLanguageContext()
   const [showThirdPartyWidgets, setShowThirdPartyWidgets] = useState(false)
+  const [shouldShowExhibitors, setShouldShowExhibitors] = useState(false)
+
+  const DynamicExhibitorsSection = dynamic(() => import('../components/home/ExhibitorsSection/ExhibitorsSection'), {
+    ssr: false,
+    loading: () => <></>
+  })
 
   const DynamicImageGallery = dynamic(() => import('../components/home/ImageGallery/ImageGallery'), {
     ssr: false,
@@ -42,15 +48,18 @@ export default function Home({ res }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero data={res.data.pages.edges[0].node.hero} language={language} />
+      <motion.div onViewportEnter={() => setShouldShowExhibitors(true)} />
       <Exhibition data={res.data.pages.edges[0].node.exhibition} language={language} />
       <ForExhibitors data={res.data.pages.edges[0].node.forExhibitors} language={language} />
       <MediaReviews data={res.data.mediaReviews.edges} content={res.data.pages.edges[0].node.mediaReviews} language={language} />
-      <ExhibitorsSection data={res.data.exhibitors.edges} content={res.data.pages.edges[0].node.exhibitors} language={language} />
+      {
+        shouldShowExhibitors ? <DynamicExhibitorsSection data={res.data.exhibitors.edges} content={res.data.pages.edges[0].node.exhibitors} language={language} /> : null
+      }
       <Rest />
-      <motion.div onViewportEnter={() => setShowThirdPartyWidgets(true)} />
       <SponsorsSection data={res.data.sponsors.edges} content={res.data.pages.edges[0].node.sponsorsSection} language={language} />
+      <motion.div onViewportEnter={() => setShowThirdPartyWidgets(true)} />
       <MediaSponsorsSection data={res.data.mediaSponsors.edges} content={res.data.pages.edges[0].node.mediaSponsorsSection} language={language} />
-      <Speakers data={res.data.speakers.edges} content={res.data.pages.edges[0].node.speakersSection} language={language}/>
+      <Speakers data={res.data.speakers.edges} content={res.data.pages.edges[0].node.speakersSection} language={language} />
       <ReviewSection data={res.data.reviews.edges} content={res.data.pages.edges[0].node.peopleReviewsSection} />
       {
         showThirdPartyWidgets ? <DynamicImageGallery media={res.data.homeImagesGallery.edges} content={res.data.pages.edges[0].node.imageGalleryCallToAction} language={language} /> : null

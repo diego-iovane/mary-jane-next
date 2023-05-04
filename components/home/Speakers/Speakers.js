@@ -69,19 +69,19 @@ const Speakers = ({ data, content, language }) => {
                 >
                     {
                         speakers.length !== 0 ?
-                            speakers.map(speaker => {
+                            speakers.map((speaker, index) => {
                                 return (
                                     <>
                                         {
                                             speaker.node.hideOnLandingPage !== true &&
-                                                <SwiperSlide key={speaker.node.image.sourceUrl}>
+                                                <SwiperSlide key={index}>
                                                     <SwiperInner>
                                                         <LogoContainer>
                                                             <Logo
                                                                 src={speaker.node.image.sourceUrl}
                                                                 alt="speaker"
                                                                 fill
-                                                                priority
+                                                                // priority
                                                             />
                                                         </LogoContainer>
                                                         <NameContainer isinview={isInView}>

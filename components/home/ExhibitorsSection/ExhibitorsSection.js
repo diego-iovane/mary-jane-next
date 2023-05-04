@@ -117,8 +117,6 @@ const ExhibitorsSection = ({ data, content, language }) => {
                         >
                             {
                                 exhibitors.map((exhibitor, index) => {
-
-                                    console.log(exhibitor)
                                     return (
                                         <SwiperSlide key={index}>
                                             <Link href={exhibitor.node.uri}>

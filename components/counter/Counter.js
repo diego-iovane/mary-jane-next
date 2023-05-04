@@ -36,8 +36,6 @@ const Counter = ({ content }) => {
         )
     }
 
-    console.log(date)
-
     return (
         <>
             {

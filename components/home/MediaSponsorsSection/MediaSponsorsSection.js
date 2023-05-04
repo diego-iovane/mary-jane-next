@@ -67,9 +67,9 @@ const MediaSponsorsSection = ({ data, content, language }) => {
                     >
                         {
                             sponsors.length !== 0 ?
-                            sponsors.map(item => {
+                            sponsors.map((item, index) => {
                                 return (
-                                    <SwiperSlide key={item.node.src}>
+                                    <SwiperSlide key={index}>
                                         <a href={item.node.website} target="_blank" rel="noopener noreferrer">
                                             <LogoContainer>
                                                 <Logo
