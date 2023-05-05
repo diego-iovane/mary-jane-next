@@ -55,6 +55,7 @@ const SponsorsSection = ({ data, content, language }) => {
                                             src={sponsor.node.logo.sourceUrl}
                                             alt={sponsor.node.logo.altText}
                                             fill
+                                            sizes="25vw"
                                         />
                                     </LogoContainer>
                                 )

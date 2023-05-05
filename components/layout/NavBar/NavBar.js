@@ -221,16 +221,16 @@ const NavBar = () => {
               <LogoContainer onClick={toTop} scrolled={navState()}>
                 {
                   navState() ?
-                    <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
-                    <Logo src="/logos/logo-white.png" alt='logo' priority fill />
+                    <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill sizes="25vw"/> :
+                    <Logo src="/logos/logo-white.png" alt='logo' priority fill sizes="25vw"/>
                 }
               </LogoContainer> :
               <Link href='/'>
                 <LogoContainer scrolled={navState()}>
                   {
                     navState() ?
-                      <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill /> :
-                      <Logo src="/logos/logo-white.png" alt='logo' priority fill />
+                      <Logo src="/logos/logo-light-green.png" alt='brand logo' priority fill sizes="25vw"/> :
+                      <Logo src="/logos/logo-white.png" alt='logo' priority fill sizes="25vw"/>
                   }
                 </LogoContainer>
               </Link>

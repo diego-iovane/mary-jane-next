@@ -125,6 +125,7 @@ const ExhibitorsSection = ({ data, content, language }) => {
                                                         src={exhibitor.node.logo.sourceUrl}
                                                         alt={exhibitor.node.logo.altText}
                                                         fill
+                                                        sizes="10vw"
                                                     />
                                                 </LogoContainer>
                                             </Link>

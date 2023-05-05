@@ -17,7 +17,7 @@ const Review = ({ content }) => {
       rel="noopener noreferrer"
     >
       <LogoContainer>
-        <Logo src={content.logo.sourceUrl} alt="" fill />
+        <Logo src={content.logo.sourceUrl} alt="media review logo" fill sizes="(max-width: 550px) 90vw, (max-width: 860px) 50vw, 35vw"/>
       </LogoContainer>
     </ReviewContainer>
   )

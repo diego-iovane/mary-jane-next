@@ -141,6 +141,7 @@ const Footer = () => {
                     src="/logos/logo-white.png" 
                     alt="Mary Jane Logo" 
                     fill 
+                    sizes="(max-width: 550px) 50vw, 25vw"
                   />
                 </LogoContainer>
                 <ScrubbleContainer>
@@ -148,6 +149,7 @@ const Footer = () => {
                     src="/logos/scrubble.png"
                     alt="Letters like scrubble saying cannabis"
                     fill
+                    sizes="50vw"
                   />
                 </ScrubbleContainer>
               </RightRight>

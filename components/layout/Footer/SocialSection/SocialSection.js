@@ -61,6 +61,7 @@ const SocialSection = () => {
                                         src={item.src}
                                         alt={item.alt}
                                         fill
+                                        sizes="15vw"
                                     />
                                 </IconContainer>
                             )

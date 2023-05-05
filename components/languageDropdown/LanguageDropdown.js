@@ -58,7 +58,7 @@ const LanguageDropdown = ({ setOpenedMenu }) => {
                         return(
                             <DropdownItem key={lng.value} onClick={() => setOpenedMenu(false)}>
                                 <FlagContainer onClick={() => changeLanguage(lng.value)}>
-                                    <Flag src={lng.src} alt={lng.value}/>
+                                    <Flag src={lng.src} alt={lng.value} fill sizes="15vw"/>
                                 </FlagContainer>
                             </DropdownItem>
                         )

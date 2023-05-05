@@ -24,6 +24,7 @@ const FloatingButton = () => {
                     src="/logos/floating-ticket.png"
                     alt="floating ticket seeling button"
                     fill
+                    sizes="25vw"
                 />
             </ImgContainer>
             <Text isvisitor={isVisitor}>

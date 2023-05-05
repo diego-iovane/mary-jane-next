@@ -25,6 +25,7 @@ const Features = ({ data }) => {
                                     src={item.icon.sourceUrl}
                                     alt={item.icon.altText}
                                     fill
+                                    sizes="25vw"
                                 />
                             </IconContainer>
                             <CountContainer>

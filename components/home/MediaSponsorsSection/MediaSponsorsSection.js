@@ -76,6 +76,7 @@ const MediaSponsorsSection = ({ data, content, language }) => {
                                                     src={item.node.logo.sourceUrl}
                                                     alt={item.node.logo.altText}
                                                     fill
+                                                    sizes="15vw"
                                                     priority
                                                 />
                                             </LogoContainer>

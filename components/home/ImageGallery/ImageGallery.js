@@ -111,7 +111,7 @@ const ImageGallery = ({ media, content, language }) => {
                                                             rel="noopener noreferrer"
                                                         />
                                                         <ImgContainer>
-                                                            <Img src={item.node.media.sourceUrl} alt={item.node.media.altText} fill />
+                                                            <Img src={item.node.media.sourceUrl} alt={item.node.media.altText} fill sizes="(max-width: 550px) 90vw, (max-width: 860px) 50vw, 35vw"/>
                                                         </ImgContainer>
                                                     </Frame>
                                                 </SwiperSlide>
