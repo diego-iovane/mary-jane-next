@@ -17,7 +17,7 @@ const LanguageDropdown = ({ setOpenedMenu }) => {
     const [opened, setOpened] = useState(false)
     const languages = [
         {
-            src: "/icons/flags/en.jpg",
+            src: "/icons/flags/en.webp",
             value: "en",
         },
         {

@@ -4,7 +4,7 @@ const Rest = () => {
   return (
     <Section>
         <Overlay />
-        <Bg src="/images/rest-bg.jpg" alt="" fill />
+        <Bg src="/images/rest-bg.webp" alt="" fill />
     </Section>
   )
 }
