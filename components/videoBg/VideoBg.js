@@ -1,6 +1,7 @@
 import {
     VideoBg,
     Overlay,
+    ImageBg,
 } from './Elements'
 
 const VideoBack = () => {
@@ -10,6 +11,7 @@ const VideoBack = () => {
             <VideoBg autoPlay loop muted playsInline poster='/video/poster.webp'>
                 <source src='/video/bg-video.mp4' type='video/mp4' />
             </VideoBg>
+            <ImageBg src="/images/rest-bg.webp" alt="" size="100vw" fill/>
             <Overlay />
         </>
     )
