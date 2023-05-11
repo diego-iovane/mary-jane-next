@@ -86,7 +86,7 @@ const Speakers = ({ data, content, language }) => {
                                                             />
                                                         </LogoContainer>
                                                         <NameContainer isinview={isInView}>
-                                                            <Surname>{speaker.node.name}</Surname>
+                                                            {speaker.node.name && <Surname>{speaker.node.name}</Surname>}
                                                             <Surname>{speaker.node.surname}</Surname>
                                                             <Prof>{speaker.node?.profession}</Prof>
                                                         </NameContainer>

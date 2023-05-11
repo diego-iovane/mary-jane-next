@@ -8,7 +8,7 @@ const Conferences = (props) => {
   const data = props.res.data.conferences.edges
 
   return (
-    <ConferencesPage data={data} content={content} />
+    <ConferencesPage data={data} content={content} lng={language}/>
   )
 }
 
@@ -40,7 +40,9 @@ export async function getServerSideProps(context) {
                 }
               }
               conferenceTitle
+              conferenceTitleEn
               description
+              descriptionEn
               topic
               time
             }

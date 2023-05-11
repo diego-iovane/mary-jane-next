@@ -32,7 +32,7 @@ import {
     TagsContainer,
 } from './Elements'
 
-const ConferencesPage = ({ data, content }) => {
+const ConferencesPage = ({ data, content, lng }) => {
 
     const [date, setDate] = useState("23")
     const [topic, setTopic] = useState("all")
@@ -100,9 +100,6 @@ const ConferencesPage = ({ data, content }) => {
     const handleClick = (e) => {
         setDate(e.target.id)
     }
-
-
-    console.log(content)
 
     return (
         <>
@@ -175,19 +172,23 @@ const ConferencesPage = ({ data, content }) => {
                     <InnerBody>
                         {
                             currentConferences.map(conference => {
+
+                                const title = lng === "de" || !conference.node.conferenceTitleEn ? conference.node.conferenceTitle : conference.node.conferenceTitleEn
+                                const description = lng === "de" || !conference.node.descriptionEn ? conference.node.description : conference.node.descriptionEn
+
                                 return (
-                                    <BodySection key={conference.node.conferenceTitle}>
+                                    <BodySection key={title}>
                                         <Hour>{conference.node.time}</Hour>
                                         <ConfContent>
-                                            <ConfTitle>{conference.node.conferenceTitle}</ConfTitle>
+                                            <ConfTitle>{title}</ConfTitle>
                                             <TagsContainer>
                                                 {
                                                     conference.node.topic.map(topic => <Tag key={topic}>{getTopic(topic).map(tpc => <span key={tpc.label}>{tpc.label}</span>)}</Tag>)
                                                 }
                                             </TagsContainer>
                                             {
-                                                conference.node.description.length !== 0 &&
-                                                <Description>{conference.node.description}</Description>
+                                                description.length !== 0 &&
+                                                <Description>{description}</Description>
                                             }
                                             <SpeakersTitle>Speakers</SpeakersTitle>
                                             {
@@ -198,7 +199,7 @@ const ConferencesPage = ({ data, content }) => {
                                                                 <SpeakerImg src={speaker.node.image.sourceUrl} alt={speaker.node.image.altText} fill />
                                                             </SpeakerImgContainer>
                                                             <SpeakerDetails>
-                                                                <SpeakerName>{speaker.node.name} {speaker.node.surname}</SpeakerName>
+                                                                <SpeakerName>{speaker.node?.name} {speaker.node.surname}</SpeakerName>
                                                                 <SpeakerProf>{speaker.node.profession}</SpeakerProf>
                                                             </SpeakerDetails>
                                                         </SpeakerContainer>
