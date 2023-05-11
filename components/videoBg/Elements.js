@@ -10,9 +10,9 @@ export const VideoBg = styled.video`
     object-fit: cover;
     background-color: #ffffff;
 
-    /* @media all and (max-width: 550px) {
+    @media all and (max-width: 550px) {
         display: none;
-    } */
+    }
 `
 
 export const Overlay = styled.div`
@@ -29,7 +29,7 @@ export const ImageBg = styled(Image)`
     object-fit: cover;
     background-color: #ffffff;
 
-    /* @media all and (min-width: 550px) {
+    @media all and (min-width: 550px) {
         display: none;
-    } */
+    }
 `
