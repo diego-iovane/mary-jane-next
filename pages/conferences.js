@@ -31,6 +31,7 @@ export async function getServerSideProps(context) {
                   node {
                     surname
                     profession
+                    professionEn
                     name
                     image {
                       altText

@@ -12,17 +12,19 @@ import {
 
 const CannabisFestivalPage = ({ data, language }) => {
 
-    const content = language === 'en' ? 
-    {
-        titleOne: data.titleOneEn || '',
-        titleTwo: data.titleTwoEn || '',
-        cta: data.ctaFestivalEn || '',
-    } :
-    {
-        titleOne: data.titleOneDe || '',
-        titleTwo: data.titleTwoDe || '',
-        cta: data.ctaFestivalDe || '',
-    }
+    console.log(data)
+
+    const content = language === 'en' ?
+        {
+            titleOne: data.titleOneEn || '',
+            titleTwo: data.titleTwoEn || '',
+            cta: data.ctaFestivalEn || '',
+        } :
+        {
+            titleOne: data.titleOneDe || '',
+            titleTwo: data.titleTwoDe || '',
+            cta: data.ctaFestivalDe || '',
+        }
 
     return (
         <>
@@ -31,20 +33,28 @@ const CannabisFestivalPage = ({ data, language }) => {
             </HeadSection>
             <Content>
                 <Inner>
-                    <Title>{content.titleOne}</Title>
-                    <PosterContainer>
-                        <Poster src={data.imageOne.sourceUrl} alt={data.imageOne.altText} fill />
-                    </PosterContainer>
-                    <ButtonContainer href={content.cta.url} target="_blank" rel="noopener noreferrer">
-                        <SmallCta>{content.cta.text}</SmallCta>
-                    </ButtonContainer>
-                    <PosterContainer>
-                        <Poster src={data.imageThree.sourceUrl} alt={data.imageThree.altText} fill />
-                    </PosterContainer>
-                    <Title>{content.titleTwo}</Title>
-                    <PosterContainer>
-                        <Poster src={data.imageTwo.sourceUrl} alt={data.imageTwo.altText} fill />
-                    </PosterContainer>
+                    {
+                        data.reverse().map(poster => {
+
+                            const title = language === "en" ? poster.node.titleEn : poster.node.titleDe || ''
+                            const cta = poster.node.callToActionUrl.length !== 0 ? language === "en" ? poster.node.callToActionTextEn : poster.node.callToActionTextDe : null
+
+                            return (
+                                <>
+                                    <Title>{title}</Title>
+                                    <PosterContainer>
+                                        <Poster src={poster.node.posterImage.sourceUrl} alt={poster.node.posterImage.altText} fill />
+                                    </PosterContainer>
+                                    {
+                                        cta !== null ?
+                                            <ButtonContainer href={poster.node.callToActionUrl} target="_blank" rel="noopener noreferrer">
+                                                <SmallCta>{cta}</SmallCta>
+                                            </ButtonContainer> : null
+                                    }
+                                </>
+                            )
+                        })
+                    }
                 </Inner>
             </Content>
         </>

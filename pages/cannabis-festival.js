@@ -6,7 +6,7 @@ const CannabisFestival = ({ res }) => {
   const { language } = GetLanguageContext()
 
   return (
-    <CannabisFestivalPage data={res.data.pages.edges[0].node.cannabisFestival} language={language} />
+    <CannabisFestivalPage data={res.data.posters.edges} language={language} />
   )
 }
 
@@ -20,39 +20,22 @@ export async function getServerSideProps(context) {
     body: JSON.stringify({
       query: `
       query NewQuery {
-        pages(where: {id: 153}) {
-          edges {
-            node {
-              cannabisFestival {
-                titleOneEn
-                titleTwoEn
-                titleOneDe
-                titleTwoDe
-                imageOne {
-                  altText
-                  sourceUrl
-                }
-                imageTwo {
-                  altText
-                  sourceUrl
-                }
-                imageThree {
-                  altText
-                  sourceUrl
-                }
-                ctaFestivalEn {
-                  url
-                  text
-                }
-                ctaFestivalDe {
-                  text
-                  url
-                }
-              }
+      posters(first: 1000) {
+        edges {
+          node {
+            titleEn
+            titleDe
+            posterImage {
+              altText
+              sourceUrl
             }
+            callToActionTextEn
+            callToActionTextDe
+            callToActionUrl
           }
         }
       }
+    }
       `
     })
   })

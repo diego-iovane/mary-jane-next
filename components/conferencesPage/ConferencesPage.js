@@ -193,6 +193,9 @@ const ConferencesPage = ({ data, content, lng }) => {
                                             <SpeakersTitle>Speakers</SpeakersTitle>
                                             {
                                                 conference.node.conferenceSpeakers.edges.map(speaker => {
+
+                                                    const prof = (lng === "en" ? speaker.node.professionEn : speaker.node.profession) || speaker.node.profession
+
                                                     return (
                                                         <SpeakerContainer>
                                                             <SpeakerImgContainer>
@@ -200,7 +203,7 @@ const ConferencesPage = ({ data, content, lng }) => {
                                                             </SpeakerImgContainer>
                                                             <SpeakerDetails>
                                                                 <SpeakerName>{speaker.node?.name} {speaker.node.surname}</SpeakerName>
-                                                                <SpeakerProf>{speaker.node.profession}</SpeakerProf>
+                                                                <SpeakerProf>{prof}</SpeakerProf>
                                                             </SpeakerDetails>
                                                         </SpeakerContainer>
                                                     )
